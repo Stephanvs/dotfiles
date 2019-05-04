@@ -6,15 +6,19 @@ local ZSH_CONF=$HOME/.zsh                      # Define the place I store all my
 local ZSH_CACHE=$ZSH_CONF/cache                # for storing files like history and zcompdump 
 local LOCAL_ZSHRC=$HOME/.zshlocal/.zshrc       # Allow the local machine to have its own overriding zshrc if it wants it
 
+# Path to your oh-my-zsh installation.
+export ZSH=$HOME/.oh-my-zsh
+
 # Load external config files and tools
    source $ZSH_CONF/aliases.zsh                # Load my nice aliases, pretty self explanatory.
    source $ZSH_CONF/functions.zsh              # Load misc functions. Done in a seperate file to keep this from getting too long and ugly
 #   source $ZSH_CONF/spectrum.zsh               # Make nice colors available
 #   source $ZSH_CONF/prompts.zsh                # Setup our PS1, PS2, etc.
-#   source $ZSH_CONF/termsupport.zsh            # Set terminal window title and other terminal-specific things
+   source $ZSH_CONF/termsupport.zsh            # Set terminal window title and other terminal-specific things
 
 # Theme
    ZSH_THEME="honukai"
+   source $ZSH/oh-my-zsh.sh
 
 # Set important shell variables
    export EDITOR=vim                           # Set default editor
@@ -104,3 +108,8 @@ local LOCAL_ZSHRC=$HOME/.zshlocal/.zshrc       # Allow the local machine to have
   if [[ -r $LOCAL_ZSHRC ]]; then
     source $LOCAL_ZSHRC
   fi
+
+# Node.js
+   export NVM_DIR="$HOME/.nvm"
+   [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
