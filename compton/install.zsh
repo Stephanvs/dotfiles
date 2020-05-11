@@ -1,2 +1,2 @@
-mkdir -p $DOTFILES/.config/
-ln --symbolic $DOTFILES/compton/compton.conf $HOME/.config/compton.conf
+mkdir -p $DOTFILES/.config/compton
+ln --symbolic $DOTFILES/compton/compton.conf $HOME/.config/compton/compton.conf
