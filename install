@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 export DOTFILES="$HOME/dotfiles"
 for f in $DOTFILES/**/install.zsh; do
   echo "executing: $f"
