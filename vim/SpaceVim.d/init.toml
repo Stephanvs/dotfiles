@@ -60,16 +60,17 @@ name = 'lang#go'
 [[layers]]
 name = 'lang#graphql'
 
-[[custom_plugins]]
-name = 'yuttie/comfortable-motion.vim'
-merged = 0
-
-#[[custom_plugins]]
-#name = 'chriskempson/base16-vim'
-#merged = 0
+[[layers]]
+name = 'shell'
+default_position = 'bottom'
+default_height = 30
 
 [[layers]]
 name = "colorscheme"
+merged = 0
+
+[[custom_plugins]]
+name = 'yuttie/comfortable-motion.vim'
 merged = 0
 
 [[custom_plugins]]
