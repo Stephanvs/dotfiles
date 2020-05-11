@@ -1,0 +1,6 @@
+#!/bin/bash
+export DOTFILES="$HOME/dotfiles"
+for f in $DOTFILES/**/install.zsh; do
+  echo "executing: $f"
+  "$f"
+done
