@@ -1,0 +1,26 @@
+[user]
+  name = Stephan van Stekelenburg
+  email = stephan@hayman.io
+[color]
+  diff = auto
+  status = auto
+  branch = auto
+  ui = true
+[core]
+  editor = vim
+[apply]
+  whitespace = nowarn
+[mergetool]
+  keepBackup = false
+[difftool]
+  prompt = false
+[help]
+  autocorrect = 1
+[push]
+  default = simple
+[branch]
+  autosetuprebase = always
+[credential]
+  helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
+[pull]
+  rebase = true
