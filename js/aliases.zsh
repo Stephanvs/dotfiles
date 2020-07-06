@@ -1,0 +1,1 @@
+alias yas='yarn start'
