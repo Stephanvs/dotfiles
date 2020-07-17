@@ -1,2 +1,2 @@
-ln --symbolic $DOTFILES/fonts $HOME/.fonts
+ln -s $DOTFILES/fonts $HOME/.fonts
 fc-cache -f -v
