@@ -13,6 +13,8 @@ font:
     family: Jetbrains Mono
     style: Italic
 
+  size: 13.0
+
 # Colors (Monokai Pro)
 colors:
   # Default colors
@@ -46,4 +48,13 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.85
+background_opacity: 0.9
+
+# Live config reload (changes require restart
+live_config_reload: true
+
+# Startup directory
+#
+# Directory the shell is started in. If this is unset, or `None`, the working
+# directory of the parent process will be used.
+#working_directory: ~/Code/
