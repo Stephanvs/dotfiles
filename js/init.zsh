@@ -1,1 +1,1 @@
-source aliases.zsh
+source $DOTFILES/js/aliases.zsh

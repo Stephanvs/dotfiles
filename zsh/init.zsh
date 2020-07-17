@@ -1,4 +1,5 @@
 alias zshrc='vim $HOME/.zshrc'
+source $DOTFILES/zsh/aliases.zsh
 
 if [ "$(uname 2> /dev/null)" == "Linux" ]; then
   alias pbcopy='xclip -selection clipboard'
