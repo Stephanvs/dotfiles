@@ -45,7 +45,6 @@ alias d='dirs -v | head -10'                      # List the last ten directorie
 alias google='web_search google'                  # Note: websearch function is loaded in function file, see above
 alias ddg='web_search ddg'
 alias github='web_search github'
-alias gh='github'
 alias wiki='web_search ddg \!w'
 alias news='web_search ddg \!n'
 alias youtube='web_search ddg \!yt'
