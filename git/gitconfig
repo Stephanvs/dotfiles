@@ -24,3 +24,5 @@
   helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
 [pull]
   rebase = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit

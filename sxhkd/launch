@@ -1,0 +1,10 @@
+#!/bin/zsh
+# Terminate already running instances
+killall -q sxhkd
+
+# Wait until the processes have been shut down
+while pgrep -u $UID -x sxhkd >/dev/null; do sleep 1; done
+
+# Find all hotkey files and launch sxhkd
+hotkeys=($(find . -type f -name hotkeys))
+sxhkd -c $DOTFILES/sxhkd/sxhkdrc $hotkeys &

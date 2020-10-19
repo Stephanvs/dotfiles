@@ -1,1 +1,1 @@
-ln -s $DOTFILES/git/gitconfig $HOME/.gitconfig
+ln -f -s $DOTFILES/git/gitconfig $HOME/.gitconfig

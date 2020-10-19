@@ -1,2 +1,9 @@
 QT_SCALE_FACTOR=2
+export DOTFILES=$HOME/dotfiles
+export DOTFILES_HOME=$HOME/dotfiles
+export POLYBAR_HOME=$DOTFILES_HOME/polybar
+
+# turn off pc speaker
+xset -b
+
 export PATH="$HOME/.cargo/bin:$PATH"

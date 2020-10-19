@@ -1,0 +1,19 @@
+#!/bin/zsh
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 10
+
+# Colors
+# TODO
+
+# Windows
+bspc config border_width         2
+bspc config window_gap          16
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+source $HOME/.profile
+
+$HOME/.config/sxhkd/launch &
+$HOME/.config/polybar/launch &
