@@ -14,7 +14,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -modi drun -show drum -m primary
+	rofi -modi drun -show drun -m primary
 
 # make sxhkd reload its configuration files:
 super + Escape
