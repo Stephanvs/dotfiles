@@ -1,35 +1,59 @@
+;--------------------------------------------------------------------;
+; Common
+;--------------------------------------------------------------------;
+
 [common/bar]
 width = 100%;${env:BAR_WIDTH:100%}
-height = ${env:PM_BAR_HEIGHT:40}
-border-left-size = 0
-border-right-size = 0
+height = ${env:PM_BAR_HEIGHT:45}
+border-left-size=0
+border-right-size=0
 offset-x = 0
 offset-y = 0
 radius = 0
 fixed-center = true
 
 font-0 = "JetBrains Mono, Regular:weight=Regular:size=11;4"
+# https://fontawesome.com/icons?d=gallery&q=date&m=free
 font-1 = "FontAwesome5Free:style=Solid:pixelsize=12;4"
 font-2 = "FontAwesome5Brands:style=Solid:pixelsize=12;4"
 
-[colors]
-background           = #ae282936
-background-focussed  = #f93a3c4e
-foreground           = #e9e9f4
+background = #ae282936
+foreground = #e9e9f4
 
-label-dimmed-foreground = ${colors.foreground}
-label-dimmed-occupied-foreground = #f7f7f7b
-label-dimmed-empty-foreground = ${colors.foreground}
+line-size = 2
+line-color = #f9b45bcf
 
-foreground-focussed  = #f7f7fb
+border-size = 0
 
-primary = #ebff87
-secondary = #e60053
-alert = #bd2c40
+padding-left = 2
+padding-right = 2
+
+module-margin-left  = 0
+module-margin-right = 0
+
+#modules-left = apps news
+#modules-center = clock
+#modules-right = weather now-playing
+
+locale = en_US.UTF-8
+
+click-left =
+click-middle =
+click-right =
+scroll-up =
+scroll-down =
+double-click-left =
+double-click-middle =
+double-click-right =
 
 [common/bar-secondary]
 inherit = common/bar
+
 bottom = true
+
+modules-left = 
+modules-center =
+modules-right =
 
 [common/bspwm]
 type = internal/bspwm
@@ -43,24 +67,24 @@ fuzzy-match = true
 
 format = <label-state> <label-mode>
 
-label-dimmed-foreground = ${colors.label-dimmed-foreground}
+label-dimmed-foreground = #626483
 
 label-dimmed-occupied = %icon%
-label-dimmed-occupied-foreground = $colors.label-dimmed-occupied-foreground}
+label-dimmed-occupied-foreground = #f7f7fb
 label-dimmed-occupied-padding = 2
 
 label-dimmed-empty = %icon%
-label-dimmed-empty-foreground = ${colors.label-dimmed-empty-foreground}
+label-dimmed-empty-foreground = #626483
 label-dimmed-empty-padding = 2
 
-label-focussed = %icon%
-label-focussed-foreground = #f7f7fb
-label-focussed-background = #f93a3c4e
-label-focussed-overline = #ebff87
-label-focussed-padding = 2
+label-focused = %icon%
+label-focused-foreground = #f7f7fb
+label-focused-background = #f93a3c4e
+label-focused-overline = #ebff87
+label-focused-padding = 2
 
 label-occupied = %icon%
-label-occupied-foreground = #f7f7f7b
+label-occupied-foreground = #f7f7fb
 label-occupied-padding = 2
 
 label-urgent = %icon%
@@ -89,9 +113,6 @@ label-sticky-foreground = #b45bcf
 label-private = " "
 label-private-foreground = #b45bcf
 
-;--------------------------------------------------------------------;
-; Modules
-;--------------------------------------------------------------------;
 [module/title]
 type = internal/xwindow
 
@@ -108,6 +129,51 @@ content = " "
 [module/gap]
 type = custom/text
 content = "    "
+
+;--------------------------------------------------------------------;
+; Top panel
+;--------------------------------------------------------------------;
+
+[module/apps]
+type = custom/text
+content = 
+content-foreground = #ebff87
+click-left = rofi -show drun
+
+[module/clock]
+type = custom/script
+exec = $HOME/.config/polybar/scripts/clock
+interval = 1
+click-left = $POLYBAR_HOME/scripts/calendar
+format-foreground = #ebff87
+
+;--------------------------------------------------------------------;
+; Bottom panel
+;--------------------------------------------------------------------;
+
+[bar/bottom]
+inherit = common/bar
+
+dpi = ${env:PM_DPI:110}
+
+bottom = true
+padding-left = 0
+padding-right = 0
+
+font-3 = "Material Icons:pixelsize=17;7"
+font-4 = "icomoon:style=Regular:pixelsize=22"
+#font-5 = "Spy Agency:pixelsize=12;4"
+#font-6 = "Spy Agency Laser:pixelsize=12;4"
+#font-7 = "Geforce:style=Bold:pixelsize=12;5"
+
+modules-left = bspwm gap title
+modules-center = now-playing
+modules-right = cpu-brand gap-small cpu-usage gap-small gap memory gap network gap filesystem gap power-menu gap
+
+tray-position = right
+tray-padding = 0
+tray-background = #f9282936
+tray-maxsize = 75
 
 [module/bspwm]
 inherit = common/bspwm
@@ -154,25 +220,64 @@ ws-icon-8 = 9;
 ws-icon-9 = "10;"
 ;ws-icon-default = 
 
-[module/apps]
+[module/cpu-brand]
 type = custom/text
-content = 
-content-foreground = #ebff87
-click-left = rofi -show drun
+content = %{T6}RYZ%{T-}%{T7}E%{T-}%{T6}N%{T-}
+
+[module/cpu-usage]
+type = internal/cpu
+interval = 1
+format-prefix = " "
+label = %percentage%%
+
+[module/cpu-temp]
+type = internal/temperature
+interval = 5
+
+hwmon-path = /sys/devices/platform/nct6775.2592/hwmon/hwmon2/temp1_input
+warn-temperature = 80
+
+format = <ramp> <label>
+format-warn = <ramp> <label-warn>
+label = %temperature-c%
+label-warn = %temperature-c%
+label-warn-foreground = #ff5555
+
+ramp-0 = 
+ramp-0-foreground = #00f769
+ramp-1 = 
+ramp-1-foreground = #00f769
+ramp-2 = 
+ramp-2-foreground = #00f769
+ramp-3 =  
+ramp-3-foreground = #00f769
+ramp-4 = 
+ramp-4-foreground = #00f769
+ramp-5 = 
+ramp-5-foreground = #ebff87
+ramp-6 = 
+ramp-6-foreground = #ebff87
+ramp-7 = 
+ramp-7-foreground = #ff5555
+
+[module/gpu-brand]
+type = custom/text
+content = %{T8}RTX 2080ti %{T-} 0%
+
+[module/gpu-usage]
+type = custom/text
+content = 0%
+
+[module/memory-brand]
+type = custom/text
+content = %{T8}Gskill Ripjaws %{T-}
+
 
 [module/memory]
 type = internal/memory
 interval = 1
 format-prefix = " "
 label = %percentage_used%%
-
-[module/cpu]
-type = internal/cpu
-interval = 2
-format-prefix = "CPU"
-format-prefix-foreground = ${colors.primary}
-format-underline = #4bffdc
-label = %percentage:2%%
 
 [module/filesystem]
 type = internal/fs
@@ -184,49 +289,56 @@ label-mounted = %{A1:baobab:}%percentage_used%%%{A}
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = #ff5555
 
+[module/updates]
+format = <label>
+type = custom/script
+exec = /usr/share/polybar/scripts/updates-aurhelper.sh
+tail = true
+click-left = pkill -USR1 updates-aurhelper.sh
+label =  %output%
+
+[module/network]
+type = internal/network
+interface = ens33
+
+interval = 1
+ping-interval = 3
+accumulate-stats = false
+
+format-connected = <label-connected>
+format-disconnected = <label-disconnected>
+format-packetloss = <label-connected> <animation-packetloss>
+
+label-connected =  %downspeed%  %upspeed%
+label-signal = %signal%
+label-disconnected =  Not connected
+label-disconnected-foreground = #626483
+
+label-packetloss-foreground = #ff5555
+animation-packetloss-0 = 
+animation-packetloss-1 = 
+animation-packetloss-framerate = 500
+
+ramp-signal-0 = %{T5}%{T-}
+ramp-signal-1 = %{T5}%{T-}
+ramp-signal-2 = %{T5}%{T-}
+ramp-signal-3 = %{T5}%{T-}
+ramp-signal-4 = %{T5}%{T-}
+
+[module/ping]
+type = custom/script
+exec = ~/.config/polybar/scripts/info-pingrtt
+interval = 1
+
+[module/power-menu]
+type = custom/text
+content-foreground = #ff5555
+content = 
+click-right = mygtkmenu /home/pjvds/.config/mygtkmenu/power-menu
+
 ;--------------------------------------------------------------------;
-; Top panel
+; General
 ;--------------------------------------------------------------------;
-
-[bar/top]
-inherit = common/bar
-
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-line-color = #f00
-
-border-size = 0
-
-padding-left = 0
-padding-right = 0
-
-module-margin-left = 0
-module-margin-right = 0
-
-modules-left = apps
-modules-right = cpu gap-small memory gap-small filesystem
-
-;--------------------------------------------------------------------;
-; Bottom panel
-;--------------------------------------------------------------------;
-[bar/bottom]
-inherit = common/bar
-bottom = true
-
-padding-left = 0
-padding-right = 0
-
-font-3 = "Material Icons:pixelsize=17;7"
-font-4 = "icomoon:style=Regular:pixelsize=22"
-font-5 = "Spy Agency:pixelsize=12;4"
-font-6 = "Spy Agency Laser:pixelsize=12;4"
-font-7 = "Geforce:style=Bold:pixelsize=12;5"
-
-modules-left = bspwm gap title
-modules-center =
-modules-right = 
 
 [settings]
 throttle-output = 5
@@ -243,4 +355,4 @@ screenchange-reload = true
 margin-top = 0
 margin-bottom = 0
 
-; vim:ft=dosini
+;vim:ft=dosini
