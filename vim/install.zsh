@@ -1,1 +1,1 @@
-ln -f --symbolic $DOTFILES/vim/SpaceVim.d $HOME/.SpaceVim.d
+ln -n -f --symbolic $DOTFILES/vim/SpaceVim.d $HOME/.SpaceVim.d
