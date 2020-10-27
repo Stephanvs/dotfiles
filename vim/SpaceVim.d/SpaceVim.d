@@ -1,1 +1,0 @@
-/home/stephanvs/dotfiles/vim/SpaceVim.d
