@@ -1,1 +1,18 @@
-Xft.dpi: 144
+Xft.dpi: 250
+Xft.autohint: 0
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintfull
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+*locale: UTF-8
+
+XTerm.*.faceName: JetBrains Mono
+XTerm.*.renderFont: true
+XTerm.*.locale: true
+XTerm.*.utf8: 2
+xterm.*.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+XTerm.*.selectToClipboard: true
+XTerm.*.saveLines: 10000
