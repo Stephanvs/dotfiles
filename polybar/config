@@ -151,10 +151,10 @@ format-foreground = #ebff87
 ; Bottom panel
 ;--------------------------------------------------------------------;
 
-[bar/bottom]
+
 inherit = common/bar
 
-dpi = ${env:PM_DPI:110}
+dpi = ${env:PM_DPI:100}
 
 bottom = true
 padding-left = 0

@@ -3,9 +3,9 @@ export DOTFILES_HOME=$HOME/dotfiles
 export POLYBAR_HOME=$DOTFILES_HOME/polybar
 
 export GDK_DPI_SCALE=1
-export GDK_SCALE=1.4
-export QT_AUTO_SCREEN_SCALE_FACTOR=1.4
-export QT_SCALE_FACTOR=1.4
+export GDK_SCALE=1
+export QT_AUTO_SCREEN_SCALE_FACTOR=1
+export QT_SCALE_FACTOR=1
 
 export BROWSER=qutebrowser
 
