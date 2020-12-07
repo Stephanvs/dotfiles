@@ -1,0 +1,24 @@
+# Don't print a new line at the start of the prompt
+add_newline = true
+
+# Replace the "❯" symbol in the prompt with "➜"
+[character]
+format = "$symbol "
+success_symbol = "[➜](bold green) "
+error_symbol   = "[✖](bold red) "
+
+[directory]
+truncation_length = 8
+truncation_symbol = "…/"
+style = "bold yellow"
+
+[username]
+show_always = true
+style_user = "white bold"
+style_root = "black bold"
+format = "$user at($style) "
+
+[hostname]
+ssh_only = false
+trim_at = ""
+format = "[$hostname]($style) in "

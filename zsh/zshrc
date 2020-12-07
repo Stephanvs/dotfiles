@@ -70,7 +70,6 @@ plugins=(
   # kubectl
   vi-mode
   ssh-agent
-  fzf
 )
 
 source $ZSH/oh-my-zsh.sh
