@@ -4,8 +4,8 @@ add_newline = true
 # Replace the "❯" symbol in the prompt with "➜"
 [character]
 format = "$symbol "
-success_symbol = "[➜](bold green) "
-error_symbol   = "[✖](bold red) "
+success_symbol = "[➜](bold green)"
+error_symbol   = "[✖](bold red)"
 
 [directory]
 truncation_length = 8
@@ -14,9 +14,9 @@ style = "bold yellow"
 
 [username]
 show_always = true
-style_user = "white bold"
-style_root = "black bold"
-format = "$user at($style) "
+format = "[$user]($style) in "
+style_user = "bold blue"
+style_root = "bold red"
 
 [hostname]
 ssh_only = false
