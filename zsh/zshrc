@@ -87,3 +87,4 @@ source $DOTFILES_HOME/init.zsh
 for f in $DOTFILES_HOME/**/init.zsh; do
   source "$f"
 done
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
