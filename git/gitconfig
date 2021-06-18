@@ -8,6 +8,7 @@
   ui = true
 [core]
   editor = vim
+	autocrlf = input
 [apply]
   whitespace = nowarn
 [mergetool]
