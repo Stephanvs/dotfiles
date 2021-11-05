@@ -1,0 +1,1 @@
+oh-my-posh --init --shell pwsh --config ./oh-my-posh-theme.json | Invoke-Expression
