@@ -5,4 +5,4 @@ Install-Module -Name Terminal-Icons -Repository PSGallery
 winget install JanDeDobbeleer.OhMyPosh
 
 # Create Symbolic link for powershell profile
-New-Item -ItemType SymbolicLink -Path ./profile.ps1 -Target $PROFILE
+New-Item -ItemType SymbolicLink -Path $PROFILE -Target $PSScriptRoot/profile.ps1 -Force
