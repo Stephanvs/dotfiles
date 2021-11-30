@@ -6,3 +6,4 @@ winget install Git.Git --silent
 
 winget install WhatsApp.WhatsApp --silent
 winget install SlackTechnologies.Slack --silent
+winget install Microsoft.Teams --silent
