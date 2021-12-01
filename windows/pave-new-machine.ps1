@@ -8,6 +8,9 @@ winget install AgileBits.1Password --silent
 winget install GitHub.GitHubDesktop --silent
 winget install Git.Git --silent
 
+# PowerToys
+winget install XP89DCGQ3K6VLD --silent --accept-package-agreements --accept-source-agreements
+
 # Communication tools
 winget install WhatsApp.WhatsApp --silent
 winget install SlackTechnologies.Slack --silent
