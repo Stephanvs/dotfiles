@@ -1,7 +1,7 @@
 using namespace System.Management.Automation
 using namespace System.Management.Automation.Language
  
-$DOTFILES = "D:\Code\dotfiles"
+$DOTFILES = "$HOME\dotfiles"
 
 if ($host.Name -eq 'ConsoleHost') {
   Import-Module PSReadLine
