@@ -1,3 +1,6 @@
+# PowerShell Core
+winget install Microsoft.PowerShell --silent
+
 # Dev editors
 winget install Microsoft.VisualStudioCode --silent --accept-package-agreements --accept-source-agreements
 winget install Microsoft.VisualStudio.2022.Professional --silent --accept-package-agreements --accept-source-agreements
