@@ -7,5 +7,7 @@ Install-Module -Name PSReadLine -AllowPrerelease -Force
 # Install OhMyPosh
 winget install JanDeDobbeleer.OhMyPosh --silent
 
+Install-Module z -AllowClobber
+
 # Create Symbolic link for powershell profile
 New-Item -ItemType SymbolicLink -Path $PROFILE -Target $PSScriptRoot/profile.ps1 -Force
