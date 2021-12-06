@@ -1,3 +1,6 @@
+# Install Microsoft PowerShell Core
+winget install Microsoft.PowerShell --silent
+
 # Install Terminal Icons
 Install-Module -Name Terminal-Icons -Repository PSGallery
 
