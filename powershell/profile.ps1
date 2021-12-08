@@ -1,6 +1,6 @@
 using namespace System.Management.Automation
 using namespace System.Management.Automation.Language
- 
+
 $DOTFILES = "$HOME\dotfiles"
 
 if ($host.Name -eq 'ConsoleHost') {
@@ -10,6 +10,12 @@ if ($host.Name -eq 'ConsoleHost') {
 Import-Module -Name Terminal-Icons
 
 oh-my-posh --init --shell pwsh --config $DOTFILES/powershell/oh-my-posh-theme.json | Invoke-Expression
+
+# Discover 'init.ps1' files recursilvely and 'dot source' them here
+foreach ($script in Get-ChildItem "$DOTFILES" -Filter init.ps1 -Recurse) {
+  Write-Verbose "Importing $script"
+  . $script
+}
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
   param($wordToComplete, $commandAst, $cursorPosition)
