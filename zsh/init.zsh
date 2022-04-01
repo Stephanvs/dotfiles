@@ -1,3 +1,5 @@
+eval "$(oh-my-posh init zsh --config $DOTFILES/powershell/oh-my-posh-theme.json)"
+
 alias zshrc='vim $HOME/.zshrc'
 source $DOTFILES/zsh/aliases.zsh
 
