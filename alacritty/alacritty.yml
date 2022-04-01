@@ -2,18 +2,18 @@
 font:
   # The normal font
   normal:
-    family: Jetbrains Mono
+    family: JetbrainsMono NF
     style: Regular
 
   bold:
-    family: Jetbrains Mono
+    family: JetbrainsMono NF
     style: Bold
 
   italic:
-    family: Jetbrains Mono
+    family: JetbrainsMono NF
     style: Italic
 
-  size: 12
+  size: 16
 
 # Colors (Monokai Pro)
 colors:
