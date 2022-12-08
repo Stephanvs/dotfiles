@@ -1,22 +1,40 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{if .Root}}root :: {{end}}{{.Shell}} :: {{.Folder}}",
+  "palette": {
+    "prompt": "#9FD356",
+    "closer": "p:prompt",
+    "os": "#26C6DA",
+    "root": "#ffff66",
+    "path": "#ff479c",
+    "folder": "p:path",
+    "text": "#fafafa",
+    "git": "#ffeb3b",
+    "node": "#98C379",
+    "dotnet": "p:node",
+    "executiontime": "p:os",
+    "error": "#E84855"
+  },
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
-          "foreground": "#9FD356",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#E84855{{ end }}"
-          ],
+          "type": "exit",
+          "style": "plain",
+          "foreground": "p:prompt",
+          "foreground_templates": ["{{ if gt .Code 0 }}p:error{{ end }}"],
           "properties": {
             "always_enabled": true
-          },
-          "style": "plain",
-          "type": "exit"
+          }
         },
         {
-          "foreground": "#26C6DA",
+          "type": "os",
+          "style": "diamond",
+          "foreground": "p:os",
           "properties": {
             "alpine": "\uf300",
             "arch": "\uf303",
@@ -33,31 +51,31 @@
             "raspbian": "\uf315",
             "ubuntu": "\uf31c",
             "windows": "\ue70f"
-          },
-          "style": "diamond",
-          "type": "os"
+          }
         },
         {
-          "foreground": "#fafafa",
+          "type": "session",
           "style": "diamond",
-          "type": "session"
+          "foreground": "p:text"
         },
         {
-          "foreground": "#ffff66",
+          "type": "root",
           "style": "diamond",
-          "type": "root"
+          "foreground": "p:root"
         },
         {
-          "foreground": "#ff479c",
+          "type": "path",
+          "style": "diamond",
+          "foreground": "p:path",
           "properties": {
-            "folder_icon": "<#B5B2C2> \ue5fe </>",
+            "folder_icon": "<p:folder> \ue5fe </>",
             "style": "agnoster"
-          },
-          "style": "diamond",
-          "type": "path"
+          }
         },
         {
-          "foreground": "#ffeb3b",
+          "type": "git",
+          "style": "diamond",
+          "foreground": "p:git",
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#ffeb3b{{ end }}",
             "{{ if gt .Ahead 0 }}#2EC4B6{{ end }}",
@@ -67,59 +85,55 @@
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
-          },
-          "style": "diamond",
-          "type": "git"
+          }
         },
         {
-          "foreground": "#6CA35E",
-          "style": "diamond",
+          "foreground": "p:node",
+          "properties": {
+            "fetch_version": true
+          },
+          "style": "plain",
+          "template": "\ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
           "type": "node"
         },
         {
-          "foreground": "#6CA35E",
+          "type": "dotnet",
           "style": "diamond",
-          "type": "dotnet"
+          "foreground": "p:dotnet"
         },
         {
-          "foreground": "#fafafa",
+          "type": "text",
           "style": "diamond",
-          "type": "text"
+          "foreground": "p:text"
         },
         {
-          "foreground": "#FFCE5C",
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "p:executiontime",
           "properties": {
             "style": "roundrock",
             "threshold": 500
-          },
-          "style": "plain",
-          "type": "executiontime"
+          }
         },
         {
-          "foreground": "#adadad",
-          "properties": {
-            "time_format": "15:04:05"
-          },
-          "style": "powerline",
-          "type": "time"
-        }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
-          "foreground": "#7a7a7a",
           "style": "plain",
+          "foreground": "p:closer",
+          "template": "\uf105",
           "type": "text"
         }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "#00ff6a"
+        }
       ],
-      "type": "prompt"
+      "newline": true
     }
-  ],
-  "console_title_template": "{{if .Root}}root :: {{end}}{{.Shell}} :: {{.Folder}}",
-  "final_space": true,
-  "version": 1
+  ]
 }
