@@ -25,4 +25,4 @@ source $HOME/.profile
 
 $HOME/.config/sxhkd/launch &
 $HOME/.config/polybar/launch &
-vmware-user &
+# vmware-user &
