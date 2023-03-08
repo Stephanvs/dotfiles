@@ -114,26 +114,21 @@
             "style": "roundrock",
             "threshold": 500
           }
-        },
-        {
-          "style": "plain",
-          "foreground": "p:closer",
-          "template": "\uf105",
-          "type": "text"
         }
       ]
     },
     {
-      "type": "prompt",
       "alignment": "left",
+      "newline": true,
       "segments": [
         {
-          "type": "text",
           "style": "plain",
-          "foreground": "#00ff6a"
+          "foreground": "p:closer",
+          "template": " \uf105",
+          "type": "text"
         }
       ],
-      "newline": true
+      "type": "prompt"
     }
   ]
 }
