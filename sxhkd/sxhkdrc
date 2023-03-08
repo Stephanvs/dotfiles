@@ -18,7 +18,7 @@ super + @space
 
 # make sxhkd reload its configuration files:
 super + Escape
-  nitrogen --restore \
+  # nitrogen --restore \
 	pkill -USR1 -x sxhkd; \
 	$DOTFILES/polybar/launch
 
