@@ -5,7 +5,7 @@ Param(
 function Get-GitStatus { & git status }
 function Set-GitCommit { & git commit -m $args }
 function Set-GitAddAll { & git add --all }
-functino Set-GitPush { & git push }
+function Set-GitPush { & git push }
 
 Write-Verbose "Setting git aliases:"
 
