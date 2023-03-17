@@ -10,10 +10,17 @@ return require('packer').startup(function(use)
   use {
 	  'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	  -- or                            , branch = '0.1.x',
-	  requires = { {'nvim-lua/plenary.nvim'} }
+	  requires = {
+          {'nvim-lua/plenary.nvim'},
+          {'nvim-telescope/telescope-live-grep-args.nvim'},
+      },
+      config = function()
+          require("telescope").load_extension("live_grep_args")
+      end
   }
 
   use 'folke/tokyonight.nvim'
+  use 'theprimeagen/harpoon'
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use("mbbill/undotree")
