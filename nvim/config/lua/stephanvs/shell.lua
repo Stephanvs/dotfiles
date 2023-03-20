@@ -1,5 +1,7 @@
 -- Configure powershell on windows and zsh on linux
-if vim.fn.has('win32') then
+if vim.fn.has('win32') == 1 then
+    print("windows")
+
     local pwsh_options = {
         shell = vim.fn.executable "pwsh" == 1 and "pwsh" or "powershell",
         shellcmdflag = "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
@@ -13,5 +15,6 @@ if vim.fn.has('win32') then
         vim.opt[option] = value
     end
 else
-  vim.opt.shell = 'zsh'
+    print("not windows")
+    vim.opt.shell = 'zsh'
 end
