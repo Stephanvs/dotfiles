@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
       end
   }
 
-  use 'navarasu/onedark.nvim'
+  use { 'catppuccin/nvim', as = 'catppuccin' }
   use 'theprimeagen/harpoon'
 
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
