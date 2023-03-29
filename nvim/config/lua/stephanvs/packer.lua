@@ -64,5 +64,17 @@ return require('packer').startup(function(use)
   }
 
   use {"akinsho/toggleterm.nvim", tag = '*' }
+  use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+
+  use {
+      "folke/which-key.nvim",
+      config = function()
+          vim.o.timeout = true
+          vim.o.timeoutlen = 400
+          require('which-key').setup({
+              -- use defaults
+          })
+      end
+  }
 
 end)
