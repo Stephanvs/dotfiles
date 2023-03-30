@@ -1,4 +1,3 @@
-
 vim.g.mapleader = " "
 
 -- In visual-line mode, move selection up/down
@@ -24,4 +23,12 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
+-- Window navigation
+vim.keymap.set('n', '<C-h>', '<C-w>h')
+vim.keymap.set('n', '<C-j>', '<C-w>j')
+vim.keymap.set('n', '<C-k>', '<C-w>k')
+vim.keymap.set('n', '<C-l>', '<C-w>l')
 
+-- Buffer navigation
+vim.keymap.set('n', '<M-p>', '<Cmd>bprevious<CR>')
+vim.keymap.set('n', '<M-n>', '<Cmd>bnext<CR>')
