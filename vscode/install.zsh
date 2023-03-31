@@ -1,4 +1,3 @@
-
 if [[ "$OSTYPE" == "darwin"* ]]; then
 
   # Fix for keyboard press-and-hold repeat of buttons
