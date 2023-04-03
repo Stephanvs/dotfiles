@@ -9,4 +9,6 @@ export BAR_WIDTH="$(($(xrandr --query |awk -F '[ x+]' '/\<connected\>/{print $4}
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # nohup polybar -c "$DOTFILES/polybar/config" top &> /dev/null &
-nohup polybar -c "$DOTFILES/polybar/config" bottom &> /dev/null &
+nohup polybar -c "$DOTFILES/polybar/config.ini" left &> /dev/null &
+nohup polybar -c "$DOTFILES/polybar/config.ini" center &> /dev/null &
+nohup polybar -c "$DOTFILES/polybar/config.ini" right &> /dev/null &
