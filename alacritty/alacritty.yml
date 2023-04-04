@@ -2,15 +2,15 @@
 font:
   # The normal font
   normal:
-    family: JetbrainsMono
+    family: JetbrainsMono NF
     style: Regular
 
   bold:
-    family: JetbrainsMono
+    family: JetbrainsMono NF
     style: Bold
 
   italic:
-    family: JetbrainsMono
+    family: JetbrainsMono NF
     style: Italic
 
   size: 12
