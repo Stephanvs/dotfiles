@@ -28,4 +28,8 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     defaults write -g InitialKeyRepeat -int 10  # via ui minimum is 15!
     defaults write -g KeyRepeat -int 1          # (15ms) via ui minimum is 2 (30ms)
 
+    # Install fonts
+    brew tap homebrew/cask-fonts && brew install --cask font-iosevka-nerd-font
+    brew tap homebrew/cask-fonts && brew install --cask font-jetbrains-mono-nerd-font
+
 fi
