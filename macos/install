@@ -1,0 +1,11 @@
+if [[ "$(uname -s)" == "Darwin" ]]; then
+
+    # Configure Dock
+    defaults write com.apple.dock autohide -bool TRUE
+    defaults write com.apple.dock tilesize -int 40
+    defaults write com.apple.dock largesize -int 80
+    defaults write com.apple.dock magnification -bool TRUE
+    defaults write com.apple.dock "minimize-to-application" -bool TRUE
+
+    killall Dock
+fi
