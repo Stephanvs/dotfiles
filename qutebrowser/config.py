@@ -20,7 +20,7 @@ catppuccin.setup(c, 'mocha', True)
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig()
 
-config.set("colors.webpage.darkmode.enabled", True)
+#config.set("colors.webpage.darkmode.enabled", True)
 
 # Which cookies to accept. With QtWebEngine, this setting also controls
 # other features with tracking capabilities similar to those of cookies;
