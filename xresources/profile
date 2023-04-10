@@ -15,5 +15,3 @@ xset -b
 # set default cursor
 # see: https://github.com/baskerville/bspwm/issues/11
 xsetroot -cursor_name left_ptr
-
-export PATH="$HOME/.cargo/bin:$PATH"
