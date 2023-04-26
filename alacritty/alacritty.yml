@@ -5,24 +5,24 @@ env:
 font:
   # The normal font
   normal:
-    family: Iosevka Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Regular
 
   bold:
-    family: Iosevka Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Bold
 
   italic:
-    family: Iosevka Nerd Font
+    family: JetBrainsMono Nerd Font
     style: Italic
 
   bold_italic:
-    family: Iosevka Nerd Font
+    family: JetBrainsMono Nerd Font
 
   size: 12
 
 import:
-  - ./catppuccin-mocha.yml
+  - ~/dotfiles/alacritty/catppuccin-mocha.yml
 
 window:
   padding:
