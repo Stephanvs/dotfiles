@@ -19,7 +19,7 @@ font:
   bold_italic:
     family: JetBrainsMono Nerd Font
 
-  size: 12
+  size: 10
 
 import:
   - ~/dotfiles/alacritty/catppuccin-mocha.yml
