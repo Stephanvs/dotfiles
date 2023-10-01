@@ -2,9 +2,9 @@ local M = {}
 
 ---@type MappingsTable
 M.nvimtree_mappings = {
-  n = {
-    ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>" },
-  },
+  --n = {
+  --  ["<leader>e"] = { "<cmd> NvimTreeToggle <CR>" },
+  --},
 }
 
 M.nvimtree = {
