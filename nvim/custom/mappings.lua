@@ -9,7 +9,7 @@ M.default = {
     -- ["<Right>"] = { "<Nop>", "Disabled right arrow" },
 
     ["<C-n>"] = { "<cmd> Telescope <CR>", "Telescope" },
-    ["<C-s>"] = { ":Telescope Files <CR>", "Telescope Files"}
+    ["<C-s>"] = { ":Telescope Files <CR>", "Telescope Files" }
   },
 
   i = {
