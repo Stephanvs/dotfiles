@@ -31,7 +31,7 @@ M.nvimtree = {
         -- open file
         api.node.open.edit()
         -- Close the tree if file was opened
-        -- api.tree.close()
+        api.tree.close()
       end
     end
 
@@ -59,6 +59,7 @@ M.nvimtree = {
     vim.keymap.set("n", "L", vsplit_preview,        opts("Vsplit Preview"))
     vim.keymap.set("n", "h", api.tree.close,        opts("Close"))
     vim.keymap.set("n", "H", api.tree.collapse_all, opts("Collapse All"))
+    vim.keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>", opts("Toggle"))
    end,
 
   renderer = {
