@@ -32,3 +32,16 @@ vim.keymap.set('n', '<c-l>', '<c-w>l')
 -- Buffer navigation
 vim.keymap.set('n', '<M-p>', '<Cmd>bprevious<CR>')
 vim.keymap.set('n', '<M-n>', '<Cmd>bnext<CR>')
+
+-- Buffer deletion
+vim.keymap.set('n', '<leader>x', '<Cmd>bd<CR>')
+
+-- Use Tab and Shift-Tab to navigate buffers
+vim.keymap.set('n', '<tab>', '<Cmd>bn<CR>')
+vim.keymap.set('n', '<s-tab>', '<Cmd>bp<CR>')
+
+-- Comment in Normal mode and Visual mode
+vim.keymap.set('n', '<leader>/', function()
+    require("Comment.api").toggle.linewise.current()
+end)
+vim.keymap.set('v', '<leader>/', '<ESC><cmd>lua require(\'Comment.api\').toggle.linewise(vim.fn.visualmode())<CR>')
