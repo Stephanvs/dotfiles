@@ -71,6 +71,13 @@ return require('packer').startup(function(use)
       tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
+  use {
+      'numToStr/Comment.nvim',
+      config = function()
+          require('Comment').setup()
+      end
+  }
+
   use("github/copilot.vim")
 
   use {
