@@ -29,10 +29,6 @@ vim.keymap.set('n', '<c-j>', '<c-w>j')
 vim.keymap.set('n', '<c-k>', '<c-w>k')
 vim.keymap.set('n', '<c-l>', '<c-w>l')
 
--- Buffer navigation
-vim.keymap.set('n', '<M-p>', '<Cmd>bprevious<CR>')
-vim.keymap.set('n', '<M-n>', '<Cmd>bnext<CR>')
-
 -- Buffer deletion
 vim.keymap.set('n', '<leader>x', '<Cmd>bd<CR>')
 
