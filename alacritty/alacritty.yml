@@ -5,21 +5,21 @@ env:
 font:
   # The normal font
   normal:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka Nerd Font
     style: Regular
 
   bold:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka Nerd Font
     style: Bold
 
   italic:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka Nerd Font
     style: Italic
 
   bold_italic:
-    family: JetBrainsMono Nerd Font
+    family: Iosevka Nerd Font
 
-  size: 10
+  size: 14
 
 import:
   - ~/dotfiles/alacritty/catppuccin-mocha.yml
@@ -30,6 +30,8 @@ window:
     y: 0
 
   dynamic_padding: true
+
+  option_as_alt: Both
 
 # Background opacity
 #
