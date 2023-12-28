@@ -33,6 +33,6 @@ if [[ "$(uname -s)" == "Darwin" ]]; then
     brew tap homebrew/cask-fonts && brew install --cask font-jetbrains-mono-nerd-font
 
     # Speed up mouse movement
-    defaults write -g com.apple.mouse.scaling 4.0
+    defaults write -g com.apple.mouse.scaling 5.0
 
 fi
