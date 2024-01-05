@@ -16,12 +16,12 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- Greatest remap ever - keep yanked after paste
-vim.keymap.set("x", "<leader>p", "\"_dP")
+vim.keymap.set("x", "<leader>p", "\"_dP", { desc = "paste without yanking" })
 
 -- Next greatest remap ever - yank to clipboard
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
+vim.keymap.set("n", "<leader>y", "\"+y", { desc = "yank to clipboard" })
+vim.keymap.set("v", "<leader>y", "\"+y", { desc = "yank to clipboard" })
+vim.keymap.set("n", "<leader>Y", "\"+Y", { desc = "yank to clipboard" })
 
 -- Window navigation
 vim.keymap.set('n', '<c-h>', '<c-w>h')
@@ -39,5 +39,5 @@ vim.keymap.set('n', '<s-tab>', '<Cmd>bp<CR>')
 -- Comment in Normal mode and Visual mode
 vim.keymap.set('n', '<leader>/', function()
     require("Comment.api").toggle.linewise.current()
-end)
-vim.keymap.set('v', '<leader>/', '<ESC><cmd>lua require(\'Comment.api\').toggle.linewise(vim.fn.visualmode())<CR>')
+end, { desc = "Toggle line comment" })
+vim.keymap.set('v', '<leader>/', '<ESC><cmd>lua require(\'Comment.api\').toggle.linewise(vim.fn.visualmode())<CR>', { desc = "Toggle line comment" })

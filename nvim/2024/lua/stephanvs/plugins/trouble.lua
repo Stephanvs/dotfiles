@@ -7,21 +7,24 @@ return {
         config = function()
             vim.keymap.set("n", "<leader>tt", function()
                 require("trouble").toggle()
-            end)
+            end,
+            { desc = "toggle trouble" })
 
             vim.keymap.set("n", "<leader>tn", function()
                 require("trouble").next({
                     skip_groups = true,
                     jump = true,
                 })
-            end)
+            end,
+            { desc = "next diagnostic" })
 
             vim.keymap.set("n", "<leader>tp", function()
                 require("trouble").previous({
                     skip_groups = true,
                     jump = true,
                 })
-            end)
+            end,
+            { desc = "previous diagnostic" })
         end,
 
         opts = {

@@ -3,8 +3,7 @@ return {
 
   build = ":TSUpdate",
 
-  config = function()
-    require('nvim-treesitter.configs').setup({
+  opts = {
       -- A list of parser names, or "all" (the five listed parsers should always be installed)
       ensure_installed = { "javascript", "typescript", "lua", "vim", "vimdoc", "query" },
 
@@ -22,7 +21,6 @@ return {
         -- Using this option may slow down your editor, and you may see some duplicate highlights.
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
-      },
-    })
-  end
+      }
+  }
 }
