@@ -1,4 +1,5 @@
 Set-Alias pbcopy Set-Clipboard
+Set-Alias pbpaste Get-Clipboard
 
 function Get-AllItems { & ls }
 
