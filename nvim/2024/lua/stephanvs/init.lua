@@ -12,4 +12,7 @@ if not vim.loop.fs_stat(lazy_path) then
 end
 vim.opt.rtp:prepend(lazy_path)
 
-require("lazy").setup("stephanvs")
+require("lazy").setup({
+    spec = "stephanvs.plugins",
+    change_detection = { notify = false },
+})
