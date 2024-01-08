@@ -4,18 +4,27 @@
   "final_space": true,
   "console_title_template": "{{if .Root}}root :: {{end}}{{.Shell}} :: {{.Folder}}",
   "palette": {
+    // Catppuccin colors:
+    "pink": "#F5C2E7",
+    "lavender": "#B4BEFE",
+    "blue":  "#89B4FA",
+    // End Catppuccin colors
     "prompt": "#9FD356",
     "closer": "p:prompt",
-    "os": "#26C6DA",
+    "os": "p:blue",
     "root": "#ffff66",
-    "path": "#ff479c",
+    "path": "#94e2d5",
     "folder": "p:path",
-    "text": "#fafafa",
-    "git": "#ffeb3b",
-    "node": "#98C379",
+    "text": "#cdd6f4",
+    "git-foreground": "#a6e3a1",
+    "git-modified": "#cba6f7",
+    "git-diverged": "#f2cdcd",
+    "git-ahead": "#f2cdcd",
+    "git-behind": "#f2cdcd",
+    "node": "#a6e3a1",
     "dotnet": "p:node",
     "executiontime": "p:os",
-    "error": "#E84855"
+    "error": "#f38ba8"
   },
   "blocks": [
     {
@@ -27,6 +36,7 @@
           "style": "plain",
           "foreground": "p:prompt",
           "foreground_templates": ["{{ if gt .Code 0 }}p:error{{ end }}"],
+          "template": "{{ if .Error }} ERR: {{ .Code }} {{ else }} OK {{ end }}",
           "properties": {
             "always_enabled": true
           }
@@ -56,12 +66,12 @@
         {
           "type": "session",
           "style": "diamond",
-          "foreground": "p:text"
+          "foreground": "p:blue"
         },
         {
           "type": "root",
           "style": "diamond",
-          "foreground": "p:root"
+          "foreground": "p:blue"
         },
         {
           "type": "path",
@@ -75,11 +85,11 @@
         {
           "type": "git",
           "style": "diamond",
-          "foreground": "p:git",
+          "foreground": "p:git-foreground",
           "foreground_templates": [
-            "{{ if or (.Working.Changed) (.Staging.Changed) }}#ffeb3b{{ end }}",
-            "{{ if gt .Ahead 0 }}#2EC4B6{{ end }}",
-            "{{ if gt .Behind 0 }}#8A4FFF{{ end }}"
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:git-modified{{ end }}",
+            "{{ if gt .Ahead 0 }}p:git-ahead{{ end }}",
+            "{{ if gt .Behind 0 }}p:git-behind{{ end }}"
           ],
           "properties": {
             "fetch_stash_count": true,
