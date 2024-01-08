@@ -25,3 +25,5 @@ vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
 
+vim.opt.listchars = "space:·,tab:->,trail:-,nbsp:+"
+vim.opt.list = true
