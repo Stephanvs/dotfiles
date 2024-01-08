@@ -5,26 +5,38 @@
   "console_title_template": "{{if .Root}}root :: {{end}}{{.Shell}} :: {{.Folder}}",
   "palette": {
     // Catppuccin colors:
-    "pink": "#F5C2E7",
-    "lavender": "#B4BEFE",
+    "rosewater": "#f5e0dc",
+    "flamingo": "#f2cdcd",
+    "pink": "#f5c2e7",
+    "mauve": "#cba6f7",
+    "red": "#f38ba8",
+    "maroon": "#eba0ac",
+    "peach": "#fab387",
+    "yellow": "#f9e2af",
+    "green": "#a6e3a1",
+    "teal": "#94e2d5",
+    "sky": "#89dceb",
+    "sapphire": "#74c7ec",
     "blue":  "#89B4FA",
+    "lavender": "#B4BEFE",
+    "text": "#cdd6f4",
+    "base": "#1e1e2e",
     // End Catppuccin colors
-    "prompt": "#9FD356",
+    "prompt": "p:green",
     "closer": "p:prompt",
     "os": "p:blue",
     "root": "#ffff66",
     "path": "#94e2d5",
     "folder": "p:path",
-    "text": "#cdd6f4",
     "git-foreground": "#a6e3a1",
     "git-modified": "#cba6f7",
     "git-diverged": "#f2cdcd",
     "git-ahead": "#f2cdcd",
     "git-behind": "#f2cdcd",
-    "node": "#a6e3a1",
+    "node": "#74c7ec",
     "dotnet": "p:node",
-    "executiontime": "p:os",
-    "error": "#f38ba8"
+    "executiontime": "p:maroon",
+    "error": "p:red"
   },
   "blocks": [
     {
@@ -66,7 +78,8 @@
         {
           "type": "session",
           "style": "diamond",
-          "foreground": "p:blue"
+          "foreground": "p:blue",
+          "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }} "
         },
         {
           "type": "root",
@@ -98,13 +111,13 @@
           }
         },
         {
-          "foreground": "p:node",
-          "properties": {
-            "fetch_version": true
-          },
+          "type": "node",
           "style": "plain",
-          "template": "\ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }} ",
-          "type": "node"
+          "foreground": "p:node",
+          "template": "\ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "properties": {
+              "fetch_version": true
+          }
         },
         {
           "type": "dotnet",
@@ -112,9 +125,10 @@
           "foreground": "p:dotnet"
         },
         {
-          "type": "text",
-          "style": "diamond",
-          "foreground": "p:text"
+            "type": "rust",
+            "style": "powerline",
+            "foreground": "p:red",
+            "template": " {{ .Full }}"
         },
         {
           "type": "executiontime",
