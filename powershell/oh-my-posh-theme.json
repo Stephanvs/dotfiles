@@ -148,7 +148,8 @@
         {
           "style": "plain",
           "foreground": "p:closer",
-          "template": " \uf105",
+          //"template": " \uf105",
+          "template": " <#a6e3a1>\u203a</><#89dceb>\u203a</><#f5c2e7>\u203a</>",
           "type": "text"
         }
       ],
