@@ -30,9 +30,11 @@ alias lx='ls -lXB'    #Sort by extension
 alias lt='ls -ltr'
 alias lk='ls -lSr'
 alias cdl=changeDirectory; function changeDirectory { cd $1 ; la }
+alias cd='cdl'
 
 alias md='mkdir -p'
 alias rd='rmdir'
+alias cwd='pwd | pbcopy'
 
 # Search running processes. Usage: psg <process_name>
 alias psg="ps aux $( [[ -n "$(uname -a | grep CYGWIN )" ]] && echo '-W') | grep -i $1"
