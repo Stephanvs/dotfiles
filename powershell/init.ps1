@@ -22,3 +22,6 @@ function Touch-File
     }
 }
 New-Alias -Name touch Touch-File
+
+function CopyWorkingDirectory { pwd | Set-Clipboard }
+Set-Alias -Name cwd -Value CopyWorkingDirectory -Force -Scope Global
