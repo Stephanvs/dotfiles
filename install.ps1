@@ -4,6 +4,9 @@ $nl = [Environment]::NewLine
 $DOTFILES="$HOME/dotfiles"
 $Source = "$DOTFILES\*"
 
+# Install scoop first
+& ./scoop/install.ps1
+
 # Ignore current file
 $Ignored = @((Get-ChildItem -Path $PSScriptRoot -File -Filter install.ps1).FullName) # Weird powershell hack to exclude current file from the install scripts.
 Write-Debug "Ignored scripts: $Ignored"
