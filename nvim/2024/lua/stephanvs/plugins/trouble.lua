@@ -25,6 +25,9 @@ return {
                 })
             end,
             { desc = "previous diagnostic" })
+
+            vim.keymap.set("n", "<leader>j", ":TroubleToggle<cr>",
+            { desc = "toggle trouble panel" })
         end,
 
         opts = {
