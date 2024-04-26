@@ -21,7 +21,7 @@ alias -g ......='../../../../..'
 alias -g .......='../../../../../..'
 alias -g ........='../../../../../../..'
 
-alias l='ls -la'
+alias l='eza --long --icons --all --group-directories-first --no-filesize'
 #alias ls="ls -h --color='auto'"
 alias lsa='ls -A'
 alias ll='ls -l'
@@ -29,7 +29,7 @@ alias la='ls -lA'
 alias lx='ls -lXB'    #Sort by extension
 alias lt='ls -ltr'
 alias lk='ls -lSr'
-alias cdl=changeDirectory; function changeDirectory { cd $1 ; la }
+alias cdl=changeDirectory; function changeDirectory { cd $1 ; l }
 alias cd='cdl'
 
 alias md='mkdir -p'
