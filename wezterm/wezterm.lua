@@ -37,6 +37,14 @@ config.keys = {
             act.SendKey({ key = "n" }),
         }),
     },
+    {
+        mods = "CMD",
+        key = "k",
+        action = act.Multiple({
+            act.SendKey({ mods = "CTRL", key = "b" }),
+            act.SendKey({ mods = "SHIFT", key = "k" }),
+        }),
+    },
     -- {
     -- Turn off the default CMD-m Hide action, allowing CMD-m to
     -- be potentially recognized and handled by the tab
