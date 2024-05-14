@@ -50,6 +50,11 @@ chars = "\u0002\u004b"
 key = "k"
 mods = "Command"
 
+[[keyboard.bindings]]
+chars = "\u0002\u004a"
+key = "j"
+mods = "Command"
+
 [window]
 dynamic_padding = true
 opacity = 0.9
