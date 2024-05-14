@@ -46,7 +46,7 @@
           "style": "plain",
           "foreground": "p:prompt",
           "foreground_templates": ["{{ if gt .Code 0 }}p:error{{ end }}"],
-          "template": "{{ if .Error }} ERR: {{ .Code }} {{ else }} OK {{ end }}",
+          "template": "{{ if .Error }} [✖]: {{ .Code }} {{ else }} [➜] {{ end }}",
           "properties": {
             "always_enabled": true
           }
