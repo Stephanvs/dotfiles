@@ -38,6 +38,19 @@ config.keys = {
         }),
     },
     -- {
+    -- Turn off the default CMD-m Hide action, allowing CMD-m to
+    -- be potentially recognized and handled by the tab
+    {
+        mods = 'CMD',
+        key = 'm',
+        action = wezterm.action.DisableDefaultAssignment,
+    },
+    {
+        mods = 'CMD',
+        key = 'h',
+        action = wezterm.action.DisableDefaultAssignment,
+    },
+    -- {
     --     mods = "CMD",
     --     key = "~",
     --     action = act.Multiple({
