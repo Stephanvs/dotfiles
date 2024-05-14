@@ -67,7 +67,7 @@ plugins=(
   history-substring-search
   git
   nvm
-  z
+  # z
   extract
   # kubectl
   vi-mode
