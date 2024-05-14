@@ -1,2 +1,2 @@
 mkdir -p $HOME/.config/alacritty
-ln -f -s $DOTFILES/alacritty/alacritty.yml $HOME/.config/alacritty/alacritty.yml
+ln -f -s $DOTFILES/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
