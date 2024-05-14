@@ -10,7 +10,7 @@ config.color_scheme = "Catppuccin Mocha"
 
 config.font = wezterm.font_with_fallback({
     "Berkeley Mono",
-    { family = "Symbols Nerd Font Mono", weight = "Bold", italic = true },
+    { family = "Symbols Nerd Font Mono", weight = "Bold" },
 })
 config.font_size = 14
 
