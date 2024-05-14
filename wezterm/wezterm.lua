@@ -9,7 +9,7 @@ local config = wezterm.config_builder()
 config.color_scheme = "Catppuccin Mocha"
 
 config.font = wezterm.font_with_fallback({
-    "BerkeleyMono Nerd Font",
+    "Berkeley Mono",
     { family = "Symbols Nerd Font Mono", weight = "Bold", italic = true },
 })
 config.font_size = 14
