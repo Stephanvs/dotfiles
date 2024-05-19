@@ -1,6 +1,6 @@
 [user]
-  name = Stephan van Stekelenburg
-  email = stephan@hayman.io
+	name = Stephan van Stekelenburg
+	email = stephan@hayman.io
 [color]
   diff = auto
   status = auto
