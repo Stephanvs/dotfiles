@@ -15,11 +15,13 @@ if wezterm.target_triple ~= 'x86_64-pc-windows-msvc' then
     })
     config.font_size = 12
 else
+    config.window_background_opacity = 0
+    config.win32_system_backdrop = 'Mica'
     config.font = wezterm.font_with_fallback({
         "BerkeleyMono Nerd Font",
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
     })
-    config.font_size = 14
+    config.font_size = 10
 end
 
 config.adjust_window_size_when_changing_font_size = false
