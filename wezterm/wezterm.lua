@@ -6,7 +6,7 @@ local act = wezterm.action
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = "Framer"
 
 if wezterm.target_triple ~= 'x86_64-pc-windows-msvc' then
     config.font = wezterm.font_with_fallback({
