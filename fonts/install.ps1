@@ -11,4 +11,4 @@ foreach ($file in (Get-ChildItem -Path . -Filter *.ttf -Recurse))
     }
 }
 
-Copy-Item -Filter *.ttf -Destination C:\Windows\Fonts\
+Copy-Item *.ttf -Destination C:\Windows\Fonts\
