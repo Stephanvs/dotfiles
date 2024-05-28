@@ -78,13 +78,6 @@
             "Info": ""
         },
         {
-            "Updated": "2024-05-19T16:27:01.0800519+02:00",
-            "Source": "main",
-            "Version": "3.14",
-            "Name": "dark",
-            "Info": ""
-        },
-        {
             "Updated": "2024-05-19T16:22:09.3447503+02:00",
             "Source": "extras",
             "Version": "1.0.9035-18",
@@ -467,13 +460,6 @@
             "Source": "extras",
             "Version": "0.11.0",
             "Name": "terminal-icons",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:31:24.8215423+02:00",
-            "Source": "extras",
-            "Version": "115.11.0",
-            "Name": "thunderbird",
             "Info": ""
         },
         {
