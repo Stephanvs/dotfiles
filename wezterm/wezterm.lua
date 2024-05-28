@@ -8,15 +8,21 @@ local config = wezterm.config_builder()
 
 config.color_scheme = "Framer"
 
-if wezterm.target_triple ~= 'x86_64-pc-windows-msvc' then
+if wezterm.target_triple == 'aarch64-apple-darwin' then
     config.font = wezterm.font_with_fallback({
         "Berkeley Mono",
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
     })
     config.font_size = 12
-else
+elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.window_background_opacity = 0
     config.win32_system_backdrop = 'Mica'
+    config.font = wezterm.font_with_fallback({
+        "BerkeleyMono Nerd Font",
+        { family = "Symbols Nerd Font Mono", weight = "Bold" },
+    })
+    config.font_size = 10
+else
     config.font = wezterm.font_with_fallback({
         "BerkeleyMono Nerd Font",
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
