@@ -79,13 +79,6 @@
         },
         {
             "Info": "",
-            "Source": "main",
-            "Version": "3.14",
-            "Name": "dark",
-            "Updated": "2024-05-19T16:27:01.0800519+02:00"
-        },
-        {
-            "Info": "",
             "Source": "extras",
             "Version": "1.0.9035-18",
             "Name": "discord",
@@ -129,13 +122,6 @@
         {
             "Info": "",
             "Source": "extras",
-            "Version": "5.0.20242.10753",
-            "Name": "fiddler",
-            "Updated": "2024-05-19T16:24:48.0101077+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
             "Version": "124.0.2",
             "Name": "figma",
             "Updated": "2024-05-21T15:29:17.0651628+02:00"
@@ -157,13 +143,6 @@
         {
             "Info": "",
             "Source": "main",
-            "Version": "3.9.1",
-            "Name": "gdrive",
-            "Updated": "2024-05-19T16:25:04.0692074+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "main",
             "Version": "2.45.1",
             "Name": "git",
             "Updated": "2024-05-19T16:20:19.8614883+02:00"
@@ -181,13 +160,6 @@
             "Version": "1.22.3",
             "Name": "go",
             "Updated": "2024-05-19T16:25:25.6563364+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Version": "125.0.6422.77",
-            "Name": "googlechrome",
-            "Updated": "2024-05-22T21:31:08.1327843+02:00"
         },
         {
             "Info": "",
@@ -268,34 +240,6 @@
         },
         {
             "Info": "",
-            "Source": "main",
-            "Version": "22.2.0",
-            "Name": "nodejs",
-            "Updated": "2024-05-19T16:26:43.5253537+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Version": "8.6.7",
-            "Name": "notepadplusplus",
-            "Updated": "2024-05-19T16:26:44.2910291+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Version": "3.7.0",
-            "Name": "notion",
-            "Updated": "2024-05-19T16:26:51.463703+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Version": "1.1.12",
-            "Name": "nvm",
-            "Updated": "2024-05-19T16:26:52.3543861+02:00"
-        },
-        {
-            "Info": "",
             "Source": "extras",
             "Version": "30.1.2",
             "Name": "obs-studio",
@@ -314,13 +258,6 @@
             "Version": "0.25.0",
             "Name": "picotorrent",
             "Updated": "2024-05-19T16:26:59.5755369+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "main",
-            "Version": "9.1.2",
-            "Name": "pnpm",
-            "Updated": "2024-05-21T15:29:21.9503982+02:00"
         },
         {
             "Info": "",
@@ -381,23 +318,9 @@
         {
             "Info": "",
             "Source": "extras",
-            "Version": "5.1.0",
-            "Name": "space-radar",
-            "Updated": "2024-05-19T16:30:13.3214516+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
             "Version": "1.2.37.701.ge66eb7bc",
             "Name": "spotify",
             "Updated": "2024-05-19T16:30:21.4210335+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Version": "3.12.2",
-            "Name": "sqlitebrowser",
-            "Updated": "2024-05-19T16:30:22.9323726+02:00"
         },
         {
             "Info": "",
@@ -461,13 +384,6 @@
             "Version": "0.11.0",
             "Name": "terminal-icons",
             "Updated": "2024-05-19T16:31:20.5016026+02:00"
-        },
-        {
-            "Info": "",
-            "Source": "extras",
-            "Version": "115.11.0",
-            "Name": "thunderbird",
-            "Updated": "2024-05-19T16:31:24.8215423+02:00"
         },
         {
             "Info": "",
