@@ -1,34 +1,24 @@
 local dark_opacity = 0.85
 local light_opacity = 0.9
 
+---@type wezterm
 local wezterm = require('wezterm')
 local act = wezterm.action
+local shortcuts = {}
 
 local config = wezterm.config_builder()
 
-config.color_scheme = "Framer"
-
-if wezterm.target_triple == 'aarch64-apple-darwin' then
-    config.font = wezterm.font_with_fallback({
-        "Berkeley Mono",
-        { family = "Symbols Nerd Font Mono", weight = "Bold" },
-    })
-    config.font_size = 12
-elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
-    config.window_background_opacity = 0
-    config.win32_system_backdrop = 'Mica'
-    config.font = wezterm.font_with_fallback({
-        "BerkeleyMono Nerd Font",
-        { family = "Symbols Nerd Font Mono", weight = "Bold" },
-    })
-    config.font_size = 10
-else
-    config.font = wezterm.font_with_fallback({
-        "BerkeleyMono Nerd Font",
-        { family = "Symbols Nerd Font Mono", weight = "Bold" },
-    })
-    config.font_size = 10
+local map = function(key, mods, action)
+  if type(mods) == "string" then
+    table.insert(shortcuts, { key = key, mods = mods, action = action })
+  elseif type(mods) == "table" then
+    for _, mod in pairs(mods) do
+      table.insert(shortcuts, { key = key, mods = mod, action = action })
+    end
+  end
 end
+
+config.color_scheme = "Framer"
 
 config.adjust_window_size_when_changing_font_size = false
 config.debug_key_events = false
@@ -38,33 +28,83 @@ config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = false
 
--- local SOLID_LEFT_ARROW = wezterm.nerdfonts.pl_right_hard_divider
--- local SOLID_RIGHT_ARROW = wezterm.nerdfonts.pl_left_hard_divider
---
--- config.tab_bar_style = {
---   active_tab_left = wezterm.format {
---     { Background = { Color = '#0b0022' } },
---     { Foreground = { Color = '#2b2042' } },
---     { Text = SOLID_LEFT_ARROW },
---   },
---   active_tab_right = wezterm.format {
---     { Background = { Color = '#0b0022' } },
---     { Foreground = { Color = '#2b2042' } },
---     { Text = SOLID_RIGHT_ARROW },
---   },
---   inactive_tab_left = wezterm.format {
---     { Background = { Color = '#0b0022' } },
---     { Foreground = { Color = '#1b1032' } },
---     { Text = SOLID_LEFT_ARROW },
---   },
---   inactive_tab_right = wezterm.format {
---     { Background = { Color = '#0b0022' } },
---     { Foreground = { Color = '#1b1032' } },
---     { Text = SOLID_RIGHT_ARROW },
---   },
--- }
+config.leader = {
+  key = 'b',
+  mods = 'CTRL',
+  timeout_milliseconds = math.maxinteger
+}
 
-if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+-- KEY BINDINGS
+-- 'hjkl' to move between panes
+map("h", { "CTRL" }, act.ActivatePaneDirection("Left"))
+map("j", { "CTRL" }, act.ActivatePaneDirection("Down"))
+map("k", { "CTRL" }, act.ActivatePaneDirection("Up"))
+map("l", { "CTRL" }, act.ActivatePaneDirection("Right"))
+
+map("|", "LEADER|SHIFT", act.SplitHorizontal({ domain = 'CurrentPaneDomain' }))
+map("-", "LEADER", act.SplitVertical({ domain = 'CurrentPaneDomain' }))
+map("Tab", "CTRL", act.ActivateWindowRelative(1))
+map("Tab", "CTRL|SHIFT", act.ActivateWindowRelative(-1))
+map("c", "LEADER", act.SpawnTab('CurrentPaneDomain'))
+map("z", "LEADER", act.TogglePaneZoomState)
+map("n", "LEADER", act.ActivateTabRelative(1))
+map("p", "LEADER", act.ActivateTabRelative(-1))
+map("x", "LEADER", act.CloseCurrentTab({ confirm = true }))
+map("P", "CTRL", act.ActivateCommandPalette)
+map("r", "LEADER", act.ReloadConfiguration)
+map("w", "LEADER", act.ShowTabNavigator)
+
+-- send <c-b> to terminal when pressing <c-b> <c-b>
+map("b", "LEADER|CTRL", act.SendKey { key = 'b', mods = "CTRL" })
+
+map("r", "LEADER", act.ActivateKeyTable({
+  name = "resize_mode",
+  one_shot = false,
+}))
+
+local key_tables = {
+  resize_mode = {
+    { key = "h", action = act.AdjustPaneSize({ "Left", 1 }) },
+    { key = "j", action = act.AdjustPaneSize({ "Down", 1 }) },
+    { key = "k", action = act.AdjustPaneSize({ "Up", 1 }) },
+    { key = "l", action = act.AdjustPaneSize({ "Right", 1 }) },
+    { key = "LeftArrow", action = act.AdjustPaneSize({ "Left", 1 }) },
+    { key = "DownArrow", action = act.AdjustPaneSize({ "Down", 1 }) },
+    { key = "UpArrow", action = act.AdjustPaneSize({ "Up", 1 }) },
+    { key = "RightArrow", action = act.AdjustPaneSize({ "Right", 1 }) },
+  },
+}
+
+-- add a common escape sequence to all key tables
+for k, _ in pairs(key_tables) do
+  table.insert(key_tables[k], { key = "Escape", action = "PopKeyTable" })
+  table.insert(key_tables[k], { key = "Enter", action = "PopKeyTable" })
+  table.insert(
+    key_tables[k],
+    { key = "c", mods = "CTRL", action = "PopKeyTable" }
+  )
+end
+
+
+----- PLATFORM SPECIFIC CONFIG
+if wezterm.target_triple == 'aarch64-apple-darwin' then
+    config.font = wezterm.font_with_fallback({
+        "Berkeley Mono",
+        { family = "Symbols Nerd Font Mono", weight = "Bold" },
+    })
+    config.font_size = 12
+
+elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+
+    config.default_prog = { 'pwsh', '-nologo' }
+    config.window_background_opacity = 0
+    config.win32_system_backdrop = 'Mica'
+    config.font = wezterm.font_with_fallback({
+        "BerkeleyMono Nerd Font",
+        { family = "Symbols Nerd Font Mono", weight = "Bold" },
+    })
+    config.font_size = 10
+
     config.window_frame = {
       font = wezterm.font_with_fallback({
           "BerkeleyMono Nerd Font",
@@ -90,123 +130,44 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 
     config.window_background_opacity = 0.5
     config.win32_system_backdrop = 'Tabbed'
-    config.default_prog = { 'pwsh', '-nologo' }
 
-    config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
-    config.keys = {
-      {
-        key = "|",
-        mods = "LEADER|SHIFT",
-        action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
-      },
-      {
-        key = "-",
-        mods = "LEADER",
-        action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
-      },
-      {
-        key = "Tab",
-        mods = "CTRL",
-        action = wezterm.action.ActivateWindowRelative(1),
-      },
-      {
-        key = "Tab",
-        mods = "CTRL|SHIFT",
-        action = wezterm.action.ActivateWindowRelative(-1),
-      },
-      {
-        key = "c",
-        mods = "LEADER",
-        action = wezterm.action.SpawnTab 'CurrentPaneDomain',
-      },
-      {
-        key = "z",
-        mods = "LEADER",
-        action = wezterm.action.TogglePaneZoomState,
-      },
-      {
-        key = "p",
-        mods = "LEADER",
-        action = wezterm.action.ActivateTabRelative(-1),
-      },
-      {
-        key = "n",
-        mods = "LEADER",
-        action = wezterm.action.ActivateTabRelative(1),
-      },
-      {
-        key = "x",
-        mods = "LEADER",
-        action = wezterm.action.CloseCurrentTab { confirm = true },
-      },
-      {
-        key = 'P',
-        mods = 'CTRL',
-        action = wezterm.action.ActivateCommandPalette,
-      },
-      {
-        key = 'r',
-        mods = 'LEADER',
-        action = wezterm.action.ReloadConfiguration,
-      },
-      { key = 'w', mods = 'LEADER', action = wezterm.action.ShowTabNavigator },
-      -- send <c-b> to terminal when pressing <c-b> <c-b>
-      {
-        key = "b",
-        mods = "LEADER|CTRL",
-        action = wezterm.action.SendKey { key = 'b', mods = "CTRL" },
-      },
-    }
+else
+    config.font = wezterm.font_with_fallback({
+        "BerkeleyMono Nerd Font",
+        { family = "Symbols Nerd Font Mono", weight = "Bold" },
+    })
+    config.font_size = 10
 end
 
 if wezterm.target_triple ~= 'x86_64-pc-windows-msvc' then
-    config.keys = {
-        {
-            mods = "CTRL",
-            key = "Tab",
-            action = act.Multiple({
-                act.SendKey({ mods = "CTRL", key = "b" }),
-                act.SendKey({ key = "n" }),
-            }),
-        },
-        {
-            mods = "CTRL|SHIFT",
-            key = "Tab",
-            action = act.Multiple({
-                act.SendKey({ mods = "CTRL", key = "b" }),
-                act.SendKey({ key = "n" }),
-            }),
-        },
-        {
-            mods = "CMD",
-            key = "k",
-            action = act.Multiple({
-                act.SendKey({ mods = "CTRL", key = "b" }),
-                act.SendKey({ mods = "SHIFT", key = "k" }),
-            }),
-        },
-        -- {
-        -- Turn off the default CMD-m Hide action, allowing CMD-m to
-        -- be potentially recognized and handled by the tab
-        {
-            mods = 'CMD',
-            key = 'm',
-            action = wezterm.action.DisableDefaultAssignment,
-        },
-        {
-            mods = 'CMD',
-            key = 'h',
-            action = wezterm.action.DisableDefaultAssignment,
-        },
-        -- {
-        --     mods = "CMD",
-        --     key = "~",
-        --     action = act.Multiple({
-        --         act.SendKey({ mods = "CTRL", key = "b" }),
-        --         act.SendKey({ key = "p" }),
-        --     }),
-        -- },
-    }
+  -- map("Tab", "CTRL", act.Multiple({
+  --   act.SendKey({ mods = "CTRL", key = "b" }),
+  --   act.SendKey({ key = "n" }))
+  -- })
+  --
+  -- map("Tab", "CTRL|SHIFT", act.Multiple({
+  --   act.SendKey({ mods = "CTRL", key = "b" }),
+  --   act.SendKey({ key = "n" }),
+  -- }))
+  --
+  -- map("k", "CMD", act.Multiple({
+  --   act.SendKey({ mods = "CTRL", key = "b" }),
+  --   act.SendKey({ mods = "SHIFT", key = "k" }),
+  -- }))
+
+  -- Turn off the default CMD-m Hide action, allowing CMD-m to
+  -- be potentially recognized and handled by the tab
+  map("m", "CMD", act.DisableDefaultAssignment)
+  map("h", "CMD", act.DisableDefaultAssignment)
+  map("~", "CMD", act.Multiple({
+    act.SendKey({ mods = "CTRL", key = "b" }),
+    act.SendKey({ key = "p" }),
+  }))
+
 end
+
+config.keys = shortcuts
+config.disable_default_key_bindings = true
+config.key_tables = key_tables
 
 return config
