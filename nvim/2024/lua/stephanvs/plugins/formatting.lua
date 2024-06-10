@@ -2,13 +2,13 @@ return {
     {
       'mhartington/formatter.nvim',
       config = function()
-        local formatter_prettier = { require('formatter.defaults.prettier') }
+        local formatter = { require('formatter.defaults.biome') }
         require("formatter").setup({
           filetype = {
-            javascript      = formatter_prettier,
-            javascriptreact = formatter_prettier,
-            typescript      = formatter_prettier,
-            typescriptreact = formatter_prettier,
+            javascript      = formatter,
+            javascriptreact = formatter,
+            typescript      = formatter,
+            typescriptreact = formatter,
           }
         })
         -- automatically format buffer before writing to disk:
