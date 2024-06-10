@@ -111,6 +111,11 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
         action = wezterm.action.SpawnTab 'CurrentPaneDomain',
       },
       {
+        key = "z",
+        mods = "LEADER",
+        action = wezterm.action.TogglePaneZoomState,
+      },
+      {
         key = "p",
         mods = "LEADER",
         action = wezterm.action.ActivateTabRelative(-1),
