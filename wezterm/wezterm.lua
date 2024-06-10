@@ -79,6 +79,15 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
         inactive_tab_edge = '#575757',
       }
     }
+    local mux = wezterm.mux
+    wezterm.on("gui-startup", function()
+      local tab, pane, window = mux.spawn_window {}
+      window:gui_window():maximize()
+    end)
+    wezterm.on("window-config", function(window, pane)
+      window:gui_window():maximize()
+    end)
+
     config.window_background_opacity = 0.5
     config.win32_system_backdrop = 'Tabbed'
     config.default_prog = { 'pwsh', '-nologo' }
