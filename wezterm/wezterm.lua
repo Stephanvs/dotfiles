@@ -96,6 +96,16 @@ if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
         action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
       },
       {
+        key = "Tab",
+        mods = "CTRL",
+        action = wezterm.action.ActivateWindowRelative(1),
+      },
+      {
+        key = "Tab",
+        mods = "CTRL|SHIFT",
+        action = wezterm.action.ActivateWindowRelative(-1),
+      },
+      {
         key = "c",
         mods = "LEADER",
         action = wezterm.action.SpawnTab 'CurrentPaneDomain',
