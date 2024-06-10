@@ -37,7 +37,28 @@ config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 
 if wezterm.target_triple == 'x86_64-pc-windows-msvc' then
+    config.window_background_opacity = 0
+    config.win32_system_backdrop = 'Tabbed'
     config.default_prog = { 'pwsh', '-nologo' }
+    config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
+    config.keys = {
+      {
+        key = "|",
+        mods = "LEADER|SHIFT",
+        action = wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }
+      },
+      {
+        key = "-",
+        mods = "LEADER",
+        action = wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }
+      },
+      -- send <c-b> to terminal when pressing <c-b> <c-b>
+      {
+        key = "b",
+        mods = "LEADER|CTRL",
+        action = wezterm.action.SendKey { key = 'b', mods = "CTRL" },
+      },
+    }
 end
 
 if wezterm.target_triple ~= 'x86_64-pc-windows-msvc' then
