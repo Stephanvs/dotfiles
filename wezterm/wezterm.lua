@@ -18,7 +18,24 @@ local map = function(key, mods, action)
   end
 end
 
-config.color_scheme = "Framer"
+-- config.color_scheme = "Framer"
+function scheme_for_appearance(appearance)
+  if appearance:find 'Dark' then
+    return 'Framer'
+  else
+    return 'Framer'
+  end
+end
+
+wezterm.on('window-config-reloaded', function(window, pane)
+  local overrides = window:get_config_overrides() or {}
+  local appearance = window:get_appearance()
+  local scheme = scheme_for_appearance(appearance)
+  if overrides.color_scheme ~= scheme then
+    overrides.color_scheme = scheme
+    window:set_config_overrides(overrides)
+  end
+end)
 
 config.adjust_window_size_when_changing_font_size = false
 config.debug_key_events = false
@@ -27,6 +44,11 @@ config.tab_bar_at_bottom = true
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
 config.use_fancy_tab_bar = false
+config.inactive_pane_hsb = {
+  saturation = 0,
+  brightness = 1,
+}
+config.text_background_opacity = 1
 
 config.leader = {
   key = 'b',
@@ -128,7 +150,7 @@ elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
       window:gui_window():maximize()
     end)
 
-    config.window_background_opacity = 0.5
+    config.window_background_opacity = .85
     config.win32_system_backdrop = 'Tabbed'
 
 else
