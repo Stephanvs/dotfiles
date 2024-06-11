@@ -189,7 +189,7 @@ if wezterm.target_triple ~= 'x86_64-pc-windows-msvc' then
 end
 
 config.keys = shortcuts
-config.disable_default_key_bindings = true
+-- config.disable_default_key_bindings = true
 config.key_tables = key_tables
 
 return config
