@@ -56,7 +56,6 @@ key = "j"
 mods = "Command"
 
 [window]
-decorations = "Buttonless"
 dynamic_padding = true
 opacity = 0.9
 option_as_alt = "Both"
