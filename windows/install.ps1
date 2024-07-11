@@ -1,7 +1,26 @@
+Set-ExecutionPolicy Unrestricted -Scope Process
+
+& ([scriptblock]::Create((irm "https://win11debloat.raphi.re/"))) `
+  -DisableDVR `
+  -DisableTelemetry `
+  -DisableBing `
+  -DisableSuggestions `
+  -DisableLockscreenTips `
+  -RevertContextMenu `
+  -ShowHiddenFolders `
+  -ShowKnownFileExt `
+  -HideDupliDrive `
+  -TaskbarAlignLeft `
+  -ShowSearchBoxTb `
+  -HideChat `
+  -DisableWidgets `
+  -DisableCopilot `
+  -DisableRecall `
+  -HideGallery `
+  -Silent
+
 Invoke-Command {reg import ./keyboard-rate.reg *>&1 | Out-Null}
 
-& ./Remove-StartMenuWidgets.ps1
-& ./left-align-start-menu.ps1
-& ./Decrap.ps1
+& ./Taskbar-CombineApps.ps1
 
 & ./Install-Apps.ps1
