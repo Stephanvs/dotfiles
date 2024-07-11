@@ -1,540 +1,246 @@
 {
-    "apps": [
-        {
-            "Updated": "2024-05-21T15:28:34.8082606+02:00",
-            "Source": "main",
-            "Version": "2.29.0",
-            "Name": "1password-cli",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:20:06.885993+02:00",
-            "Source": "main",
-            "Version": "24.05",
-            "Name": "7zip",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:21:15.20807+02:00",
-            "Source": "extras",
-            "Version": "0.13.2",
-            "Name": "alacritty",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:21:18.75694+02:00",
-            "Source": "extras",
-            "Version": "24.4.28.0",
-            "Name": "archwsl",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-24T22:33:56.917539+02:00",
-            "Source": "main",
-            "Version": "2.15.58",
-            "Name": "aws",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:21:37.2918003+02:00",
-            "Source": "main",
-            "Version": "1.7.3",
-            "Name": "biome",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:21:55.8414111+02:00",
-            "Source": "extras",
-            "Version": "4.1.1",
-            "Name": "blender",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-27T09:28:57.8857635+02:00",
-            "Source": "main",
-            "Version": "1.1.10",
-            "Name": "bun",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:22:03.0467539+02:00",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1",
-            "Name": "CascadiaCode-NF",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:22:04.7343655+02:00",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1",
-            "Name": "CascadiaMono-NF",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-22T21:31:01.6784579+02:00",
-            "Source": "main",
-            "Version": "8.8.0_1",
-            "Name": "curl",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:22:09.3447503+02:00",
-            "Source": "extras",
-            "Version": "1.0.9035-18",
-            "Name": "discord",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T20:08:02.7453783+02:00",
-            "Source": "main",
-            "Version": "8.0.300",
-            "Name": "dotnet-sdk",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:22:10.797971+02:00",
-            "Source": "scoop-elevate",
-            "Version": "1.1",
-            "Name": "elevate",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:24:27.6191061+02:00",
-            "Source": "games",
-            "Version": "15.17.1",
-            "Name": "epic-games-launcher",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-21T15:29:13.7556228+02:00",
-            "Source": "main",
-            "Version": "27.0",
-            "Name": "erlang",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:24:42.2876865+02:00",
-            "Source": "main",
-            "Version": "0.18.16",
-            "Name": "eza",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-27T09:28:58.8532111+02:00",
-            "Source": "extras",
-            "Version": "5.0.20243.10853",
-            "Name": "fiddler",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-21T15:29:17.0651628+02:00",
-            "Source": "extras",
-            "Version": "124.0.2",
-            "Name": "figma",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-24T22:32:22.3438072+02:00",
-            "Source": "extras",
-            "Version": "1.98.0",
-            "Name": "fork",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:25:03.0803877+02:00",
-            "Source": "main",
-            "Version": "0.52.1",
-            "Name": "fzf",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:25:04.0692074+02:00",
-            "Source": "main",
-            "Version": "3.9.1",
-            "Name": "gdrive",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:20:19.8614883+02:00",
-            "Source": "main",
-            "Version": "2.45.1",
-            "Name": "git",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-28T10:59:19.4167802+02:00",
-            "Source": "main",
-            "Version": "1.2.0",
-            "Name": "gleam",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:25:25.6563364+02:00",
-            "Source": "main",
-            "Version": "1.22.3",
-            "Name": "go",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-24T22:26:59.7228582+02:00",
-            "Source": "extras",
-            "Version": "125.0.6422.113",
-            "Name": "googlechrome",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:25:31.0838919+02:00",
-            "Source": "extras",
-            "Version": "8.2.0.7535",
-            "Name": "ilspy",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:25:32.0529942+02:00",
-            "Source": "main",
-            "Version": "0.50",
-            "Name": "innounp",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:25:40.2910558+02:00",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1",
-            "Name": "Iosevka-NF",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:25:43.4646878+02:00",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1",
-            "Name": "JetBrainsMono-NF",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:30.5678466+02:00",
-            "Source": "extras",
-            "Version": "8.0.2",
-            "Name": "kicad",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:31.4746852+02:00",
-            "Source": "extras",
-            "Version": "0.42.0",
-            "Name": "lazygit",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:32.3502473+02:00",
-            "Source": "extras",
-            "Version": "1.0.3",
-            "Name": "litedb-studio",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:33.8044165+02:00",
-            "Source": "extras",
-            "Version": "5.0.1",
-            "Name": "moonlight",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-22T21:31:09.3051774+02:00",
-            "Source": "extras",
-            "Version": "2.2.248",
-            "Name": "msbuild-structured-log-viewer",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:38.3683834+02:00",
-            "Source": "main",
-            "Version": "0.10.0",
-            "Name": "neovim",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:38.7434074+02:00",
-            "Source": "main",
-            "Version": "1.12",
-            "Name": "netcat",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:43.5253537+02:00",
-            "Source": "main",
-            "Version": "22.2.0",
-            "Name": "nodejs",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:44.2910291+02:00",
-            "Source": "extras",
-            "Version": "8.6.7",
-            "Name": "notepadplusplus",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-24T22:27:03.6340923+02:00",
-            "Source": "extras",
-            "Version": "3.8.1",
-            "Name": "notion",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:52.3543861+02:00",
-            "Source": "main",
-            "Version": "1.1.12",
-            "Name": "nvm",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:56.8248653+02:00",
-            "Source": "extras",
-            "Version": "30.1.2",
-            "Name": "obs-studio",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-28T10:59:32.3391308+02:00",
-            "Source": "main",
-            "Version": "20.2.2",
-            "Name": "oh-my-posh",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:26:59.5755369+02:00",
-            "Source": "extras",
-            "Version": "0.25.0",
-            "Name": "picotorrent",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-28T11:00:43.6973777+02:00",
-            "Source": "main",
-            "Version": "9.1.3",
-            "Name": "pnpm",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-22T21:31:32.5277855+02:00",
-            "Source": "extras",
-            "Version": "0.81.0",
-            "Name": "powertoys",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-24T22:27:26.4577677+02:00",
-            "Source": "extras",
-            "Version": "27.0",
-            "Name": "protobuf",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:27:25.1129681+02:00",
-            "Source": "main",
-            "Version": "7.4.2",
-            "Name": "pwsh",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:27:44.0980706+02:00",
-            "Source": "main",
-            "Version": "3.12.3",
-            "Name": "python",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:28:27.0609079+02:00",
-            "Source": "extras",
-            "Version": "2024.1.2-241.15989.179",
-            "Name": "rider",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:28:27.8650566+02:00",
-            "Source": "main",
-            "Version": "14.1.0",
-            "Name": "ripgrep",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-24T21:51:06.0553484+02:00",
-            "Source": "extras",
-            "Version": "4.5",
-            "Name": "rufus",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:29:53.9962324+02:00",
-            "Source": "main",
-            "Version": "1.78.0",
-            "Name": "rust",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:30:07.9839371+02:00",
-            "Source": "main",
-            "Version": "1.27.1",
-            "Name": "rustup",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:30:13.3214516+02:00",
-            "Source": "extras",
-            "Version": "5.1.0",
-            "Name": "space-radar",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-24T22:27:35.3687911+02:00",
-            "Source": "extras",
-            "Version": "1.2.38.720.ga4a70a0e",
-            "Name": "spotify",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:30:22.9323726+02:00",
-            "Source": "extras",
-            "Version": "3.12.2",
-            "Name": "sqlitebrowser",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:30:24.8820121+02:00",
-            "Source": "extras",
-            "Version": "3.4.4",
-            "Name": "sqlitestudio",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:30:25.418558+02:00",
-            "Source": "games",
-            "Version": "nightly-20240519",
-            "Name": "steam",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:30:57.2670433+02:00",
-            "Source": "extras",
-            "Version": "24.1",
-            "Name": "stellarium",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:23:44.581733+02:00",
-            "Source": "main",
-            "Version": "0.2020.01.26",
-            "Name": "sudo",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:30:58.7262701+02:00",
-            "Source": "extras",
-            "Version": "0.23.1",
-            "Name": "sunshine",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:31:06.5862396+02:00",
-            "Source": "extras",
-            "Version": "2024.2.13",
-            "Name": "sysinternals",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-22T21:35:58.562937+02:00",
-            "Source": "extras",
-            "Version": "1.66.4",
-            "Name": "tailscale",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:31:20.2806405+02:00",
-            "Source": "extras",
-            "Version": "15.53.7",
-            "Name": "teamviewer",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:31:20.5016026+02:00",
-            "Source": "extras",
-            "Version": "0.11.0",
-            "Name": "terminal-icons",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:31:26.5892883+02:00",
-            "Source": "extras",
-            "Version": "4.0.5",
-            "Name": "transmission",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:31:29.899466+02:00",
-            "Source": "nerd-fonts",
-            "Version": "3.2.1",
-            "Name": "VictorMono-NF",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:31:33.0081614+02:00",
-            "Source": "extras",
-            "Version": "3.0.20",
-            "Name": "vlc",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:31:37.818717+02:00",
-            "Source": "extras",
-            "Version": "1.89.1",
-            "Name": "vscode",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T23:35:56.5676811+02:00",
-            "Source": "extras",
-            "Version": "20240203-110809-5046fc22",
-            "Name": "wezterm",
-            "Info": ""
-        },
-        {
-            "Updated": "2024-05-19T16:31:38.6177141+02:00",
-            "Source": "main",
-            "Version": "0.9.4",
-            "Name": "zoxide",
-            "Info": ""
-        }
-    ],
     "buckets": [
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main",
-            "Updated": "2024-05-28T10:29:07+02:00",
-            "Manifests": 1325
+            "Updated": "2024-07-11T18:29:13+02:00",
+            "Manifests": 1332
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2024-05-28T10:31:22+02:00",
-            "Manifests": 2027
+            "Updated": "2024-07-11T18:34:19+02:00",
+            "Manifests": 2044
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
-            "Updated": "2024-05-26T17:20:11+02:00",
+            "Updated": "2024-07-05T08:27:51+02:00",
             "Manifests": 336
         },
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2024-05-28T06:27:21+02:00",
-            "Manifests": 300
+            "Updated": "2024-07-11T18:27:28+02:00",
+            "Manifests": 310
         },
         {
             "Name": "scoop-elevate",
             "Source": "https://github.com/stephanvs/scoop-elevate.git",
             "Updated": "2024-01-19T10:51:12+01:00",
             "Manifests": 0
+        }
+    ],
+    "apps": [
+        {
+            "Version": "2.29.0",
+            "Source": "main",
+            "Updated": "2024-07-11T09:34:17.8440302+02:00",
+            "Name": "1password-cli",
+            "Info": ""
+        },
+        {
+            "Version": "24.07",
+            "Source": "main",
+            "Updated": "2024-07-10T16:24:00.629825+02:00",
+            "Name": "7zip",
+            "Info": ""
+        },
+        {
+            "Version": "0.13.2",
+            "Source": "extras",
+            "Updated": "2024-07-11T09:34:19.2510187+02:00",
+            "Name": "alacritty",
+            "Info": ""
+        },
+        {
+            "Version": "24.4.28.0",
+            "Source": "extras",
+            "Updated": "2024-07-11T09:34:27.8969102+02:00",
+            "Name": "archwsl",
+            "Info": ""
+        },
+        {
+            "Version": "2.17.12",
+            "Source": "main",
+            "Updated": "2024-07-11T09:35:09.630266+02:00",
+            "Name": "aws",
+            "Info": ""
+        },
+        {
+            "Version": "1.8.3",
+            "Source": "main",
+            "Updated": "2024-07-11T09:35:11.7802551+02:00",
+            "Name": "biome",
+            "Info": ""
+        },
+        {
+            "Version": "4.1.1",
+            "Source": "extras",
+            "Updated": "2024-07-11T09:36:43.4814625+02:00",
+            "Name": "blender",
+            "Info": ""
+        },
+        {
+            "Version": "1.1.18",
+            "Source": "main",
+            "Updated": "2024-07-11T09:37:07.0944891+02:00",
+            "Name": "bun",
+            "Info": ""
+        },
+        {
+            "Version": "3.2.1",
+            "Source": "nerd-fonts",
+            "Updated": "2024-07-11T09:37:13.9269714+02:00",
+            "Name": "CascadiaCode-NF",
+            "Info": ""
+        },
+        {
+            "Version": "3.2.1",
+            "Source": "nerd-fonts",
+            "Updated": "2024-07-11T09:37:21.3082074+02:00",
+            "Name": "CascadiaMono-NF",
+            "Info": ""
+        },
+        {
+            "Version": "8.8.0_3",
+            "Source": "main",
+            "Updated": "2024-07-11T09:37:27.5472442+02:00",
+            "Name": "curl",
+            "Info": ""
+        },
+        {
+            "Version": "3.14",
+            "Source": "main",
+            "Updated": "2024-07-11T10:08:21.2023318+02:00",
+            "Name": "dark",
+            "Info": ""
+        },
+        {
+            "Version": "1.0.9035-18",
+            "Source": "extras",
+            "Updated": "2024-07-11T09:37:51.9581632+02:00",
+            "Name": "discord",
+            "Info": ""
+        },
+        {
+            "Version": "8.0.303",
+            "Source": "main",
+            "Updated": "2024-07-11T09:39:32.5995588+02:00",
+            "Name": "dotnet-sdk",
+            "Info": ""
+        },
+        {
+            "Version": "1.1",
+            "Source": "scoop-elevate",
+            "Updated": "2024-07-11T09:39:34.3316389+02:00",
+            "Name": "elevate",
+            "Info": ""
+        },
+        {
+            "Version": null,
+            "Source": null,
+            "Updated": "2024-07-11T09:39:45.4012823+02:00",
+            "Name": "epic-games-launcher",
+            "Info": "Install failed"
+        },
+        {
+            "Version": "0.18.21",
+            "Source": "main",
+            "Updated": "2024-07-11T17:14:22.49007+02:00",
+            "Name": "eza",
+            "Info": ""
+        },
+        {
+            "Version": "1.98.0",
+            "Source": "extras",
+            "Updated": "2024-07-11T11:29:41.0223381+02:00",
+            "Name": "fork",
+            "Info": ""
+        },
+        {
+            "Version": "2.45.2",
+            "Source": "main",
+            "Updated": "2024-07-10T16:24:47.7269322+02:00",
+            "Name": "git",
+            "Info": ""
+        },
+        {
+            "Version": "0.50",
+            "Source": "main",
+            "Updated": "2024-07-11T10:08:11.3243888+02:00",
+            "Name": "innounp",
+            "Info": ""
+        },
+        {
+            "Version": "0.42.0",
+            "Source": "extras",
+            "Updated": "2024-07-11T17:09:09.9358395+02:00",
+            "Name": "lazygit",
+            "Info": ""
+        },
+        {
+            "Version": "3.9.6",
+            "Source": "extras",
+            "Updated": "2024-07-11T14:06:54.5501577+02:00",
+            "Name": "notion",
+            "Info": ""
+        },
+        {
+            "Version": "21.23.4",
+            "Source": "main",
+            "Updated": "2024-07-11T17:55:45.144065+02:00",
+            "Name": "oh-my-posh",
+            "Info": ""
+        },
+        {
+            "Version": "0.82.0",
+            "Source": "extras",
+            "Updated": "2024-07-11T14:25:42.1436587+02:00",
+            "Name": "powertoys",
+            "Info": ""
+        },
+        {
+            "Version": "7.4.3",
+            "Source": "main",
+            "Updated": "2024-07-10T18:04:54.031401+02:00",
+            "Name": "pwsh",
+            "Info": ""
+        },
+        {
+            "Version": "2024.1.4-241.18034.76",
+            "Source": "extras",
+            "Updated": "2024-07-10T18:12:04.8143707+02:00",
+            "Name": "rider",
+            "Info": ""
+        },
+        {
+            "Version": "0.2020.01.26",
+            "Source": "main",
+            "Updated": "2024-07-11T09:57:30.9670103+02:00",
+            "Name": "sudo",
+            "Info": ""
+        },
+        {
+            "Version": "0.11.0",
+            "Source": "extras",
+            "Updated": "2024-07-11T21:13:16.2091389+02:00",
+            "Name": "terminal-icons",
+            "Info": ""
+        },
+        {
+            "Version": "1.91.1",
+            "Source": "extras",
+            "Updated": "2024-07-11T20:30:46.0119115+02:00",
+            "Name": "vscode",
+            "Info": ""
+        },
+        {
+            "Version": "0.9.4",
+            "Source": "main",
+            "Updated": "2024-07-11T17:13:46.1344632+02:00",
+            "Name": "zoxide",
+            "Info": ""
         }
     ]
 }
