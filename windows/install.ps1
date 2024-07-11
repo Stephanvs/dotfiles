@@ -22,5 +22,5 @@ Set-ExecutionPolicy Unrestricted -Scope Process
 Invoke-Command {reg import ./keyboard-rate.reg *>&1 | Out-Null}
 
 & $PSScriptRoot/Taskbar-CombineApps.ps1
-
+& $PSScriptRoot/Remove-DesktopShortcuts.ps1
 & $PSScriptRoot/Install-Apps.ps1
