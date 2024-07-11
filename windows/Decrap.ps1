@@ -23,4 +23,3 @@ foreach ($App in $AppPackages) {
 
 # Restart explorer process to apply changes
 Stop-Process -Name explorer -Force
-# Start-Process explorer.exe
