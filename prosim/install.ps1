@@ -1,0 +1,1 @@
+[Environment]::SetEnvironmentVariable('HOST_IPV4', 'activation.prosim-ar.com', 'Machine')
