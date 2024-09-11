@@ -46,7 +46,7 @@
           "style": "plain",
           "foreground": "p:prompt",
           "foreground_templates": ["{{ if gt .Code 0 }}p:error{{ end }}"],
-          "template": "{{ if .Error }} [✖]: {{ .Code }} {{ else }} [➜] {{ end }}",
+          "template": "{{ if .Error }}[\uebfb]: {{ .Code }}{{ else }}[\u2192]{{ end }}",
           "properties": {
             "always_enabled": true
           }
@@ -77,7 +77,7 @@
           "type": "session",
           "style": "diamond",
           "foreground": "p:blue",
-          "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }} "
+          "template": " {{ if .SSHSession }}\udb82\udcc0 {{ end }}{{ .UserName }}@{{ .HostName }} "
         },
         {
           "type": "root",
@@ -146,7 +146,7 @@
         {
           "style": "plain",
           "foreground": "p:closer",
-          "template": " <#a6e3a1>\u203a</><#89dceb>\u203a</><#f5c2e7>\u203a</>",
+          "template": " <#f5c2e7>\udb81\ude27</>",
           "type": "text"
         }
       ],
