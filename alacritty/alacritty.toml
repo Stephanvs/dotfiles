@@ -1,5 +1,5 @@
-import = ["/Users/stephanvs/dotfiles/alacritty/catppuccin-mocha.toml"]
-live_config_reload = true
+general.import = ["/Users/stephanvs/dotfiles/alacritty/catppuccin-mocha.toml"]
+general.live_config_reload = true
 
 [colors]
 draw_bold_text_with_bright_colors = true
