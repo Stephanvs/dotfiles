@@ -37,7 +37,6 @@ bars:
     widgets:
       left:
         [
-          "win_button",
           "komorebi_workspaces",
           "komorebi_active_layout",
           "active_window"
@@ -175,7 +174,7 @@ widgets:
         label_workspace_btn: "\udb81\udc3d"
         label_workspace_active_btn: "\udb81\udc3e"
         label_default_name: "{index}"
-        label_zero_index: false
+        label_zero_index: true
         hide_empty_workspaces: false
         hide_if_offline: false
 
