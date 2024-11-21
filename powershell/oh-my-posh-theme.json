@@ -55,6 +55,7 @@
           "properties": {
             "alpine": "\uf300",
             "arch": "\uf303",
+            "cache_duration": "none",
             "centos": "\uf304",
             "debian": "\uf306",
             "elementary": "\uf309",
@@ -86,6 +87,24 @@
         },
         {
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": " {{ if .SSHSession }}\udb82\udcc0 {{ end }}{{ .UserName }}@{{ .HostName }} ",
+          "foreground": "p:blue",
+          "type": "session",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "foreground": "p:blue",
+          "type": "root",
+          "style": "diamond"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "folder_icon": "<p:folder> \ue5fe </>",
             "style": "agnoster"
           },
@@ -130,6 +149,16 @@
         },
         {
           "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue7a8 {{ .Full }}",
+          "foreground": "p:red",
+          "type": "rust",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
             "style": "roundrock",
             "threshold": 500
           },

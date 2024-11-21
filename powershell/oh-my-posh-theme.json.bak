@@ -1,0 +1,156 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+  "console_title_template": "{{if .Root}}root :: {{end}}{{.Shell}} :: {{.Folder}}",
+  "palette": {
+    "rosewater": "#f5e0dc",
+    "flamingo": "#f2cdcd",
+    "pink": "#f5c2e7",
+    "mauve": "#cba6f7",
+    "red": "#f38ba8",
+    "maroon": "#eba0ac",
+    "peach": "#fab387",
+    "yellow": "#f9e2af",
+    "green": "#a6e3a1",
+    "teal": "#94e2d5",
+    "sky": "#89dceb",
+    "sapphire": "#74c7ec",
+    "blue":  "#89B4FA",
+    "lavender": "#B4BEFE",
+    "text": "#cdd6f4",
+    "base": "#1e1e2e",
+    "prompt": "p:green",
+    "closer": "p:prompt",
+    "os": "p:blue",
+    "root": "#ffff66",
+    "path": "#94e2d5",
+    "folder": "p:path",
+    "git-foreground": "#a6e3a1",
+    "git-modified": "#cba6f7",
+    "git-diverged": "#f2cdcd",
+    "git-ahead": "#f2cdcd",
+    "git-behind": "#f2cdcd",
+    "node": "#74c7ec",
+    "dotnet": "p:node",
+    "executiontime": "p:maroon",
+    "error": "p:red"
+  },
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "p:prompt",
+          "foreground_templates": ["{{ if gt .Code 0 }}p:error{{ end }}"],
+          "template": "{{ if .Error }}[\uebfb]: {{ .Code }}{{ else }}[\u2192]{{ end }}",
+          "properties": {
+            "always_enabled": true
+          }
+        },
+        {
+          "type": "os",
+          "style": "diamond",
+          "foreground": "p:os",
+          "properties": {
+            "alpine": "\uf300",
+            "arch": "\uf303",
+            "centos": "\uf304",
+            "debian": "\uf306",
+            "elementary": "\uf309",
+            "fedora": "\uf30a",
+            "gentoo": "\uf30d",
+            "linux": "\ue712",
+            "macos": "\ue711",
+            "manjaro": "\uf312",
+            "mint": "\uf30f",
+            "opensuse": "\uf314",
+            "raspbian": "\uf315",
+            "ubuntu": "\uf31c",
+            "windows": "\ue70f"
+          }
+        },
+        {
+          "type": "session",
+          "style": "diamond",
+          "foreground": "p:blue",
+          "template": " {{ if .SSHSession }}\udb82\udcc0 {{ end }}{{ .UserName }}@{{ .HostName }} "
+        },
+        {
+          "type": "root",
+          "style": "diamond",
+          "foreground": "p:blue"
+        },
+        {
+          "type": "path",
+          "style": "diamond",
+          "foreground": "p:path",
+          "properties": {
+            "folder_icon": "<p:folder> \ue5fe </>",
+            "style": "agnoster"
+          }
+        },
+        {
+          "type": "git",
+          "style": "diamond",
+          "foreground": "p:git-foreground",
+          "foreground_templates": [
+            "{{ if or (.Working.Changed) (.Staging.Changed) }}p:git-modified{{ end }}",
+            "{{ if gt .Ahead 0 }}p:git-ahead{{ end }}",
+            "{{ if gt .Behind 0 }}p:git-behind{{ end }}"
+          ],
+          "properties": {
+            "fetch_stash_count": true,
+            "fetch_status": true,
+            "fetch_upstream_icon": true
+          }
+        },
+        {
+          "type": "node",
+          "style": "plain",
+          "foreground": "p:node",
+          "template": "\ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "properties": {
+              "fetch_version": true
+          }
+        },
+        {
+          "type": "dotnet",
+          "style": "diamond",
+          "foreground": "p:dotnet"
+        },
+        {
+            "type": "rust",
+            "style": "powerline",
+            "foreground": "p:red",
+            "template": " {{ .Full }}"
+        },
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "p:executiontime",
+          "properties": {
+            "style": "roundrock",
+            "threshold": 500
+          }
+        }
+      ]
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "style": "plain",
+          "foreground": "p:closer",
+          "template": " <#f5c2e7>\udb81\ude27</>",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ]
+}
