@@ -87,23 +87,6 @@
         },
         {
           "properties": {
-            "cache_duration": "none"
-          },
-          "template": " {{ if .SSHSession }}\udb82\udcc0 {{ end }}{{ .UserName }}@{{ .HostName }} ",
-          "foreground": "p:blue",
-          "type": "session",
-          "style": "diamond"
-        },
-        {
-          "properties": {
-            "cache_duration": "none"
-          },
-          "foreground": "p:blue",
-          "type": "root",
-          "style": "diamond"
-        },
-        {
-          "properties": {
             "cache_duration": "none",
             "folder_icon": "<p:folder> \ue5fe </>",
             "style": "agnoster"
