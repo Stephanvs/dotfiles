@@ -1,6 +1,6 @@
-import = ['C:\Users\steph\dotfiles/alacritty/catppuccin-mocha.yml']
-live_config_reload = true
-working_directory = "E:/Code/"
+general.import = ['C:\Users\steph\dotfiles/alacritty/catppuccin-mocha.yml']
+general.live_config_reload = true
+general.working_directory = "E:/Code/"
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -26,7 +26,7 @@ style = "Italic"
 family = "BerkeleyMono Nerd Font"
 style = "Regular"
 
-[shell]
+[terminal.shell]
 args = ["-NoLogo"]
 program = "pwsh.exe"
 
