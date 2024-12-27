@@ -1,0 +1,2494 @@
+[2024-12-12][13:02:29] [ncspot::authentication] [INFO] Using cached credentials
+[2024-12-12][13:02:29] [ncspot::spotify] [DEBUG] No HTTP proxy set
+[2024-12-12][13:02:29] [librespot_core::session] [DEBUG] new Session
+[2024-12-12][13:02:29] [librespot::component] [DEBUG] new ApResolver
+[2024-12-12][13:02:29] [librespot_core::http_client] [DEBUG] Requesting https://apresolve.spotify.com/?type=accesspoint&type=dealer&type=spclient
+[2024-12-12][13:02:29] [hyper_rustls::config] [DEBUG] with_native_roots processed 48 valid and 0 invalid certs
+[2024-12-12][13:02:29] [hyper_rustls::config] [DEBUG] with_native_roots processed 48 valid and 0 invalid certs
+[2024-12-12][13:02:29] [rustls::client::hs] [DEBUG] No cached session for DnsName("apresolve.spotify.com")
+[2024-12-12][13:02:29] [rustls::client::hs] [DEBUG] Not resuming any session
+[2024-12-12][13:02:29] [rustls::client::hs] [TRACE] Sending ClientHello Message {
+    version: TLSv1_0,
+    payload: Handshake {
+        parsed: HandshakeMessagePayload {
+            typ: ClientHello,
+            payload: ClientHello(
+                ClientHelloPayload {
+                    client_version: TLSv1_2,
+                    random: 19cd75193f0772dc90def0ef9d07b299e835d5efe2afd2877df12a2cc9ae2a1d,
+                    session_id: cfe8ce01bbe745e20ed8930cabf33a46e6a2a9b347d6af44043150a3aed45047,
+                    cipher_suites: [
+                        TLS13_AES_256_GCM_SHA384,
+                        TLS13_AES_128_GCM_SHA256,
+                        TLS13_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_EMPTY_RENEGOTIATION_INFO_SCSV,
+                    ],
+                    compression_methods: [
+                        Null,
+                    ],
+                    extensions: [
+                        SessionTicket(
+                            Request,
+                        ),
+                        ExtendedMasterSecretRequest,
+                        SignatureAlgorithms(
+                            [
+                                ECDSA_NISTP384_SHA384,
+                                ECDSA_NISTP256_SHA256,
+                                ECDSA_NISTP521_SHA512,
+                                ED25519,
+                                RSA_PSS_SHA512,
+                                RSA_PSS_SHA384,
+                                RSA_PSS_SHA256,
+                                RSA_PKCS1_SHA512,
+                                RSA_PKCS1_SHA384,
+                                RSA_PKCS1_SHA256,
+                            ],
+                        ),
+                        ServerName(
+                            [
+                                ServerName {
+                                    typ: HostName,
+                                    payload: HostName(
+                                        DnsName(
+                                            "apresolve.spotify.com",
+                                        ),
+                                    ),
+                                },
+                            ],
+                        ),
+                        PresharedKeyModes(
+                            [
+                                PSK_DHE_KE,
+                            ],
+                        ),
+                        EcPointFormats(
+                            [
+                                Uncompressed,
+                            ],
+                        ),
+                        Protocols(
+                            [
+                                ProtocolName(
+                                    6832,
+                                ),
+                                ProtocolName(
+                                    687474702f312e31,
+                                ),
+                            ],
+                        ),
+                        NamedGroups(
+                            [
+                                X25519,
+                                secp256r1,
+                                secp384r1,
+                            ],
+                        ),
+                        KeyShare(
+                            [
+                                KeyShareEntry {
+                                    group: X25519,
+                                    payload: 5d86fdd5560afd23680ca7ab063e531a3bd06a982855fa14e062f64fefdeb428,
+                                },
+                            ],
+                        ),
+                        SupportedVersions(
+                            [
+                                TLSv1_3,
+                                TLSv1_2,
+                            ],
+                        ),
+                        CertificateStatusRequest(
+                            Ocsp(
+                                OcspCertificateStatusRequest {
+                                    responder_ids: [],
+                                    extensions: ,
+                                },
+                            ),
+                        ),
+                    ],
+                },
+            ),
+        },
+        encoded: 01000103030319cd75193f0772dc90def0ef9d07b299e835d5efe2afd2877df12a2cc9ae2a1d20cfe8ce01bbe745e20ed8930cabf33a46e6a2a9b347d6af44043150a3aed450470014130213011303c02cc02bcca9c030c02fcca800ff010000a60023000000170000000d0016001405030403060308070806080508040601050104010000001a001800001561707265736f6c76652e73706f746966792e636f6d002d00020101000b000201000010000e000c02683208687474702f312e31000a00080006001d00170018003300260024001d00205d86fdd5560afd23680ca7ab063e531a3bd06a982855fa14e062f64fefdeb428002b00050403040303000500050100000000,
+    },
+}
+[2024-12-12][13:02:29] [rustls::client::hs] [TRACE] We got ServerHello ServerHelloPayload {
+    extensions: [
+        KeyShare(
+            KeyShareEntry {
+                group: X25519,
+                payload: d7b2d19ae3a99c6f12b4efd4451426f18f528ac25555a89ccd6d9fb01bb8333c,
+            },
+        ),
+        SupportedVersions(
+            TLSv1_3,
+        ),
+    ],
+    legacy_version: TLSv1_2,
+    random: ddf6ee2c664f5ff5e93cf4fd58d05b62e223f61e8d845e33e76648a505eca1c5,
+    session_id: cfe8ce01bbe745e20ed8930cabf33a46e6a2a9b347d6af44043150a3aed45047,
+    cipher_suite: TLS13_AES_256_GCM_SHA384,
+    compression_method: Null,
+}
+[2024-12-12][13:02:29] [rustls::client::hs] [DEBUG] Using ciphersuite TLS13_AES_256_GCM_SHA384
+[2024-12-12][13:02:29] [rustls::client::tls13] [DEBUG] Not resuming
+[2024-12-12][13:02:29] [rustls::client::client_conn] [TRACE] EarlyData rejected
+[2024-12-12][13:02:29] [rustls::conn] [TRACE] Dropping CCS
+[2024-12-12][13:02:29] [rustls::client::tls13] [DEBUG] TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)])]
+[2024-12-12][13:02:29] [rustls::client::hs] [DEBUG] ALPN protocol is Some(b"h2")
+[2024-12-12][13:02:29] [rustls::client::tls13] [TRACE] Server cert is CertificateChain([CertificateDer(0x308206c9308205b1a00302010202100186ff0fb60cdac83b40d9cb98f99747300d06092a864886f70d01010b05003059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c532052534120534841323536203230323020434131301e170d3234303230353030303030305a170d3235303230343233353935395a304e310b3009060355040613025345311230100603550407130953746f636b686f6c6d31133011060355040a130a53706f746966792041423116301406035504030c0d2a2e73706f746966792e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100d26f9bf30c67951cc2b46aba3390a718dfac4a22ab40fc0e8d0fe9bb723cab62595f2ea1d6188f4a6f1763dc94f6bff53cb394952d36a9714893dc87f47d3a5d17875846d2a4b906fdec1d340f9bc38ddcb7bc08712c9995acd513c5704cae6d45777bb7f74abafcc0faf1f6c9f2e4a35dfe7694195fcfb0a4a34deb214d0bc456a448e2922ec5b97e8ac41023276fb3b8ddd963defe61c0f69d1e6e919424254d0debb9e4477176a8a45d4b1bec06ab43ee4aae16110c0730ba99a174d43b809660606e2b2e526bd472a7851a10944eda390789eb66c1805ae68e3633ec4435c174e078982f61f27c3b8d94e132697f41d6ebe284c2f20d592dd7c34735f5a10203010001a382039630820392301f0603551d23041830168014748580c066c7df37decfbd2937aa031dbeedcd17301d0603551d0e04160414e28eb9b4d77668fe804bbbad990dd0f91c48b7d330250603551d11041e301c820d2a2e73706f746966792e636f6d820b73706f746966792e636f6d303e0603551d20043730353033060667810c0102023029302706082b06010505070201161b687474703a2f2f7777772e64696769636572742e636f6d2f435053300e0603551d0f0101ff0404030205a0301d0603551d250416301406082b0601050507030106082b0601050507030230819f0603551d1f0481973081943048a046a0448642687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c3048a046a0448642687474703a2f2f63726c342e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c30818706082b06010505070101047b3079302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d305106082b060105050730028645687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e637274300c0603551d130101ff040230003082017e060a2b06010401d6790204020482016e0482016a01680075004e75a3275c9a10c3385b6cd4df3f52eb1df0e08e1b8d69c0b1fa64b1629a39df0000018d78112c530000040300463044022067e891f0c0823f0a1f749f185e62009eeb6ecf959ba11b55cd40eacd38809c0f0220389e5aa665bbf4926eb78be435477ce514fcc1c8a79b59965498ce7b93ff072c0077007d591e12e1782a7b1c61677c5efdf8d0875c14a04e959eb9032fd90e8c2e79b80000018d78112c9200000403004830460221009ef78997d892f5c11c9779556b634d312347c1023c7b2dcd3981069e940d69ae022100bc36a1d1eaad9905e865016931f4aecbdea606972f46902794ef7529904c0e34007600e6d2316340778cc1104106d771b9cec1d240f6968486fbba87321dfd1e378e500000018d78112cba000004030047304502200dcf53185290a596ff491339db0da139bc6250904a88d2d9e0c5005cc20d3175022100c4290978c996e32061b57b009f01b0c92ab47a988b9796df5d2d3087f2af915c300d06092a864886f70d01010b05000382010100658d45f5736591c463b35f85a7d3cd00eeb503a6f8d04c69875fd5bb2f9ec15b0940fa5c175663ed0cf58cbf09d2b25023e40d40b359cbb833a33bed0f5e071270d4f87d23a31c2680b65f914790ec909ccc52d95b5bda0efb2502534950db6f69d13c60cf4baca7d634730701d65c73e35b5bb3c45851bd21c6395babf75029493b6ee16f24bea8195655f1ad180ab47bd6eb701b5004bd90806e50f5f91dc9c2e084e06e317bd4ae6a0b3543bf862fb001e27ec12248e78391664ba63639fa7405a292aa190c3e282adddce126046f5a4c974d8fb45b99004463dda1eaa454a9dbc6f0cbf0883cd3c2d45dd489c02e36ee487a8a68c9f74c8da8f2b7f1fade), CertificateDer(0x308204c8308203b0a00302010202100cf5bd062b5602f47ab8502c23ccf066300d06092a864886f70d01010b05003061310b300906035504061302555331153013060355040a130c446967694365727420496e6331193017060355040b13107777772e64696769636572742e636f6d3120301e06035504031317446967694365727420476c6f62616c20526f6f74204732301e170d3231303333303030303030305a170d3331303332393233353935395a3059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c53205253412053484132353620323032302043413130820122300d06092a864886f70d01010105000382010f003082010a0282010100ccf710624fa6bb636fed905256c56d277b7a12568af1f4f9d6e7e18fbd95abf260411570db1200fa270ab557385b7db2519371950e6a41945b351bfa7bfabbc5be2430fe56efc4f37d97e314f5144dcba710f216eaab22f031221161699026ba78d9971fe37d66ab75449573c8acffef5d0a8a5943e1acb23a0ff348fcd76b37c163dcde46d6db45fe7d23fd90e851071e51a35fed4946547f2c88c5f4139c97153c03e8a139dc690c32c1af16574c9447427ca2c89c7de6d44d54af4299a8c104c2779cd648e4ce11e02a8099f04370cf3f766bd14c49ab245ec20d82fd46a8ab6c93cc6252427592f89afa5e5eb2b061e51f1fb97f0998e83dfa837f4769a10203010001a38201823082017e30120603551d130101ff040830060101ff020100301d0603551d0e04160414748580c066c7df37decfbd2937aa031dbeedcd17301f0603551d230418301680144e2254201895e6e36ee60ffafab912ed06178f39300e0603551d0f0101ff040403020186301d0603551d250416301406082b0601050507030106082b06010505070302307606082b06010505070101046a3068302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d304006082b060105050730028634687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63727430420603551d1f043b30393037a035a0338631687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63726c303d0603551d2004363034300b06096086480186fd6c02013007060567810c01013008060667810c0102013008060667810c0102023008060667810c010203300d06092a864886f70d01010b0500038201010090f170cb289769977c74fdc0fa267b53abadcd65fdba9c069c8ad75a4387ed4d4c565fadc1c5b505202e59d1ff4af5a02ad8b095adc92e4a3bd7a7f66f8829fc303f2484bbc3b77b93072caf876b7633ed005552b2599ee4b9d0f3dfe70ffeddf8c4b910728109045fcf979e2e32758ecf9a58d257317e370181b2666d291ab166096dd16e90f4b9fa2f0114c55c566401d97d87a838539f8b5d466d5cc6278481d47e8c8ca39b52e7c688ec377c2afbf0555a387210d80013cf4c73dbaa3735a82981699c76bcde187b90d4cacfef6703fd045a2116b1ffea3fdfdc82f5ebf45992230d242a95254ccaa191e6d4b7ac8774b3f16da399dbf9d5bd84409f0798)])
+[2024-12-12][13:02:29] [librespot_core::session] [INFO] Connecting to AP "ap-gew4.spotify.com:4070"
+[2024-12-12][13:02:29] [librespot_core::connection] [DEBUG] Authenticating with AP using AUTHENTICATION_STORED_SPOTIFY_CREDENTIALS
+[2024-12-12][13:02:29] [librespot_core::session] [INFO] Authenticated as '111460632' !
+[2024-12-12][13:02:29] [librespot_core::session] [DEBUG] drop Session
+[2024-12-12][13:02:29] [librespot_core::session] [DEBUG] drop Dispatch
+[2024-12-12][13:02:29] [librespot::component] [DEBUG] drop ApResolver
+[2024-12-12][13:02:29] [rustls::common_state] [DEBUG] Sending warning alert CloseNotify
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "background", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "background", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "primary", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "secondary", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "title", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "highlight", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "highlight_bg", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "highlight_inactive_bg", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "playing", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "playing_selected", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "playing_bg", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "error", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "error_bg", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "statusbar_progress", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "statusbar_progress_bg", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "statusbar", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "statusbar_bg", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "cmdline", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "cmdline_bg", falling back to default
+[2024-12-12][13:02:29] [ncspot::theme] [WARN] Failed to parse color in "search_match", falling back to default
+[2024-12-12][13:02:29] [ncspot::spotify] [INFO] Initializing audio backend rodio
+[2024-12-12][13:02:29] [ncspot::spotify] [DEBUG] opening spotify session
+[2024-12-12][13:02:29] [ncspot::spotify] [DEBUG] No HTTP proxy set
+[2024-12-12][13:02:29] [librespot_core::session] [DEBUG] new Session
+[2024-12-12][13:02:29] [librespot::component] [DEBUG] new ApResolver
+[2024-12-12][13:02:29] [librespot_core::http_client] [DEBUG] Requesting https://apresolve.spotify.com/?type=accesspoint&type=dealer&type=spclient
+[2024-12-12][13:02:29] [hyper_rustls::config] [DEBUG] with_native_roots processed 48 valid and 0 invalid certs
+[2024-12-12][13:02:29] [hyper_rustls::config] [DEBUG] with_native_roots processed 48 valid and 0 invalid certs
+[2024-12-12][13:02:29] [rustls::client::hs] [DEBUG] No cached session for DnsName("apresolve.spotify.com")
+[2024-12-12][13:02:29] [rustls::client::hs] [DEBUG] Not resuming any session
+[2024-12-12][13:02:29] [rustls::client::hs] [TRACE] Sending ClientHello Message {
+    version: TLSv1_0,
+    payload: Handshake {
+        parsed: HandshakeMessagePayload {
+            typ: ClientHello,
+            payload: ClientHello(
+                ClientHelloPayload {
+                    client_version: TLSv1_2,
+                    random: d7c2c3e9ec8d2dcc96096cba54d198ab96acf442f30ed414bd54b6a10d0557f4,
+                    session_id: a124a4f88d0d775e883ff00bd6a36214938735385bfd4073dd498e3992cec113,
+                    cipher_suites: [
+                        TLS13_AES_256_GCM_SHA384,
+                        TLS13_AES_128_GCM_SHA256,
+                        TLS13_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_EMPTY_RENEGOTIATION_INFO_SCSV,
+                    ],
+                    compression_methods: [
+                        Null,
+                    ],
+                    extensions: [
+                        ExtendedMasterSecretRequest,
+                        KeyShare(
+                            [
+                                KeyShareEntry {
+                                    group: X25519,
+                                    payload: 05f553c3ed5e17b5884a5e8d02d98a57b8f046a5a25bc487f2f8c0713bf4c153,
+                                },
+                            ],
+                        ),
+                        ServerName(
+                            [
+                                ServerName {
+                                    typ: HostName,
+                                    payload: HostName(
+                                        DnsName(
+                                            "apresolve.spotify.com",
+                                        ),
+                                    ),
+                                },
+                            ],
+                        ),
+                        PresharedKeyModes(
+                            [
+                                PSK_DHE_KE,
+                            ],
+                        ),
+                        SignatureAlgorithms(
+                            [
+                                ECDSA_NISTP384_SHA384,
+                                ECDSA_NISTP256_SHA256,
+                                ECDSA_NISTP521_SHA512,
+                                ED25519,
+                                RSA_PSS_SHA512,
+                                RSA_PSS_SHA384,
+                                RSA_PSS_SHA256,
+                                RSA_PKCS1_SHA512,
+                                RSA_PKCS1_SHA384,
+                                RSA_PKCS1_SHA256,
+                            ],
+                        ),
+                        Protocols(
+                            [
+                                ProtocolName(
+                                    6832,
+                                ),
+                                ProtocolName(
+                                    687474702f312e31,
+                                ),
+                            ],
+                        ),
+                        EcPointFormats(
+                            [
+                                Uncompressed,
+                            ],
+                        ),
+                        CertificateStatusRequest(
+                            Ocsp(
+                                OcspCertificateStatusRequest {
+                                    responder_ids: [],
+                                    extensions: ,
+                                },
+                            ),
+                        ),
+                        NamedGroups(
+                            [
+                                X25519,
+                                secp256r1,
+                                secp384r1,
+                            ],
+                        ),
+                        SessionTicket(
+                            Request,
+                        ),
+                        SupportedVersions(
+                            [
+                                TLSv1_3,
+                                TLSv1_2,
+                            ],
+                        ),
+                    ],
+                },
+            ),
+        },
+        encoded: 010001030303d7c2c3e9ec8d2dcc96096cba54d198ab96acf442f30ed414bd54b6a10d0557f420a124a4f88d0d775e883ff00bd6a36214938735385bfd4073dd498e3992cec1130014130213011303c02cc02bcca9c030c02fcca800ff010000a600170000003300260024001d002005f553c3ed5e17b5884a5e8d02d98a57b8f046a5a25bc487f2f8c0713bf4c1530000001a001800001561707265736f6c76652e73706f746966792e636f6d002d00020101000d0016001405030403060308070806080508040601050104010010000e000c02683208687474702f312e31000b00020100000500050100000000000a00080006001d0017001800230000002b00050403040303,
+    },
+}
+[2024-12-12][13:02:29] [rustls::client::hs] [TRACE] We got ServerHello ServerHelloPayload {
+    extensions: [
+        KeyShare(
+            KeyShareEntry {
+                group: X25519,
+                payload: bf2bb06e6f39b5937df17dc876344ac3a6c242400fc3d5fb94f193739e10885d,
+            },
+        ),
+        SupportedVersions(
+            TLSv1_3,
+        ),
+    ],
+    legacy_version: TLSv1_2,
+    random: 6bfa764a3f140de5185fc96468966fbf347f35f5207ed901acfce9312d4808be,
+    session_id: a124a4f88d0d775e883ff00bd6a36214938735385bfd4073dd498e3992cec113,
+    cipher_suite: TLS13_AES_256_GCM_SHA384,
+    compression_method: Null,
+}
+[2024-12-12][13:02:29] [rustls::client::hs] [DEBUG] Using ciphersuite TLS13_AES_256_GCM_SHA384
+[2024-12-12][13:02:29] [rustls::client::tls13] [DEBUG] Not resuming
+[2024-12-12][13:02:29] [rustls::client::client_conn] [TRACE] EarlyData rejected
+[2024-12-12][13:02:29] [rustls::conn] [TRACE] Dropping CCS
+[2024-12-12][13:02:29] [rustls::client::tls13] [DEBUG] TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)])]
+[2024-12-12][13:02:29] [rustls::client::hs] [DEBUG] ALPN protocol is Some(b"h2")
+[2024-12-12][13:02:29] [rustls::client::tls13] [TRACE] Server cert is CertificateChain([CertificateDer(0x308206c9308205b1a00302010202100186ff0fb60cdac83b40d9cb98f99747300d06092a864886f70d01010b05003059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c532052534120534841323536203230323020434131301e170d3234303230353030303030305a170d3235303230343233353935395a304e310b3009060355040613025345311230100603550407130953746f636b686f6c6d31133011060355040a130a53706f746966792041423116301406035504030c0d2a2e73706f746966792e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100d26f9bf30c67951cc2b46aba3390a718dfac4a22ab40fc0e8d0fe9bb723cab62595f2ea1d6188f4a6f1763dc94f6bff53cb394952d36a9714893dc87f47d3a5d17875846d2a4b906fdec1d340f9bc38ddcb7bc08712c9995acd513c5704cae6d45777bb7f74abafcc0faf1f6c9f2e4a35dfe7694195fcfb0a4a34deb214d0bc456a448e2922ec5b97e8ac41023276fb3b8ddd963defe61c0f69d1e6e919424254d0debb9e4477176a8a45d4b1bec06ab43ee4aae16110c0730ba99a174d43b809660606e2b2e526bd472a7851a10944eda390789eb66c1805ae68e3633ec4435c174e078982f61f27c3b8d94e132697f41d6ebe284c2f20d592dd7c34735f5a10203010001a382039630820392301f0603551d23041830168014748580c066c7df37decfbd2937aa031dbeedcd17301d0603551d0e04160414e28eb9b4d77668fe804bbbad990dd0f91c48b7d330250603551d11041e301c820d2a2e73706f746966792e636f6d820b73706f746966792e636f6d303e0603551d20043730353033060667810c0102023029302706082b06010505070201161b687474703a2f2f7777772e64696769636572742e636f6d2f435053300e0603551d0f0101ff0404030205a0301d0603551d250416301406082b0601050507030106082b0601050507030230819f0603551d1f0481973081943048a046a0448642687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c3048a046a0448642687474703a2f2f63726c342e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c30818706082b06010505070101047b3079302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d305106082b060105050730028645687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e637274300c0603551d130101ff040230003082017e060a2b06010401d6790204020482016e0482016a01680075004e75a3275c9a10c3385b6cd4df3f52eb1df0e08e1b8d69c0b1fa64b1629a39df0000018d78112c530000040300463044022067e891f0c0823f0a1f749f185e62009eeb6ecf959ba11b55cd40eacd38809c0f0220389e5aa665bbf4926eb78be435477ce514fcc1c8a79b59965498ce7b93ff072c0077007d591e12e1782a7b1c61677c5efdf8d0875c14a04e959eb9032fd90e8c2e79b80000018d78112c9200000403004830460221009ef78997d892f5c11c9779556b634d312347c1023c7b2dcd3981069e940d69ae022100bc36a1d1eaad9905e865016931f4aecbdea606972f46902794ef7529904c0e34007600e6d2316340778cc1104106d771b9cec1d240f6968486fbba87321dfd1e378e500000018d78112cba000004030047304502200dcf53185290a596ff491339db0da139bc6250904a88d2d9e0c5005cc20d3175022100c4290978c996e32061b57b009f01b0c92ab47a988b9796df5d2d3087f2af915c300d06092a864886f70d01010b05000382010100658d45f5736591c463b35f85a7d3cd00eeb503a6f8d04c69875fd5bb2f9ec15b0940fa5c175663ed0cf58cbf09d2b25023e40d40b359cbb833a33bed0f5e071270d4f87d23a31c2680b65f914790ec909ccc52d95b5bda0efb2502534950db6f69d13c60cf4baca7d634730701d65c73e35b5bb3c45851bd21c6395babf75029493b6ee16f24bea8195655f1ad180ab47bd6eb701b5004bd90806e50f5f91dc9c2e084e06e317bd4ae6a0b3543bf862fb001e27ec12248e78391664ba63639fa7405a292aa190c3e282adddce126046f5a4c974d8fb45b99004463dda1eaa454a9dbc6f0cbf0883cd3c2d45dd489c02e36ee487a8a68c9f74c8da8f2b7f1fade), CertificateDer(0x308204c8308203b0a00302010202100cf5bd062b5602f47ab8502c23ccf066300d06092a864886f70d01010b05003061310b300906035504061302555331153013060355040a130c446967694365727420496e6331193017060355040b13107777772e64696769636572742e636f6d3120301e06035504031317446967694365727420476c6f62616c20526f6f74204732301e170d3231303333303030303030305a170d3331303332393233353935395a3059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c53205253412053484132353620323032302043413130820122300d06092a864886f70d01010105000382010f003082010a0282010100ccf710624fa6bb636fed905256c56d277b7a12568af1f4f9d6e7e18fbd95abf260411570db1200fa270ab557385b7db2519371950e6a41945b351bfa7bfabbc5be2430fe56efc4f37d97e314f5144dcba710f216eaab22f031221161699026ba78d9971fe37d66ab75449573c8acffef5d0a8a5943e1acb23a0ff348fcd76b37c163dcde46d6db45fe7d23fd90e851071e51a35fed4946547f2c88c5f4139c97153c03e8a139dc690c32c1af16574c9447427ca2c89c7de6d44d54af4299a8c104c2779cd648e4ce11e02a8099f04370cf3f766bd14c49ab245ec20d82fd46a8ab6c93cc6252427592f89afa5e5eb2b061e51f1fb97f0998e83dfa837f4769a10203010001a38201823082017e30120603551d130101ff040830060101ff020100301d0603551d0e04160414748580c066c7df37decfbd2937aa031dbeedcd17301f0603551d230418301680144e2254201895e6e36ee60ffafab912ed06178f39300e0603551d0f0101ff040403020186301d0603551d250416301406082b0601050507030106082b06010505070302307606082b06010505070101046a3068302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d304006082b060105050730028634687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63727430420603551d1f043b30393037a035a0338631687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63726c303d0603551d2004363034300b06096086480186fd6c02013007060567810c01013008060667810c0102013008060667810c0102023008060667810c010203300d06092a864886f70d01010b0500038201010090f170cb289769977c74fdc0fa267b53abadcd65fdba9c069c8ad75a4387ed4d4c565fadc1c5b505202e59d1ff4af5a02ad8b095adc92e4a3bd7a7f66f8829fc303f2484bbc3b77b93072caf876b7633ed005552b2599ee4b9d0f3dfe70ffeddf8c4b910728109045fcf979e2e32758ecf9a58d257317e370181b2666d291ab166096dd16e90f4b9fa2f0114c55c566401d97d87a838539f8b5d466d5cc6278481d47e8c8ca39b52e7c688ec377c2afbf0555a387210d80013cf4c73dbaa3735a82981699c76bcde187b90d4cacfef6703fd045a2116b1ffea3fdfdc82f5ebf45992230d242a95254ccaa191e6d4b7ac8774b3f16da399dbf9d5bd84409f0798)])
+[2024-12-12][13:02:29] [librespot_core::session] [INFO] Connecting to AP "ap-gew4.spotify.com:4070"
+[2024-12-12][13:02:29] [librespot_core::connection] [DEBUG] Authenticating with AP using AUTHENTICATION_STORED_SPOTIFY_CREDENTIALS
+[2024-12-12][13:02:29] [librespot_core::session] [INFO] Authenticated as '111460632' !
+[2024-12-12][13:02:29] [librespot_playback::mixer::softmixer] [INFO] Mixing with softvol and volume control: Log(60.0)
+[2024-12-12][13:02:29] [librespot_playback::mixer::mappings] [DEBUG] Input volume 45885 mapped to: 12.60%
+[2024-12-12][13:02:29] [ncspot::spotify] [DEBUG] worker thread ready.
+[2024-12-12][13:02:29] [librespot_core::session] [TRACE] Received Ping
+[2024-12-12][13:02:29] [librespot_core::session] [TRACE] keep-alive state: PendingPong, timeout in 60.0
+[2024-12-12][13:02:29] [librespot_core::session] [DEBUG] Session strong=3 weak=3
+[2024-12-12][13:02:29] [librespot_core::session] [INFO] Country: "NL"
+[2024-12-12][13:02:29] [librespot_playback::player] [DEBUG] new Player [0]
+[2024-12-12][13:02:29] [librespot_playback::convert] [INFO] Converting with ditherer: tpdf
+[2024-12-12][13:02:29] [librespot_playback::audio_backend::rodio] [INFO] Using Rodio sink with format S16 and cpal host: WASAPI
+[2024-12-12][13:02:29] [librespot_core::session] [TRACE] Received product info: {
+    "payments-locked-state": "0",
+    "shuffle-algorithm": "1",
+    "ad-session-persistence": "1",
+    "ab-new-share-flow": "0",
+    "shuffle": "0",
+    "head-file-caching": "0",
+    "fb-info-confirmation": "control",
+    "is_email_verified": "1",
+    "libspotify": "1",
+    "player-license": "premium",
+    "shows-collection-jam": "0",
+    "user-profile-show-invitation-codes": "0",
+    "enable-crossfade": "1",
+    "publish-playlist": "1",
+    "ad-formats-preroll-video": "0",
+    "remote-control": "0",
+    "ab-mobile-startpage": "0",
+    "buffering-strategy-parameters": "0.8:0.2:0.0:0.0:0.0:0.0:1.0:10:10:2000:10000:10485760",
+    "ap-resolve-pods": "0",
+    "audiobook-onboarding-dismissed": "0",
+    "use-playlist-uris": "0",
+    "high-bitrate": "1",
+    "ab-mobile-running-onlymanualmode": "only-manual",
+    "prefetch-window-max": "2",
+    "expiry": "1",
+    "pause-after": "0",
+    "ab-watch-now": "0",
+    "payments-initial-campaign": "default",
+    "multiuserplan-member-type": "FAMILY_MANAGER",
+    "ad-persist-reward-time": "0",
+    "type": "premium",
+    "video-initial-bitrate": "200000",
+    "ab-desktop-hide-follow": "0",
+    "enable-gapless": "1",
+    "audio-preview-url-template": "https://p.scdn.co/mp3-preview/{id}",
+    "arsenal_country": "1",
+    "rating-access": "1",
+    "send-email": "0",
+    "financial-product": "pr:premium,tc:0,rt:v2_NL_default_new-family-master-1m_17.99_EUR_default",
+    "ugc-abuse-report": "0",
+    "ab-test-group": "363",
+    "on-demand": "1",
+    "ab-collection-followed-artists-only": "0",
+    "restrict-playlist-collaboration": "0",
+    "gracenote-username": "WEcxA/y62Fpkogf8qNYFtQMONGMAEbrf1PyEWOqGHK+yF9FbOS0BX94nY3M38aFgV9N0BBfBRulgH0IOe5cB9S9EJXPFhqmUzPeKpa3CcXBLxOCeYYMO0kIRtohnfrtjb3v6Tl+iVpCPWdUQEGE=",
+    "ab-moments-experience": "0",
+    "catalogue": "premium",
+    "nft-disabled": "1",
+    "ab-collection-bookmark-model": "1",
+    "prefetch-keys": "1",
+    "local-files-import": "0",
+    "offline": "1",
+    "playlist-folders": "1",
+    "incognito_mode_timeout": "21600",
+    "ab-mobile-discover": "0",
+    "browse-overview-enabled": "1",
+    "employee-free-opt-in": "0",
+    "fb-grant-permission-local-render": "0",
+    "mobile-login": "1",
+    "radio": "1",
+    "public-toplist": "1",
+    "explicit-content": "1",
+    "mobile": "1",
+    "mobile-payment": "0",
+    "network-operator-premium-activation": "1",
+    "ad-formats-video-takeover": "0",
+    "unrestricted": "1",
+    "ab-mobile-running-tempo-detection": "Control",
+    "prefetch-strategy": "2",
+    "sidebar-navigation-enabled": "0",
+    "collection": "1",
+    "post-open-graph-loglevel": "0",
+    "enable-autostart": "1",
+    "streaming": "1",
+    "audiobook-onboarding-completed": "0",
+    "video-wifi-initial-bitrate": "800000",
+    "video-device-blacklisted": "0",
+    "widevine-license-url": "https://spclient.wg.spotify.com/widevine-license/v1/video/license",
+    "ab-ad-player-targeting": "1",
+    "india-experience": "0",
+    "playlist-annotations-markup": "0",
+    "ab-play-history": "0",
+    "publish-activity": "1",
+    "use-pl3": "0",
+    "mobile-browse": "0",
+    "ugc-abuse-report-url": "https://support.spotify.com/abuse/?uri={uri}",
+    "filter-explicit-content": "0",
+    "ab_recently_played_feature_time_filter_threshold": "com.spotify.gaia=30,driving-mode=120,spotify%3Ainternal%3Astartpage=30",
+    "enable-annotations-read": "0",
+    "image-url": "https://i.scdn.co/image/{file_id}",
+    "video-keyframe-url": "http://keyframes-fa.cdn.spotify.com/keyframes/v1/sources/{source_id}/keyframe/heights/{height}/timestamps/{timestamp_ms}.jpg",
+    "name": "Spotify Premium",
+    "ab-mobile-social-feed": "1",
+    "ab-collection-hide-unavailable-albums": "0",
+    "metadata-link-lookup-modes": "0",
+    "ab-android-push-notifications": "1",
+    "ab-collection-union": "1",
+    "instant-search": "0",
+    "is_maybe_in_social_session": "0",
+    "video-cdn-sampling": "100",
+    "head-files": "0",
+    "allow-override-internal-prefs": "0",
+    "track-cap": "0",
+    "key-caching-max-offline-seconds": "1800",
+    "app-developer": "1",
+    "ab-collection-offline-mode": "0",
+    "capping-bar-threshold": "3601",
+    "use-fb-publish-backend": "2",
+    "ab-browse-music-tuesday": "1",
+    "preferred-locale": "en-nl",
+    "shows-collection": "0",
+    "storage-size-config": "10240,90,500,3",
+    "video-manifest-url": "https://spclient.wg.spotify.com/manifests/v6/{type}/sources/{source_id}",
+    "ads": "0",
+    "license-acceptance-grace-days": "30",
+    "instant-search-expand-sidebar": "0",
+    "buffering-strategy": "2",
+    "multiuserplan-current-size": "3",
+    "key-caching-max-count": "10000",
+}
+[2024-12-12][13:02:29] [ncspot::spotify] [INFO] setting volume to 45885
+[2024-12-12][13:02:29] [ncspot::spotify] [INFO] sending command to worker: SetVolume(45885)
+[2024-12-12][13:02:29] [ncspot::spotify_api] [INFO] Token will expire in -PT0.1318454S, renewing
+[2024-12-12][13:02:29] [librespot_playback::mixer::mappings] [DEBUG] Input volume 45885 mapped to: 12.60%
+[2024-12-12][13:02:29] [librespot::component] [DEBUG] new TokenProvider
+[2024-12-12][13:02:29] [librespot_core::token] [TRACE] Requested token in scopes "user-read-private,playlist-read-private,playlist-read-collaborative,playlist-modify-public,playlist-modify-private,user-follow-modify,user-follow-read,user-library-read,user-library-modify,user-top-read,user-read-recently-played" unavailable or expired, requesting new token.
+[2024-12-12][13:02:29] [librespot::component] [DEBUG] new MercuryManager
+[2024-12-12][13:02:29] [librespot_playback::audio_backend::rodio] [INFO] Using audio device: Speakers (Yeti Stereo Microphone)
+[2024-12-12][13:02:29] [librespot_core::mercury] [DEBUG] unknown subscription uri=hm://pusher/v1/connections/MGQwMDU5MmYtNzEzZi00MzYwLWI1ZDctMjczMjk3NDZlMjZjK0FQK3RjcDovLzBhY2E1ODI5LmlwLmdldzQuc3BvdGlmeS5uZXQ6NTAxNys5RkJCRURCMzhENTFCRDc0RDc5NUFFMUE3QjRCQzM3RTM4N0U4MUMyMEZERjEyQjlFMjdCMjk5RDAzNUYzNDA4
+[2024-12-12][13:02:29] [librespot_core::mercury] [TRACE] response pushed over Mercury: MercuryResponse { uri: "hm://pusher/v1/connections/MGQwMDU5MmYtNzEzZi00MzYwLWI1ZDctMjczMjk3NDZlMjZjK0FQK3RjcDovLzBhY2E1ODI5LmlwLmdldzQuc3BvdGlmeS5uZXQ6NTAxNys5RkJCRURCMzhENTFCRDc0RDc5NUFFMUE3QjRCQzM3RTM4N0U4MUMyMEZERjEyQjlFMjdCMjk5RDAzNUYzNDA4", status_code: 200, payload: [] }
+[2024-12-12][13:02:29] [librespot_core::session] [DEBUG] could not dispatch command: Service unavailable { error handling Mercury response: MercuryResponse { uri: "hm://pusher/v1/connections/MGQwMDU5MmYtNzEzZi00MzYwLWI1ZDctMjczMjk3NDZlMjZjK0FQK3RjcDovLzBhY2E1ODI5LmlwLmdldzQuc3BvdGlmeS5uZXQ6NTAxNys5RkJCRURCMzhENTFCRDc0RDc5NUFFMUE3QjRCQzM3RTM4N0U4MUMyMEZERjEyQjlFMjdCMjk5RDAzNUYzNDA4", status_code: 200, payload: [] } }
+[2024-12-12][13:02:29] [librespot_playback::audio_backend::rodio] [DEBUG] Rodio sink was created
+[2024-12-12][13:02:29] [librespot_playback::player] [DEBUG] command=AddEventSender
+[2024-12-12][13:02:30] [librespot_core::token] [TRACE] Got token: Token {
+    access_token: "BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI",
+    expires_in: 3600s,
+    token_type: "Bearer",
+    scopes: [
+        "user-read-private",
+        "playlist-read-private",
+        "playlist-read-collaborative",
+        "playlist-modify-public",
+        "playlist-modify-private",
+        "user-follow-modify",
+        "user-follow-read",
+        "user-library-read",
+        "user-library-modify",
+        "user-top-read",
+        "user-read-recently-played",
+    ],
+    timestamp: Instant {
+        t: 127839.2685413s,
+    },
+}
+[2024-12-12][13:02:30] [ncspot::spotify_worker] [INFO] token updated!
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] connecting to api.spotify.com:443 at 35.186.224.24:443
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] created stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56059, peer: 35.186.224.24:443, socket: 1396 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request GET https://api.spotify.com/v1/me/
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/ HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 1172
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56059, peer: 35.186.224.24:443, socket: 1396 } })
+[2024-12-12][13:02:30] [ncspot::spotify] [INFO] loading track: Track(Track { id: Some("0CB7J9QsvEqmD0MY1plRsh"), uri: "spotify:track:0CB7J9QsvEqmD0MY1plRsh", title: "Silence - DJ Tiësto's In Search Of Sunrise Remix", track_number: 1, disc_number: 1, duration: 685640, artists: ["Delerium"], artist_ids: ["0IUq1plF3ON4Fboj1bE6kN"], album: Some("Odyssey: The Remix Collection"), album_id: Some("5DhIwfAaWyNbv2FUukALcm"), album_artists: ["Delerium"], cover_url: Some("https://i.scdn.co/image/ab67616d0000b27396e43f58dabccc09971f2091"), url: "https://open.spotify.com/track/0CB7J9QsvEqmD0MY1plRsh", added_at: Some(2023-04-06T10:00:16Z), list_index: 0, is_local: false, is_playable: Some(true) })
+[2024-12-12][13:02:30] [ncspot::spotify] [INFO] sending command to worker: Load(Track(Track { id: Some("0CB7J9QsvEqmD0MY1plRsh"), uri: "spotify:track:0CB7J9QsvEqmD0MY1plRsh", title: "Silence - DJ Tiësto's In Search Of Sunrise Remix", track_number: 1, disc_number: 1, duration: 685640, artists: ["Delerium"], artist_ids: ["0IUq1plF3ON4Fboj1bE6kN"], album: Some("Odyssey: The Remix Collection"), album_id: Some("5DhIwfAaWyNbv2FUukALcm"), album_artists: ["Delerium"], cover_url: Some("https://i.scdn.co/image/ab67616d0000b27396e43f58dabccc09971f2091"), url: "https://open.spotify.com/track/0CB7J9QsvEqmD0MY1plRsh", added_at: Some(2023-04-06T10:00:16Z), list_index: 0, is_local: false, is_playable: Some(true) }), false, 12043)
+[2024-12-12][13:02:30] [ncspot::spotify] [INFO] pause()
+[2024-12-12][13:02:30] [ncspot::spotify] [INFO] sending command to worker: Pause
+[2024-12-12][13:02:30] [ncspot::spotify_worker] [INFO] player loading track: SpotifyId("spotify:track:0CB7J9QsvEqmD0MY1plRsh")
+[2024-12-12][13:02:30] [librespot_playback::player] [DEBUG] command=Load(SpotifyId("spotify:track:0CB7J9QsvEqmD0MY1plRsh"), false, 12043)
+[2024-12-12][13:02:30] [ncspot::spotify_api] [DEBUG] fetching categories, offset: 0
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/browse/categories, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [librespot_playback::player] [DEBUG] command=Pause
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56059, peer: 35.186.224.24:443, socket: 1396 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/browse/categories?country=from_token&limit=50&offset=0
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/browse/categories?country=from_token&limit=50&offset=0 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ncspot::spotify_worker] [DEBUG] Unhandled player event: PlayRequestIdChanged { play_request_id: 0 }
+[2024-12-12][13:02:30] [ncspot::spotify_worker] [DEBUG] Unhandled player event: Loading { play_request_id: 0, track_id: SpotifyId("spotify:track:0CB7J9QsvEqmD0MY1plRsh"), position_ms: 12043 }
+[2024-12-12][13:02:30] [librespot::component] [DEBUG] new SpClient
+[2024-12-12][13:02:30] [librespot_core::spclient] [INFO] Resolved "gew4-spclient.spotify.com:443" as spclient access point
+[2024-12-12][13:02:30] [librespot::component] [DEBUG] new Login5Manager
+[2024-12-12][13:02:30] [librespot_core::spclient] [DEBUG] Client token unavailable or expired, requesting new token.
+[2024-12-12][13:02:30] [librespot_core::http_client] [DEBUG] Requesting https://clienttoken.spotify.com/v1/clienttoken
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] loading playlists
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] loading shows
+[2024-12-12][13:02:30] [ncspot::spotify_api] [DEBUG] fetching user playlists, offset: 0
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] loading cache from C:\Users\steph\AppData\Local\ncspot\albums.db
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/shows, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/playlists, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] loading cache from C:\Users\steph\AppData\Local\ncspot\tracks.db
+[2024-12-12][13:02:30] [ncspot::library] [ERROR] can't parse cache: EOF while parsing a string at line 1 column 34244
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/albums, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] connecting to api.spotify.com:443 at 35.186.224.24:443
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] loading cache from C:\Users\steph\AppData\Local\ncspot\artists.db
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] connecting to api.spotify.com:443 at 35.186.224.24:443
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] connecting to api.spotify.com:443 at 35.186.224.24:443
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] cache from C:\Users\steph\AppData\Local\ncspot\tracks.db loaded (916 items)
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] connecting to api.spotify.com:443 at 35.186.224.24:443
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] cache from C:\Users\steph\AppData\Local\ncspot\artists.db loaded (1059 items)
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/following, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] connecting to api.spotify.com:443 at 35.186.224.24:443
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] No cached session for DnsName("clienttoken.spotify.com")
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] Not resuming any session
+[2024-12-12][13:02:30] [rustls::client::hs] [TRACE] Sending ClientHello Message {
+    version: TLSv1_0,
+    payload: Handshake {
+        parsed: HandshakeMessagePayload {
+            typ: ClientHello,
+            payload: ClientHello(
+                ClientHelloPayload {
+                    client_version: TLSv1_2,
+                    random: dd51ea6fa48d8ae48f48b03abb732dd99aeb2c89f48cab1ba14764d6808b6884,
+                    session_id: ff7de497574cae197563ba622581b525d60bacb2a296d9411c3310affc31817e,
+                    cipher_suites: [
+                        TLS13_AES_256_GCM_SHA384,
+                        TLS13_AES_128_GCM_SHA256,
+                        TLS13_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_EMPTY_RENEGOTIATION_INFO_SCSV,
+                    ],
+                    compression_methods: [
+                        Null,
+                    ],
+                    extensions: [
+                        ServerName(
+                            [
+                                ServerName {
+                                    typ: HostName,
+                                    payload: HostName(
+                                        DnsName(
+                                            "clienttoken.spotify.com",
+                                        ),
+                                    ),
+                                },
+                            ],
+                        ),
+                        ExtendedMasterSecretRequest,
+                        SessionTicket(
+                            Request,
+                        ),
+                        CertificateStatusRequest(
+                            Ocsp(
+                                OcspCertificateStatusRequest {
+                                    responder_ids: [],
+                                    extensions: ,
+                                },
+                            ),
+                        ),
+                        Protocols(
+                            [
+                                ProtocolName(
+                                    6832,
+                                ),
+                                ProtocolName(
+                                    687474702f312e31,
+                                ),
+                            ],
+                        ),
+                        KeyShare(
+                            [
+                                KeyShareEntry {
+                                    group: X25519,
+                                    payload: 3b52b6f45fb6e543ff6fe44e0329603c25cef4864962aa3ac8811a48bc6a5633,
+                                },
+                            ],
+                        ),
+                        SupportedVersions(
+                            [
+                                TLSv1_3,
+                                TLSv1_2,
+                            ],
+                        ),
+                        SignatureAlgorithms(
+                            [
+                                ECDSA_NISTP384_SHA384,
+                                ECDSA_NISTP256_SHA256,
+                                ECDSA_NISTP521_SHA512,
+                                ED25519,
+                                RSA_PSS_SHA512,
+                                RSA_PSS_SHA384,
+                                RSA_PSS_SHA256,
+                                RSA_PKCS1_SHA512,
+                                RSA_PKCS1_SHA384,
+                                RSA_PKCS1_SHA256,
+                            ],
+                        ),
+                        NamedGroups(
+                            [
+                                X25519,
+                                secp256r1,
+                                secp384r1,
+                            ],
+                        ),
+                        EcPointFormats(
+                            [
+                                Uncompressed,
+                            ],
+                        ),
+                        PresharedKeyModes(
+                            [
+                                PSK_DHE_KE,
+                            ],
+                        ),
+                    ],
+                },
+            ),
+        },
+        encoded: 010001050303dd51ea6fa48d8ae48f48b03abb732dd99aeb2c89f48cab1ba14764d6808b688420ff7de497574cae197563ba622581b525d60bacb2a296d9411c3310affc31817e0014130213011303c02cc02bcca9c030c02fcca800ff010000a80000001c001a000017636c69656e74746f6b656e2e73706f746966792e636f6d00170000002300000005000501000000000010000e000c02683208687474702f312e31003300260024001d00203b52b6f45fb6e543ff6fe44e0329603c25cef4864962aa3ac8811a48bc6a5633002b00050403040303000d001600140503040306030807080608050804060105010401000a00080006001d00170018000b00020100002d00020101,
+    },
+}
+[2024-12-12][13:02:30] [rustls::client::hs] [TRACE] We got ServerHello ServerHelloPayload {
+    extensions: [
+        KeyShare(
+            KeyShareEntry {
+                group: X25519,
+                payload: 28607ccd4cd01e10be13f0b89869ff1ab548a8b260afda394f959411246fd82f,
+            },
+        ),
+        SupportedVersions(
+            TLSv1_3,
+        ),
+    ],
+    legacy_version: TLSv1_2,
+    random: aff3e5851e4fbdc43e9c357d0796de5ba454fb795b3b421728cd78771c328aae,
+    session_id: ff7de497574cae197563ba622581b525d60bacb2a296d9411c3310affc31817e,
+    cipher_suite: TLS13_AES_256_GCM_SHA384,
+    compression_method: Null,
+}
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] Using ciphersuite TLS13_AES_256_GCM_SHA384
+[2024-12-12][13:02:30] [rustls::client::tls13] [DEBUG] Not resuming
+[2024-12-12][13:02:30] [rustls::client::client_conn] [TRACE] EarlyData rejected
+[2024-12-12][13:02:30] [rustls::conn] [TRACE] Dropping CCS
+[2024-12-12][13:02:30] [rustls::client::tls13] [DEBUG] TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)])]
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] ALPN protocol is Some(b"h2")
+[2024-12-12][13:02:30] [rustls::client::tls13] [TRACE] Server cert is CertificateChain([CertificateDer(0x308206c9308205b1a00302010202100186ff0fb60cdac83b40d9cb98f99747300d06092a864886f70d01010b05003059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c532052534120534841323536203230323020434131301e170d3234303230353030303030305a170d3235303230343233353935395a304e310b3009060355040613025345311230100603550407130953746f636b686f6c6d31133011060355040a130a53706f746966792041423116301406035504030c0d2a2e73706f746966792e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100d26f9bf30c67951cc2b46aba3390a718dfac4a22ab40fc0e8d0fe9bb723cab62595f2ea1d6188f4a6f1763dc94f6bff53cb394952d36a9714893dc87f47d3a5d17875846d2a4b906fdec1d340f9bc38ddcb7bc08712c9995acd513c5704cae6d45777bb7f74abafcc0faf1f6c9f2e4a35dfe7694195fcfb0a4a34deb214d0bc456a448e2922ec5b97e8ac41023276fb3b8ddd963defe61c0f69d1e6e919424254d0debb9e4477176a8a45d4b1bec06ab43ee4aae16110c0730ba99a174d43b809660606e2b2e526bd472a7851a10944eda390789eb66c1805ae68e3633ec4435c174e078982f61f27c3b8d94e132697f41d6ebe284c2f20d592dd7c34735f5a10203010001a382039630820392301f0603551d23041830168014748580c066c7df37decfbd2937aa031dbeedcd17301d0603551d0e04160414e28eb9b4d77668fe804bbbad990dd0f91c48b7d330250603551d11041e301c820d2a2e73706f746966792e636f6d820b73706f746966792e636f6d303e0603551d20043730353033060667810c0102023029302706082b06010505070201161b687474703a2f2f7777772e64696769636572742e636f6d2f435053300e0603551d0f0101ff0404030205a0301d0603551d250416301406082b0601050507030106082b0601050507030230819f0603551d1f0481973081943048a046a0448642687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c3048a046a0448642687474703a2f2f63726c342e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c30818706082b06010505070101047b3079302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d305106082b060105050730028645687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e637274300c0603551d130101ff040230003082017e060a2b06010401d6790204020482016e0482016a01680075004e75a3275c9a10c3385b6cd4df3f52eb1df0e08e1b8d69c0b1fa64b1629a39df0000018d78112c530000040300463044022067e891f0c0823f0a1f749f185e62009eeb6ecf959ba11b55cd40eacd38809c0f0220389e5aa665bbf4926eb78be435477ce514fcc1c8a79b59965498ce7b93ff072c0077007d591e12e1782a7b1c61677c5efdf8d0875c14a04e959eb9032fd90e8c2e79b80000018d78112c9200000403004830460221009ef78997d892f5c11c9779556b634d312347c1023c7b2dcd3981069e940d69ae022100bc36a1d1eaad9905e865016931f4aecbdea606972f46902794ef7529904c0e34007600e6d2316340778cc1104106d771b9cec1d240f6968486fbba87321dfd1e378e500000018d78112cba000004030047304502200dcf53185290a596ff491339db0da139bc6250904a88d2d9e0c5005cc20d3175022100c4290978c996e32061b57b009f01b0c92ab47a988b9796df5d2d3087f2af915c300d06092a864886f70d01010b05000382010100658d45f5736591c463b35f85a7d3cd00eeb503a6f8d04c69875fd5bb2f9ec15b0940fa5c175663ed0cf58cbf09d2b25023e40d40b359cbb833a33bed0f5e071270d4f87d23a31c2680b65f914790ec909ccc52d95b5bda0efb2502534950db6f69d13c60cf4baca7d634730701d65c73e35b5bb3c45851bd21c6395babf75029493b6ee16f24bea8195655f1ad180ab47bd6eb701b5004bd90806e50f5f91dc9c2e084e06e317bd4ae6a0b3543bf862fb001e27ec12248e78391664ba63639fa7405a292aa190c3e282adddce126046f5a4c974d8fb45b99004463dda1eaa454a9dbc6f0cbf0883cd3c2d45dd489c02e36ee487a8a68c9f74c8da8f2b7f1fade), CertificateDer(0x308204c8308203b0a00302010202100cf5bd062b5602f47ab8502c23ccf066300d06092a864886f70d01010b05003061310b300906035504061302555331153013060355040a130c446967694365727420496e6331193017060355040b13107777772e64696769636572742e636f6d3120301e06035504031317446967694365727420476c6f62616c20526f6f74204732301e170d3231303333303030303030305a170d3331303332393233353935395a3059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c53205253412053484132353620323032302043413130820122300d06092a864886f70d01010105000382010f003082010a0282010100ccf710624fa6bb636fed905256c56d277b7a12568af1f4f9d6e7e18fbd95abf260411570db1200fa270ab557385b7db2519371950e6a41945b351bfa7bfabbc5be2430fe56efc4f37d97e314f5144dcba710f216eaab22f031221161699026ba78d9971fe37d66ab75449573c8acffef5d0a8a5943e1acb23a0ff348fcd76b37c163dcde46d6db45fe7d23fd90e851071e51a35fed4946547f2c88c5f4139c97153c03e8a139dc690c32c1af16574c9447427ca2c89c7de6d44d54af4299a8c104c2779cd648e4ce11e02a8099f04370cf3f766bd14c49ab245ec20d82fd46a8ab6c93cc6252427592f89afa5e5eb2b061e51f1fb97f0998e83dfa837f4769a10203010001a38201823082017e30120603551d130101ff040830060101ff020100301d0603551d0e04160414748580c066c7df37decfbd2937aa031dbeedcd17301f0603551d230418301680144e2254201895e6e36ee60ffafab912ed06178f39300e0603551d0f0101ff040403020186301d0603551d250416301406082b0601050507030106082b06010505070302307606082b06010505070101046a3068302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d304006082b060105050730028634687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63727430420603551d1f043b30393037a035a0338631687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63726c303d0603551d2004363034300b06096086480186fd6c02013007060567810c01013008060667810c0102013008060667810c0102023008060667810c010203300d06092a864886f70d01010b0500038201010090f170cb289769977c74fdc0fa267b53abadcd65fdba9c069c8ad75a4387ed4d4c565fadc1c5b505202e59d1ff4af5a02ad8b095adc92e4a3bd7a7f66f8829fc303f2484bbc3b77b93072caf876b7633ed005552b2599ee4b9d0f3dfe70ffeddf8c4b910728109045fcf979e2e32758ecf9a58d257317e370181b2666d291ab166096dd16e90f4b9fa2f0114c55c566401d97d87a838539f8b5d466d5cc6278481d47e8c8ca39b52e7c688ec377c2afbf0555a387210d80013cf4c73dbaa3735a82981699c76bcde187b90d4cacfef6703fd045a2116b1ffea3fdfdc82f5ebf45992230d242a95254ccaa191e6d4b7ac8774b3f16da399dbf9d5bd84409f0798)])
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] created stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request GET https://api.spotify.com/v1/me/playlists?offset=0&limit=50
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/playlists?offset=0&limit=50 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] created stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56063, peer: 35.186.224.24:443, socket: 1736 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request GET https://api.spotify.com/v1/me/albums?limit=50&offset=0&market=from_token
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/albums?limit=50&offset=0&market=from_token HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] created stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56061, peer: 35.186.224.24:443, socket: 1660 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request GET https://api.spotify.com/v1/me/shows?offset=0&limit=50
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/shows?offset=0&limit=50 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] created stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request GET https://api.spotify.com/v1/me/tracks?offset=0&market=from_token&limit=50
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/tracks?offset=0&market=from_token&limit=50 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] created stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56065, peer: 35.186.224.24:443, socket: 1776 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request GET https://api.spotify.com/v1/me/following?type=artist&limit=50
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/following?type=artist&limit=50 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 12350
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/browse/categories?country=from_token&limit=50&offset=0
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56059, peer: 35.186.224.24:443, socket: 1396 } })
+[2024-12-12][13:02:30] [ncspot::ui::pagination] [DEBUG] fetched first page, items: 50, total: 58
+[2024-12-12][13:02:30] [librespot_core::spclient] [DEBUG] Received a granted token
+[2024-12-12][13:02:30] [librespot_core::spclient] [TRACE] Got client token: GrantedTokenResponse { token: "AABz5UFajtqTeMvtouCyy5wTLTMYotDxE2no9GFsP2IEyapu1fdY7xI2ZP7G7Jm/GWop8CcvlBIs9hfFpWlR4D3PSlQw7PJfo3mmdutC+nrN80/owtblcv0TZV9usPmyS+PWR/dXHTlO4SE9cxVzINpsEeoUDTFe2da7QDzr5Lw2lwEw9PD+C3CogQeW8Q92fr3YDyHNAQEq2Qvw7/en23NlbmrbFKp+F5QKi90Ol57DXUQIXzGIlUGOmprONkNiXfJ9", expires_after_seconds: 1216800, refresh_after_seconds: 1209600, domains: [TokenDomain { domain: "spotify.com", special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }, TokenDomain { domain: "spotify.net", special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }], special_fields: SpecialFields { unknown_fields: UnknownFields { fields: None }, cached_size: CachedSize { size: 0 } } }
+[2024-12-12][13:02:30] [librespot_core::http_client] [DEBUG] Requesting https://login5.spotify.com/v3/login
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] No cached session for DnsName("login5.spotify.com")
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] Not resuming any session
+[2024-12-12][13:02:30] [rustls::client::hs] [TRACE] Sending ClientHello Message {
+    version: TLSv1_0,
+    payload: Handshake {
+        parsed: HandshakeMessagePayload {
+            typ: ClientHello,
+            payload: ClientHello(
+                ClientHelloPayload {
+                    client_version: TLSv1_2,
+                    random: 3eff9783787973bcd5aefb23a2f44110e4670cade73c8f5b9aa9e54eef1371b7,
+                    session_id: 659b1dee02c589dd4574ab1a17a7165823bac012ea9419bfeeb933395a8f9148,
+                    cipher_suites: [
+                        TLS13_AES_256_GCM_SHA384,
+                        TLS13_AES_128_GCM_SHA256,
+                        TLS13_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_EMPTY_RENEGOTIATION_INFO_SCSV,
+                    ],
+                    compression_methods: [
+                        Null,
+                    ],
+                    extensions: [
+                        EcPointFormats(
+                            [
+                                Uncompressed,
+                            ],
+                        ),
+                        Protocols(
+                            [
+                                ProtocolName(
+                                    6832,
+                                ),
+                                ProtocolName(
+                                    687474702f312e31,
+                                ),
+                            ],
+                        ),
+                        SupportedVersions(
+                            [
+                                TLSv1_3,
+                                TLSv1_2,
+                            ],
+                        ),
+                        PresharedKeyModes(
+                            [
+                                PSK_DHE_KE,
+                            ],
+                        ),
+                        SessionTicket(
+                            Request,
+                        ),
+                        NamedGroups(
+                            [
+                                X25519,
+                                secp256r1,
+                                secp384r1,
+                            ],
+                        ),
+                        CertificateStatusRequest(
+                            Ocsp(
+                                OcspCertificateStatusRequest {
+                                    responder_ids: [],
+                                    extensions: ,
+                                },
+                            ),
+                        ),
+                        ServerName(
+                            [
+                                ServerName {
+                                    typ: HostName,
+                                    payload: HostName(
+                                        DnsName(
+                                            "login5.spotify.com",
+                                        ),
+                                    ),
+                                },
+                            ],
+                        ),
+                        SignatureAlgorithms(
+                            [
+                                ECDSA_NISTP384_SHA384,
+                                ECDSA_NISTP256_SHA256,
+                                ECDSA_NISTP521_SHA512,
+                                ED25519,
+                                RSA_PSS_SHA512,
+                                RSA_PSS_SHA384,
+                                RSA_PSS_SHA256,
+                                RSA_PKCS1_SHA512,
+                                RSA_PKCS1_SHA384,
+                                RSA_PKCS1_SHA256,
+                            ],
+                        ),
+                        ExtendedMasterSecretRequest,
+                        KeyShare(
+                            [
+                                KeyShareEntry {
+                                    group: X25519,
+                                    payload: 1a370877a33e26765af402a9994a9816c288198ee05e2c4bf033b8fdb61c0b4e,
+                                },
+                            ],
+                        ),
+                    ],
+                },
+            ),
+        },
+        encoded: 0100010003033eff9783787973bcd5aefb23a2f44110e4670cade73c8f5b9aa9e54eef1371b720659b1dee02c589dd4574ab1a17a7165823bac012ea9419bfeeb933395a8f91480014130213011303c02cc02bcca9c030c02fcca800ff010000a3000b000201000010000e000c02683208687474702f312e31002b00050403040303002d0002010100230000000a00080006001d001700180005000501000000000000001700150000126c6f67696e352e73706f746966792e636f6d000d00160014050304030603080708060805080406010501040100170000003300260024001d00201a370877a33e26765af402a9994a9816c288198ee05e2c4bf033b8fdb61c0b4e,
+    },
+}
+[2024-12-12][13:02:30] [rustls::client::hs] [TRACE] We got ServerHello ServerHelloPayload {
+    extensions: [
+        KeyShare(
+            KeyShareEntry {
+                group: X25519,
+                payload: 29a39b30a1ffd3a8f98ec0bfd6563420ca9a63a829c43af004c13252c493b90f,
+            },
+        ),
+        SupportedVersions(
+            TLSv1_3,
+        ),
+    ],
+    legacy_version: TLSv1_2,
+    random: e84bd0cf566220757528e5a74f169df5e9587d386ba1c9fc7955714d7de6a3f1,
+    session_id: 659b1dee02c589dd4574ab1a17a7165823bac012ea9419bfeeb933395a8f9148,
+    cipher_suite: TLS13_AES_256_GCM_SHA384,
+    compression_method: Null,
+}
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] Using ciphersuite TLS13_AES_256_GCM_SHA384
+[2024-12-12][13:02:30] [rustls::client::tls13] [DEBUG] Not resuming
+[2024-12-12][13:02:30] [rustls::client::client_conn] [TRACE] EarlyData rejected
+[2024-12-12][13:02:30] [rustls::conn] [TRACE] Dropping CCS
+[2024-12-12][13:02:30] [rustls::client::tls13] [DEBUG] TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)])]
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] ALPN protocol is Some(b"h2")
+[2024-12-12][13:02:30] [rustls::client::tls13] [TRACE] Server cert is CertificateChain([CertificateDer(0x308206c9308205b1a00302010202100186ff0fb60cdac83b40d9cb98f99747300d06092a864886f70d01010b05003059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c532052534120534841323536203230323020434131301e170d3234303230353030303030305a170d3235303230343233353935395a304e310b3009060355040613025345311230100603550407130953746f636b686f6c6d31133011060355040a130a53706f746966792041423116301406035504030c0d2a2e73706f746966792e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100d26f9bf30c67951cc2b46aba3390a718dfac4a22ab40fc0e8d0fe9bb723cab62595f2ea1d6188f4a6f1763dc94f6bff53cb394952d36a9714893dc87f47d3a5d17875846d2a4b906fdec1d340f9bc38ddcb7bc08712c9995acd513c5704cae6d45777bb7f74abafcc0faf1f6c9f2e4a35dfe7694195fcfb0a4a34deb214d0bc456a448e2922ec5b97e8ac41023276fb3b8ddd963defe61c0f69d1e6e919424254d0debb9e4477176a8a45d4b1bec06ab43ee4aae16110c0730ba99a174d43b809660606e2b2e526bd472a7851a10944eda390789eb66c1805ae68e3633ec4435c174e078982f61f27c3b8d94e132697f41d6ebe284c2f20d592dd7c34735f5a10203010001a382039630820392301f0603551d23041830168014748580c066c7df37decfbd2937aa031dbeedcd17301d0603551d0e04160414e28eb9b4d77668fe804bbbad990dd0f91c48b7d330250603551d11041e301c820d2a2e73706f746966792e636f6d820b73706f746966792e636f6d303e0603551d20043730353033060667810c0102023029302706082b06010505070201161b687474703a2f2f7777772e64696769636572742e636f6d2f435053300e0603551d0f0101ff0404030205a0301d0603551d250416301406082b0601050507030106082b0601050507030230819f0603551d1f0481973081943048a046a0448642687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c3048a046a0448642687474703a2f2f63726c342e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c30818706082b06010505070101047b3079302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d305106082b060105050730028645687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e637274300c0603551d130101ff040230003082017e060a2b06010401d6790204020482016e0482016a01680075004e75a3275c9a10c3385b6cd4df3f52eb1df0e08e1b8d69c0b1fa64b1629a39df0000018d78112c530000040300463044022067e891f0c0823f0a1f749f185e62009eeb6ecf959ba11b55cd40eacd38809c0f0220389e5aa665bbf4926eb78be435477ce514fcc1c8a79b59965498ce7b93ff072c0077007d591e12e1782a7b1c61677c5efdf8d0875c14a04e959eb9032fd90e8c2e79b80000018d78112c9200000403004830460221009ef78997d892f5c11c9779556b634d312347c1023c7b2dcd3981069e940d69ae022100bc36a1d1eaad9905e865016931f4aecbdea606972f46902794ef7529904c0e34007600e6d2316340778cc1104106d771b9cec1d240f6968486fbba87321dfd1e378e500000018d78112cba000004030047304502200dcf53185290a596ff491339db0da139bc6250904a88d2d9e0c5005cc20d3175022100c4290978c996e32061b57b009f01b0c92ab47a988b9796df5d2d3087f2af915c300d06092a864886f70d01010b05000382010100658d45f5736591c463b35f85a7d3cd00eeb503a6f8d04c69875fd5bb2f9ec15b0940fa5c175663ed0cf58cbf09d2b25023e40d40b359cbb833a33bed0f5e071270d4f87d23a31c2680b65f914790ec909ccc52d95b5bda0efb2502534950db6f69d13c60cf4baca7d634730701d65c73e35b5bb3c45851bd21c6395babf75029493b6ee16f24bea8195655f1ad180ab47bd6eb701b5004bd90806e50f5f91dc9c2e084e06e317bd4ae6a0b3543bf862fb001e27ec12248e78391664ba63639fa7405a292aa190c3e282adddce126046f5a4c974d8fb45b99004463dda1eaa454a9dbc6f0cbf0883cd3c2d45dd489c02e36ee487a8a68c9f74c8da8f2b7f1fade), CertificateDer(0x308204c8308203b0a00302010202100cf5bd062b5602f47ab8502c23ccf066300d06092a864886f70d01010b05003061310b300906035504061302555331153013060355040a130c446967694365727420496e6331193017060355040b13107777772e64696769636572742e636f6d3120301e06035504031317446967694365727420476c6f62616c20526f6f74204732301e170d3231303333303030303030305a170d3331303332393233353935395a3059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c53205253412053484132353620323032302043413130820122300d06092a864886f70d01010105000382010f003082010a0282010100ccf710624fa6bb636fed905256c56d277b7a12568af1f4f9d6e7e18fbd95abf260411570db1200fa270ab557385b7db2519371950e6a41945b351bfa7bfabbc5be2430fe56efc4f37d97e314f5144dcba710f216eaab22f031221161699026ba78d9971fe37d66ab75449573c8acffef5d0a8a5943e1acb23a0ff348fcd76b37c163dcde46d6db45fe7d23fd90e851071e51a35fed4946547f2c88c5f4139c97153c03e8a139dc690c32c1af16574c9447427ca2c89c7de6d44d54af4299a8c104c2779cd648e4ce11e02a8099f04370cf3f766bd14c49ab245ec20d82fd46a8ab6c93cc6252427592f89afa5e5eb2b061e51f1fb97f0998e83dfa837f4769a10203010001a38201823082017e30120603551d130101ff040830060101ff020100301d0603551d0e04160414748580c066c7df37decfbd2937aa031dbeedcd17301f0603551d230418301680144e2254201895e6e36ee60ffafab912ed06178f39300e0603551d0f0101ff040403020186301d0603551d250416301406082b0601050507030106082b06010505070302307606082b06010505070101046a3068302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d304006082b060105050730028634687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63727430420603551d1f043b30393037a035a0338631687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63726c303d0603551d2004363034300b06096086480186fd6c02013007060567810c01013008060667810c0102013008060667810c0102023008060667810c010203300d06092a864886f70d01010b0500038201010090f170cb289769977c74fdc0fa267b53abadcd65fdba9c069c8ad75a4387ed4d4c565fadc1c5b505202e59d1ff4af5a02ad8b095adc92e4a3bd7a7f66f8829fc303f2484bbc3b77b93072caf876b7633ed005552b2599ee4b9d0f3dfe70ffeddf8c4b910728109045fcf979e2e32758ecf9a58d257317e370181b2666d291ab166096dd16e90f4b9fa2f0114c55c566401d97d87a838539f8b5d466d5cc6278481d47e8c8ca39b52e7c688ec377c2afbf0555a387210d80013cf4c73dbaa3735a82981699c76bcde187b90d4cacfef6703fd045a2116b1ffea3fdfdc82f5ebf45992230d242a95254ccaa191e6d4b7ac8774b3f16da399dbf9d5bd84409f0798)])
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 18640
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/shows?offset=0&limit=50
+[2024-12-12][13:02:30] [librespot_core::login5] [TRACE] Got auth token: Token { access_token: "BQCeoYMTXvLBarFL3CjPSKv7zGKTtDSxl4UKb8DYqq0neYY8dnS828dQsF_sQWrM3ObVAf7LyrXuyCvYEOnW3YtzJBhAlhCQBoMJEzq6EsTOOjPassOVzGc954rNnBSbTGZPefQ-604B9fsTaMty34yJOcvGqHPG7x-LkkVGqYfAup15-xqeF6rAXxwLT118MJq8CkUDJr0XGIJ7wtSApRkNt2Y2SUF0fHOnDWzAyurPcCFsOk13Ia34b5ZNXscmpBc0QQxJeKUMZCJbXkYvrexPE86UoYOiggOZMSLJ79NVgDruOZnzez1la_1LPV9iV5GOAh0el3Z9Wbl6EUNGy1CRe07jZTrGrvFxmSeMl8kE", expires_in: 3600s, token_type: "Bearer", scopes: [], timestamp: Instant { t: 127839.5000928s } }
+[2024-12-12][13:02:30] [librespot_core::http_client] [DEBUG] Requesting https://gew4-spclient.spotify.com:443/metadata/4/track/147494fc4bc64449b55a7653971e9f75?product=0&country=NL&salt=2601626436
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56061, peer: 35.186.224.24:443, socket: 1660 } })
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] host https|api.spotify.com|443 has 1 conns, dropping oldest: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56059, peer: 35.186.224.24:443, socket: 1396 } })
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] dropping stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56059, peer: 35.186.224.24:443, socket: 1396 } })
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] No cached session for DnsName("gew4-spclient.spotify.com")
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] Not resuming any session
+[2024-12-12][13:02:30] [rustls::client::hs] [TRACE] Sending ClientHello Message {
+    version: TLSv1_0,
+    payload: Handshake {
+        parsed: HandshakeMessagePayload {
+            typ: ClientHello,
+            payload: ClientHello(
+                ClientHelloPayload {
+                    client_version: TLSv1_2,
+                    random: edce93e8d95c4bcc90df87498a7c70a5c3b0c7fd88f16be81e4cb2519a2dc7f1,
+                    session_id: 40de9f8029f8af56cd526aaee5720d4574ee0ff4c54dd4e5b257ffd700648090,
+                    cipher_suites: [
+                        TLS13_AES_256_GCM_SHA384,
+                        TLS13_AES_128_GCM_SHA256,
+                        TLS13_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_EMPTY_RENEGOTIATION_INFO_SCSV,
+                    ],
+                    compression_methods: [
+                        Null,
+                    ],
+                    extensions: [
+                        NamedGroups(
+                            [
+                                X25519,
+                                secp256r1,
+                                secp384r1,
+                            ],
+                        ),
+                        ServerName(
+                            [
+                                ServerName {
+                                    typ: HostName,
+                                    payload: HostName(
+                                        DnsName(
+                                            "gew4-spclient.spotify.com",
+                                        ),
+                                    ),
+                                },
+                            ],
+                        ),
+                        SignatureAlgorithms(
+                            [
+                                ECDSA_NISTP384_SHA384,
+                                ECDSA_NISTP256_SHA256,
+                                ECDSA_NISTP521_SHA512,
+                                ED25519,
+                                RSA_PSS_SHA512,
+                                RSA_PSS_SHA384,
+                                RSA_PSS_SHA256,
+                                RSA_PKCS1_SHA512,
+                                RSA_PKCS1_SHA384,
+                                RSA_PKCS1_SHA256,
+                            ],
+                        ),
+                        PresharedKeyModes(
+                            [
+                                PSK_DHE_KE,
+                            ],
+                        ),
+                        ExtendedMasterSecretRequest,
+                        SessionTicket(
+                            Request,
+                        ),
+                        SupportedVersions(
+                            [
+                                TLSv1_3,
+                                TLSv1_2,
+                            ],
+                        ),
+                        KeyShare(
+                            [
+                                KeyShareEntry {
+                                    group: X25519,
+                                    payload: 900d75cdb2860a9954598894d2a3e2317138dc923c96b16a8d3855ea0962d97b,
+                                },
+                            ],
+                        ),
+                        EcPointFormats(
+                            [
+                                Uncompressed,
+                            ],
+                        ),
+                        CertificateStatusRequest(
+                            Ocsp(
+                                OcspCertificateStatusRequest {
+                                    responder_ids: [],
+                                    extensions: ,
+                                },
+                            ),
+                        ),
+                        Protocols(
+                            [
+                                ProtocolName(
+                                    6832,
+                                ),
+                                ProtocolName(
+                                    687474702f312e31,
+                                ),
+                            ],
+                        ),
+                    ],
+                },
+            ),
+        },
+        encoded: 010001070303edce93e8d95c4bcc90df87498a7c70a5c3b0c7fd88f16be81e4cb2519a2dc7f12040de9f8029f8af56cd526aaee5720d4574ee0ff4c54dd4e5b257ffd7006480900014130213011303c02cc02bcca9c030c02fcca800ff010000aa000a00080006001d001700180000001e001c000019676577342d7370636c69656e742e73706f746966792e636f6d000d001600140503040306030807080608050804060105010401002d000201010017000000230000002b00050403040303003300260024001d0020900d75cdb2860a9954598894d2a3e2317138dc923c96b16a8d3855ea0962d97b000b000201000005000501000000000010000e000c02683208687474702f312e31,
+    },
+}
+[2024-12-12][13:02:30] [rustls::client::hs] [TRACE] We got ServerHello ServerHelloPayload {
+    extensions: [
+        KeyShare(
+            KeyShareEntry {
+                group: X25519,
+                payload: 1922050708883d9c1f1a3eedc89132b613c2b6e4ee01f9c1d805c92f35bcfd54,
+            },
+        ),
+        SupportedVersions(
+            TLSv1_3,
+        ),
+    ],
+    legacy_version: TLSv1_2,
+    random: 463695eb45833f615287baa3771824e98fbb0fb90fde4c336292f89977725606,
+    session_id: 40de9f8029f8af56cd526aaee5720d4574ee0ff4c54dd4e5b257ffd700648090,
+    cipher_suite: TLS13_AES_256_GCM_SHA384,
+    compression_method: Null,
+}
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] Using ciphersuite TLS13_AES_256_GCM_SHA384
+[2024-12-12][13:02:30] [rustls::client::tls13] [DEBUG] Not resuming
+[2024-12-12][13:02:30] [rustls::client::client_conn] [TRACE] EarlyData rejected
+[2024-12-12][13:02:30] [rustls::conn] [TRACE] Dropping CCS
+[2024-12-12][13:02:30] [rustls::client::tls13] [DEBUG] TLS1.3 encrypted extensions: [Protocols([ProtocolName(6832)])]
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] ALPN protocol is Some(b"h2")
+[2024-12-12][13:02:30] [rustls::client::tls13] [TRACE] Server cert is CertificateChain([CertificateDer(0x308206c9308205b1a00302010202100186ff0fb60cdac83b40d9cb98f99747300d06092a864886f70d01010b05003059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c532052534120534841323536203230323020434131301e170d3234303230353030303030305a170d3235303230343233353935395a304e310b3009060355040613025345311230100603550407130953746f636b686f6c6d31133011060355040a130a53706f746966792041423116301406035504030c0d2a2e73706f746966792e636f6d30820122300d06092a864886f70d01010105000382010f003082010a0282010100d26f9bf30c67951cc2b46aba3390a718dfac4a22ab40fc0e8d0fe9bb723cab62595f2ea1d6188f4a6f1763dc94f6bff53cb394952d36a9714893dc87f47d3a5d17875846d2a4b906fdec1d340f9bc38ddcb7bc08712c9995acd513c5704cae6d45777bb7f74abafcc0faf1f6c9f2e4a35dfe7694195fcfb0a4a34deb214d0bc456a448e2922ec5b97e8ac41023276fb3b8ddd963defe61c0f69d1e6e919424254d0debb9e4477176a8a45d4b1bec06ab43ee4aae16110c0730ba99a174d43b809660606e2b2e526bd472a7851a10944eda390789eb66c1805ae68e3633ec4435c174e078982f61f27c3b8d94e132697f41d6ebe284c2f20d592dd7c34735f5a10203010001a382039630820392301f0603551d23041830168014748580c066c7df37decfbd2937aa031dbeedcd17301d0603551d0e04160414e28eb9b4d77668fe804bbbad990dd0f91c48b7d330250603551d11041e301c820d2a2e73706f746966792e636f6d820b73706f746966792e636f6d303e0603551d20043730353033060667810c0102023029302706082b06010505070201161b687474703a2f2f7777772e64696769636572742e636f6d2f435053300e0603551d0f0101ff0404030205a0301d0603551d250416301406082b0601050507030106082b0601050507030230819f0603551d1f0481973081943048a046a0448642687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c3048a046a0448642687474703a2f2f63726c342e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c30818706082b06010505070101047b3079302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d305106082b060105050730028645687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e637274300c0603551d130101ff040230003082017e060a2b06010401d6790204020482016e0482016a01680075004e75a3275c9a10c3385b6cd4df3f52eb1df0e08e1b8d69c0b1fa64b1629a39df0000018d78112c530000040300463044022067e891f0c0823f0a1f749f185e62009eeb6ecf959ba11b55cd40eacd38809c0f0220389e5aa665bbf4926eb78be435477ce514fcc1c8a79b59965498ce7b93ff072c0077007d591e12e1782a7b1c61677c5efdf8d0875c14a04e959eb9032fd90e8c2e79b80000018d78112c9200000403004830460221009ef78997d892f5c11c9779556b634d312347c1023c7b2dcd3981069e940d69ae022100bc36a1d1eaad9905e865016931f4aecbdea606972f46902794ef7529904c0e34007600e6d2316340778cc1104106d771b9cec1d240f6968486fbba87321dfd1e378e500000018d78112cba000004030047304502200dcf53185290a596ff491339db0da139bc6250904a88d2d9e0c5005cc20d3175022100c4290978c996e32061b57b009f01b0c92ab47a988b9796df5d2d3087f2af915c300d06092a864886f70d01010b05000382010100658d45f5736591c463b35f85a7d3cd00eeb503a6f8d04c69875fd5bb2f9ec15b0940fa5c175663ed0cf58cbf09d2b25023e40d40b359cbb833a33bed0f5e071270d4f87d23a31c2680b65f914790ec909ccc52d95b5bda0efb2502534950db6f69d13c60cf4baca7d634730701d65c73e35b5bb3c45851bd21c6395babf75029493b6ee16f24bea8195655f1ad180ab47bd6eb701b5004bd90806e50f5f91dc9c2e084e06e317bd4ae6a0b3543bf862fb001e27ec12248e78391664ba63639fa7405a292aa190c3e282adddce126046f5a4c974d8fb45b99004463dda1eaa454a9dbc6f0cbf0883cd3c2d45dd489c02e36ee487a8a68c9f74c8da8f2b7f1fade), CertificateDer(0x308204c8308203b0a00302010202100cf5bd062b5602f47ab8502c23ccf066300d06092a864886f70d01010b05003061310b300906035504061302555331153013060355040a130c446967694365727420496e6331193017060355040b13107777772e64696769636572742e636f6d3120301e06035504031317446967694365727420476c6f62616c20526f6f74204732301e170d3231303333303030303030305a170d3331303332393233353935395a3059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c53205253412053484132353620323032302043413130820122300d06092a864886f70d01010105000382010f003082010a0282010100ccf710624fa6bb636fed905256c56d277b7a12568af1f4f9d6e7e18fbd95abf260411570db1200fa270ab557385b7db2519371950e6a41945b351bfa7bfabbc5be2430fe56efc4f37d97e314f5144dcba710f216eaab22f031221161699026ba78d9971fe37d66ab75449573c8acffef5d0a8a5943e1acb23a0ff348fcd76b37c163dcde46d6db45fe7d23fd90e851071e51a35fed4946547f2c88c5f4139c97153c03e8a139dc690c32c1af16574c9447427ca2c89c7de6d44d54af4299a8c104c2779cd648e4ce11e02a8099f04370cf3f766bd14c49ab245ec20d82fd46a8ab6c93cc6252427592f89afa5e5eb2b061e51f1fb97f0998e83dfa837f4769a10203010001a38201823082017e30120603551d130101ff040830060101ff020100301d0603551d0e04160414748580c066c7df37decfbd2937aa031dbeedcd17301f0603551d230418301680144e2254201895e6e36ee60ffafab912ed06178f39300e0603551d0f0101ff040403020186301d0603551d250416301406082b0601050507030106082b06010505070302307606082b06010505070101046a3068302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d304006082b060105050730028634687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63727430420603551d1f043b30393037a035a0338631687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63726c303d0603551d2004363034300b06096086480186fd6c02013007060567810c01013008060667810c0102013008060667810c0102023008060667810c010203300d06092a864886f70d01010b0500038201010090f170cb289769977c74fdc0fa267b53abadcd65fdba9c069c8ad75a4387ed4d4c565fadc1c5b505202e59d1ff4af5a02ad8b095adc92e4a3bd7a7f66f8829fc303f2484bbc3b77b93072caf876b7633ed005552b2599ee4b9d0f3dfe70ffeddf8c4b910728109045fcf979e2e32758ecf9a58d257317e370181b2666d291ab166096dd16e90f4b9fa2f0114c55c566401d97d87a838539f8b5d466d5cc6278481d47e8c8ca39b52e7c688ec377c2afbf0555a387210d80013cf4c73dbaa3735a82981699c76bcde187b90d4cacfef6703fd045a2116b1ffea3fdfdc82f5ebf45992230d242a95254ccaa191e6d4b7ac8774b3f16da399dbf9d5bd84409f0798)])
+[2024-12-12][13:02:30] [librespot_metadata] [TRACE] Received metadata: Track {
+    gid: Some(
+        [
+            20,
+            116,
+            148,
+            252,
+            75,
+            198,
+            68,
+            73,
+            181,
+            90,
+            118,
+            83,
+            151,
+            30,
+            159,
+            117,
+        ],
+    ),
+    name: Some(
+        "Silence - DJ Tiësto's In Search Of Sunrise Remix",
+    ),
+    album: MessageField(
+        Some(
+            Album {
+                gid: Some(
+                    [
+                        52,
+                        154,
+                        117,
+                        149,
+                        242,
+                        180,
+                        77,
+                        35,
+                        149,
+                        60,
+                        79,
+                        75,
+                        190,
+                        8,
+                        220,
+                        190,
+                    ],
+                ),
+                name: Some(
+                    "Odyssey: The Remix Collection",
+                ),
+                artist: [
+                    Artist {
+                        gid: Some(
+                            [
+                                23,
+                                204,
+                                206,
+                                28,
+                                59,
+                                117,
+                                74,
+                                89,
+                                189,
+                                21,
+                                173,
+                                236,
+                                136,
+                                100,
+                                252,
+                                49,
+                            ],
+                        ),
+                        name: Some(
+                            "Delerium",
+                        ),
+                        popularity: None,
+                        top_track: [],
+                        album_group: [],
+                        single_group: [],
+                        compilation_group: [],
+                        appears_on_group: [],
+                        genre: [],
+                        external_id: [],
+                        portrait: [],
+                        biography: [],
+                        activity_period: [],
+                        restriction: [],
+                        related: [],
+                        is_portrait_album_cover: None,
+                        portrait_group: MessageField(
+                            None,
+                        ),
+                        sale_period: [],
+                        availability: [],
+                        special_fields: SpecialFields {
+                            unknown_fields: UnknownFields {
+                                fields: None,
+                            },
+                            cached_size: CachedSize {
+                                size: 0,
+                            },
+                        },
+                    },
+                ],
+                type_: None,
+                label: Some(
+                    "Nettwerk Music Group",
+                ),
+                date: MessageField(
+                    Some(
+                        Date {
+                            year: Some(
+                                2007,
+                            ),
+                            month: Some(
+                                7,
+                            ),
+                            day: Some(
+                                2,
+                            ),
+                            hour: None,
+                            minute: None,
+                            special_fields: SpecialFields {
+                                unknown_fields: UnknownFields {
+                                    fields: None,
+                                },
+                                cached_size: CachedSize {
+                                    size: 0,
+                                },
+                            },
+                        },
+                    ),
+                ),
+                popularity: None,
+                genre: [],
+                cover: [],
+                external_id: [],
+                disc: [],
+                review: [],
+                copyright: [],
+                restriction: [],
+                related: [],
+                sale_period: [],
+                cover_group: MessageField(
+                    Some(
+                        ImageGroup {
+                            image: [
+                                Image {
+                                    file_id: Some(
+                                        [
+                                            171,
+                                            103,
+                                            97,
+                                            109,
+                                            0,
+                                            0,
+                                            30,
+                                            2,
+                                            26,
+                                            208,
+                                            77,
+                                            160,
+                                            80,
+                                            18,
+                                            216,
+                                            8,
+                                            147,
+                                            226,
+                                            5,
+                                            173,
+                                        ],
+                                    ),
+                                    size: Some(
+                                        DEFAULT,
+                                    ),
+                                    width: Some(
+                                        300,
+                                    ),
+                                    height: Some(
+                                        300,
+                                    ),
+                                    special_fields: SpecialFields {
+                                        unknown_fields: UnknownFields {
+                                            fields: None,
+                                        },
+                                        cached_size: CachedSize {
+                                            size: 0,
+                                        },
+                                    },
+                                },
+                                Image {
+                                    file_id: Some(
+                                        [
+                                            171,
+                                            103,
+                                            97,
+                                            109,
+                                            0,
+                                            0,
+                                            72,
+                                            81,
+                                            26,
+                                            208,
+                                            77,
+                                            160,
+                                            80,
+                                            18,
+                                            216,
+                                            8,
+                                            147,
+                                            226,
+                                            5,
+                                            173,
+                                        ],
+                                    ),
+                                    size: Some(
+                                        SMALL,
+                                    ),
+                                    width: Some(
+                                        64,
+                                    ),
+                                    height: Some(
+                                        64,
+                                    ),
+                                    special_fields: SpecialFields {
+                                        unknown_fields: UnknownFields {
+                                            fields: None,
+                                        },
+                                        cached_size: CachedSize {
+                                            size: 0,
+                                        },
+                                    },
+                                },
+                                Image {
+                                    file_id: Some(
+                                        [
+                                            171,
+                                            103,
+                                            97,
+                                            109,
+                                            0,
+                                            0,
+                                            178,
+                                            115,
+                                            26,
+                                            208,
+                                            77,
+                                            160,
+                                            80,
+                                            18,
+                                            216,
+                                            8,
+                                            147,
+                                            226,
+                                            5,
+                                            173,
+                                        ],
+                                    ),
+                                    size: Some(
+                                        LARGE,
+                                    ),
+                                    width: Some(
+                                        640,
+                                    ),
+                                    height: Some(
+                                        640,
+                                    ),
+                                    special_fields: SpecialFields {
+                                        unknown_fields: UnknownFields {
+                                            fields: None,
+                                        },
+                                        cached_size: CachedSize {
+                                            size: 0,
+                                        },
+                                    },
+                                },
+                            ],
+                            special_fields: SpecialFields {
+                                unknown_fields: UnknownFields {
+                                    fields: None,
+                                },
+                                cached_size: CachedSize {
+                                    size: 0,
+                                },
+                            },
+                        },
+                    ),
+                ),
+                original_title: None,
+                version_title: None,
+                type_str: None,
+                availability: [],
+                special_fields: SpecialFields {
+                    unknown_fields: UnknownFields {
+                        fields: Some(
+                            {
+                                25: UnknownValues {
+                                    fixed32: [],
+                                    fixed64: [],
+                                    varint: [],
+                                    length_delimited: [
+                                        [
+                                            10,
+                                            16,
+                                            204,
+                                            108,
+                                            46,
+                                            155,
+                                            119,
+                                            234,
+                                            73,
+                                            122,
+                                            162,
+                                            251,
+                                            185,
+                                            28,
+                                            61,
+                                            151,
+                                            153,
+                                            94,
+                                        ],
+                                    ],
+                                },
+                            },
+                        ),
+                    },
+                    cached_size: CachedSize {
+                        size: 0,
+                    },
+                },
+            },
+        ),
+    ),
+    artist: [
+        Artist {
+            gid: Some(
+                [
+                    23,
+                    204,
+                    206,
+                    28,
+                    59,
+                    117,
+                    74,
+                    89,
+                    189,
+                    21,
+                    173,
+                    236,
+                    136,
+                    100,
+                    252,
+                    49,
+                ],
+            ),
+            name: Some(
+                "Delerium",
+            ),
+            popularity: None,
+            top_track: [],
+            album_group: [],
+            single_group: [],
+            compilation_group: [],
+            appears_on_group: [],
+            genre: [],
+            external_id: [],
+            portrait: [],
+            biography: [],
+            activity_period: [],
+            restriction: [],
+            related: [],
+            is_portrait_album_cover: None,
+            portrait_group: MessageField(
+                None,
+            ),
+            sale_period: [],
+            availability: [],
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+        Artist {
+            gid: Some(
+                [
+                    157,
+                    137,
+                    220,
+                    82,
+                    48,
+                    199,
+                    75,
+                    114,
+                    147,
+                    2,
+                    81,
+                    245,
+                    236,
+                    227,
+                    225,
+                    5,
+                ],
+            ),
+            name: Some(
+                "Sarah McLachlan",
+            ),
+            popularity: None,
+            top_track: [],
+            album_group: [],
+            single_group: [],
+            compilation_group: [],
+            appears_on_group: [],
+            genre: [],
+            external_id: [],
+            portrait: [],
+            biography: [],
+            activity_period: [],
+            restriction: [],
+            related: [],
+            is_portrait_album_cover: None,
+            portrait_group: MessageField(
+                None,
+            ),
+            sale_period: [],
+            availability: [],
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+    ],
+    number: Some(
+        1,
+    ),
+    disc_number: Some(
+        1,
+    ),
+    duration: Some(
+        685640,
+    ),
+    popularity: Some(
+        51,
+    ),
+    explicit: None,
+    external_id: [
+        ExternalId {
+            type_: Some(
+                "isrc",
+            ),
+            id: Some(
+                "CAN110100176",
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+    ],
+    restriction: [],
+    file: [
+        AudioFile {
+            file_id: Some(
+                [
+                    217,
+                    51,
+                    148,
+                    250,
+                    241,
+                    205,
+                    93,
+                    110,
+                    143,
+                    131,
+                    39,
+                    191,
+                    221,
+                    239,
+                    51,
+                    5,
+                    75,
+                    236,
+                    247,
+                    126,
+                ],
+            ),
+            format: Some(
+                OGG_VORBIS_320,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+        AudioFile {
+            file_id: Some(
+                [
+                    100,
+                    172,
+                    1,
+                    32,
+                    53,
+                    177,
+                    251,
+                    0,
+                    92,
+                    31,
+                    199,
+                    158,
+                    2,
+                    34,
+                    218,
+                    9,
+                    173,
+                    132,
+                    79,
+                    132,
+                ],
+            ),
+            format: Some(
+                OGG_VORBIS_160,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+        AudioFile {
+            file_id: Some(
+                [
+                    201,
+                    155,
+                    212,
+                    176,
+                    181,
+                    229,
+                    186,
+                    37,
+                    155,
+                    126,
+                    173,
+                    105,
+                    51,
+                    77,
+                    115,
+                    130,
+                    237,
+                    151,
+                    116,
+                    160,
+                ],
+            ),
+            format: Some(
+                OGG_VORBIS_96,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+        AudioFile {
+            file_id: Some(
+                [
+                    122,
+                    131,
+                    104,
+                    165,
+                    155,
+                    192,
+                    45,
+                    37,
+                    222,
+                    245,
+                    152,
+                    124,
+                    191,
+                    201,
+                    153,
+                    224,
+                    26,
+                    97,
+                    33,
+                    55,
+                ],
+            ),
+            format: Some(
+                OTHER5,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+        AudioFile {
+            file_id: Some(
+                [
+                    22,
+                    52,
+                    243,
+                    125,
+                    37,
+                    248,
+                    54,
+                    5,
+                    105,
+                    255,
+                    61,
+                    61,
+                    189,
+                    214,
+                    155,
+                    99,
+                    28,
+                    244,
+                    120,
+                    58,
+                ],
+            ),
+            format: Some(
+                AAC_320,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+        AudioFile {
+            file_id: Some(
+                [
+                    163,
+                    148,
+                    153,
+                    197,
+                    230,
+                    94,
+                    79,
+                    251,
+                    122,
+                    89,
+                    124,
+                    239,
+                    150,
+                    34,
+                    113,
+                    196,
+                    37,
+                    211,
+                    40,
+                    192,
+                ],
+            ),
+            format: Some(
+                MP4_128,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+        AudioFile {
+            file_id: Some(
+                [
+                    8,
+                    235,
+                    92,
+                    227,
+                    9,
+                    97,
+                    80,
+                    4,
+                    160,
+                    107,
+                    112,
+                    123,
+                    81,
+                    118,
+                    159,
+                    2,
+                    224,
+                    34,
+                    162,
+                    100,
+                ],
+            ),
+            format: Some(
+                AAC_160,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+        AudioFile {
+            file_id: Some(
+                [
+                    212,
+                    119,
+                    153,
+                    40,
+                    72,
+                    228,
+                    240,
+                    46,
+                    162,
+                    131,
+                    199,
+                    188,
+                    219,
+                    98,
+                    164,
+                    248,
+                    110,
+                    132,
+                    124,
+                    213,
+                ],
+            ),
+            format: Some(
+                AAC_24,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+    ],
+    alternative: [],
+    sale_period: [],
+    preview: [
+        AudioFile {
+            file_id: Some(
+                [
+                    194,
+                    196,
+                    110,
+                    75,
+                    63,
+                    173,
+                    71,
+                    136,
+                    125,
+                    101,
+                    69,
+                    115,
+                    106,
+                    74,
+                    187,
+                    147,
+                    109,
+                    187,
+                    106,
+                    220,
+                ],
+            ),
+            format: Some(
+                MP3_96,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+    ],
+    tags: [],
+    earliest_live_timestamp: Some(
+        1572399446,
+    ),
+    has_lyrics: Some(
+        true,
+    ),
+    availability: [],
+    licensor: MessageField(
+        Some(
+            Licensor {
+                uuid: Some(
+                    [
+                        204,
+                        108,
+                        46,
+                        155,
+                        119,
+                        234,
+                        73,
+                        122,
+                        162,
+                        251,
+                        185,
+                        28,
+                        61,
+                        151,
+                        153,
+                        94,
+                    ],
+                ),
+                special_fields: SpecialFields {
+                    unknown_fields: UnknownFields {
+                        fields: None,
+                    },
+                    cached_size: CachedSize {
+                        size: 0,
+                    },
+                },
+            },
+        ),
+    ),
+    language_of_performance: [
+        "en",
+    ],
+    content_rating: [],
+    original_title: Some(
+        "Silence",
+    ),
+    version_title: Some(
+        "DJ Tiësto's In Search Of Sunrise Remix",
+    ),
+    artist_with_role: [
+        ArtistWithRole {
+            artist_gid: Some(
+                [
+                    23,
+                    204,
+                    206,
+                    28,
+                    59,
+                    117,
+                    74,
+                    89,
+                    189,
+                    21,
+                    173,
+                    236,
+                    136,
+                    100,
+                    252,
+                    49,
+                ],
+            ),
+            artist_name: Some(
+                "Delerium",
+            ),
+            role: Some(
+                ARTIST_ROLE_MAIN_ARTIST,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+        ArtistWithRole {
+            artist_gid: Some(
+                [
+                    157,
+                    137,
+                    220,
+                    82,
+                    48,
+                    199,
+                    75,
+                    114,
+                    147,
+                    2,
+                    81,
+                    245,
+                    236,
+                    227,
+                    225,
+                    5,
+                ],
+            ),
+            artist_name: Some(
+                "Sarah McLachlan",
+            ),
+            role: Some(
+                ARTIST_ROLE_FEATURED_ARTIST,
+            ),
+            special_fields: SpecialFields {
+                unknown_fields: UnknownFields {
+                    fields: None,
+                },
+                cached_size: CachedSize {
+                    size: 0,
+                },
+            },
+        },
+    ],
+    special_fields: SpecialFields {
+        unknown_fields: UnknownFields {
+            fields: Some(
+                {
+                    36: UnknownValues {
+                        fixed32: [],
+                        fixed64: [],
+                        varint: [],
+                        length_delimited: [
+                            [
+                                115,
+                                112,
+                                111,
+                                116,
+                                105,
+                                102,
+                                121,
+                                58,
+                                116,
+                                114,
+                                97,
+                                99,
+                                107,
+                                58,
+                                48,
+                                67,
+                                66,
+                                55,
+                                74,
+                                57,
+                                81,
+                                115,
+                                118,
+                                69,
+                                113,
+                                109,
+                                68,
+                                48,
+                                77,
+                                89,
+                                49,
+                                112,
+                                108,
+                                82,
+                                115,
+                                104,
+                            ],
+                        ],
+                    },
+                    39: UnknownValues {
+                        fixed32: [],
+                        fixed64: [],
+                        varint: [],
+                        length_delimited: [
+                            [],
+                        ],
+                    },
+                    24: UnknownValues {
+                        fixed32: [],
+                        fixed64: [],
+                        varint: [],
+                        length_delimited: [
+                            [
+                                10,
+                                16,
+                                40,
+                                202,
+                                182,
+                                219,
+                                77,
+                                236,
+                                69,
+                                123,
+                                145,
+                                38,
+                                103,
+                                223,
+                                68,
+                                229,
+                                120,
+                                244,
+                            ],
+                        ],
+                    },
+                },
+            ),
+        },
+        cached_size: CachedSize {
+            size: 0,
+        },
+    },
+}
+[2024-12-12][13:02:30] [librespot_playback::player] [INFO] Loading <Silence - DJ Tiësto's In Search Of Sunrise Remix> with Spotify URI <spotify:track:0CB7J9QsvEqmD0MY1plRsh>
+[2024-12-12][13:02:30] [librespot_audio::fetch] [DEBUG] Downloading file d93394faf1cd5d6e8f8327bfddef33054becf77e
+[2024-12-12][13:02:30] [librespot_core::http_client] [DEBUG] Requesting https://gew4-spclient.spotify.com:443/storage-resolve/files/audio/interactive/d93394faf1cd5d6e8f8327bfddef33054becf77e?product=0&country=NL&salt=2718270215
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 53905
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/playlists?offset=0&limit=50
+[2024-12-12][13:02:30] [librespot_core::cdn_url] [TRACE] Resolved CDN storage: CdnUrl {
+    file_id: FileId(
+        Ok(
+            "d93394faf1cd5d6e8f8327bfddef33054becf77e",
+        ),
+    ),
+    urls: MaybeExpiringUrls(
+        [
+            MaybeExpiringUrl(
+                "https://audio-ak.spotifycdn.com/audio/d93394faf1cd5d6e8f8327bfddef33054becf77e?__token__=exp=1734091350~hmac=9d480c41f579edba0111178ce7ca9df37c2d86e53dc159a6a2700164ccf02762",
+                Some(
+                    Date(
+                        2024-12-13 11:57:30.0 +00:00:00,
+                    ),
+                ),
+            ),
+            MaybeExpiringUrl(
+                "https://audio4-fa.scdn.co/audio/d93394faf1cd5d6e8f8327bfddef33054becf77e?1734091350_lzQvqotzwncetfUgvNI1r5tYrEecxBmIYS5q-xvUHm0=",
+                Some(
+                    Date(
+                        2024-12-13 11:57:30.0 +00:00:00,
+                    ),
+                ),
+            ),
+        ],
+    ),
+}
+[2024-12-12][13:02:30] [librespot_audio::fetch] [TRACE] Streaming from https://audio-ak.spotifycdn.com/audio/d93394faf1cd5d6e8f8327bfddef33054becf77e?__token__=exp=1734091350~hmac=9d480c41f579edba0111178ce7ca9df37c2d86e53dc159a6a2700164ccf02762
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] No cached session for DnsName("audio-ak.spotifycdn.com")
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] Not resuming any session
+[2024-12-12][13:02:30] [rustls::client::hs] [TRACE] Sending ClientHello Message {
+    version: TLSv1_0,
+    payload: Handshake {
+        parsed: HandshakeMessagePayload {
+            typ: ClientHello,
+            payload: ClientHello(
+                ClientHelloPayload {
+                    client_version: TLSv1_2,
+                    random: aab28f68b5fac7f77433d3b44fbafda50c41e6db6d421308b059e4a6f4c91022,
+                    session_id: a44b160f6fd9b159008a0ea5e1d40fcdeeed3a0ef3b8935ae098f8914740d4f5,
+                    cipher_suites: [
+                        TLS13_AES_256_GCM_SHA384,
+                        TLS13_AES_128_GCM_SHA256,
+                        TLS13_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,
+                        TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,
+                        TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,
+                        TLS_EMPTY_RENEGOTIATION_INFO_SCSV,
+                    ],
+                    compression_methods: [
+                        Null,
+                    ],
+                    extensions: [
+                        ServerName(
+                            [
+                                ServerName {
+                                    typ: HostName,
+                                    payload: HostName(
+                                        DnsName(
+                                            "audio-ak.spotifycdn.com",
+                                        ),
+                                    ),
+                                },
+                            ],
+                        ),
+                        CertificateStatusRequest(
+                            Ocsp(
+                                OcspCertificateStatusRequest {
+                                    responder_ids: [],
+                                    extensions: ,
+                                },
+                            ),
+                        ),
+                        KeyShare(
+                            [
+                                KeyShareEntry {
+                                    group: X25519,
+                                    payload: 72059cfa42a211f2a3ddcddc332ac5670f1124933456bafa66d5063f3b68613a,
+                                },
+                            ],
+                        ),
+                        SessionTicket(
+                            Request,
+                        ),
+                        SupportedVersions(
+                            [
+                                TLSv1_3,
+                                TLSv1_2,
+                            ],
+                        ),
+                        NamedGroups(
+                            [
+                                X25519,
+                                secp256r1,
+                                secp384r1,
+                            ],
+                        ),
+                        PresharedKeyModes(
+                            [
+                                PSK_DHE_KE,
+                            ],
+                        ),
+                        EcPointFormats(
+                            [
+                                Uncompressed,
+                            ],
+                        ),
+                        Protocols(
+                            [
+                                ProtocolName(
+                                    6832,
+                                ),
+                                ProtocolName(
+                                    687474702f312e31,
+                                ),
+                            ],
+                        ),
+                        SignatureAlgorithms(
+                            [
+                                ECDSA_NISTP384_SHA384,
+                                ECDSA_NISTP256_SHA256,
+                                ECDSA_NISTP521_SHA512,
+                                ED25519,
+                                RSA_PSS_SHA512,
+                                RSA_PSS_SHA384,
+                                RSA_PSS_SHA256,
+                                RSA_PKCS1_SHA512,
+                                RSA_PKCS1_SHA384,
+                                RSA_PKCS1_SHA256,
+                            ],
+                        ),
+                        ExtendedMasterSecretRequest,
+                    ],
+                },
+            ),
+        },
+        encoded: 010001050303aab28f68b5fac7f77433d3b44fbafda50c41e6db6d421308b059e4a6f4c9102220a44b160f6fd9b159008a0ea5e1d40fcdeeed3a0ef3b8935ae098f8914740d4f50014130213011303c02cc02bcca9c030c02fcca800ff010000a80000001c001a000017617564696f2d616b2e73706f7469667963646e2e636f6d000500050100000000003300260024001d002072059cfa42a211f2a3ddcddc332ac5670f1124933456bafa66d5063f3b68613a00230000002b00050403040303000a00080006001d00170018002d00020101000b000201000010000e000c02683208687474702f312e31000d00160014050304030603080708060805080406010501040100170000,
+    },
+}
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] host https|api.spotify.com|443 has 1 conns, dropping oldest: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56061, peer: 35.186.224.24:443, socket: 1660 } })
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] dropping stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56061, peer: 35.186.224.24:443, socket: 1660 } })
+[2024-12-12][13:02:30] [ncspot::ui::pagination] [DEBUG] fetched first page, items: 50, total: 145
+[2024-12-12][13:02:30] [ncspot::library] [INFO] updating playlist Miss Monique ALL Tracks (index: 0)
+[2024-12-12][13:02:30] [ncspot::spotify_api] [DEBUG] fetching playlist 7qx7GQj3GtRxdY3pli8UHv tracks, offset: 0
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/playlists/7qx7GQj3GtRxdY3pli8UHv/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/playlists/7qx7GQj3GtRxdY3pli8UHv/tracks?market=from_token&limit=100&offset=0
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/playlists/7qx7GQj3GtRxdY3pli8UHv/tracks?market=from_token&limit=100&offset=0 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [rustls::client::hs] [TRACE] We got ServerHello ServerHelloPayload {
+    extensions: [
+        SupportedVersions(
+            TLSv1_3,
+        ),
+        KeyShare(
+            KeyShareEntry {
+                group: X25519,
+                payload: 72393562e58ff24b35153b89f1c60f0a4490b82555240ee11d1d68773892d617,
+            },
+        ),
+    ],
+    legacy_version: TLSv1_2,
+    random: 59a942e3cbd33ebeb20673ba0d88c3b2256e81a867296fffc5a50bc46bb826e8,
+    session_id: a44b160f6fd9b159008a0ea5e1d40fcdeeed3a0ef3b8935ae098f8914740d4f5,
+    cipher_suite: TLS13_AES_256_GCM_SHA384,
+    compression_method: Null,
+}
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] Using ciphersuite TLS13_AES_256_GCM_SHA384
+[2024-12-12][13:02:30] [rustls::client::tls13] [DEBUG] Not resuming
+[2024-12-12][13:02:30] [rustls::client::client_conn] [TRACE] EarlyData rejected
+[2024-12-12][13:02:30] [rustls::conn] [TRACE] Dropping CCS
+[2024-12-12][13:02:30] [rustls::client::tls13] [DEBUG] TLS1.3 encrypted extensions: [ServerNameAck, Unknown(UnknownExtension { typ: EllipticCurves, payload: 00040017001d }), Protocols([ProtocolName(687474702f312e31)])]
+[2024-12-12][13:02:30] [rustls::client::hs] [DEBUG] ALPN protocol is Some(b"http/1.1")
+[2024-12-12][13:02:30] [rustls::client::tls13] [TRACE] Server cert is CertificateChain([CertificateDer(0x30820608308204f0a003020102021005d9fcb02b4cb0e67aaf20929cdf6fdb300d06092a864886f70d01010b05003059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c532052534120534841323536203230323020434131301e170d3234303730393030303030305a170d3235303830393233353935395a3051310b3009060355040613025345311230100603550407130953746f636b686f6c6d31133011060355040a130a53706f746966792041423119301706035504030c102a2e73706f7469667963646e2e636f6d3059301306072a8648ce3d020106082a8648ce3d030107034200047d4eecef4183cb7f63b354571229440e15ee43598d4ea34696f42e4811392b44e329cb8cbcd8986b397feac6ad4dfa66641312c10e848fe6c0a260c6f4b6396ba382039d30820399301f0603551d23041830168014748580c066c7df37decfbd2937aa031dbeedcd17301d0603551d0e0416041419ea327086ce65e3f7685b02f26dea34caf7d0d1302b0603551d110424302282102a2e73706f7469667963646e2e636f6d820e73706f7469667963646e2e636f6d303e0603551d20043730353033060667810c0102023029302706082b06010505070201161b687474703a2f2f7777772e64696769636572742e636f6d2f435053300e0603551d0f0101ff040403020388301d0603551d250416301406082b0601050507030106082b0601050507030230819f0603551d1f0481973081943048a046a0448642687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c3048a046a0448642687474703a2f2f63726c342e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e63726c30818706082b06010505070101047b3079302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d305106082b060105050730028645687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c4732544c53525341534841323536323032304341312d312e637274300c0603551d130101ff040230003082017f060a2b06010401d6790204020482016f0482016b016900770012f14e34bd53724c840619c38f3f7a13f8e7b56287889c6d300584ebe586263a00000190983ac4470000040300483046022100de3d9374d2ca323eb0ee7505afd0a487d19deaa807cc84017859ad70b3082b61022100accc7a0282b8e4bac45e9a5aab97ca454dd41b630925bcbbbc2b0c38664a03e10076007d591e12e1782a7b1c61677c5efdf8d0875c14a04e959eb9032fd90e8c2e79b800000190983ac4740000040300473045022100ec3d2caa156758738992d55b3c0bba9dd47e9010e3900aca94389c750e533491022066a076bf180a0248aa84034f57047c4fc6b4bef96cbab9aa0a60857feaab19a4007600e6d2316340778cc1104106d771b9cec1d240f6968486fbba87321dfd1e378e5000000190983ac4bd000004030047304502204a946acae2d4a729318eb243e6d9551e0e511f6cb321bab52f48c672f964e76c022100a308f62232207204e8eb580c94887f5e1d2f653e25d507950c15f4746f803036300d06092a864886f70d01010b0500038201010007399bd7673aa9e6574947110590703ae80055f1de1ea5a2bcb12f390d8dbef120a52e24f6cdbd275eb5e3dd1e9766332da83da409313c44fb45a8dd973bbf26f7e3639b285c9fbd0e570bd67d1879d98ee6652844a99ffccf11509676e9338ee4aa7ec15505ddbfd8b84769d45610691ba706fc7d3b9441a1febcd7a38c50dae1eb02d021f670cf869e5c796e95ccb11895f565c2358f9cf8bb53ccf155e048c4d972860defcabaddaee11dec51d895d2da5b4dfb4e0dfe503c743c7c6a8a789a50b3cd1d5c5daea980caa0a2647b3eb3ca8386a5c078f3cb11bb4f70bf08eaedc63a8e547aa07302af0533f21006b61921c99768f0f5739abc82b9dea92af4), CertificateDer(0x308204c8308203b0a00302010202100cf5bd062b5602f47ab8502c23ccf066300d06092a864886f70d01010b05003061310b300906035504061302555331153013060355040a130c446967694365727420496e6331193017060355040b13107777772e64696769636572742e636f6d3120301e06035504031317446967694365727420476c6f62616c20526f6f74204732301e170d3231303333303030303030305a170d3331303332393233353935395a3059310b300906035504061302555331153013060355040a130c446967694365727420496e63313330310603550403132a446967694365727420476c6f62616c20473220544c53205253412053484132353620323032302043413130820122300d06092a864886f70d01010105000382010f003082010a0282010100ccf710624fa6bb636fed905256c56d277b7a12568af1f4f9d6e7e18fbd95abf260411570db1200fa270ab557385b7db2519371950e6a41945b351bfa7bfabbc5be2430fe56efc4f37d97e314f5144dcba710f216eaab22f031221161699026ba78d9971fe37d66ab75449573c8acffef5d0a8a5943e1acb23a0ff348fcd76b37c163dcde46d6db45fe7d23fd90e851071e51a35fed4946547f2c88c5f4139c97153c03e8a139dc690c32c1af16574c9447427ca2c89c7de6d44d54af4299a8c104c2779cd648e4ce11e02a8099f04370cf3f766bd14c49ab245ec20d82fd46a8ab6c93cc6252427592f89afa5e5eb2b061e51f1fb97f0998e83dfa837f4769a10203010001a38201823082017e30120603551d130101ff040830060101ff020100301d0603551d0e04160414748580c066c7df37decfbd2937aa031dbeedcd17301f0603551d230418301680144e2254201895e6e36ee60ffafab912ed06178f39300e0603551d0f0101ff040403020186301d0603551d250416301406082b0601050507030106082b06010505070302307606082b06010505070101046a3068302406082b060105050730018618687474703a2f2f6f6373702e64696769636572742e636f6d304006082b060105050730028634687474703a2f2f636163657274732e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63727430420603551d1f043b30393037a035a0338631687474703a2f2f63726c332e64696769636572742e636f6d2f4469676943657274476c6f62616c526f6f7447322e63726c303d0603551d2004363034300b06096086480186fd6c02013007060567810c01013008060667810c0102013008060667810c0102023008060667810c010203300d06092a864886f70d01010b0500038201010090f170cb289769977c74fdc0fa267b53abadcd65fdba9c069c8ad75a4387ed4d4c565fadc1c5b505202e59d1ff4af5a02ad8b095adc92e4a3bd7a7f66f8829fc303f2484bbc3b77b93072caf876b7633ed005552b2599ee4b9d0f3dfe70ffeddf8c4b910728109045fcf979e2e32758ecf9a58d257317e370181b2666d291ab166096dd16e90f4b9fa2f0114c55c566401d97d87a838539f8b5d466d5cc6278481d47e8c8ca39b52e7c688ec377c2afbf0555a387210d80013cf4c73dbaa3735a82981699c76bcde187b90d4cacfef6703fd045a2116b1ffea3fdfdc82f5ebf45992230d242a95254ccaa191e6d4b7ac8774b3f16da399dbf9d5bd84409f0798)])
+[2024-12-12][13:02:30] [rustls::webpki::server_verifier] [TRACE] Unvalidated OCSP response: [48, 130, 1, 211, 10, 1, 0, 160, 130, 1, 204, 48, 130, 1, 200, 6, 9, 43, 6, 1, 5, 5, 7, 48, 1, 1, 4, 130, 1, 185, 48, 130, 1, 181, 48, 129, 158, 162, 22, 4, 20, 116, 133, 128, 192, 102, 199, 223, 55, 222, 207, 189, 41, 55, 170, 3, 29, 190, 237, 205, 23, 24, 15, 50, 48, 50, 52, 49, 50, 49, 49, 49, 52, 52, 51, 48, 56, 90, 48, 115, 48, 113, 48, 73, 48, 9, 6, 5, 43, 14, 3, 2, 26, 5, 0, 4, 20, 167, 196, 184, 179, 220, 91, 181, 88, 30, 167, 215, 241, 58, 197, 105, 245, 111, 72, 215, 137, 4, 20, 116, 133, 128, 192, 102, 199, 223, 55, 222, 207, 189, 41, 55, 170, 3, 29, 190, 237, 205, 23, 2, 16, 5, 217, 252, 176, 43, 76, 176, 230, 122, 175, 32, 146, 156, 223, 111, 219, 128, 0, 24, 15, 50, 48, 50, 52, 49, 50, 49, 49, 49, 52, 50, 55, 48, 49, 90, 160, 17, 24, 15, 50, 48, 50, 52, 49, 50, 49, 56, 49, 51, 50, 55, 48, 49, 90, 48, 13, 6, 9, 42, 134, 72, 134, 247, 13, 1, 1, 11, 5, 0, 3, 130, 1, 1, 0, 160, 111, 81, 199, 195, 234, 144, 150, 154, 165, 166, 91, 220, 157, 137, 62, 48, 151, 141, 241, 186, 241, 205, 111, 243, 158, 68, 193, 160, 136, 35, 214, 181, 242, 143, 134, 125, 167, 65, 214, 182, 118, 253, 198, 22, 179, 20, 218, 59, 185, 33, 214, 78, 27, 251, 88, 110, 32, 171, 200, 145, 0, 123, 148, 53, 38, 126, 59, 94, 184, 22, 201, 20, 182, 214, 249, 108, 6, 2, 162, 21, 143, 0, 53, 246, 10, 245, 110, 182, 230, 112, 248, 204, 212, 202, 212, 47, 152, 200, 253, 207, 171, 91, 95, 242, 83, 18, 161, 136, 237, 64, 137, 131, 198, 209, 189, 53, 199, 25, 116, 31, 213, 161, 35, 187, 131, 205, 214, 71, 236, 66, 246, 50, 56, 189, 177, 6, 65, 179, 16, 253, 255, 56, 167, 213, 20, 157, 120, 13, 88, 98, 198, 191, 50, 167, 178, 159, 247, 251, 132, 247, 14, 15, 141, 147, 108, 69, 211, 225, 61, 251, 168, 237, 110, 2, 194, 253, 165, 196, 205, 89, 97, 42, 152, 10, 17, 226, 51, 237, 46, 178, 217, 213, 28, 239, 146, 23, 51, 102, 81, 155, 144, 145, 221, 174, 170, 229, 19, 144, 46, 238, 104, 57, 0, 133, 106, 66, 41, 45, 236, 186, 166, 192, 95, 121, 115, 241, 193, 52, 62, 22, 153, 166, 147, 200, 181, 217, 200, 20, 204, 19, 67, 128, 64, 17, 21, 194, 213, 27, 168, 82, 16, 197, 252, 0, 33]
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 106621
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/tracks?offset=0&market=from_token&limit=50
+[2024-12-12][13:02:30] [librespot::component] [DEBUG] new AudioKeyManager
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] tracks page: 0
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/me/tracks?offset=50&limit=50&market=from_token
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/tracks?offset=50&limit=50&market=from_token HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [symphonia_format_ogg::page] [DEBUG] grow page buffer to 8192 bytes
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [INFO] starting new physical stream
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [INFO] selected vorbis mapper for stream with serial=0x0
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Time to first byte now estimated as: 36 ms
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Throughput now estimated as: 1714 kbps
+[2024-12-12][13:02:30] [symphonia_codec_vorbis] [DEBUG] vorbis: leftover bits in setup head extra data
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seeking track=0x0 to frame_ts=531096
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 25919
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/following?type=artist&limit=50
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Time to first byte now estimated as: 28 ms
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Throughput now estimated as: 2346 kbps
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seek: bisect step: page={ start_ts=14854144, end_ts=14858624 } byte_range=[4026, 13943491, 27882956]
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56065, peer: 35.186.224.24:443, socket: 1776 } })
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] artists page: 0
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Time to first byte now estimated as: 20 ms
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Throughput now estimated as: 3513 kbps
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seek: bisect step: page={ start_ts=7583296, end_ts=7587392 } byte_range=[4026, 6973758, 13943491]
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 131651
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/playlists/7qx7GQj3GtRxdY3pli8UHv/tracks?market=from_token&limit=100&offset=0
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Time to first byte now estimated as: 12 ms
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Throughput now estimated as: 4277 kbps
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seek: bisect step: page={ start_ts=3770368, end_ts=3775168 } byte_range=[4026, 3488892, 6973758]
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] host https|api.spotify.com|443 has 1 conns, dropping oldest: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56065, peer: 35.186.224.24:443, socket: 1776 } })
+[2024-12-12][13:02:30] [ureq::stream] [DEBUG] dropping stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56065, peer: 35.186.224.24:443, socket: 1776 } })
+[2024-12-12][13:02:30] [ncspot::ui::pagination] [DEBUG] fetched first page, items: 52, total: 52
+[2024-12-12][13:02:30] [ncspot::library] [INFO] updating playlist Miss Monique: Progressive House  (index: 1)
+[2024-12-12][13:02:30] [ncspot::spotify_api] [DEBUG] fetching playlist 5XqgQknNU7sPLv03uv5Xpa tracks, offset: 0
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/playlists/5XqgQknNU7sPLv03uv5Xpa/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/playlists/5XqgQknNU7sPLv03uv5Xpa/tracks?limit=100&market=from_token&offset=0
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/playlists/5XqgQknNU7sPLv03uv5Xpa/tracks?limit=100&market=from_token&offset=0 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Throughput now estimated as: 3268 kbps
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seek: bisect step: page={ start_ts=1878592, end_ts=1882688 } byte_range=[4026, 1746459, 3488892]
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 360222
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/albums?limit=50&offset=0&market=from_token
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Time to first byte now estimated as: 24 ms
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Throughput now estimated as: 2894 kbps
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seek: bisect step: page={ start_ts=979136, end_ts=983232 } byte_range=[4026, 875242, 1746459]
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56063, peer: 35.186.224.24:443, socket: 1736 } })
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] albums page: 0
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/albums, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56063, peer: 35.186.224.24:443, socket: 1736 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/me/albums?limit=50&offset=50&market=from_token
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/albums?limit=50&offset=50&market=from_token HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seek: bisect step: page={ start_ts=497728, end_ts=501824 } byte_range=[4026, 439634, 875242]
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Time to first byte now estimated as: 19 ms
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seek: bisect step: page={ start_ts=742976, end_ts=747072 } byte_range=[439634, 657438, 875242]
+[2024-12-12][13:02:30] [librespot_audio::fetch::receive] [TRACE] Throughput now estimated as: 2745 kbps
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seek: bisect step: page={ start_ts=617152, end_ts=620544 } byte_range=[439634, 548536, 657438]
+[2024-12-12][13:02:30] [symphonia_format_ogg::demuxer] [DEBUG] seeked track=0x0 to packet_ts=530112 (delta=-984)
+[2024-12-12][13:02:30] [librespot_playback::player] [INFO] <Silence - DJ Tiësto's In Search Of Sunrise Remix> (685640 ms) loaded
+[2024-12-12][13:02:30] [ncspot::spotify_worker] [DEBUG] Unhandled player event: TrackChanged { audio_item: AudioItem { track_id: SpotifyId("spotify:track:0CB7J9QsvEqmD0MY1plRsh"), uri: "spotify:track:0CB7J9QsvEqmD0MY1plRsh", files: AudioFiles({OGG_VORBIS_160: FileId(Ok("64ac012035b1fb005c1fc79e0222da09ad844f84")), AAC_160: FileId(Ok("08eb5ce309615004a06b707b51769f02e022a264")), OGG_VORBIS_96: FileId(Ok("c99bd4b0b5e5ba259b7ead69334d7382ed9774a0")), OTHER5: FileId(Ok("7a8368a59bc02d25def5987cbfc999e01a612137")), OGG_VORBIS_320: FileId(Ok("d93394faf1cd5d6e8f8327bfddef33054becf77e")), AAC_24: FileId(Ok("d477992848e4f02ea283c7bcdb62a4f86e847cd5")), AAC_320: FileId(Ok("1634f37d25f8360569ff3d3dbdd69b631cf4783a")), MP4_128: FileId(Ok("a39499c5e65e4ffb7a597cef962271c425d328c0"))}), name: "Silence - DJ Tiësto's In Search Of Sunrise Remix", covers: [CoverImage { url: "https://i.scdn.co/image/ab67616d0000b2731ad04da05012d80893e205ad", size: LARGE, width: 640, height: 640 }, CoverImage { url: "https://i.scdn.co/image/ab67616d00001e021ad04da05012d80893e205ad", size: DEFAULT, width: 300, height: 300 }, CoverImage { url: "https://i.scdn.co/image/ab67616d000048511ad04da05012d80893e205ad", size: SMALL, width: 64, height: 64 }], language: ["en"], duration_ms: 685640, is_explicit: false, availability: Ok(()), alternatives: None, unique_fields: Track { artists: ArtistsWithRole([ArtistWithRole { id: SpotifyId("spotify:artist:0IUq1plF3ON4Fboj1bE6kN"), name: "Delerium", role: ARTIST_ROLE_MAIN_ARTIST }, ArtistWithRole { id: SpotifyId("spotify:artist:4NgNsOXSwIzXlUIJcpnNUp"), name: "Sarah McLachlan", role: ARTIST_ROLE_FEATURED_ARTIST }]), album: "Odyssey: The Remix Collection", album_artists: ["Delerium"], popularity: 51, number: 1, disc_number: 1 } } }
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 102791
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/tracks?offset=50&limit=50&market=from_token
+[2024-12-12][13:02:30] [ncspot::application] [TRACE] event received: Paused(12.02s)
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] tracks page: 1
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/me/tracks?limit=50&offset=100&market=from_token
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/tracks?limit=50&offset=100&market=from_token HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 159536
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/playlists/5XqgQknNU7sPLv03uv5Xpa/tracks?limit=100&market=from_token&offset=0
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:30] [ncspot::ui::pagination] [DEBUG] fetched first page, items: 62, total: 62
+[2024-12-12][13:02:30] [ncspot::library] [INFO] updating playlist Miss Monique: Melodic Techno 2024 (index: 2)
+[2024-12-12][13:02:30] [ncspot::spotify_api] [DEBUG] fetching playlist 5JZIMFv2aXvRvqzAsFArM0 tracks, offset: 0
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/playlists/5JZIMFv2aXvRvqzAsFArM0/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/playlists/5JZIMFv2aXvRvqzAsFArM0/tracks?market=from_token&limit=100&offset=0
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/playlists/5JZIMFv2aXvRvqzAsFArM0/tracks?market=from_token&limit=100&offset=0 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 106808
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/tracks?limit=50&offset=100&market=from_token
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] tracks page: 2
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/me/tracks?market=from_token&offset=150&limit=50
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/tracks?market=from_token&offset=150&limit=50 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 104787
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/playlists/5JZIMFv2aXvRvqzAsFArM0/tracks?market=from_token&limit=100&offset=0
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:30] [ncspot::ui::pagination] [DEBUG] fetched first page, items: 42, total: 42
+[2024-12-12][13:02:30] [ncspot::library] [INFO] updating playlist Apres-ski & Duitstalig (index: 3)
+[2024-12-12][13:02:30] [ncspot::spotify_api] [DEBUG] fetching playlist 2BkemVzrKR2pCCs943HOFM tracks, offset: 0
+[2024-12-12][13:02:30] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/playlists/2BkemVzrKR2pCCs943HOFM/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/playlists/2BkemVzrKR2pCCs943HOFM/tracks?limit=100&offset=0&market=from_token
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] writing prelude: GET /v1/playlists/2BkemVzrKR2pCCs943HOFM/tracks?limit=100&offset=0&market=from_token HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:30] [ureq::response] [DEBUG] Streaming body until content-length: 143960
+[2024-12-12][13:02:30] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/albums?limit=50&offset=50&market=from_token
+[2024-12-12][13:02:30] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56063, peer: 35.186.224.24:443, socket: 1736 } })
+[2024-12-12][13:02:30] [ncspot::library] [DEBUG] albums page: 1
+[2024-12-12][13:02:31] [ureq::response] [DEBUG] Streaming body until content-length: 108284
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/tracks?market=from_token&offset=150&limit=50
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] host https|api.spotify.com|443 has 1 conns, dropping oldest: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56063, peer: 35.186.224.24:443, socket: 1736 } })
+[2024-12-12][13:02:31] [ureq::stream] [DEBUG] dropping stream: Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56063, peer: 35.186.224.24:443, socket: 1736 } })
+[2024-12-12][13:02:31] [ncspot::library] [DEBUG] tracks page: 3
+[2024-12-12][13:02:31] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/me/tracks?limit=50&offset=200&market=from_token
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/tracks?limit=50&offset=200&market=from_token HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:31] [ureq::response] [DEBUG] Streaming body until content-length: 235919
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/playlists/2BkemVzrKR2pCCs943HOFM/tracks?limit=100&offset=0&market=from_token
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:31] [ncspot::ui::pagination] [DEBUG] fetched first page, items: 100, total: 133
+[2024-12-12][13:02:31] [ncspot::ui::pagination] [DEBUG] fetching next page at offset 100
+[2024-12-12][13:02:31] [ncspot::spotify_api] [DEBUG] fetching playlist 2BkemVzrKR2pCCs943HOFM tracks, offset: 100
+[2024-12-12][13:02:31] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/playlists/2BkemVzrKR2pCCs943HOFM/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/playlists/2BkemVzrKR2pCCs943HOFM/tracks?market=from_token&limit=100&offset=100
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] writing prelude: GET /v1/playlists/2BkemVzrKR2pCCs943HOFM/tracks?market=from_token&limit=100&offset=100 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:31] [ureq::response] [DEBUG] Streaming body until content-length: 112039
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/tracks?limit=50&offset=200&market=from_token
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:31] [ncspot::library] [DEBUG] tracks page: 4
+[2024-12-12][13:02:31] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/me/tracks?limit=50&offset=250&market=from_token
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/tracks?limit=50&offset=250&market=from_token HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:31] [ureq::response] [DEBUG] Streaming body until content-length: 79663
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/playlists/2BkemVzrKR2pCCs943HOFM/tracks?market=from_token&limit=100&offset=100
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:31] [ncspot::library] [INFO] updating playlist lofi chill (index: 4)
+[2024-12-12][13:02:31] [ncspot::spotify_api] [DEBUG] fetching playlist 37i9dQZF1DWYoYGBbGKurt tracks, offset: 0
+[2024-12-12][13:02:31] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?limit=100&market=from_token&offset=0
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] writing prelude: GET /v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?limit=100&market=from_token&offset=0 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:31] [ureq::response] [DEBUG] Streaming body until content-length: 110441
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/tracks?limit=50&offset=250&market=from_token
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:31] [ncspot::library] [DEBUG] tracks page: 5
+[2024-12-12][13:02:31] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/me/tracks?market=from_token&offset=300&limit=50
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/tracks?market=from_token&offset=300&limit=50 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:31] [ureq::response] [DEBUG] Streaming body until content-length: 218356
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?limit=100&market=from_token&offset=0
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:31] [ncspot::ui::pagination] [DEBUG] fetched first page, items: 100, total: 371
+[2024-12-12][13:02:31] [ncspot::ui::pagination] [DEBUG] fetching next page at offset 100
+[2024-12-12][13:02:31] [ncspot::spotify_api] [DEBUG] fetching playlist 37i9dQZF1DWYoYGBbGKurt tracks, offset: 100
+[2024-12-12][13:02:31] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?market=from_token&limit=100&offset=100
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] writing prelude: GET /v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?market=from_token&limit=100&offset=100 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:31] [ureq::response] [DEBUG] Streaming body until content-length: 102610
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/tracks?market=from_token&offset=300&limit=50
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:31] [ncspot::library] [DEBUG] tracks page: 6
+[2024-12-12][13:02:31] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/me/tracks?limit=50&offset=350&market=from_token
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/tracks?limit=50&offset=350&market=from_token HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:31] [ureq::response] [DEBUG] Streaming body until content-length: 217517
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?market=from_token&limit=100&offset=100
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:31] [ncspot::ui::pagination] [DEBUG] fetching next page at offset 200
+[2024-12-12][13:02:31] [ncspot::spotify_api] [DEBUG] fetching playlist 37i9dQZF1DWYoYGBbGKurt tracks, offset: 200
+[2024-12-12][13:02:31] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:31] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?market=from_token&offset=200&limit=100
+[2024-12-12][13:02:31] [ureq::unit] [DEBUG] writing prelude: GET /v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?market=from_token&offset=200&limit=100 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:32] [ureq::response] [DEBUG] Streaming body until content-length: 106743
+[2024-12-12][13:02:32] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/me/tracks?limit=50&offset=350&market=from_token
+[2024-12-12][13:02:32] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:32] [ncspot::library] [DEBUG] tracks page: 7
+[2024-12-12][13:02:32] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/me/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:32] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56064, peer: 35.186.224.24:443, socket: 1756 } })
+[2024-12-12][13:02:32] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/me/tracks?offset=400&market=from_token&limit=50
+[2024-12-12][13:02:32] [ureq::unit] [DEBUG] writing prelude: GET /v1/me/tracks?offset=400&market=from_token&limit=50 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:32] [ureq::response] [DEBUG] Streaming body until content-length: 217749
+[2024-12-12][13:02:32] [ureq::unit] [DEBUG] response 200 to GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?market=from_token&offset=200&limit=100
+[2024-12-12][13:02:32] [ureq::pool] [DEBUG] adding stream to pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:32] [ncspot::ui::pagination] [DEBUG] fetching next page at offset 300
+[2024-12-12][13:02:32] [ncspot::spotify_api] [DEBUG] fetching playlist 37i9dQZF1DWYoYGBbGKurt tracks, offset: 300
+[2024-12-12][13:02:32] [rspotify_http::ureq] [INFO] Making request Request(GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks, [authorization: Bearer BQCSBOwOVlvQDzKw8JXKM9KVzSGNa6uGXALdYZah15OmBEg8-xWJ_DYvTBgCDll-SKtkqmo4cgcXTLtyVjBmGAhY4JI1JqX65OlCxRKNjKf8blYGhaqOyAgrS8TyHftVNSufiE1x78EoBF8rY-RpoZfsucAXacEfEiAJVyONljB0V-8TdO6w2GZKP1Jkl5F7fkQ1tTm0frNjhLfnaMHa1GtMyLo_94vKNN2-O3OGIawE9Z8zNWI-X6LGDB08CuHXZggJJuVp6igmmbbdodVUTDon2ZbyIey9zOivqWAxVnTrAxmgBBl568zjwO9vdiVY5vWJHPQcpB8tvHFZiz8l00lq0gz7YIWJzlI])
+[2024-12-12][13:02:32] [ureq::pool] [DEBUG] pulling stream from pool: https|api.spotify.com|443 -> Stream(TlsStream { stream: TcpStream { addr: 192.168.1.131:56062, peer: 35.186.224.24:443, socket: 1732 } })
+[2024-12-12][13:02:32] [ureq::unit] [DEBUG] sending request (reused connection) GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?limit=100&market=from_token&offset=300
+[2024-12-12][13:02:32] [ureq::unit] [DEBUG] writing prelude: GET /v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?limit=100&market=from_token&offset=300 HTTP/1.1
+Host: api.spotify.com
+User-Agent: ureq/2.10.1
+Accept: */*
+authorization: ***
+[2024-12-12][13:02:32] [ncspot::commands] [DEBUG] saving state, 7 items, current track: Some(0)
+[2024-12-12][13:02:32] [ncspot::config] [DEBUG] saving user state to C:\Users\steph\AppData\Roaming\ncspot\userstate.cbor
+[2024-12-12][13:02:32] [ureq::stream] [DEBUG] dropping stream: Stream(TlsStream { stream: TcpStream { socket: 1732 } })
+[2024-12-12][13:02:32] [ureq::unit] [DEBUG] retrying request GET https://api.spotify.com/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks?limit=100&market=from_token&offset=300: Network Error: Network Error: Error encountered in the status line: An established connection was aborted by the software in your host machine. (os error 10053)
+[2024-12-12][13:02:32] [librespot_core::session] [ERROR] Connection to server closed.
+[2024-12-12][13:02:32] [librespot_core::session] [DEBUG] Shutdown: Invalidating session
+[2024-12-12][13:02:32] [librespot::component] [DEBUG] new ChannelManager
+[2024-12-12][13:02:32] [librespot_core::session] [DEBUG] drop Dispatch
+[2024-12-12][13:02:32] [ncspot::spotify_api] [DEBUG] http error: Transport(Transport { kind: Dns, message: Some("resolve dns name 'api.spotify.com:443'"), url: Some(Url { scheme: "https", cannot_be_a_base: false, username: "", password: None, host: Some(Domain("api.spotify.com")), port: None, path: "/v1/playlists/37i9dQZF1DWYoYGBbGKurt/tracks", query: Some("limit=100&market=from_token&offset=300"), fragment: None }), source: Some(Os { code: 10093, kind: Uncategorized, message: "Either the application has not called WSAStartup, or WSAStartup failed." }) })
+[2024-12-12][13:02:32] [ureq::stream] [DEBUG] dropping stream: Stream(TlsStream { stream: TcpStream { socket: 1756 } })
