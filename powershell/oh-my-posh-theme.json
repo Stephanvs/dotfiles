@@ -132,15 +132,6 @@
         },
         {
           "properties": {
-            "cache_duration": "none"
-          },
-          "template": "\ue7a8 {{ .Full }}",
-          "foreground": "p:red",
-          "type": "rust",
-          "style": "powerline"
-        },
-        {
-          "properties": {
             "cache_duration": "none",
             "style": "roundrock",
             "threshold": 500
