@@ -1,2 +1,5 @@
 font-family = "CaskaydiaCove Nerd Font"
 theme = catppuccin-mocha
+
+keybind = super+k=text:\u0002\u004b
+keybind = super+j=text:\u0002\u004a
