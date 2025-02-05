@@ -1,6 +1,6 @@
 New-Item -ItemType SymbolicLink `
-  -Path $HOME\applications.yaml `
-  -Target $PSScriptRoot\applications.yaml -Force | Out-Null
+  -Path $HOME\applications.json `
+  -Target $PSScriptRoot\applications.json -Force | Out-Null
 
 New-Item -ItemType SymbolicLink `
   -Path $HOME\komorebi.ahk `
