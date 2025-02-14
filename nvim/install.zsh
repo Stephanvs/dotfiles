@@ -7,5 +7,5 @@ rm -rf $HOME/.config/nvim
 # ln -nfs $DOTFILES/nvim/custom $HOME/.config/nvim/lua/custom
 
 # create new symbolic link
-ln -nfs $DOTFILES/nvim/2024 $HOME/.config/nvim
+ln -nfs $DOTFILES/nvim/nvchad $HOME/.config/nvim
 
