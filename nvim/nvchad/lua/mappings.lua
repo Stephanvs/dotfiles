@@ -1,6 +1,13 @@
 require "nvchad.mappings"
 
 local map = vim.keymap.set
+local nomap = vim.keymap.del
+
+-- Remove default navigation keymaps (replaced by TmuxNavigator)
+nomap("n", "<c-h>")
+nomap("n", "<c-j>")
+nomap("n", "<c-k>")
+nomap("n", "<c-l>")
 
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
