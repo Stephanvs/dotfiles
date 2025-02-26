@@ -7,4 +7,4 @@ Remove-Item -Force -Confirm:$false -Recurse $VIMHOME -ErrorAction SilentlyContin
 
 # Create Symbolic link for powershell profile
 Write-Verbose "Creating symbolic link for nvim custom from $PSScriptRoot\config to $VIMHOME"
-sudo New-Item -ItemType SymbolicLink -Path $VIMHOME -Target $PSScriptRoot\2024 -Force | Out-Null
+New-Item -ItemType SymbolicLink -Path $VIMHOME -Target $PSScriptRoot\nvchad -Force | Out-Null
