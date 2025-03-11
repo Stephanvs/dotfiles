@@ -10,17 +10,17 @@ M.base46 = {
   -- transparency = true,
   theme_toggle = { "radium", "ayu_light" },
 
-  -- hl_override = {
-  -- 	Comment = { italic = true },
-  -- 	["@comment"] = { italic = true },
-  -- },
+  hl_override = {
+    Comment = { italic = true },
+    ["@comment"] = { italic = true },
+  },
 }
 
 M.nvdash = { load_on_startup = true }
--- M.ui = {
---       tabufline = {
---          lazyload = false
---      }
---}
+M.ui = {
+  tabufline = {
+    lazyload = false,
+  },
+}
 
 return M
