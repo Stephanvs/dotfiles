@@ -8,6 +8,7 @@ local M = {}
 M.base46 = {
   theme = "radium",
   -- transparency = true,
+  theme_toggle = { "radium", "ayu_light" },
 
   -- hl_override = {
   -- 	Comment = { italic = true },
