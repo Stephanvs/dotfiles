@@ -6,9 +6,6 @@ alias rbash='source ~/.bash_profile'
 alias weather='curl -4 http://wttr.in/Eindhoven'
 alias moon='curl -4 http://wttr.in/Moon'
 
-# Bat
-alias cat='bat'
-
 # Aliases
 git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit"
 
