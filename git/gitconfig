@@ -1,6 +1,7 @@
 [user]
 	name = Stephan van Stekelenburg
 	email = stephan@hayman.io
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHZLEp5JjI0xKVqtgbqJvE1txMLalkUn/B9veAN6ixBj
 [color]
   diff = auto
   status = auto
@@ -35,3 +36,9 @@
 	required = true
 [credential "helperselector"]
 	selected = manager
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /opt/1Password/op-ssh-sign
+[commit]
+	gpgsign = true
