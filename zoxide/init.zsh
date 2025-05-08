@@ -1,5 +1,5 @@
 #!/bin/zsh
 
 # Zoxide configuration
-eval "$(zoxide init zsh)"
+# eval "$(zoxide init zsh)"
 

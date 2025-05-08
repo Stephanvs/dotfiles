@@ -66,8 +66,8 @@ ZSH_THEME="honukai"
 plugins=(
   history-substring-search
   git
-  nvm
-  # z
+  # nvm
+  z
   extract
   # kubectl
   vi-mode

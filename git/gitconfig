@@ -42,3 +42,6 @@
 	program = /opt/1Password/op-ssh-sign
 [commit]
 	gpgsign = true
+[safe]
+	directory = /mnt/Colossal/Code
+	directory = /mnt/Colossal/Code/prosim737
