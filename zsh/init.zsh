@@ -5,6 +5,6 @@ alias zshrc='vim $HOME/.zshrc'
 source $DOTFILES/zsh/aliases.zsh
 
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
-  alias pbcopy='xclip -selection clipboard'
-  alias pbpaste='xclip -selection clipboard -o'
+  alias pbcopy=wl-copy
+  alias pbpaste=wl-paste
 fi
