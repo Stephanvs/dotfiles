@@ -6,9 +6,9 @@
 local M = {}
 
 M.base46 = {
-  theme = "radium",
+  theme = "ayu_light",
   -- transparency = true,
-  theme_toggle = { "radium", "ayu_light" },
+  theme_toggle = { "catppuccin", "ayu_light" },
 
   hl_override = {
     Comment = { italic = true },
