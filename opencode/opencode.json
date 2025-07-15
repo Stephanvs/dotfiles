@@ -1,6 +1,6 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "theme": "matrix",
+  "theme": "catppuccin",
   "model": "anthropic/claude-sonnet-4-20250514",
   "autoshare": true,
   "autoupdate": true,
@@ -19,6 +19,10 @@
     },
     "xai": {
       "name": "X.ai",
+      "models": {}
+    },
+    "openrouter": {
+      "name": "OpenRouter",
       "models": {}
     }
   },
@@ -45,9 +49,34 @@
         "grep": true,
         "glob": true
       }
+    },
+    "review": {
+      "prompt": "{file:./prompts/code_review.txt}",
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false,
+        "read": true,
+        "glob": true,
+        "grep": true,
+        "list": true,
+        "webfetch": true
+      }
     }
   },
   "keybinds": {
     "leader": "ctrl+x"
+  },
+  "mcp": {
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    "whatsapp": {
+      "type": "local",
+      "command": [""],
+      "enabled": false
+    }
   }
 }
