@@ -5,6 +5,9 @@ local o = vim.o
 o.nu = true
 o.relativenumber = true
 
+-- auto read files when they change
+o.autoread = true
+
 -- indentation
 o.tabstop = 2
 o.softtabstop = 2
