@@ -8,6 +8,8 @@ return {
       -- add any opts here
       -- for example
       provider = "openai",
+    },
+    providers = {
       openai = {
         endpoint = "https://api.openai.com/v1",
         model = "gpt-4o", -- your desired model (or use gpt-4o, etc.)
