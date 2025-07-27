@@ -6,6 +6,18 @@
   "autoshare": true,
   "autoupdate": true,
   "provider": {
+    "lmstudio-homepc": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (homepc)",
+      "options": {
+        "baseURL": "http://100.84.112.43:1234/v1"
+      },
+      "models": {
+        "mistralai/devstral-small-2507": {
+          "name": "Devstral Small 2507"
+        }
+      }
+    },
     "lmstudio": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "LM Studio (local)",
@@ -75,8 +87,8 @@
       "enabled": true
     },
     "whatsapp": {
-      "type": "local",
-      "command": [""],
+      "type": "remote",
+      "url": "",
       "enabled": false
     }
   }
