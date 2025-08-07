@@ -90,3 +90,10 @@ for f in $DOTFILES_HOME/**/init.zsh; do
   source "$f"
 done
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# bun completions
+[ -s "/home/stephanvs/.bun/_bun" ] && source "/home/stephanvs/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
