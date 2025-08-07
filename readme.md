@@ -1,6 +1,6 @@
 # dotfiles
 
-![](img/wsl.png)
+![](img/windows.png)
 
 # Setting up a new Linux machine
 
