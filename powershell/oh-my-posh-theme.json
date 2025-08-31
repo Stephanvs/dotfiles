@@ -89,7 +89,10 @@
           "properties": {
             "cache_duration": "none",
             "folder_icon": "<p:folder> \ue5fe </>",
-            "style": "agnoster_full"
+            "style": "agnoster_full",
+            "mapped_locations": {
+              "~/Code": ""
+            }
           },
           "style": "diamond",
           "foreground": "p:path",
