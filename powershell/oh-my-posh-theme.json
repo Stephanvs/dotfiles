@@ -89,7 +89,7 @@
           "properties": {
             "cache_duration": "none",
             "folder_icon": "<p:folder> \ue5fe </>",
-            "style": "agnoster"
+            "style": "agnoster_full"
           },
           "style": "diamond",
           "foreground": "p:path",
@@ -115,9 +115,9 @@
             "fetch_version": true
           },
           "style": "plain",
-          "template": "\ue781 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}",
+          "template": "  {{ .Full }} ",
           "foreground": "p:node",
-          "type": "node"
+          "type": "bun"
         },
         {
           "style": "diamond",
