@@ -91,6 +91,7 @@
             "folder_icon": "<p:folder> \ue5fe </>",
             "style": "agnoster_full",
             "mapped_locations": {
+              "~/code": "",
               "~/Code": ""
             }
           },
