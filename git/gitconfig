@@ -45,3 +45,5 @@
 [safe]
 	directory = /mnt/Colossal/Code
 	directory = /mnt/Colossal/Code/prosim737
+[init]
+	defaultBranch = main
