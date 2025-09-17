@@ -1,5 +1,10 @@
-font-family = "CaskaydiaCove Nerd Font"
-theme = catppuccin-mocha
+font-family = "BerkeleyMono Nerd Font"
+font-size = 13
+theme = light:ayu_light,dark:Catppuccin Mocha
+cursor-style = block
+background-opacity = 1
+background-blur-radius = 20
+macos-icon = xray
 
 keybind = super+k=text:\u0002\u004b
 keybind = super+j=text:\u0002\u004a
