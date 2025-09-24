@@ -21,6 +21,7 @@ M.ui = {
   tabufline = {
     lazyload = false,
   },
+  telescope = { style = "bordered" }, -- borderless / bordered
 }
 
 return M
