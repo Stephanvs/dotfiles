@@ -152,7 +152,7 @@
       "segments": [
         {
           "style": "plain",
-          "template": " <#f5c2e7>\udb81\ude27</>",
+          "template": "<#f5c2e7>\udb81\ude27</>",
           "foreground": "p:closer",
           "type": "text"
         }
