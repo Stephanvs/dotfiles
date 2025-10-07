@@ -18,6 +18,21 @@
         }
       }
     },
+    "lmstudio-mini": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (mini)",
+      "options": {
+        "baseURL": "http://100.71.230.81:1234/v1"
+      },
+      "models": {
+        "mistralai/devstral-small-2507": {
+          "name": "Devstral Small 2507"
+        },
+        "qwen/qwen3-coder-30b": {
+          "name": "Qwen 3 Coder 30b"
+        }
+      }
+    },
     "lmstudio": {
       "npm": "@ai-sdk/openai-compatible",
       "name": "LM Studio (local)",
