@@ -54,7 +54,7 @@
       "models": {}
     }
   },
-  "disabled_providers": ["openai"],
+  "disabled_providers": [],
   "mode": {
     "build": {
       "model": "opencode/grok-code"
