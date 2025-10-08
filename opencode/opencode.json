@@ -57,7 +57,7 @@
   "disabled_providers": ["openai"],
   "mode": {
     "build": {
-      "model": "anthropic/claude-sonnet-4-20250514"
+      "model": "opencode/grok-code"
     },
     "plan": {
       "model": "google/gemini-2.5-pro",
