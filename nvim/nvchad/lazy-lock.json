@@ -1,5 +1,6 @@
 {
-  "LuaSnip": { "branch": "master", "commit": "73813308abc2eaeff2bc0d3f2f79270c491be9d7" },
+  "LazyVim": { "branch": "main", "commit": "064e61058b6bbaef02a6143662628d105695b8e5" },
+  "LuaSnip": { "branch": "master", "commit": "b3104910bb5ebf40492aadffae18f2528fa757d9" },
   "NvChad": { "branch": "v2.5", "commit": "f107fabe11ac8013dc3435ecd5382bee872b1584" },
   "avante.nvim": { "branch": "main", "commit": "164a86db6e5da78bc42310691a26b22d0763ceca" },
   "base46": { "branch": "v3.0", "commit": "db58475d3fd2a16f9b1467d6895e3c4c195ed7dd" },
