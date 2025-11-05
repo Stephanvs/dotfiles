@@ -4,7 +4,7 @@ return {
   keys = {
     {
       "<leader>fmt",
-      "<cmd>CellularAutomaton randomize_ascii<cr>",
+      "<cmd>CellularAutomaton make_it_rain<cr>",
       desc = "Randomize ascii cellular automaton",
     },
     {
