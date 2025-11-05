@@ -3,9 +3,9 @@ return {
   lazy = false,
   keys = {
     {
-      "<leader>fmt",
+      "<leader>fmr",
       "<cmd>CellularAutomaton make_it_rain<cr>",
-      desc = "Randomize ascii cellular automaton",
+      desc = "Make it rain",
     },
     {
       "<leader>fml",
