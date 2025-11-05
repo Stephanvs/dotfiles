@@ -12,6 +12,5 @@ return {
       "<cmd>CellularAutomaton game_of_life<cr>",
       desc = "Game of life",
     },
-    -- Add more as needed (see usage below)
   },
 }
