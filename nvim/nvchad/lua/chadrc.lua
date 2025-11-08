@@ -17,10 +17,30 @@ M.base46 = {
 }
 
 M.nvdash = { load_on_startup = true }
+
 M.ui = {
+  cmp = {
+    icons = true,
+    lspkind_text = true,
+  },
+
   tabufline = {
     lazyload = false,
   },
+
+  statusline = {
+    -- order is vscode with triforce added
+    order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "triforce", "cursor", "cwd" },
+    modules = {
+      triforce = function()
+        return
+          require("triforce.lualine").level() .. " | " ..
+          require("triforce.lualine").streak() .. " | " ..
+          require("triforce.lualine").session_time() .. " "
+      end,
+    },
+  },
+
   telescope = { style = "bordered" }, -- borderless / bordered
 }
 
