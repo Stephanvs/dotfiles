@@ -33,10 +33,10 @@ M.ui = {
     order = { "mode", "file", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "triforce", "cursor", "cwd" },
     modules = {
       triforce = function()
-        return
-          require("triforce.lualine").level() .. " | " ..
-          require("triforce.lualine").streak() .. " | " ..
-          require("triforce.lualine").session_time() .. " "
+        return require("triforce.lualine").level {
+          show_bar = true,
+          show_percent = true,
+        } .. " | " .. require("triforce.lualine").streak() .. " | " .. require("triforce.lualine").session_time() .. " "
       end,
     },
   },
