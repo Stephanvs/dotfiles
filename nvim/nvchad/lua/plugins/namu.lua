@@ -1,6 +1,7 @@
 return {
   {
     "bassamsdata/namu.nvim",
+    lazy = false,
     config = function()
       require("namu").setup({
         -- Enable the modules you want
