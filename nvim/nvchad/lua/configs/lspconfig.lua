@@ -1,7 +1,7 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = require "lspconfig"
+local lspconfig = vim.lsp.config("csharp_ls")
 
 -- EXAMPLE
 local servers = { "html", "cssls", "csharp_ls", "ts_ls", "rust_analyzer" }
