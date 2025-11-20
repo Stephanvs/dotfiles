@@ -18,7 +18,8 @@ local map = function(key, mods, action)
   end
 end
 
--- config.color_scheme = "Framer"
+config.color_scheme = "Catppuccin Mocha"
+
 function scheme_for_appearance(appearance)
   if appearance:find 'Dark' then
     return 'Framer'
@@ -27,7 +28,7 @@ function scheme_for_appearance(appearance)
   end
 end
 
-wezterm.on('window-config-reloaded', function(window, pane)
+wezterm.on('window-config-reloaded', function(window, _pane)
   local overrides = window:get_config_overrides() or {}
   local appearance = window:get_appearance()
   local scheme = scheme_for_appearance(appearance)
@@ -49,6 +50,12 @@ config.inactive_pane_hsb = {
   brightness = 1,
 }
 config.text_background_opacity = 1
+config.window_padding = {
+  left = 0,
+  right = 0,
+  top = 0,
+  bottom = 0,
+}
 
 config.leader = {
   key = 'b',
