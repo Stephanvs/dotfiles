@@ -40,19 +40,19 @@
       "alignment": "left",
       "segments": [
         {
-          "properties": {
+          "options": {
             "always_enabled": true
           },
-          "style": "plain",
           "template": "{{ if .Error }}[\uebfb]: {{ .Code }}{{ else }}[\u2192]{{ end }}",
           "foreground": "p:prompt",
           "type": "status",
+          "style": "plain",
           "foreground_templates": [
             "{{ if gt .Code 0 }}p:error{{ end }}"
           ]
         },
         {
-          "properties": {
+          "options": {
             "alpine": "\uf300",
             "arch": "\uf303",
             "cache_duration": "none",
@@ -70,44 +70,44 @@
             "ubuntu": "\uf31c",
             "windows": "\ue70f"
           },
-          "style": "diamond",
           "foreground": "p:os",
-          "type": "os"
+          "type": "os",
+          "style": "diamond"
         },
         {
-          "style": "diamond",
           "template": " {{ if .SSHSession }}\udb82\udcc0 {{ end }}{{ .UserName }}@{{ .HostName }} ",
           "foreground": "p:blue",
-          "type": "session"
+          "type": "session",
+          "style": "diamond"
         },
         {
-          "style": "diamond",
           "foreground": "p:blue",
-          "type": "root"
+          "type": "root",
+          "style": "diamond"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none",
             "folder_icon": "<p:folder> \ue5fe </>",
-            "style": "agnoster_full",
             "mapped_locations": {
-              "~/code": "",
-              "~/Code": ""
-            }
+              "~/Code": "\uf09b",
+              "~/code": "\uf09b"
+            },
+            "style": "agnoster_full"
           },
-          "style": "diamond",
           "foreground": "p:path",
-          "type": "path"
+          "type": "path",
+          "style": "diamond"
         },
         {
-          "properties": {
+          "options": {
             "fetch_stash_count": true,
             "fetch_status": true,
             "fetch_upstream_icon": true
           },
-          "style": "diamond",
           "foreground": "p:git-foreground",
           "type": "git",
+          "style": "diamond",
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}p:git-modified{{ end }}",
             "{{ if gt .Ahead 0 }}p:git-ahead{{ end }}",
@@ -115,34 +115,34 @@
           ]
         },
         {
-          "properties": {
+          "options": {
             "fetch_version": true
           },
-          "style": "plain",
-          "template": "  {{ .Full }} ",
+          "template": " \ue76f {{ .Full }} ",
           "foreground": "p:node",
-          "type": "bun"
+          "type": "bun",
+          "style": "plain"
         },
         {
-          "style": "diamond",
           "foreground": "p:dotnet",
-          "type": "dotnet"
+          "type": "dotnet",
+          "style": "diamond"
         },
         {
-          "style": "powerline",
           "template": "\ue7a8 {{ .Full }}",
           "foreground": "p:red",
-          "type": "rust"
+          "type": "rust",
+          "style": "powerline"
         },
         {
-          "properties": {
+          "options": {
             "cache_duration": "none",
             "style": "roundrock",
             "threshold": 500
           },
-          "style": "plain",
           "foreground": "p:executiontime",
-          "type": "executiontime"
+          "type": "executiontime",
+          "style": "plain"
         }
       ]
     },
@@ -151,15 +151,15 @@
       "alignment": "left",
       "segments": [
         {
-          "style": "plain",
           "template": "<#f5c2e7>\udb81\ude27</>",
           "foreground": "p:closer",
-          "type": "text"
+          "type": "text",
+          "style": "plain"
         }
       ],
       "newline": true
     }
   ],
-  "version": 3,
+  "version": 4,
   "final_space": true
 }
