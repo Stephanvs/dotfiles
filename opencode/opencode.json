@@ -7,7 +7,8 @@
   "autoshare": true,
   "autoupdate": true,
   "plugin": [
-    "opencode-openai-codex-auth@4.1.0"
+    "opencode-openai-codex-auth@4.1.0",
+    "opencode-skills"
   ],
   "provider": {
     "lmstudio-homepc": {
