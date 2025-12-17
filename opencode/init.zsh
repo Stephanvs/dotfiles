@@ -1,1 +1,1 @@
-alias oc='bunx opencode-ai@opentui'
+#alias oc='bunx opencode-ai@opentui'
