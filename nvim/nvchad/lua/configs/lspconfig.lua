@@ -1,24 +1,15 @@
 -- load defaults i.e lua_lsp
 require("nvchad.configs.lspconfig").defaults()
 
-local lspconfig = vim.lsp.config("csharp_ls")
-
--- EXAMPLE
+-- servers with default config
 local servers = { "html", "cssls", "csharp_ls", "ts_ls", "rust_analyzer" }
-local nvlsp = require "nvchad.configs.lspconfig"
 
--- lsps with default config
+-- enable all servers (capabilities and on_init are set globally by nvchad defaults)
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup {
-    on_attach = nvlsp.on_attach,
-    on_init = nvlsp.on_init,
-    capabilities = nvlsp.capabilities,
-  }
+  vim.lsp.enable(lsp)
 end
 
--- configuring single server, example: typescript
--- lspconfig.ts_ls.setup {
---   on_attach = nvlsp.on_attach,
---   on_init = nvlsp.on_init,
---   capabilities = nvlsp.capabilities,
--- }
+-- to customize a specific server, use vim.lsp.config:
+-- vim.lsp.config("ts_ls", {
+--   settings = { ... }
+-- })
