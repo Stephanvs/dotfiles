@@ -47,3 +47,6 @@ map("v", "<leader>y", "\"+y", { desc = "yank to clipboard" })
 -- j or k cancel insert mode
 map("i", "jk", "<ESC>")
 
+-- Toggle word wrap
+map("n", "<leader>w", "<cmd>set wrap!<CR>", { desc = "toggle word wrap" })
+
