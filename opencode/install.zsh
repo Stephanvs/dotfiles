@@ -1,4 +1,5 @@
+# remove existing config directory/symlink
+rm -rf $HOME/.config/opencode
 
-# create new symbolic link
-ln -nfs $DOTFILES/opencode/opencode.json $HOME/.config/opencode/opencode.json
-ln -nfs $DOTFILES/opencode/prompts $HOME/.config/opencode/prompts
+# create symbolic link to entire opencode directory (GNU Stow-like approach)
+ln -nfs $DOTFILES/opencode $HOME/.config/opencode
