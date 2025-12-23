@@ -391,10 +391,10 @@
   "disabled_providers": [],
   "mode": {
     "build": {
-      "model": "opencode/grok-code"
+      "model": "anthropic/claude-opus-4-5"
     },
     "plan": {
-      "model": "google/gemini-2.5-pro",
+      "model": "anthropic/claude-opus-4-5",
       "tools": {
         "write": false,
         "edit": false,
