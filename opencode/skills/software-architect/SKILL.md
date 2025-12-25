@@ -165,6 +165,7 @@ improve clarity; relax them when the surrounding ecosystem makes them counterpro
 - Keep APIs narrow: fewer parameters, simpler return types, fewer states.
 - Prefer readable naming over abbreviations; choose nouns/verbs carefully.
 - Delete dead code and unnecessary indirection.
+- Structure by feature/domain, not by technical role. Avoid folders like commands/, components/, utils/ at the top level. Instead, group by domain: auth/, calendar/, settings/. Technical groupings (if needed) should be leaves within feature folders, not roots.
 
 ## Checklists
 
