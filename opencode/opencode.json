@@ -443,9 +443,37 @@
     "devops": {
       "type": "local",
       "command": ["bunx", "-y", "@azure-devops/mcp", "itncare", "-d", "core", "work", "work-items"],
-      "enabled": true,
+      "enabled": true
+    },
+    "mcp-atlassian": {
+      "type": "local",
+      "command": [
+        "op", "run", "--",
+        "docker", "run", "-i", "--rm", "--network=host",
+        "-e", "CONFLUENCE_URL",
+        "-e", "CONFLUENCE_USERNAME",
+        "-e", "CONFLUENCE_API_TOKEN",
+        "-e", "JIRA_URL",
+        "-e", "JIRA_USERNAME",
+        "-e", "JIRA_API_TOKEN",
+        "ghcr.io/sooperset/mcp-atlassian:latest"
+      ],
       "environment": {
+        "CONFLUENCE_URL": "https://prosim.atlassian.net/wiki",
+        "CONFLUENCE_USERNAME": "stephan.van.stekelenburg@prosim-ar.com",
+        "CONFLUENCE_API_TOKEN": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/opencode api token",
+        "JIRA_URL": "https://prosim.atlassian.net",
+        "JIRA_USERNAME": "stephan.van.stekelenburg@prosim-ar.com",
+        "JIRA_API_TOKEN": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/opencode api token"
       }
+    },
+    "teamcity": {
+      "type": "local",
+      "command": [
+        "op", "run", "--env-file", "./teamcity.env", "--",
+        "bunx", "-y", "@daghis/teamcity-mcp", "--config", "teamcity.env"
+      ],
+      "enabled": true
     }
   }
 }
