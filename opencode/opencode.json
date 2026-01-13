@@ -439,6 +439,13 @@
       "type": "remote",
       "url": "",
       "enabled": false
+    },
+    "devops": {
+      "type": "local",
+      "command": ["bunx", "-y", "@azure-devops/mcp", "itncare", "-d", "core", "work", "work-items"],
+      "enabled": true,
+      "environment": {
+      }
     }
   }
 }
