@@ -1,0 +1,249 @@
+## configure Tmux Plugin Manager
+set-environment -gF TMUX_PLUGIN_MANAGER_PATH '#{HOME}/.tmux/plugins/'
+
+if 'test ! -d "${TMUX_PLUGIN_MANAGER_PATH}/tpm"' {
+  run 'mkdir -p "${TMUX_PLUGIN_MANAGER_PATH}"'
+  run 'git clone https://github.com/tmux-plugins/tpm "${TMUX_PLUGIN_MANAGER_PATH}/tpm"'
+  run '${TMUX_PLUGIN_MANAGER_PATH}/tpm/bin/install_plugins'
+}
+
+# set terminal colors
+set -g default-terminal 'screen-256color'
+set -ag terminal-overrides ',xterm-256color*:RGB'
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'wfxr/tmux-fzf-url' # fzf url
+set -g @plugin 'sunaku/tmux-navigate'
+set -g @plugin 'tmux-plugins/tmux-open'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+# theme / style
+set -g @plugin 'catppuccin/tmux'
+set -g @plugin 'joshmedeski/tmux-nerd-font-window-name'
+set -g @plugin 'alexwforsythe/tmux-which-key'  # prefix + space
+set -g @plugin 'tmux-plugins/tmux-cpu'
+set -g @plugin 'dreknix/tmux-ctp-battery'
+set -g @plugin 'tmux-plugins/tmux-battery'
+set -g @plugin 'dreknix/tmux-primary-ip'
+set -g @plugin 'olimorris/tmux-pomodoro-plus'
+
+### Plugin: https://github.com/catppuccin/tmux
+set -g @catppuccin_flavor 'mocha'
+set -g @catppuccin_window_status_style 'rounded'
+set -g @catppuccin_window_number_position 'right'
+set -g @catppuccin_window_flags 'icon'
+set -g @catppuccin_window_text ' #W'
+#set -g @catppuccin_window_text_color '#{E:@thm_surface_1}'
+set -g @catppuccin_window_current_text '#W'
+set -g @catppuccin_window_current_text_color '#{E:@thm_surface_2}'
+set -g @catppuccin_date_time_text '%d.%m. %H:%M'
+set -g @catppuccin_status_module_text_bg '#{E:@thm_mantle}'
+set -g @catppuccin_status_middle_separator '▐'
+
+# source the plugin here
+set -g '@catppuccin_battery_color' '#{E:@thm_lavender}'
+run '#{TMUX_PLUGIN_MANAGER_PATH}/tmux/catppuccin.tmux'
+
+# load custom moudules
+source -F '#{DOTFILES}/tmux/ctp_cpu.conf'
+source -F '#{DOTFILES}/tmux/ctp_gpu.conf'
+source -F '#{DOTFILES}/tmux/ctp_battery.conf'
+source -F '#{DOTFILES}/tmux/ctp_memory.conf'
+source -F '#{DOTFILES}/tmux/primary_ip.conf'
+
+# set left and right status bar
+set -g allow-rename off
+set -g status-position top
+set -g status-interval 5
+set -g status-left-length 100
+set -g status-right-length 100
+
+# right status bar
+set -gF status-right "#{E:@catppuccin_status_pomodoro_plus}"
+set -agF status-right '#{E:@catppuccin_status_primary_ip}'
+set -agF status-right '#{E:@catppuccin_status_ctp_cpu}'
+set -agF status-right '#{E:@catppuccin_status_ctp_gpu}'
+set -agF status-right '#{E:@catppuccin_status_ctp_memory}'
+if 'test -r /sys/class/power_supply/BAT*' {
+  set -agF status-right '#{E:@catppuccin_status_battery}'
+}
+set -ag status-right '#{E:@catppuccin_status_host}'
+set -ag status-right '#{E:@catppuccin_status_date_time}'
+
+# Prevent <Esc-h> from triggering <Alt-h>
+set -s escape-time 0
+set -g mouse on
+
+# Start window and pane numbering at 1
+set -g base-index 1
+set -g pane-base-index 1
+set-window-option -g pane-base-index 1
+
+# Allow a little longer key repeat time (1s, default of 500ms is very short)
+set -g repeat-time 1000
+
+# scrollback buffer
+set -g history-limit 50000
+set -g display-time 2000
+
+# easy config reloads
+bind C-r source-file $DOTFILES/tmux/tmux.conf \; display-message "Config reloaded!"
+
+# open new windows in cwd
+bind c new-window -c "#{pane_current_path}"
+
+# split panes using - and | and set cwd for new panes
+bind | split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+
+# vim-like pane resizing
+bind -r M-k resize-pane -U
+bind -r M-j resize-pane -D
+bind -r M-h resize-pane -L
+bind -r M-l resize-pane -R
+
+bind -n M-S-Left resize-pane -L 2
+bind -n M-S-Right resize-pane -R 2
+bind -n M-S-Up resize-pane -U 1
+bind -n M-S-Down resize-pane -D 1
+
+# vim-like pane switching
+bind -r k select-pane -U
+bind -r j select-pane -D
+bind -r h select-pane -L
+bind -r l select-pane -R
+
+
+
+# switch to window with Alt + number
+bind -n M-1 select-window -t 1
+bind -n M-2 select-window -t 2
+bind -n M-3 select-window -t 3
+bind -n M-4 select-window -t 4
+bind -n M-5 select-window -t 5
+bind -n M-6 select-window -t 6
+bind -n M-7 select-window -t 7
+bind -n M-8 select-window -t 8
+bind -n M-9 select-window -t 9
+bind -n M-0 select-window -t 10
+bind -n M-\` previous-window
+
+# and now unbind keys
+unbind Up
+unbind Down
+unbind Left
+unbind Right
+
+# unbind C-Up
+# unbind C-Down
+# unbind C-Left
+# unbind C-Right
+#
+# # switch panes using Alt-arrow without prefix
+# bind -n M-Left select-pane -L
+# bind -n M-Right select-pane -R
+# bind -n M-Up select-pane -U
+# bind -n M-Down select-pane -D
+
+# Use v to trigger selection    
+bind-key -T copy-mode-vi v send-keys -X begin-selection
+
+# Use y to yank current selection
+bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+
+# Show a list of tmux sessions and connect to them
+bind-key C-j display-popup -E -w 40% "sesh connect \"$(
+    sesh list -i | gum filter --limit 1 --placeholder 'Choose a session' --height 50 --prompt='⚡'
+)\""
+
+bind-key C-k display-popup -w 60% -h 55% -E "sesh connect \"$(
+    sesh list | fzf -- \
+        --no-sort --border-label ' sesh ' --prompt '⚡  ' \
+        --header '  ^a=all | ^t=tmux | ^x=zoxide | ^g=config | ^d=tmux kill | ^f=find' \
+        --bind 'tab:down,btab:up' \
+        --bind 'ctrl-a:change-prompt(⚡  )+reload(sesh list)' \
+        --bind 'ctrl-t:change-prompt(🐠  )+reload(sesh list -t)' \
+        --bind 'ctrl-g:change-prompt(⚙️  )+reload(sesh list -c)' \
+        --bind 'ctrl-x:change-prompt(📁  )+reload(sesh list -z)' \
+        --bind 'ctrl-f:change-prompt(👀  )+reload(fd -H -d 2 -t d -E .Trash . ~)' \
+        --bind 'ctrl-d:execute(tmux kill-session -t {})+change-prompt(⚡  )+reload(sesh list)'
+)\""
+
+# bind-key "K" display-popup -E "sesh connect \$(sesh list -i | fzf --height 24)"
+
+bind C-n display-popup \
+  -E '$SHELL -i -c "name=$(gum input --placeholder "Session name: ") && tmux new-session -d -s \$name && tmux switch-client -t \$name"'
+
+bind C-t display-popup \
+  -d "#{pane_current_path}" \
+  -w 75% \
+  -h 75% \
+  -E "zsh"
+
+bind C-g display-popup \
+  -d "#{pane_current_path}" \
+  -w 80% \
+  -h 80% \
+  -E "lazygit"
+
+bind C-f display-popup \
+  -d "#{pane_current_path}" \
+  -w 80% \
+  -h 80% \
+  -E "yazi"
+
+bind C-o display-popup \
+  -d "#{pane_current_path}" \
+  -w 80% \
+  -h 80% \
+  -E "opencode"
+
+bind o display-menu -T " Launch AI " \
+    "opencode" "o" "split-window -h -c '#{pane_current_path}' 'opencode'; resize-pane -x 35%" \
+    "claude-code" "c" "split-window -h -c '#{pane_current_path}' 'claude'; resize-pane -x 35%" \
+    "gemini-cli" "g" "split-window -h -c '#{pane_current_path}' 'gemini'; resize-pane -x 35%" \
+    "codex" "x" "split-window -h -c '#{pane_current_path}' 'codex'; resize-pane -x 35%"
+
+# install 'tpm' if needed.
+if "test ! -d ~/.tmux/plugins/tpm" \
+  "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm &&  ~/.tmux/plugins/tpm/bin/install_plugins'"
+
+run -b '#{TMUX_PLUGIN_MANAGER_PATH}/tpm/tpm'
+
+### keybindings with commands from plugins
+
+# bindings for tmux plugins, start with: prefix + g
+bind-key -N 'Switch to plugin bindings' -T prefix 'g' {
+  switch-client -T tpm-bindings
+  display-message -d 1000 '#{E:log_info} in tpm-bindings mode'
+}
+
+bind-key -N 'Reload tmux configuration' -T tpm-bindings  'r' reload-config  # macro from tmux-which-key
+
+bind-key -N 'TPM - Install plugins' -T tpm-bindings  'i' {
+  display-message -d 1000 '#{E:log_info} Installing plugins... '
+  run-shell '#{TMUX_PLUGIN_MANAGER_PATH}/tpm/bindings/install_plugins'
+}
+bind-key -N 'TPM - Update plugins' -T tpm-bindings  'u' {
+  display-message -d 1000 '#{E:log_info} Updating plugins... '
+  run-shell '#{TMUX_PLUGIN_MANAGER_PATH}/tpm/bindings/update_plugins'
+}
+bind-key -N 'TPM - Clean plugins' -T tpm-bindings  'x' {
+  display-message -d 1000 '#{E:log_info} Cleaning plugins... '
+  run-shell '#{TMUX_PLUGIN_MANAGER_PATH}/tpm/bindings/clean_plugins'
+}
+
+bind-key -N 'SessionX - Start popup' -T tpm-bindings  'o' {
+  switch-client -T root
+  display-message -d 250 '#{E:log_info} Starting SessionX... '
+  run-shell '#{TMUX_PLUGIN_MANAGER_PATH}/tmux-sessionx/scripts/sessionx.sh'
+}
+
+# delete unneeded key bindings
+unbind-key -a -T copy-mode
+
+# delete old key bindings
+unbind-key -T prefix I  # tpm - install plugins
+unbind-key -T prefix U  # tpm - update plugins
