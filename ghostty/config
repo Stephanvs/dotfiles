@@ -1,6 +1,6 @@
 font-family = "BerkeleyMono Nerd Font"
 font-size = 13
-theme = light:ayu_light,dark:Catppuccin Mocha
+theme = light:ayu_light,dark:TokyoNight
 cursor-style = block
 background-opacity = 1
 background-blur-radius = 20
