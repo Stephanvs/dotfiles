@@ -1,3 +1,2 @@
-if [[ "$(uname -s)" == "Linux" ]]; then
-  eval "$(starship init zsh)"
-fi
+# Initialize starship prompt
+eval "$(starship init zsh)"
