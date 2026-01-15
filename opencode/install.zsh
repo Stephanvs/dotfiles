@@ -1,7 +1,10 @@
 # remove existing config directory/symlink
 rm -rf $HOME/.config/opencode
 
-# create new symbolic link
+# create the directory
+mkdir -p $HOME/.config/opencode
+
+# create new symbolic links
 ln -nfs $DOTFILES/opencode/opencode.json $HOME/.config/opencode/opencode.json
 ln -nfs $DOTFILES/opencode/prompts $HOME/.config/opencode/prompts
 ln -nfs $DOTFILES/opencode/skill $HOME/.config/opencode/skill
