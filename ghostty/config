@@ -2,7 +2,7 @@ font-family = "BerkeleyMono Nerd Font"
 font-size = 13
 theme = light:ayu_light,dark:TokyoNight
 cursor-style = block
-background-opacity = 1
+background-opacity = 0.8
 background-blur-radius = 20
 macos-icon = xray
 
