@@ -1,4 +1,4 @@
-general.import = ["/Users/stephanvs/dotfiles/alacritty/catppuccin-mocha.toml"]
+# general.import = ["/Users/stephanvs/dotfiles/alacritty/catppuccin-mocha.toml"]
 general.live_config_reload = true
 
 [colors]
@@ -25,44 +25,44 @@ style = "Italic"
 family = "BerkeleyMono Nerd Font"
 style = "Regular"
 
-[[keyboard.bindings]]
-chars = "\u001Bj"
-key = "J"
-mods = "Alt"
+# [[keyboard.bindings]]
+# chars = "\u001Bj"
+# key = "J"
+# mods = "Alt"
 
-[[keyboard.bindings]]
-chars = "\u001Bk"
-key = "K"
-mods = "Alt"
+# [[keyboard.bindings]]
+# chars = "\u001Bk"
+# key = "K"
+# mods = "Alt"
 
-[[keyboard.bindings]]
-chars = "\u001Bh"
-key = "H"
-mods = "Alt"
+# [[keyboard.bindings]]
+# chars = "\u001Bh"
+# key = "H"
+# mods = "Alt"
 
-[[keyboard.bindings]]
-chars = "\u001Bl"
-key = "L"
-mods = "Alt"
+# [[keyboard.bindings]]
+# chars = "\u001Bl"
+# key = "L"
+# mods = "Alt"
 
-[[keyboard.bindings]]
-chars = "\x17"
-key = "Back"
-mods = "Control"
+# [[keyboard.bindings]]
+# chars = "\x17"
+# key = "Back"
+# mods = "Control"
 
-[[keyboard.bindings]]
-chars = "\u0002\u004b"
-key = "k"
-mods = "Command"
+# [[keyboard.bindings]]
+# chars = "\u0002\u004b"
+# key = "k"
+# mods = "Command"
 
-[[keyboard.bindings]]
-chars = "\u0002\u004a"
-key = "j"
-mods = "Command"
+# [[keyboard.bindings]]
+# chars = "\u0002\u004a"
+# key = "j"
+# mods = "Command"
 
 [window]
 dynamic_padding = true
-opacity = 0.9
+opacity = 1
 option_as_alt = "Both"
 
 [window.padding]
