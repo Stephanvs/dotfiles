@@ -6,9 +6,9 @@
 local M = {}
 
 M.base46 = {
-  theme = "tokyodark",
-  -- transparency = true,
-  theme_toggle = { "tokyodark", "ayu_light" },
+  theme = "catppuccin",
+  transparency = true,
+  theme_toggle = { "catppuccin", "ayu_light" },
 
   hl_override = {
     Comment = { italic = true },
@@ -16,7 +16,9 @@ M.base46 = {
   },
 }
 
-M.nvdash = { load_on_startup = true }
+M.nvdash = { 
+  load_on_startup = true
+}
 
 M.ui = {
   cmp = {
