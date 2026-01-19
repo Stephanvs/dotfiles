@@ -127,8 +127,8 @@
     "teamcity": {
       "type": "local",
       "command": [
-        "op", "run", "--env-file", "home/stephanvs/dotfiles/opencode/teamcity.env", "--",
-        "bunx", "-y", "@daghis/teamcity-mcp", "--config", "home/stephanvs/dotfiles/opencode/teamcity.env"
+        "op", "run", "--env-file", "/home/stephanvs/dotfiles/opencode/teamcity.env", "--",
+        "bunx", "-y", "@daghis/teamcity-mcp", "--config", "/home/stephanvs/dotfiles/opencode/teamcity.env"
       ],
       "enabled": false
     },
