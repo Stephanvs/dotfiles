@@ -98,7 +98,7 @@
     },
     "az-devops": {
       "type": "local",
-      "command": ["bunx", "-y", "@azure-devops/mcp", "itncare", "-d", "core", "work", "work-items"],
+      "command": ["bunx", "-y", "@azure-devops/mcp", "itncare", "-d", "core", "work", "work-items", "repositories", "pipelines", "wiki"],
       "enabled": false
     },
     "atlassian": {
