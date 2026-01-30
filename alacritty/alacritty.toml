@@ -45,10 +45,10 @@ style = "Regular"
 # key = "L"
 # mods = "Alt"
 
-# [[keyboard.bindings]]
-# chars = "\x17"
-# key = "Back"
-# mods = "Control"
+[[keyboard.bindings]]
+chars = "\x1b\x7f"
+key = "Back"
+mods = "Control"
 
 # [[keyboard.bindings]]
 # chars = "\u0002\u004b"
