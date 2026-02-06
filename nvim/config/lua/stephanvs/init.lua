@@ -1,5 +1,0 @@
-require("stephanvs.packer")
-require("stephanvs.remap")
-require("stephanvs.disable-arrows")
-require("stephanvs.set")
-require("stephanvs.shell")
