@@ -3,12 +3,18 @@ require "nvchad.mappings"
 local map = vim.keymap.set
 local nomap = vim.keymap.del
 
+local function telescope_grep(search)
+  local builtin = require "telescope.builtin"
+  builtin.grep_string { search = search }
+end
+
 -- Remove default navigation keymaps (replaced by TmuxNavigator)
 nomap("n", "<c-h>")
 nomap("n", "<c-j>")
 nomap("n", "<c-k>")
 nomap("n", "<c-l>")
 
+-- Save with Ctrl-s
 map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- #########
@@ -50,3 +56,10 @@ map("i", "jk", "<ESC>")
 -- Toggle word wrap
 map("n", "<leader>w", "<cmd>set wrap!<CR>", { desc = "toggle word wrap" })
 
+map("n", "<leader>fws", function()
+  telescope_grep(vim.fn.expand "<cword>")
+end, { desc = "Find word under cursor" })
+
+map("n", "<leader>fp", function()
+  telescope_grep(vim.fn.expand "<cWORD>")
+end, { desc = "Find WORD under cursor" })
