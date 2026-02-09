@@ -1,11 +1,5 @@
-# nuke nvim dir first
-rm -rf $HOME/.config/nvim
+#!/bin/zsh
+source $DOTFILES/lib/install.zsh
 
-# git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
-#
-# # link custom config folder inside nvim
-# ln -nfs $DOTFILES/nvim/custom $HOME/.config/nvim/lua/custom
-
-# create new symbolic link
-ln -nfs $DOTFILES/nvim/nvchad $HOME/.config/nvim
-
+rm -rf "$HOME/.config/nvim"
+symlink nvim/nvchad "$HOME/.config/nvim"

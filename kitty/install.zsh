@@ -1,3 +1,4 @@
-mkdir -p $HOME/.config/kitty
+#!/bin/zsh
+source $DOTFILES/lib/install.zsh
 
-ln -f -s $DOTFILES/kitty/kitty.conf $HOME/.config/kitty/kitty.conf
+symlink kitty/kitty.conf "$HOME/.config/kitty/kitty.conf"

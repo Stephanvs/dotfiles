@@ -1,3 +1,4 @@
-# create new symbolic link
-mkdir -p $HOME/.config/wezterm
-ln -nfs $DOTFILES/wezterm/wezterm.lua $HOME/.config/wezterm/wezterm.lua
+#!/bin/zsh
+source $DOTFILES/lib/install.zsh
+
+symlink wezterm/wezterm.lua "$HOME/.config/wezterm/wezterm.lua"

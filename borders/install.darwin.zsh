@@ -1,4 +1,4 @@
 #!/bin/zsh
 source $DOTFILES/lib/install.zsh
 
-symlink git/gitconfig "$HOME/.gitconfig"
+symlink borders "$HOME/.config/borders"

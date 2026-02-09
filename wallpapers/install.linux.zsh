@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/bin/zsh
+source $DOTFILES/lib/install.zsh
 
 change_background() {
   FILE="'file://$(readlink -e "$1" )'"
@@ -7,8 +8,8 @@ change_background() {
   then
       gsettings set org.gnome.desktop.background picture-uri "$FILE"
   else
-      echo "File doesn't exist"
+      warn "File doesn't exist"
   fi
 }
 
-change_background $DOTFILES/wallpapers/dark_gradient.jpg
+change_background "$DOTFILES/wallpapers/dark_gradient.jpg"

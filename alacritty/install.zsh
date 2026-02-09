@@ -1,2 +1,4 @@
-mkdir -p $HOME/.config/alacritty
-ln -f -s $DOTFILES/alacritty/alacritty.toml $HOME/.config/alacritty/alacritty.toml
+#!/bin/zsh
+source $DOTFILES/lib/install.zsh
+
+symlink alacritty/alacritty.toml "$HOME/.config/alacritty/alacritty.toml"

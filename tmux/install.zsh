@@ -1,7 +1,9 @@
-# create new symbolic link
-ln -nfs $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+#!/bin/zsh
+source $DOTFILES/lib/install.zsh
 
-# if [ ! -d $HOME/.tmux ]; then
-#     # clone repo to the '.tmux' folder
-#     git clone https://github.com/tmux-plugins/tpm $HOME/.tmux/plugins/tpm
-# fi
+symlink tmux/tmux.conf "$HOME/.tmux.conf"
+
+if [[ ! -d "$HOME/.tmux/plugins/tpm" ]]; then
+    ensure_dir "$HOME/.tmux/plugins"
+    git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+fi
