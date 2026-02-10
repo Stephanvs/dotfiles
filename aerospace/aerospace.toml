@@ -10,9 +10,10 @@
 after-login-command = [ ]
 
 after-startup-command = [
-  # JankyBorders has a built-in detection of already running process,
-  # so it won't be run twice on AeroSpace restart
-  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+    # JankyBorders has a built-in detection of already running process,
+    # so it won't be run twice on AeroSpace restart
+    'exec-and-forget borders',
+    'exec-and-forget sketchybar',
 ]
 
 exec-on-workspace-change = [
@@ -63,7 +64,7 @@ inner.horizontal = 12
 inner.vertical =   12
 outer.left =       12
 outer.bottom =     12
-outer.top =        12
+outer.top =        [{ monitor."built-in" = 20 }, 50]
 outer.right =      12
 
 # 'main' binding mode declaration
