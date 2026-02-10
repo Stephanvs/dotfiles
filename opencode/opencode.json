@@ -6,7 +6,9 @@
   "small_model": "opencode/gpt-5-nano",
   "autoshare": true,
   "autoupdate": false,
-  "plugin": [ ],
+  "plugin": [
+    "opencode-sfx"
+  ],
   "provider": {
     "lmstudio-homepc": {
       "npm": "@ai-sdk/openai-compatible",
