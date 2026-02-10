@@ -14,6 +14,8 @@ get_rgb() {
     catp_mauve) echo "#cba6f7" ;;
     catp_maroon) echo "#eba0ac" ;;
     catp_crust) echo "#11111b" ;;
+    catp_base) echo "#1e1e2e" ;;
+    catp_surface1) echo "#45475a" ;;
     catp_yellow) echo "#f9e2af" ;;
     catp_mantle) echo "#181825" ;;
     catp_lavender) echo "#b4befe" ;;
@@ -68,8 +70,8 @@ get_hex() {
 }
 
 # set color
-act_color="cgreen"
-ina_color="dcurrent"
+act_color="catp_mauve"
+ina_color="catp_surface1"
 # bg_color="catp_crust"
 
 OPTIONS=(
