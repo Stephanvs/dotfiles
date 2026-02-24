@@ -5,5 +5,4 @@ Set-Alias pb-paste Get-Clipboard
 
 function Get-AllItems { & eza --icons --group-directories-first --sort size --all --no-filesize --no-permissions --no-time --no-quotes }
 
-
 Set-Alias -Name l -Value Get-AllItems -Force -Scope Global
