@@ -1,2 +1,3 @@
-Write-Verbose "Creating symbolic link for alacritty config from $PSScriptRoot\config to %APPDATA%\alacritty\alacritty.windows.toml"
-New-Item -ItemType SymbolicLink -Path $env:APPDATA\alacritty\alacritty.toml -Target $PSScriptRoot\alacritty.windows.toml -Force | Out-Null
+Import-Module -Name "$PSScriptRoot\..\lib\Symlink.psm1"
+
+New-Symlink -SourcePath "$PSScriptRoot/alacritty.windows.toml" -TargetPath "$env:APPDATA/alacritty/alacritty.toml" -Label 'Alacritty config link'

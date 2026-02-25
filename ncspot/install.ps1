@@ -1,4 +1,4 @@
-sudo New-Item -ItemType SymbolicLink `
-  -Path $HOME/.config/ncspot/config.toml `
-  -Target $PSScriptRoot/config.toml -Force | Out-Null
+Import-Module -Name "$PSScriptRoot\..\lib\Symlink.psm1"
+
+New-Symlink -SourcePath "$PSScriptRoot/config.toml" -TargetPath "$HOME/.config/ncspot/config.toml" -Label 'Ncspot config link'
 
