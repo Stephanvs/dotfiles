@@ -8,7 +8,10 @@ $Source = "$DOTFILES\*"
 & ./scoop/install.ps1
 
 # Ignore current file
-$Ignored = @((Get-ChildItem -Path $PSScriptRoot -File -Filter install.ps1).FullName) # Weird powershell hack to exclude current file from the install scripts.
+$Ignored = @(
+  (Get-Item -LiteralPath "$PSScriptRoot/install.ps1").FullName,
+  (Get-Item -LiteralPath "$PSScriptRoot/scoop/install.ps1").FullName
+)
 Write-Debug "Ignored scripts: $Ignored"
 $Scripts = Get-ChildItem $Source -File -Filter install.ps1 -Recurse
 Write-Debug "Found scripts:$nl$($Scripts | Format-List -Property FullName | Out-String)"
