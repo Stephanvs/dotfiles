@@ -1,2 +1,3 @@
-# Create Symbolic link for powershell profile
-sudo New-Item -ItemType SymbolicLink -Path $PROFILE -Target $PSScriptRoot/profile.ps1 -Force | Out-Null
+Import-Module -Name "$PSScriptRoot\..\lib\Symlink.psm1" -Force
+
+New-Symlink -SourcePath "$PSScriptRoot/profile.ps1" -TargetPath "$([Environment]::GetFolderPath('MyDocuments'))/PowerShell/Microsoft.PowerShell_profile.ps1" -Label 'Profile link'
