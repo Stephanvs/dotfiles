@@ -1,10 +1,4 @@
-$VIMHOME = "$env:LOCALAPPDATA\nvim"
+Import-Module -Name "$PSScriptRoot\..\lib\Symlink.psm1"
 
-# nuke nvim directory
-Remove-Item -Force -Confirm:$false -Recurse $VIMHOME -ErrorAction SilentlyContinue
-
-# git clone https://github.com/NvChad/NvChad $VIMHOME --depth 1
-
-# Create Symbolic link for powershell profile
-Write-Verbose "Creating symbolic link for nvim custom from $PSScriptRoot\config to $VIMHOME"
-New-Item -ItemType SymbolicLink -Path $VIMHOME -Target $PSScriptRoot\nvchad -Force | Out-Null
+Remove-Item -Force -Confirm:$false -Recurse "$env:LOCALAPPDATA/nvim" -ErrorAction SilentlyContinue
+New-Symlink -SourcePath "$PSScriptRoot/nvchad" -TargetPath "$env:LOCALAPPDATA/nvim" -Label 'Neovim config link'
