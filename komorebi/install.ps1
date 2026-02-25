@@ -1,11 +1,9 @@
-New-Item -ItemType SymbolicLink `
-  -Path $HOME\applications.json `
-  -Target $PSScriptRoot\applications.json -Force | Out-Null
+Import-Module -Name "$PSScriptRoot\..\lib\Symlink.psm1"
 
-New-Item -ItemType SymbolicLink `
-  -Path $HOME\komorebi.ahk `
-  -Target $PSScriptRoot\komorebi.ahk -Force | Out-Null
-
-New-Item -ItemType SymbolicLink `
-  -Path $HOME\komorebi.json `
-  -Target $PSScriptRoot\komorebi.json -Force | Out-Null
+foreach ($link in @(
+    @{ Name = 'applications.json'; Label = 'Komorebi applications link' },
+    @{ Name = 'komorebi.ahk'; Label = 'Komorebi AHK link' },
+    @{ Name = 'komorebi.json'; Label = 'Komorebi config link' }
+)) {
+    New-Symlink -SourcePath "$PSScriptRoot/$($link.Name)" -TargetPath "$HOME/$($link.Name)" -Label $link.Label
+}
