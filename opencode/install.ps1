@@ -1,12 +1,12 @@
-# Ensure config directory exists
-if (-not (Test-Path $HOME\.config\opencode)) {
-    New-Item -ItemType Directory -Path $HOME\.config\opencode -Force | Out-Null
-}
+Import-Module -Name "$PSScriptRoot\..\lib\Symlink.psm1"
 
-# Create symbolic links
-New-Item -ItemType SymbolicLink -Path $HOME\.config\opencode\opencode.json -Target $PSScriptRoot\opencode.json -Force | Out-Null
-New-Item -ItemType SymbolicLink -Path $HOME\.config\opencode\prompts -Target $PSScriptRoot\prompts -Force | Out-Null
-New-Item -ItemType SymbolicLink -Path $HOME\.config\opencode\skill -Target $PSScriptRoot\skill -Force | Out-Null
-New-Item -ItemType SymbolicLink -Path $HOME\.config\opencode\rules -Target $PSScriptRoot\rules -Force | Out-Null
-New-Item -ItemType SymbolicLink -Path $HOME\.config\opencode\AGENTS.md -Target $PSScriptRoot\AGENTS.md -Force | Out-Null
-New-Item -ItemType SymbolicLink -Path $HOME\.config\opencode\command -Target $PSScriptRoot\command -Force | Out-Null
+foreach ($link in @(
+    @{ Name = 'opencode.json'; Label = 'OpenCode config link' },
+    @{ Name = 'prompts'; Label = 'OpenCode prompts link' },
+    @{ Name = 'skill'; Label = 'OpenCode skill link' },
+    @{ Name = 'rules'; Label = 'OpenCode rules link' },
+    @{ Name = 'AGENTS.md'; Label = 'OpenCode agents link' },
+    @{ Name = 'command'; Label = 'OpenCode command link' }
+)) {
+    New-Symlink -SourcePath "$PSScriptRoot/$($link.Name)" -TargetPath "$HOME/.config/opencode/$($link.Name)" -Label $link.Label
+}
