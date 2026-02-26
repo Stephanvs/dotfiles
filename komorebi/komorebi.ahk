@@ -35,12 +35,6 @@ Komorebic(cmd) {
 #[::Komorebic("cycle-stack previous")
 #]::Komorebic("cycle-stack next")
 
-; Resize
-!=::Komorebic("resize-axis horizontal increase")
-!-::Komorebic("resize-axis horizontal decrease")
-!+=::Komorebic("resize-axis vertical increase")
-!+_::Komorebic("resize-axis vertical decrease")
-
 ; Manipulate windows
 #t::Komorebic("toggle-float")
 #f::Komorebic("toggle-monocle")
