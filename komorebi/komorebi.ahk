@@ -54,6 +54,7 @@ Komorebic(cmd) {
 !y::Komorebic("flip-layout vertical")
 
 ; Workspaces
+#Tab::Komorebic("focus-last-workspace")
 #1::Komorebic("focus-workspace 0")
 #2::Komorebic("focus-workspace 1")
 #3::Komorebic("focus-workspace 2")
