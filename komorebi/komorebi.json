@@ -43,14 +43,6 @@
 				{
 					"name": "I",
 					"layout": "BSP"
-				}
-			]
-		},
-		{
-			"workspaces": [
-				{
-					"name": "I",
-					"layout": "BSP"
 				},
 				{
 					"name": "II",
