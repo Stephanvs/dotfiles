@@ -816,6 +816,15 @@
 			}
 		]
 	},
+	"Handy": {
+		"ignore": [
+			{
+				"kind": "Exe",
+				"id": "handy.exe",
+				"matching_strategy": "Equals"
+			}
+		]
+	},
 	"IntelliJ IDEA": {
 		"ignore": [
 			{
