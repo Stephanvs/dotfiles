@@ -1,10 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
-            "command": 
+            "command":
             {
                 "action": "closeTab"
             },
@@ -200,7 +200,7 @@
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore",
-                "startingDirectory": "%USERPROFILE%"
+                "startingDirectory": null
             },
             {
                 "guid": "{ccdc2b78-b724-55cc-bf0c-0045ed604702}",

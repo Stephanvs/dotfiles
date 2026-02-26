@@ -123,6 +123,16 @@ Set-PSReadLineKeyHandler -Key Alt+a `
   [Microsoft.PowerShell.PSConsoleReadLine]::SelectForwardChar($null, ($nextAst.Extent.EndOffset - $nextAst.Extent.StartOffset) - $endOffsetAdjustment)
 }
 
+# Report current working directory to Windows Terminal so split panes inherit it (OSC 9;9)
+if ($env:WT_SESSION) {
+  $Global:__OriginalPrompt = $function:prompt
+  function prompt {
+    $loc = $executionContext.SessionState.Path.CurrentLocation.ProviderPath
+    [Console]::Write("`e]9;9;`"$loc`"`e\")
+    & $Global:__OriginalPrompt
+  }
+}
+
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
