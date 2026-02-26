@@ -1,7 +1,16 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": [],
+    "actions": 
+    [
+        {
+            "command": 
+            {
+                "action": "closeTab"
+            },
+            "id": "User.closeTab.0"
+        }
+    ],
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
@@ -12,28 +21,28 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "Terminal.PasteFromClipboard",
-            "keys": "ctrl+v"
+            "id": "Terminal.MoveFocusLeft",
+            "keys": "ctrl+h"
         },
         {
             "id": "Terminal.FindText",
             "keys": "ctrl+shift+f"
         },
         {
-            "id": "Terminal.MoveFocusLeft",
-            "keys": "ctrl+h"
+            "id": "Terminal.PasteFromClipboard",
+            "keys": "ctrl+v"
         },
         {
             "id": "Terminal.DuplicatePaneAuto",
             "keys": "alt+shift+d"
         },
         {
-            "id": "Terminal.MoveFocusDown",
-            "keys": "ctrl+j"
-        },
-        {
             "id": null,
             "keys": "alt+down"
+        },
+        {
+            "id": "Terminal.MoveFocusDown",
+            "keys": "ctrl+j"
         },
         {
             "id": "Terminal.SwitchToTab2",
@@ -126,6 +135,10 @@
         {
             "id": "Terminal.SwitchToLastTab",
             "keys": "alt+9"
+        },
+        {
+            "id": "User.closeTab.0",
+            "keys": "ctrl+w"
         }
     ],
     "newTabMenu": 
