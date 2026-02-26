@@ -16,4 +16,6 @@ Set-Alias -Name gaa -Value Set-GitAddAll -Force -Scope Global
 Set-Alias -Name gp -Value Set-GitPush -Force -Scope Global
 Set-Alias -Name gpl -Value Set-GitPull -Force -Scope Global
 
+$env:GIT_SSH_COMMAND = "C:/Windows/System32/OpenSSH/ssh.exe"
+
 Write-Verbose "Git aliases installed."
