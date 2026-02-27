@@ -42,11 +42,25 @@
 			"workspaces": [
 				{
 					"name": "I",
-					"layout": "BSP"
+					"layout": "BSP",
+					"workspace_rules": [
+						{
+							"kind": "Exe",
+							"id": "zen.exe",
+							"matching_strategy": "Equals"
+						}
+					]
 				},
 				{
 					"name": "II",
-					"layout": "BSP"
+					"layout": "BSP",
+					"workspace_rules": [
+						{
+							"kind": "Exe",
+							"id": "WindowsTerminal.exe",
+							"matching_strategy": "Equals"
+						}
+					]
 				},
 				{
 					"name": "III",
@@ -54,7 +68,29 @@
 				},
 				{
 					"name": "IV",
-					"layout": "Grid"
+					"layout": "Grid",
+					"workspace_rules": [
+						{
+							"kind": "Exe",
+							"id": "ms-teams.exe",
+							"matching_strategy": "Equals"
+						},
+						{
+							"kind": "Exe",
+							"id": "Teams.exe",
+							"matching_strategy": "Equals"
+						},
+						{
+							"kind": "Exe",
+							"id": "WhatsApp.Root.exe",
+							"matching_strategy": "Equals"
+						},
+						{
+							"kind": "Exe",
+							"id": "WhatsApp.exe",
+							"matching_strategy": "Equals"
+						}
+					]
 				},
 				{
 					"name": "V",
