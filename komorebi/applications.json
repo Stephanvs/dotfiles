@@ -1523,6 +1523,39 @@
 			}
 		]
 	},
+	"Prepar3D": {
+		"ignore": [
+			{
+				"kind": "Exe",
+				"id": "Prepar3D.exe",
+				"matching_strategy": "Equals"
+			},
+			{
+				"kind": "Exe",
+				"id": "Prepar3D",
+				"matching_strategy": "StartsWith"
+			},
+			{
+				"kind": "Path",
+				"id": "\\Lockheed Martin\\Prepar3D",
+				"matching_strategy": "Contains"
+			},
+			{
+				"kind": "Title",
+				"id": "Prepar3D",
+				"matching_strategy": "Contains"
+			}
+		]
+	},
+	"ProSim System": {
+		"ignore": [
+			{
+				"kind": "Exe",
+				"id": "ProSimA322-System.exe",
+				"matching_strategy": "Equals"
+			}
+		]
+	},
 	"Process Hacker": {
 		"ignore": [
 			{
