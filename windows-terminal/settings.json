@@ -139,6 +139,22 @@
         {
             "id": "User.closeTab.0",
             "keys": "ctrl+w"
+        },
+        {
+            "id": "Terminal.SwapPaneLeft",
+            "keys": "ctrl+alt+h"
+        },
+        {
+            "id": "Terminal.SwapPaneDown",
+            "keys": "ctrl+alt+j"
+        },
+        {
+            "id": "Terminal.SwapPaneUp",
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "id": "Terminal.SwapPaneRight",
+            "keys": "ctrl+alt+l"
         }
     ],
     "newTabMenu": 
