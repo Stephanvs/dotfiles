@@ -1,4 +1,8 @@
 {
   "vimMode": true,
-  "showInlineTitle": true
+  "showInlineTitle": true,
+  "livePreview": false,
+  "showLineNumber": true,
+  "defaultViewMode": "preview",
+  "alwaysUpdateLinks": true
 }
