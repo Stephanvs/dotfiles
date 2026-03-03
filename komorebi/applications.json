@@ -1,11 +1,70 @@
 {
 	"$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/master/schema.asc.json",
 	"1Password": {
-		"ignore": [
+		"manage": [
 			{
 				"kind": "Exe",
-				"id": "1Password.exe",
-				"matching_strategy": "Equals"
+				"id": "(?i)^1password\\.exe$",
+				"matching_strategy": "Regex"
+			},
+			[
+				{
+					"kind": "Class",
+					"id": "Chrome_WidgetWin_1",
+					"matching_strategy": "Equals"
+				},
+				{
+					"kind": "Title",
+					"id": "1Password",
+					"matching_strategy": "EndsWith"
+				}
+			]
+		],
+		"floating": [
+			{
+				"kind": "Exe",
+				"id": "(?i)^1password\\.exe$",
+				"matching_strategy": "Regex"
+			},
+			[
+				{
+					"kind": "Class",
+					"id": "Chrome_WidgetWin_1",
+					"matching_strategy": "Equals"
+				},
+				{
+					"kind": "Title",
+					"id": "1Password",
+					"matching_strategy": "EndsWith"
+				}
+			]
+		],
+		"object_name_change": [
+			{
+				"kind": "Exe",
+				"id": "(?i)^1password\\.exe$",
+				"matching_strategy": "Regex"
+			}
+		],
+		"layered": [
+			{
+				"kind": "Exe",
+				"id": "(?i)^1password\\.exe$",
+				"matching_strategy": "Regex"
+			}
+		],
+		"slow_application": [
+			{
+				"kind": "Exe",
+				"id": "(?i)^1password\\.exe$",
+				"matching_strategy": "Regex"
+			}
+		],
+		"tray_and_multi_window": [
+			{
+				"kind": "Exe",
+				"id": "(?i)^1password\\.exe$",
+				"matching_strategy": "Regex"
 			}
 		]
 	},
