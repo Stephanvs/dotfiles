@@ -4,5 +4,9 @@
   "livePreview": false,
   "showLineNumber": true,
   "defaultViewMode": "preview",
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "01 - Inbox",
+  "attachmentFolderPath": "90 - Attachments",
+  "trashOption": "local"
 }
