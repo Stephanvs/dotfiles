@@ -122,6 +122,8 @@ if wezterm.target_triple == 'aarch64-apple-darwin' then
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
     })
     config.font_size = 12
+    config.window_background_opacity = 0.9
+    config.macos_window_background_blur = 20
 
 elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 
