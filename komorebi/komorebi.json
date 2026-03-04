@@ -6,7 +6,7 @@
 	"cross_boundary_behaviour": "Monitor",
 	"default_workspace_padding": 16,
 	"default_container_padding": 16,
-	"mouse_follows_focus": true,
+	"mouse_follows_focus": false,
 	"border": true,
 	"border_width": 4,
 	"border_implementation": "Komorebi",
