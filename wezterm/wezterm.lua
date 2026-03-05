@@ -1,4 +1,4 @@
-local dark_opacity = 0.85
+local dark_opacity = 0.9
 local light_opacity = 0.9
 
 ---@type wezterm
@@ -118,8 +118,8 @@ end
 ----- PLATFORM SPECIFIC CONFIG
 if wezterm.target_triple == 'aarch64-apple-darwin' then
     config.font = wezterm.font_with_fallback({
-        "Berkeley Mono",
-        { family = "Symbols Nerd Font Mono", weight = "Bold" },
+        "JetBrainsMono Nerd Font",
+        { family = "JetBrainsMono", weight = "Bold" },
     })
     config.font_size = 12
     config.window_background_opacity = 0.9
@@ -128,17 +128,15 @@ if wezterm.target_triple == 'aarch64-apple-darwin' then
 elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 
     config.default_prog = { 'pwsh', '-nologo' }
-    config.window_background_opacity = 0
-    config.win32_system_backdrop = 'Mica'
     config.font = wezterm.font_with_fallback({
-        "BerkeleyMono Nerd Font",
+        "JetBrainsMono Nerd Font",
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
     })
     config.font_size = 10
 
     config.window_frame = {
       font = wezterm.font_with_fallback({
-          "BerkeleyMono Nerd Font",
+          "JetBrainsMono Nerd Font",
           { family = "Symbols Nerd Font Mono", weight = "Bold" },
       }),
       font_size = 10.0,
@@ -159,12 +157,12 @@ elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
       window:gui_window():maximize()
     end)
 
-    config.window_background_opacity = .85
-    config.win32_system_backdrop = 'Tabbed'
+    config.window_background_opacity = dark_opacity
+    config.win32_system_backdrop = 'Disable'
 
 else
     config.font = wezterm.font_with_fallback({
-        "BerkeleyMono Nerd Font",
+        "JetBrainsMono Nerd Font",
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
     })
     config.font_size = 10
