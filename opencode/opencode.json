@@ -50,6 +50,9 @@
     }
   },
   "disabled_providers": [],
+  "experimental": {
+    "disable_paste_summary": true
+  },
   "mode": {
     "plan": {
       "tools": {
