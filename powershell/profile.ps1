@@ -7,10 +7,6 @@ if ($host.Name -eq 'ConsoleHost') {
   Import-Module PSReadLine
 }
 
-Import-Module -Name Terminal-Icons
-
-Invoke-Expression (&starship init powershell)
-
 # Discover 'init.ps1' files recursilvely and 'dot source' them here
 foreach ($script in Get-ChildItem "$DOTFILES" -Filter init.ps1 -Recurse) {
   Write-Verbose "Importing $script"
