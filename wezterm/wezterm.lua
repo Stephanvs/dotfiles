@@ -82,6 +82,14 @@ map("x", "LEADER", act.CloseCurrentTab({ confirm = true }))
 map("P", "CTRL", act.ActivateCommandPalette)
 map("r", "LEADER", act.ReloadConfiguration)
 map("w", "LEADER", act.ShowTabNavigator)
+map("$", "LEADER|SHIFT", act.PromptInputLine({
+  description = 'Enter new name for tab:',
+  action = wezterm.action_callback(function(window, _, line)
+    if line then
+      window:active_tab():set_title(line)
+    end
+  end),
+}))
 
 -- send <c-b> to terminal when pressing <c-b> <c-b>
 map("b", "LEADER|CTRL", act.SendKey { key = 'b', mods = "CTRL" })
