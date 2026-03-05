@@ -119,13 +119,32 @@ Set-PSReadLineKeyHandler -Key Alt+a `
   [Microsoft.PowerShell.PSConsoleReadLine]::SelectForwardChar($null, ($nextAst.Extent.EndOffset - $nextAst.Extent.StartOffset) - $endOffsetAdjustment)
 }
 
-# Report current working directory to Windows Terminal so split panes inherit it (OSC 9;9)
-if ($env:WT_SESSION) {
+# Report current working directory so new panes inherit it in terminal emulators.
+# - WezTerm reads OSC 7
+# - Windows Terminal reads OSC 9;9
+$supportsOsc7 = $env:TERM_PROGRAM -eq "WezTerm"
+$supportsOsc99 = [bool]$env:WT_SESSION
+if ($supportsOsc7 -or $supportsOsc99) {
   $Global:__OriginalPrompt = $function:prompt
   function prompt {
-    $loc = $executionContext.SessionState.Path.CurrentLocation.ProviderPath
-    [Console]::Write("`e]9;9;`"$loc`"`e\")
-    & $Global:__OriginalPrompt
+    $promptText = & $Global:__OriginalPrompt
+    $location = $executionContext.SessionState.Path.CurrentLocation
+
+    if ($location.Provider.Name -eq "FileSystem") {
+      $providerPath = $location.ProviderPath
+
+      if ($supportsOsc7) {
+        $ansiEscape = [char]27
+        $osc7Path = $providerPath -replace "\\", "/"
+        [Console]::Write("$ansiEscape]7;file://${env:COMPUTERNAME}/${osc7Path}${ansiEscape}\")
+      }
+
+      if ($supportsOsc99) {
+        [Console]::Write("`e]9;9;`"$providerPath`"`e\")
+      }
+    }
+
+    $promptText
   }
 }
 
