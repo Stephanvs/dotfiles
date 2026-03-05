@@ -1,6 +1,6 @@
 # dotfiles
 
-![Windows desktop screenshot](img/windows.png)
+![Windows desktop screenshot](img/win-2026-mrt-05.png)
 
 Personal cross-platform dotfiles, organized as composable modules.
 
