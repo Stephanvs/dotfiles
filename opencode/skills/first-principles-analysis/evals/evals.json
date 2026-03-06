@@ -1,0 +1,23 @@
+{
+  "skill_name": "first-principles-analysis",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Our API p95 latency doubled after a recent release. Use first-principles thinking to figure out what could be happening and what we should investigate first.",
+      "expected_output": "A structured analysis that distinguishes symptoms from mechanisms, identifies load-bearing assumptions, gives multiple hypotheses or options, and recommends the highest-value next checks.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "We want to improve completion rates in our signup flow without lowering fraud controls. Think from first principles rather than copying generic CRO advice.",
+      "expected_output": "A structured analysis of objectives, constraints, primitives, likely mechanisms, real tradeoffs, and a recommended sequence of experiments.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Should we build an internal analytics tool ourselves or buy an existing product? Use first-principles reasoning.",
+      "expected_output": "A structured comparison grounded in primitives such as requirements uniqueness, integration complexity, maintenance burden, time to value, and control, ending with a recommendation or next experiment.",
+      "files": []
+    }
+  ]
+}
