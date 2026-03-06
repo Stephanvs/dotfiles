@@ -78,6 +78,9 @@ map("c", "LEADER", act.SpawnTab('CurrentPaneDomain'))
 map("z", "LEADER", act.TogglePaneZoomState)
 map("n", "LEADER", act.ActivateTabRelative(1))
 map("p", "LEADER", act.ActivateTabRelative(-1))
+for i = 1, 9 do
+  map(tostring(i), "LEADER", act.ActivateTab(i - 1))
+end
 map("x", "LEADER", act.CloseCurrentTab({ confirm = true }))
 map("P", "CTRL", act.ActivateCommandPalette)
 map("r", "LEADER", act.ReloadConfiguration)
