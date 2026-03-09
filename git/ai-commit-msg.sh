@@ -1,6 +1,5 @@
 #!/bin/zsh
 # AI Commit Message Generator
-# Generates a commit message from staged changes using OpenCode with Claude Haiku
 
 set -e
 
