@@ -64,8 +64,8 @@ inner.horizontal = 12
 inner.vertical =   12
 outer.left =       12
 outer.bottom =     12
+outer.top =        12 # use this without sketchybar
 # outer.top =        [{ monitor."built-in" = 20 }, 50] -- use this with sketchybar
-outer.top =        [{ monitor."built-in" = 12 }, 50]
 outer.right =      12
 
 # 'main' binding mode declaration
