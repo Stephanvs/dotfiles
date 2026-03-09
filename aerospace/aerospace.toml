@@ -212,5 +212,10 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
-if.app-id = "com.mitchellh.ghostty"
-run = ["layout tiling"]
+    if.app-id = "com.mitchellh.ghostty"
+    run = ["layout tiling"]
+
+[[on-window-detected]]
+    if.app-id = 'com.microsoft.teams2'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 4']
