@@ -17,7 +17,7 @@ if ! command -v opencode &> /dev/null; then
 fi
 
 # Generate commit message using opencode with haiku model
-MSG=$(opencode run -m opencode/gpt-5-nano "Generate a conventional commit message for these staged changes. Output ONLY the commit message - no explanations, no markdown, no code blocks, no quotes around the message:
+MSG=$(opencode run -m openai/gpt-5.3-codex-spark "Generate a conventional commit message for these staged changes. Output ONLY the commit message - no explanations, no markdown, no code blocks, no quotes around the message:
 
 $DIFF" 2>/dev/null | tail -1)
 
