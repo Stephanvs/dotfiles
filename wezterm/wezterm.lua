@@ -170,7 +170,6 @@ elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 
     config.window_background_opacity = dark_opacity
     config.win32_system_backdrop = 'Disable'
-
 else
     config.font = wezterm.font_with_fallback({
         "JetBrainsMono Nerd Font",
