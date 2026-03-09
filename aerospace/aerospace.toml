@@ -212,10 +212,36 @@ alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
 
 [[on-window-detected]]
-    if.app-id = "com.mitchellh.ghostty"
-    run = ["layout tiling"]
+    if.app-id = 'app.zen-browser.zen'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 1']
+
+[[on-window-detected]]
+    if.app-id = 'com.github.wez.wezterm'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+    if.app-id = 'com.jetbrains.rider'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 3']
 
 [[on-window-detected]]
     if.app-id = 'com.microsoft.teams2'
     check-further-callbacks = true
     run = ['move-node-to-workspace 4']
+
+[[on-window-detected]]
+    if.app-id = 'net.whatsapp.WhatsApp'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 4']
+
+[[on-window-detected]]
+    if.app-id = 'md.obsidian'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 5']
+
+[[on-window-detected]]
+    if.app-id = 'com.spotify.client'
+    check-further-callbacks = true
+    run = ['move-node-to-workspace 7']
