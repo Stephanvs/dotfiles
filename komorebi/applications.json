@@ -1887,6 +1887,15 @@
 			}
 		]
 	},
+	"SpeedReader": {
+		"ignore": [
+			{
+				"kind": "Title",
+				"id": "SpeedReader",
+				"matching_strategy": "Equals"
+			}
+		]
+	},
 	"Spotify": {
 		"tray_and_multi_window": [
 			{
