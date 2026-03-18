@@ -8,6 +8,12 @@ Komorebic(cmd) {
     RunWait(format("komorebic.exe {}", cmd), , "Hide")
 }
 
+ReloadKomorebiConfig() {
+    configPath := EnvGet("USERPROFILE") . "\komorebi.json"
+    quote := Chr(34)
+    RunWait("komorebic.exe replace-configuration " . quote . configPath . quote, , "Hide")
+}
+
 #q::Komorebic("close")
 ; !m::Komorebic("minimize")
 
@@ -40,6 +46,7 @@ Komorebic(cmd) {
 #f::Komorebic("toggle-monocle")
 
 ; Window manager options
+^!+r::ReloadKomorebiConfig()
 !+r::Komorebic("retile")
 !p::Komorebic("toggle-pause")
 
