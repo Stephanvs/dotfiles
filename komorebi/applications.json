@@ -2602,6 +2602,22 @@
 			}
 		]
 	},
+	"Yapper": {
+		"ignore": [
+			[
+				{
+					"kind": "Class",
+					"id": "Chrome_WidgetWin_1",
+					"matching_strategy": "Equals"
+				},
+				{
+					"kind": "Title",
+					"id": "Yapper",
+					"matching_strategy": "Equals"
+				}
+			]
+		]
+	},
 	"Zebar": {
 		"ignore": [
 			{
