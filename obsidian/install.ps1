@@ -1,6 +1,6 @@
 Import-Module -Name "$PSScriptRoot\..\lib\Symlink.psm1"
 
-$vaultPath = "$env:USERPROFILE\Documents\Obsidian Vault"
+$vaultPath = "$env:USERPROFILE\notes"
 if (-not (Test-Path -LiteralPath $vaultPath)) {
     New-Item -ItemType Directory -Path $vaultPath -Force | Out-Null
     Write-Host "Created Obsidian Vault directory at $vaultPath"
