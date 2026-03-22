@@ -1,6 +1,5 @@
 [
-  "remotely-save",
-  "obsidian-importer",
   "remotely-secure",
-  "obsidian-git"
+  "obsidian-git",
+  "obsidian-minimal-settings"
 ]
