@@ -91,21 +91,21 @@
       "key": "P"
     }
   ],
-  "file-explorer:open": [
-    {
-      "modifiers": [
-        "Mod",
-        "Shift"
-      ],
-      "key": "E"
-    }
-  ],
   "daily-notes": [
     {
       "modifiers": [
         "Alt"
       ],
       "key": "T"
+    }
+  ],
+  "file-explorer:reveal-active-file": [
+    {
+      "modifiers": [
+        "Mod",
+        "Shift"
+      ],
+      "key": "E"
     }
   ]
 }
