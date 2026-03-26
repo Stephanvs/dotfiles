@@ -6,7 +6,8 @@
   "autoshare": true,
   "autoupdate": false,
   "plugin": [
-    "opencode-sfx"
+    "opencode-sfx",
+    "opencode-claude-bridge"
   ],
   "provider": {
     "lmstudio-homepc": {
