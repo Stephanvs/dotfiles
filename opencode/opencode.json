@@ -9,6 +9,15 @@
     "opencode-sfx",
     "opencode-claude-bridge"
   ],
+  "permission": {
+    "external_directory": {
+      "~/.config/*": "allow",
+      "~/dotfiles/*": "allow",
+      "~/code/*": "allow",
+      "~/notes/*": "allow",
+      "E:/Code/*": "allow",
+    }
+  },
   "provider": {
     "lmstudio-homepc": {
       "npm": "@ai-sdk/openai-compatible",
