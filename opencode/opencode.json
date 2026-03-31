@@ -135,6 +135,20 @@
         "JIRA_API_TOKEN": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/opencode api token"
       }
     },
+    "bitbucket": {
+      "type": "local",
+      "enabled": false,
+      "command": [
+        "op", "run", "--",
+        "bunx", "-y", "bitbucket-mcp@latest"
+      ],
+      "environment": {
+        "BITBUCKET_URL": "https://api.bitbucket.org/2.0",
+        "BITBUCKET_WORKSPACE": "prosim",
+        "BITBUCKET_USERNAME": "stephan.van.stekelenburg@prosim-ar.com",
+        "BITBUCKET_PASSWORD": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/Bitbucket MCP API Token/API Token"
+      }
+    },
     "teamcity": {
       "type": "local",
       "command": [
