@@ -1610,8 +1610,8 @@
 		"ignore": [
 			{
 				"kind": "Exe",
-				"id": "ProSimA322-System.exe",
-				"matching_strategy": "Equals"
+				"id": "(?i)^ProSim.*\\.exe$",
+				"matching_strategy": "Regex"
 			}
 		]
 	},
