@@ -16,8 +16,7 @@ defaults write com.apple.dock "minimize-to-application" -bool TRUE
 # keep Spaces in their assigned order instead or mru
 defaults write com.apple.dock "mru-spaces" -bool "false"
 
-# Hide macOS menu bar for SketchyBar ("Always")
-defaults write NSGlobalDomain "_HIHideMenuBar" -bool TRUE
+defaults write NSGlobalDomain "_HIHideMenuBar" -bool FALSE
 defaults write NSGlobalDomain "AppleMenuBarVisibleInFullscreen" -bool FALSE
 killall Dock
 
