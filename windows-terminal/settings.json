@@ -1,10 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions":
+    "actions": 
     [
         {
-            "command":
+            "command": 
             {
                 "action": "closeTab"
             },
@@ -21,10 +21,6 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "Terminal.MoveFocusLeft",
-            "keys": "ctrl+h"
-        },
-        {
             "id": "Terminal.FindText",
             "keys": "ctrl+shift+f"
         },
@@ -33,24 +29,36 @@
             "keys": "ctrl+v"
         },
         {
-            "id": "Terminal.DuplicatePaneAuto",
-            "keys": "alt+shift+d"
+            "id": "Terminal.MoveFocusLeft",
+            "keys": "ctrl+h"
         },
         {
-            "id": null,
-            "keys": "alt+down"
+            "id": "Terminal.DuplicatePaneAuto",
+            "keys": "alt+shift+d"
         },
         {
             "id": "Terminal.MoveFocusDown",
             "keys": "ctrl+j"
         },
         {
-            "id": "Terminal.SwitchToTab2",
-            "keys": "alt+3"
+            "id": "Terminal.SwapPaneRight",
+            "keys": "ctrl+alt+l"
+        },
+        {
+            "id": "Terminal.SwapPaneUp",
+            "keys": "ctrl+alt+k"
+        },
+        {
+            "id": null,
+            "keys": "alt+down"
         },
         {
             "id": null,
             "keys": "alt+left"
+        },
+        {
+            "id": "Terminal.SwitchToTab2",
+            "keys": "alt+3"
         },
         {
             "id": "Terminal.MoveFocusRight",
@@ -73,12 +81,12 @@
             "keys": "alt+1"
         },
         {
-            "id": "Terminal.SwitchToTab5",
-            "keys": "alt+6"
-        },
-        {
             "id": null,
             "keys": "ctrl+alt+1"
+        },
+        {
+            "id": "Terminal.SwitchToTab5",
+            "keys": "alt+6"
         },
         {
             "id": "Terminal.SwitchToTab1",
@@ -86,11 +94,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+9"
+            "keys": "ctrl+alt+2"
         },
         {
             "id": null,
-            "keys": "ctrl+alt+2"
+            "keys": "ctrl+alt+9"
         },
         {
             "id": null,
@@ -102,11 +110,11 @@
         },
         {
             "id": null,
-            "keys": "ctrl+alt+7"
+            "keys": "ctrl+alt+4"
         },
         {
             "id": null,
-            "keys": "ctrl+alt+4"
+            "keys": "ctrl+alt+7"
         },
         {
             "id": "Terminal.SwitchToTab4",
@@ -147,14 +155,6 @@
         {
             "id": "Terminal.SwapPaneDown",
             "keys": "ctrl+alt+j"
-        },
-        {
-            "id": "Terminal.SwapPaneUp",
-            "keys": "ctrl+alt+k"
-        },
-        {
-            "id": "Terminal.SwapPaneRight",
-            "keys": "ctrl+alt+l"
         }
     ],
     "newTabMenu": 
@@ -271,6 +271,12 @@
                 "hidden": false,
                 "name": "PowerShell (scoop)",
                 "source": "Windows.Terminal.PowershellCore"
+            },
+            {
+                "guid": "{8e9e53b0-d3d7-52ec-9a13-bd439760c5a0}",
+                "hidden": false,
+                "name": "Arch",
+                "source": "Microsoft.WSL"
             }
         ]
     },
