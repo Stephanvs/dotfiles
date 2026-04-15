@@ -59,6 +59,12 @@ get_rgb() {
     tkpurple) echo "#BC9BF7" ;;
     tkyellow) echo "#E1AF68" ;;
 
+
+  # darkmatter
+    dm_orange) echo "#fbcb97" ;;
+    dm_orange2) echo "#e78a53" ;;
+    dm_inactive) echo "#5f8787" ;;
+
 	# default color
 	*) echo "#ffffff" ;;
 	esac
@@ -70,15 +76,15 @@ get_hex() {
 }
 
 # set color
-act_color="catp_mauve"
-ina_color="catp_surface1"
+act_color="dm_orange2"
+ina_color="dm_inactive"
 # bg_color="catp_crust"
 
 OPTIONS=(
 	hidpi=on
 	width=6.0
 	style=round
-	#blur_radius=80.0
+	# blur_radius=80.0
 	# background_color="0xff$(get_hex $bg_color)"
   active_color=$(get_hex $act_color)
   inactive_color=$(get_hex $ina_color)
