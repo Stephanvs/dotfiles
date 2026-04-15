@@ -222,7 +222,7 @@ if wezterm.target_triple ~= 'x86_64-pc-windows-msvc' then
   map("m", "CMD", act.DisableDefaultAssignment)
   map("h", "CMD", act.DisableDefaultAssignment)
   map("~", "CMD", act.Multiple({
-    act.SenDKey({ mods = "CTRL", key = "b" }),
+    act.SendKey({ mods = "CTRL", key = "b" }),
     act.SendKey({ key = "p" }),
   }))
 
