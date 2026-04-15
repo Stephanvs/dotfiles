@@ -40,30 +40,30 @@ config.color_schemes = {
   }
 }
 
--- function scheme_for_appearance(appearance)
---   if appearance:find 'Dark' then
---     return 'Darkmatter'
---   else
---     return 'Framer'
---   end
--- end
+function scheme_for_appearance(appearance)
+  if appearance:find 'Dark' then
+    return 'Darkmatter'
+  else
+    return 'Framer'
+  end
+end
 
--- wezterm.on('window-config-reloaded', function(window, _pane)
---   local overrides = window:get_config_overrides() or {}
---   local appearance = window:get_appearance()
---   local scheme = scheme_for_appearance(appearance)
---   if overrides.color_scheme ~= scheme then
---     overrides.color_scheme = scheme
---     window:set_config_overrides(overrides)
---   end
--- end)
+wezterm.on('window-config-reloaded', function(window, _pane)
+  local overrides = window:get_config_overrides() or {}
+  local appearance = window:get_appearance()
+  local scheme = scheme_for_appearance(appearance)
+  if overrides.color_scheme ~= scheme then
+    overrides.color_scheme = scheme
+    window:set_config_overrides(overrides)
+  end
+end)
 
 config.adjust_window_size_when_changing_font_size = false
 config.debug_key_events = false
-config.enable_tab_bar = true --wezterm.target_triple == 'x86_64-pc-windows-msvc'
-config.tab_bar_at_bottom = true
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
+config.enable_tab_bar = false --wezterm.target_triple == 'x86_64-pc-windows-msvc'
+config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.inactive_pane_hsb = {
   saturation = 0,
@@ -71,10 +71,10 @@ config.inactive_pane_hsb = {
 }
 config.text_background_opacity = 1
 config.window_padding = {
-  left = 0,
-  right = 0,
-  top = 0,
-  bottom = 0,
+  left = 10,
+  right = 10,
+  top = 6,
+  bottom = 6
 }
 
 config.leader = {
