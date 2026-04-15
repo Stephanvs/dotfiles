@@ -18,25 +18,45 @@ local map = function(key, mods, action)
   end
 end
 
-config.color_scheme = "Catppuccin Mocha"
+-- config.color_scheme = "Catppuccin Mocha"
+config.color_scheme = 'Darkmatter'
+config.color_schemes = {
+  ["Darkmatter"] = {
+    foreground = "#ffffff",
+    background = "#121113",
+    cursor_fg = "#121113",
+    cursor_bg = "#ffffff",
+    cursor_border = "#ffffff",
+    selection_fg = "#000000",
+    selection_bg = "#222222",
+    ansi = {
+      "#121113", "#5f8787", "#fbcb97", "#e78a53",
+      "#888888", "#999999", "#aaaaaa", "#c1c1c1"
+    },
+    brights = {
+      "#333333", "#5f8787", "#fbcb97", "#e78a53",
+      "#888888", "#999999", "#aaaaaa", "#c1c1c1"
+    }
+  }
+}
 
-function scheme_for_appearance(appearance)
-  if appearance:find 'Dark' then
-    return 'Framer'
-  else
-    return 'Framer'
-  end
-end
+-- function scheme_for_appearance(appearance)
+--   if appearance:find 'Dark' then
+--     return 'Darkmatter'
+--   else
+--     return 'Framer'
+--   end
+-- end
 
-wezterm.on('window-config-reloaded', function(window, _pane)
-  local overrides = window:get_config_overrides() or {}
-  local appearance = window:get_appearance()
-  local scheme = scheme_for_appearance(appearance)
-  if overrides.color_scheme ~= scheme then
-    overrides.color_scheme = scheme
-    window:set_config_overrides(overrides)
-  end
-end)
+-- wezterm.on('window-config-reloaded', function(window, _pane)
+--   local overrides = window:get_config_overrides() or {}
+--   local appearance = window:get_appearance()
+--   local scheme = scheme_for_appearance(appearance)
+--   if overrides.color_scheme ~= scheme then
+--     overrides.color_scheme = scheme
+--     window:set_config_overrides(overrides)
+--   end
+-- end)
 
 config.adjust_window_size_when_changing_font_size = false
 config.debug_key_events = false
@@ -141,23 +161,25 @@ elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 
     config.default_prog = { 'pwsh', '-nologo' }
     config.font = wezterm.font_with_fallback({
-        "JetBrainsMono Nerd Font",
+        -- "JetBrainsMono Nerd Font",
+        "BerkeleyMono Nerd Font",
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
     })
     config.font_size = 10
 
     config.window_frame = {
       font = wezterm.font_with_fallback({
-          "JetBrainsMono Nerd Font",
+          -- "JetBrainsMono Nerd Font",
+          "BerkeleyMono Nerd Font",
           { family = "Symbols Nerd Font Mono", weight = "Bold" },
       }),
       font_size = 10.0,
-      active_titlebar_bg = '#333333',
-      inactive_titlebar_bg = '#575757',
+      -- active_titlebar_bg = '#333333',
+      -- inactive_titlebar_bg = '#575757',
     }
     config.colors = {
       tab_bar = {
-        inactive_tab_edge = '#575757',
+        -- inactive_tab_edge = '#575757',
       }
     }
     local mux = wezterm.mux
@@ -200,7 +222,7 @@ if wezterm.target_triple ~= 'x86_64-pc-windows-msvc' then
   map("m", "CMD", act.DisableDefaultAssignment)
   map("h", "CMD", act.DisableDefaultAssignment)
   map("~", "CMD", act.Multiple({
-    act.SendKey({ mods = "CTRL", key = "b" }),
+    act.SenDKey({ mods = "CTRL", key = "b" }),
     act.SendKey({ key = "p" }),
   }))
 
