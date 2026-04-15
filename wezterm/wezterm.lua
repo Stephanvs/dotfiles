@@ -1,4 +1,4 @@
-local dark_opacity = 0.9
+local dark_opacity = 0.8
 local light_opacity = 0.9
 
 ---@type wezterm
@@ -150,11 +150,11 @@ end
 ----- PLATFORM SPECIFIC CONFIG
 if wezterm.target_triple == 'aarch64-apple-darwin' then
     config.font = wezterm.font_with_fallback({
-        "JetBrainsMono Nerd Font",
-        { family = "JetBrainsMono", weight = "Bold" },
+        "BerkeleyMono Nerd Font",
+        { family = "BerkeleyMono", weight = "Bold" },
     })
-    config.font_size = 12
-    config.window_background_opacity = 0.9
+    config.font_size = 14
+    config.window_background_opacity = dark_opacity
     config.macos_window_background_blur = 20
 
 elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
@@ -195,7 +195,7 @@ elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.win32_system_backdrop = 'Disable'
 else
     config.font = wezterm.font_with_fallback({
-        "JetBrainsMono Nerd Font",
+        "BerkeleyMono Nerd Font",
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
     })
     config.font_size = 10
