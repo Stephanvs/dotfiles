@@ -8,6 +8,9 @@ o.relativenumber = true
 -- auto read files when they change
 o.autoread = true
 
+-- show terminal colors
+o.termguicolors = true
+
 -- indentation
 o.tabstop = 2
 o.softtabstop = 2
