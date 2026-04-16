@@ -62,7 +62,7 @@ config.adjust_window_size_when_changing_font_size = false
 config.debug_key_events = false
 config.window_close_confirmation = "NeverPrompt"
 config.window_decorations = "RESIZE"
-config.enable_tab_bar = false --wezterm.target_triple == 'x86_64-pc-windows-msvc'
+config.enable_tab_bar = true --wezterm.target_triple == 'x86_64-pc-windows-msvc'
 config.tab_bar_at_bottom = true
 config.use_fancy_tab_bar = false
 config.inactive_pane_hsb = {
