@@ -261,6 +261,7 @@ elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
 
     config.window_background_opacity = dark_opacity
     config.win32_system_backdrop = 'Disable'
+    config.tab_max_width = 50
 else
     config.font = wezterm.font_with_fallback({
         "BerkeleyMono Nerd Font",
