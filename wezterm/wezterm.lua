@@ -1,4 +1,4 @@
-local dark_opacity = 0.8
+local dark_opacity = 0.9
 local light_opacity = 0.9
 
 ---@type wezterm
