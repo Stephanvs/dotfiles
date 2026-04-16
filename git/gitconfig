@@ -31,7 +31,7 @@
 
 [branch]
   autosetuprebase = always
-  sort = -comitterdate
+	sort = -committerdate
 
 [status]
   branch = true
