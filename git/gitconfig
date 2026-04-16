@@ -1,48 +1,67 @@
 [user]
-	name = Stephan van Stekelenburg
-	email = stephan@hayman.io
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHZLEp5JjI0xKVqtgbqJvE1txMLalkUn/B9veAN6ixBj
+  name = Stephan van Stekelenburg
+  email = stephan@hayman.io
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHZLEp5JjI0xKVqtgbqJvE1txMLalkUn/B9veAN6ixBj
+
+[alias]
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
+[core]
+  excludesfile = $HOME/.gitignore
+  editor = vim
+  autocrlf = input
+
+[push]
+  default = simple
+
+[pull]
+  rebase = true
+
+[apply]
+  whitespace = nowarn
+
+[mergetool]
+  keepBackup = false
+
+[difftool]
+  prompt = false
+
+[help]
+  autocorrect = 1
+
+[branch]
+  autosetuprebase = always
+  sort = -comitterdate
+
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+
 [color]
   diff = auto
   status = auto
   branch = auto
   ui = true
-[core]
-  editor = vim
-  autocrlf = input
-[apply]
-  whitespace = nowarn
-[mergetool]
-  keepBackup = false
-[difftool]
-  prompt = false
-[help]
-  autocorrect = 1
-[push]
-  default = simple
-[branch]
-  autosetuprebase = always
+
 [credential]
   helper = /usr/share/doc/git/contrib/credential/libsecret/git-credential-libsecret
-[pull]
-  rebase = true
-[alias]
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+
 [credential "helperselector"]
-	selected = manager
+  selected = manager
+
 #[gpg]
 #	format = ssh
 #[gpg "ssh"]
 #	program = /opt/1Password/op-ssh-sign
 #[commit]
 #	gpgsign = true
-[safe]
-	directory = /mnt/Colossal/Code
-	directory = /mnt/Colossal/Code/prosim737
+
 [init]
-	defaultBranch = main
+  defaultBranch = main
