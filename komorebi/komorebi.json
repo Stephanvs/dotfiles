@@ -11,11 +11,11 @@
 	"border_width": 4,
 	"border_implementation": "Komorebi",
 	"border_colours": {
-		"floating": "#eba0ac",
-		"monocle": "#fab387",
-		"single": "#a6e3a1",
-		"stack": "#94e2d5",
-		"unfocused": "#1e1e2e"
+		"floating": "#e78a53",
+		"monocle": "#e78a53",
+		"single": "#e78a53",
+		"stack": "#fbcb97",
+		"unfocused": "#5f8787"
 	},
 	"animation": {
 		"enabled": true,
