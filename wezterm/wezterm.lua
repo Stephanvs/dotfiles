@@ -71,7 +71,7 @@ config.colors = {
 
     active_tab = {
       bg_color = '#e78a53',
-      fg_color = '#ffffff',
+      fg_color = '#121113',
       intensity = 'Normal',
       underline = 'None',
       italic = false,
@@ -80,13 +80,12 @@ config.colors = {
 
     inactive_tab = {
       bg_color = '#121113',
-      fg_color = '#999999',
+      fg_color = '#FFC9A9',
     },
 
     inactive_tab_hover = {
       bg_color = '#333333',
       fg_color = '#fbcb97',
-      italic = true,
     },
 
     new_tab = {
@@ -97,7 +96,6 @@ config.colors = {
     new_tab_hover = {
       bg_color = '#333333',
       fg_color = '#fbcb97',
-      italic = true,
     },
 
     inactive_tab_edge = '#121113',
