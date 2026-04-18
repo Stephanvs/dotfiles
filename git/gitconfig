@@ -10,6 +10,21 @@
   excludesfile = $HOME/.gitignore
   editor = vim
   autocrlf = input
+  pager = delta
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  #dark = true     # or light = true, or omit for auto-detection
+  side-by-side = true
+  features = NeonDark
+
+[merge]
+  conflictStyle = zdiff3[interactive]
+  diffFilter = delta --color-only
+  conflictStyle = zdiff3
 
 [push]
   default = simple
