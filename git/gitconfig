@@ -22,7 +22,7 @@
   features = NeonDark
 
 [merge]
-  conflictStyle = zdiff3[interactive]
+#  conflictStyle = zdiff3[interactive]
   diffFilter = delta --color-only
   conflictStyle = zdiff3
 
