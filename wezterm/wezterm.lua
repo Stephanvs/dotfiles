@@ -5,6 +5,7 @@ local light_opacity = 0.9
 local wezterm = require('wezterm')
 local act = wezterm.action
 local shortcuts = {}
+local zoomed_tab_icon = utf8.char(0x26F6)
 
 local config = wezterm.config_builder()
 
@@ -48,6 +49,15 @@ function scheme_for_appearance(appearance)
   end
 end
 
+local function tab_title(tab_info)
+  local title = tab_info.tab_title
+  if title and #title > 0 then
+    return title
+  end
+
+  return tab_info.active_pane.title
+end
+
 wezterm.on('window-config-reloaded', function(window, _pane)
   local overrides = window:get_config_overrides() or {}
   local appearance = window:get_appearance()
@@ -56,6 +66,19 @@ wezterm.on('window-config-reloaded', function(window, _pane)
     overrides.color_scheme = scheme
     window:set_config_overrides(overrides)
   end
+end)
+
+wezterm.on('format-tab-title', function(tab, _tabs, _panes, _config, _hover, max_width)
+  local prefix = tostring(tab.tab_index + 1) .. ': '
+
+  if tab.active_pane.is_zoomed then
+    prefix = prefix .. zoomed_tab_icon .. ' '
+  end
+
+  local title_width = math.max(0, max_width - wezterm.column_width(prefix) - 2)
+  local title = wezterm.truncate_right(tab_title(tab), title_width)
+
+  return ' ' .. prefix .. title .. ' '
 end)
 
 config.adjust_window_size_when_changing_font_size = false
