@@ -10,7 +10,7 @@
     "context": "Workspace",
     "bindings": {
       "shift shift": "file_finder::Toggle",
-      "cmd-k": [
+      "secondary-k": [
         "projects::OpenRecent",
         {
           "create_new_window": false
@@ -23,6 +23,8 @@
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
       "tab": "tab_switcher::Toggle",
+      "s": "vim::PushSneak",
+      "shift-s": "vim::PushSneakBackward",
 
       "ctrl-n": "vim::LineDown",
       "ctrl-p": "vim::LineUp",
@@ -83,7 +85,7 @@
       "ctrl-q": "pane::CloseActiveItem",
       "space b d": "pane::CloseActiveItem",
       // Close other items
-      "space b o": "pane::CloseInactiveItems",
+      "space b o": "pane::CloseOtherItems",
       "ctrl-s": "workspace::Save",
       "space f f": "file_finder::Toggle",
       // Project search

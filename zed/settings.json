@@ -7,6 +7,29 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "auto_update": false,
+  "diff_view_style": "unified",
+  "show_whitespaces": "boundary",
+  "selection_highlight": true,
+  "edit_predictions": {
+    "provider": "zed"
+  },
+  "git_panel": {
+    "tree_view": true,
+    "sort_by_path": false
+  },
+  "agent_servers": {
+    "opencode": {
+      "type": "registry",
+      "default_config_options": {
+        "mode": "build"
+      }
+    },
+    "claude-acp": {
+      "type": "registry",
+      "default_mode": "acceptEdits"
+    }
+  },
   "auto_signature_help": false,
   "autosave": {
     "after_delay": {
@@ -50,42 +73,12 @@
   "cursor_shape": "bar",
   "agent": {
     "default_profile": "write",
-    "always_allow_tool_actions": true,
-    "profiles": {
-      "write": {
-        "name": "Write",
-        "tools": {
-          "open": true,
-          "create_directory": true,
-          "terminal": true,
-          "batch_tool": true,
-          "code_actions": true,
-          "code_symbols": true,
-          "contents": true,
-          "copy_path": true,
-          "create_file": true,
-          "delete_path": false,
-          "diagnostics": true,
-          "edit_file": true,
-          "fetch": true,
-          "list_directory": true,
-          "move_path": true,
-          "now": true,
-          "find_path": true,
-          "read_file": true,
-          "grep": true,
-          "rename": true,
-          "symbol_info": true,
-          "thinking": true
-        },
-        "enable_all_context_servers": true,
-        "context_servers": {}
-      }
+    "tool_permissions": {
+      "default": "allow"
     },
-    "version": "2",
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-sonnet-4-thinking"
+      "model": "claude-sonnet-4-5"
     }
   },
   "tabs": {
@@ -95,10 +88,6 @@
     "show": true,
     "show_nav_history_buttons": false,
     "show_tab_bar_buttons": true
-  },
-  "features": {
-    "edit_prediction_provider": "zed",
-    "copilot": false
   },
   "indent_guides": {
     "enabled": true,
@@ -114,20 +103,20 @@
   },
   "base_keymap": "VSCode",
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Base16 IR Black"
+    "dark": "Catppuccin Mocha"
   },
   "icon_theme": {
+    "mode": "dark",
     "dark": "Catppuccin Mocha",
     "light": "Catppuccin Latte"
   },
   "vim": {
-    "use_system_clipboard": "always",
-    "enable_vim_sneak": true
+    "use_system_clipboard": "always"
   },
   "vim_mode": true,
-  "relative_line_numbers": true,
+  "relative_line_numbers": "enabled",
   "ui_font_size": 14,
   "buffer_font_size": 12.0,
   "use_autoclose": false,
@@ -144,14 +133,9 @@
       "enabled": false
     }
   },
-  // Whether to reveal it in the project panel automatically,
-  // when a corresponding project entry becomes active.
-  // Gitignored entries are never auto revealed.
-  "auto_reveal_entries": false,
   "minimap": {
     "show": "always",
     "current_line_highlight": "all",
-    "enabled": true,
     "thumb": "hover"
   }
 }
