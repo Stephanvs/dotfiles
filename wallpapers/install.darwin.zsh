@@ -19,4 +19,4 @@ change_background() {
   fi
 }
 
-change_background "$DOTFILES/wallpapers/ascii-galaxy.png"
+change_background "$DOTFILES/wallpapers/wallhaven-wej177.jpg"

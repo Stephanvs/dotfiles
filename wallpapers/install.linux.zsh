@@ -12,4 +12,4 @@ change_background() {
   fi
 }
 
-change_background "$DOTFILES/wallpapers/dark_gradient.jpg"
+change_background "$DOTFILES/wallpapers/wallhaven-wej177.jpg"
