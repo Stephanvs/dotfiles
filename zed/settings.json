@@ -7,6 +7,7 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "ui_font_size": 14.0,
   "auto_update": false,
   "diff_view_style": "unified",
   "show_whitespaces": "boundary",
@@ -62,6 +63,7 @@
   ],
   "vertical_scroll_margin": 8,
   "terminal": {
+    "font_family": "BerkeleyMono Nerd Font",
     "dock": "bottom"
   },
   "project_panel": {
@@ -93,11 +95,10 @@
     "enabled": true,
     "coloring": "indent_aware"
   },
-  "ui_font_family": "Iosevka Nerd Font",
   "ui_font_features": {
     "liga": true
   },
-  "buffer_font_family": "Iosevka Nerd Font",
+  "buffer_font_family": "BerkeleyMono Nerd Font",
   "buffer_font_features": {
     "liga": true
   },
@@ -117,7 +118,6 @@
   },
   "vim_mode": true,
   "relative_line_numbers": "enabled",
-  "ui_font_size": 14,
   "buffer_font_size": 12.0,
   "use_autoclose": false,
   "toolbar": {
