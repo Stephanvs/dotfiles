@@ -1,2 +1,3 @@
 nvim/config/plugin/packer_compiled.lua
 install.log
+.opencode/package-lock.json
