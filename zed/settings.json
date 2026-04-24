@@ -20,6 +20,12 @@
     "sort_by_path": false
   },
   "agent_servers": {
+    "codex-acp": {
+      "default_config_options": {
+        "mode": "full-access"
+      },
+      "type": "registry"
+    },
     "opencode": {
       "type": "registry",
       "default_config_options": {
