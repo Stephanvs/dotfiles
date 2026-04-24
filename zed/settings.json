@@ -9,7 +9,7 @@
 {
   "ui_font_size": 14.0,
   "auto_update": false,
-  "diff_view_style": "unified",
+  "diff_view_style": "split",
   "show_whitespaces": "boundary",
   "selection_highlight": true,
   "edit_predictions": {
