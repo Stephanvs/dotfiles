@@ -1,26 +1,21 @@
-Set-ExecutionPolicy Unrestricted -Scope Process
+& "$PSScriptRoot/gaming-disable-dvr.ps1"
+& "$PSScriptRoot/privacy-disable-telemetry.ps1"
+& "$PSScriptRoot/search-disable-bing.ps1"
+& "$PSScriptRoot/content-disable-suggestions.ps1"
+& "$PSScriptRoot/lockscreen-disable-tips.ps1"
+& "$PSScriptRoot/explorer-use-classic-context-menu.ps1"
+& "$PSScriptRoot/explorer-show-hidden-folders.ps1"
+& "$PSScriptRoot/explorer-show-known-file-extensions.ps1"
+& "$PSScriptRoot/taskbar-align-left.ps1"
+& "$PSScriptRoot/taskbar-hide-chat.ps1"
+& "$PSScriptRoot/taskbar-disable-widgets.ps1"
+& "$PSScriptRoot/ai-disable-copilot.ps1"
+& "$PSScriptRoot/ai-disable-recall.ps1"
+& "$PSScriptRoot/explorer-hide-gallery.ps1"
 
-& ([scriptblock]::Create((irm "https://win11debloat.raphi.re/"))) `
-  -DisableDVR `
-  -DisableTelemetry `
-  -DisableBing `
-  -DisableSuggestions `
-  -DisableLockscreenTips `
-  -RevertContextMenu `
-  -ShowHiddenFolders `
-  -ShowKnownFileExt `
-  -HideDupliDrive `
-  -TaskbarAlignLeft `
-  -ShowSearchBoxTb `
-  -HideChat `
-  -DisableWidgets `
-  -DisableCopilot `
-  -DisableRecall `
-  -HideGallery `
-  -Silent
-
-& $PSScriptRoot/Taskbar-CombineApps.ps1
-& $PSScriptRoot/Remove-DesktopShortcuts.ps1
-& $PSScriptRoot/Install-Apps.ps1
-& $PSScriptRoot/disable-lock-workstation.ps1
-& $PSScriptRoot/keyboard-rate.ps1
+& "$PSScriptRoot/taskbar-search-box.ps1"
+& "$PSScriptRoot/taskbar-combine-apps.ps1"
+& "$PSScriptRoot/remove-desktop-shortcuts.ps1"
+& "$PSScriptRoot/install-apps.ps1"
+& "$PSScriptRoot/disable-lock-workstation.ps1"
+& "$PSScriptRoot/keyboard-rate.ps1"

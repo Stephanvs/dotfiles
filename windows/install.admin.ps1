@@ -1,0 +1,8 @@
+& "$PSScriptRoot/gaming-disable-dvr.admin.ps1"
+& "$PSScriptRoot/privacy-disable-telemetry.admin.ps1"
+& "$PSScriptRoot/search-disable-bing.admin.ps1"
+& "$PSScriptRoot/explorer-hide-duplicate-removable-drives.admin.ps1"
+& "$PSScriptRoot/taskbar-disable-widgets.admin.ps1"
+& "$PSScriptRoot/ai-disable-copilot.admin.ps1"
+& "$PSScriptRoot/ai-disable-recall.admin.ps1"
+& "$PSScriptRoot/explorer-hide-gallery.admin.ps1"

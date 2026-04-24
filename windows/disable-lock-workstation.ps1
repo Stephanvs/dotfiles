@@ -1,19 +1,13 @@
-$EnableLockWorkstation = 0
-$DisableLockWorkstation = 1
+. "$PSScriptRoot/_helpers.ps1"
 
-$Value = $DisableLockWorkstation
+$lockWorkstationEnabled = 0
+$lockWorkstationDisabled = 1
 
-$PropertyPath = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\System"
-$PropertyName = "DisableLockWorkstation"
+$propertyPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Policies\System'
+$propertyName = 'DisableLockWorkstation'
+$value = $lockWorkstationDisabled
 
-if (-not (Test-Path -Path $PropertyPath)) {
-  New-Item -Path $PropertyPath -Force | Out-Null
-}
-
-$CurrentValue = Get-ItemPropertyValue -Path $PropertyPath -Name $PropertyName -ErrorAction SilentlyContinue
-Write-Host "Current $PropertyName Property = $CurrentValue"
-
-if ($CurrentValue -ne $Value) {
-  Write-Host "Setting $PropertyName to value: $Value"
-  New-ItemProperty -Path $PropertyPath -Name $PropertyName -PropertyType DWord -Value $Value -Force | Out-Null
+$changed = Set-RegistryValueIfDifferent -Path $propertyPath -Name $propertyName -Value $value -PropertyType DWord
+if ($changed) {
+  Write-Host 'Disabled locking the workstation from the current user session.'
 }

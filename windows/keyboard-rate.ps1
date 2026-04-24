@@ -1,40 +1,43 @@
-$PropertyPath = "HKCU:\Control Panel\Accessibility\Keyboard Response"
+. "$PSScriptRoot/_helpers.ps1"
 
-$StringProperties = @{
-  AutoRepeatDelay = "200"
-  AutoRepeatRate = "200"
-  BounceTime = "0"
-  DelayBeforeAcceptance = "500"
-  Flags = "114"
+$propertyPath = 'HKCU:\Control Panel\Accessibility\Keyboard Response'
+
+$autoRepeatDelayFast = '200'
+$autoRepeatDelayDefault = '500'
+$autoRepeatRateFast = '200'
+$autoRepeatRateDefault = '500'
+$bounceTimeDisabled = '0'
+$delayBeforeAcceptanceShort = '500'
+$delayBeforeAcceptanceDefault = '1000'
+$flagsEnabled = '114'
+
+$lastBounceKeySettingDisabled = 0
+$lastBounceKeySettingEnabled = 1
+$lastValidDelayDisabled = 0
+$lastValidRepeatDisabled = 0
+$lastValidWaitDefault = 1000
+
+$stringProperties = @{
+  AutoRepeatDelay = $autoRepeatDelayFast
+  AutoRepeatRate = $autoRepeatRateFast
+  BounceTime = $bounceTimeDisabled
+  DelayBeforeAcceptance = $delayBeforeAcceptanceShort
+  Flags = $flagsEnabled
 }
 
-$DwordProperties = @{
-  "Last BounceKey Setting" = 0
-  "Last Valid Delay" = 0
-  "Last Valid Repeat" = 0
-  "Last Valid Wait" = 1000
+$dwordProperties = @{
+  'Last BounceKey Setting' = $lastBounceKeySettingDisabled
+  'Last Valid Delay' = $lastValidDelayDisabled
+  'Last Valid Repeat' = $lastValidRepeatDisabled
+  'Last Valid Wait' = $lastValidWaitDefault
 }
 
-if (-not (Test-Path -Path $PropertyPath)) {
-  New-Item -Path $PropertyPath -Force | Out-Null
+Ensure-RegistryKey -Path $propertyPath
+
+foreach ($property in $stringProperties.GetEnumerator()) {
+  Set-RegistryValueIfDifferent -Path $propertyPath -Name $property.Key -Value $property.Value -PropertyType String | Out-Null
 }
 
-foreach ($Property in $StringProperties.GetEnumerator()) {
-  $CurrentValue = Get-ItemPropertyValue -Path $PropertyPath -Name $Property.Key -ErrorAction SilentlyContinue
-  Write-Host "Current $($Property.Key) Property = $CurrentValue"
-
-  if ($CurrentValue -ne $Property.Value) {
-    Write-Host "Setting $($Property.Key) to value: $($Property.Value)"
-    New-ItemProperty -Path $PropertyPath -Name $Property.Key -PropertyType String -Value $Property.Value -Force | Out-Null
-  }
-}
-
-foreach ($Property in $DwordProperties.GetEnumerator()) {
-  $CurrentValue = Get-ItemPropertyValue -Path $PropertyPath -Name $Property.Key -ErrorAction SilentlyContinue
-  Write-Host "Current $($Property.Key) Property = $CurrentValue"
-
-  if ($CurrentValue -ne $Property.Value) {
-    Write-Host "Setting $($Property.Key) to value: $($Property.Value)"
-    New-ItemProperty -Path $PropertyPath -Name $Property.Key -PropertyType DWord -Value $Property.Value -Force | Out-Null
-  }
+foreach ($property in $dwordProperties.GetEnumerator()) {
+  Set-RegistryValueIfDifferent -Path $propertyPath -Name $property.Key -Value $property.Value -PropertyType DWord | Out-Null
 }
