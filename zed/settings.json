@@ -13,35 +13,35 @@
   "show_whitespaces": "boundary",
   "selection_highlight": true,
   "edit_predictions": {
-    "provider": "zed"
+    "provider": "zed",
   },
   "git_panel": {
     "tree_view": true,
-    "sort_by_path": false
+    "sort_by_path": false,
   },
   "agent_servers": {
     "codex-acp": {
       "default_config_options": {
-        "mode": "full-access"
+        "mode": "full-access",
       },
-      "type": "registry"
+      "type": "registry",
     },
     "opencode": {
       "type": "registry",
       "default_config_options": {
-        "mode": "build"
-      }
+        "mode": "build",
+      },
     },
     "claude-acp": {
       "type": "registry",
-      "default_mode": "acceptEdits"
-    }
+      "default_mode": "acceptEdits",
+    },
   },
   "auto_signature_help": false,
   "autosave": {
     "after_delay": {
-      "milliseconds": 5000
-    }
+      "milliseconds": 5000,
+    },
   },
   "ssh_connections": [
     {
@@ -49,32 +49,32 @@
       "username": "stephanvs",
       "projects": [
         {
-          "paths": ["~/Code"]
+          "paths": ["~/Code"],
         },
         {
-          "paths": ["~/actions-runner"]
+          "paths": ["~/actions-runner"],
         },
         {
-          "paths": ["~/codeql"]
+          "paths": ["~/codeql"],
         },
         {
-          "paths": ["~/source"]
+          "paths": ["~/source"],
         },
         {
-          "paths": ["~/source/lazycode"]
-        }
+          "paths": ["~/source/lazycode"],
+        },
       ],
-      "nickname": "fiji"
-    }
+      "nickname": "fiji",
+    },
   ],
   "vertical_scroll_margin": 8,
   "terminal": {
     "font_family": "BerkeleyMono Nerd Font",
-    "dock": "bottom"
+    "dock": "bottom",
   },
   "project_panel": {
     "auto_reveal_entries": false,
-    "git_status": true
+    "git_status": true,
   },
   "hide_mouse": "on_typing_and_movement",
   "cursor_blink": false,
@@ -82,7 +82,7 @@
   "agent": {
     "default_profile": "write",
     "tool_permissions": {
-      "default": "allow"
+      "default": "allow",
     },
     "default_model": {
       "provider": "zed.dev",
@@ -90,37 +90,37 @@
     }
   },
   "tabs": {
-    "show_diagnostics": "errors"
+    "show_diagnostics": "errors",
   },
   "tab_bar": {
     "show": true,
     "show_nav_history_buttons": false,
-    "show_tab_bar_buttons": true
+    "show_tab_bar_buttons": true,
   },
   "indent_guides": {
     "enabled": true,
-    "coloring": "indent_aware"
+    "coloring": "indent_aware",
   },
   "ui_font_features": {
-    "liga": true
+    "liga": true,
   },
   "buffer_font_family": "BerkeleyMono Nerd Font",
   "buffer_font_features": {
-    "liga": true
+    "liga": true,
   },
   "base_keymap": "VSCode",
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Catppuccin Mocha"
+    "dark": "Catppuccin Mocha",
   },
   "icon_theme": {
     "mode": "dark",
     "dark": "Catppuccin Mocha",
-    "light": "Catppuccin Latte"
+    "light": "Catppuccin Latte",
   },
   "vim": {
-    "use_system_clipboard": "always"
+    "use_system_clipboard": "always",
   },
   "vim_mode": true,
   "relative_line_numbers": "enabled",
@@ -131,17 +131,17 @@
     "code_actions": true,
     "quick_actions": true,
     "breadcrumbs": false,
-    "selections_menu": false
+    "selections_menu": false,
   },
   "git": {
     "git_gutter": "tracked_files",
     "inline_blame": {
-      "enabled": false
-    }
+      "enabled": false,
+    },
   },
   "minimap": {
     "show": "always",
     "current_line_highlight": "all",
-    "thumb": "hover"
-  }
+    "thumb": "hover",
+  },
 }
