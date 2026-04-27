@@ -1,3 +1,7 @@
+# Schedule to run this script regularly
+& "$PSScriptRoot/schedule-install-task.ps1"
+
+# Ensure some windows preferences are set
 & "$PSScriptRoot/gaming-disable-dvr.ps1"
 & "$PSScriptRoot/privacy-disable-telemetry.ps1"
 & "$PSScriptRoot/search-disable-bing.ps1"
@@ -12,10 +16,8 @@
 & "$PSScriptRoot/ai-disable-copilot.ps1"
 & "$PSScriptRoot/ai-disable-recall.ps1"
 & "$PSScriptRoot/explorer-hide-gallery.ps1"
-
 & "$PSScriptRoot/taskbar-search-box.ps1"
 & "$PSScriptRoot/taskbar-combine-apps.ps1"
 & "$PSScriptRoot/remove-desktop-shortcuts.ps1"
-& "$PSScriptRoot/install-apps.ps1"
 & "$PSScriptRoot/disable-lock-workstation.ps1"
 & "$PSScriptRoot/keyboard-rate.ps1"
