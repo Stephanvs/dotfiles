@@ -1,3 +1,4 @@
+& "$PSScriptRoot/task-scheduler-enable-history.admin.ps1"
 & "$PSScriptRoot/gaming-disable-dvr.admin.ps1"
 & "$PSScriptRoot/privacy-disable-telemetry.admin.ps1"
 & "$PSScriptRoot/search-disable-bing.admin.ps1"
