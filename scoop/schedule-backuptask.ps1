@@ -1,22 +1,18 @@
-$taskName = "scoop-backup"
-$task = Get-ScheduledTaskInfo -TaskName $taskName -ErrorAction SilentlyContinue
+$taskName = 'scoop-backup'
+$scriptPath = Join-Path $PSScriptRoot 'backup-scoop.ps1'
+$taskCommand = "pwsh.exe -NoProfile -ExecutionPolicy Bypass -WorkingDirectory `"$PSScriptRoot`" -File `"$scriptPath`""
 
-if ($task) {
-  Write-Verbose "Task '$taskName' already registered, exiting..."
-  return
+$arguments = @(
+  '/Create'
+  '/TN', $taskName
+  '/TR', $taskCommand
+  '/SC', 'DAILY'
+  '/ST', '00:00'
+  '/F'
+)
+
+& schtasks.exe @arguments
+
+if ($LASTEXITCODE -ne 0) {
+  throw "Failed to register scheduled task '$taskName'."
 }
-
-Write-Host "Task '$taskName' not registered, creating now..."
-
-$wd = Resolve-Path .
-
-$trigger = New-ScheduledTaskTrigger -AtLogOn
-$action = New-ScheduledTaskAction -WorkingDirectory (Resolve-Path .) -Execute  "pwsh -wd $wd -c ./backup-scoop.ps1"
-$user = whoami
-
-Register-ScheduledTask -TaskName $taskName `
-  -Trigger $trigger `
-  -Action $action `
-  -User $user
-
-Write-Debug "Task '$taskName' scheduled to run on LogOn time"

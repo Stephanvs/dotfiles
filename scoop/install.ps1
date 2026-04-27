@@ -6,10 +6,13 @@ catch {
 }
 
 $logPath = "$PSScriptRoot/install.log"
-Invoke-WebRequest -Uri 'https://get.scoop.sh' | Invoke-Expression *> $logPath
 
-if (-not $?) {
-  throw "Scoop bootstrap script failed. Check '$logPath' for details."
+if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
+  Invoke-WebRequest -Uri 'https://get.scoop.sh' | Invoke-Expression *> $logPath
+
+  if (-not $?) {
+    throw "Scoop bootstrap script failed. Check '$logPath' for details."
+  }
 }
 
 if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
@@ -17,3 +20,6 @@ if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
 }
 
 scoop install sudo
+
+& "$PSScriptRoot/schedule-backuptask.ps1"
+& "$PSScriptRoot/schedule-updatetask.ps1"
