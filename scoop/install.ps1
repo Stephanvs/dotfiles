@@ -1,3 +1,5 @@
+Import-Module -Name "$PSScriptRoot\..\lib\Symlink.psm1"
+
 try {
   Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -ErrorAction Stop
 }
@@ -18,6 +20,8 @@ if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
 if (-not (Get-Command scoop -ErrorAction SilentlyContinue)) {
   throw "Scoop command not found after bootstrap. Check '$logPath' for details."
 }
+
+New-Symlink -SourcePath "$PSScriptRoot/config.json" -TargetPath "$HOME/.config/scoop/config.json" -Label 'Scoop config link'
 
 scoop install sudo
 
