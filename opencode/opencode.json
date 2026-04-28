@@ -15,7 +15,7 @@
       "~/dotfiles/*": "allow",
       "~/code/*": "allow",
       "~/notes/*": "allow",
-      "E:/Code/*": "allow",
+      "E:/Code/*": "allow"
     }
   },
   "provider": {
@@ -166,6 +166,10 @@
       "type": "remote",
       "url": "https://mcp.grep.app",
       "enabled": true
+    },
+    "chrome-devtools": {
+      "type": "local",
+      "command": ["bunx", "-y", "chrome-devtools-mcp@latest"]
     }
   }
 }
