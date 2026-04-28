@@ -17,7 +17,7 @@
   },
   "git_panel": {
     "tree_view": true,
-    "sort_by_path": false,
+    "sort_by_path": true,
   },
   "agent_servers": {
     "codex-acp": {
