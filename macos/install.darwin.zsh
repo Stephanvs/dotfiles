@@ -38,3 +38,5 @@ brew install --cask font-jetbrains-mono-nerd-font
 
 # Speed up mouse movement
 defaults write -g com.apple.mouse.scaling 5.0
+
+post_install "zsh \"$DOTFILES/macos/schedule-brew-updatetask.darwin.zsh\""
