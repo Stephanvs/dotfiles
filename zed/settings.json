@@ -130,7 +130,7 @@
   },
   "base_keymap": "VSCode",
   "theme": {
-    "mode": "dark",
+    "mode": "system",
     "light": "Ayu Light",
     "dark": "Catppuccin Mocha",
   },
