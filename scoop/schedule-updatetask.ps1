@@ -1,7 +1,7 @@
 $taskName = 'scoop-update'
 $scriptPath = Join-Path $PSScriptRoot 'scoop-update-all.ps1'
 $startTime = '00:00'
-$taskCommand = "pwsh.exe -NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`""
+$taskCommand = "pwsh.exe -WindowStyle Hidden -NoProfile -NonInteractive -ExecutionPolicy Bypass -File `"$scriptPath`""
 
 $arguments = @(
   '/Create'
