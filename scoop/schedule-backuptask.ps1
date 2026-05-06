@@ -1,6 +1,6 @@
 $taskName = 'scoop-backup'
-$scriptPath = Join-Path $PSScriptRoot 'backup-scoop.ps1'
-$taskCommand = "pwsh.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -WorkingDirectory `"$PSScriptRoot`" -File `"$scriptPath`""
+$launcherPath = Join-Path (Split-Path -Path $PSScriptRoot -Parent) 'windows\run-hidden.vbs'
+$taskCommand = "wscript.exe //B //Nologo `"$launcherPath`" --cwd `"$PSScriptRoot`" `"pwsh.exe`" `"-WindowStyle`" `"Hidden`" `"-NoProfile`" `"-ExecutionPolicy`" `"Bypass`" `"-File`" `"backup-scoop.ps1`""
 
 $arguments = @(
   '/Create'

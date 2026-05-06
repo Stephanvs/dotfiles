@@ -1,13 +1,13 @@
 $taskName = 'dotfiles-windows-install'
 $repoRoot = Split-Path -Path $PSScriptRoot -Parent
-$scriptPath = Join-Path $repoRoot 'install.ps1'
 $currentUser = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
 $runLevelLimited = 'Limited'
 $runLevelHighest = 'Highest'
 $interactiveLogon = 'Interactive'
 $serviceAccountLogon = 'ServiceAccount'
 $midnight = '12:00AM'
-$action = New-ScheduledTaskAction -Execute 'pwsh.exe' -WorkingDirectory $repoRoot -Argument "-WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`""
+$launcherPath = Join-Path $PSScriptRoot 'run-hidden.vbs'
+$action = New-ScheduledTaskAction -Execute 'wscript.exe' -WorkingDirectory $repoRoot -Argument "//B //Nologo `"$launcherPath`" --cwd `"$repoRoot`" pwsh.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File install.ps1"
 $trigger = New-ScheduledTaskTrigger -Daily -At $midnight
 $principal = New-ScheduledTaskPrincipal -UserId $currentUser -LogonType $interactiveLogon -RunLevel $runLevelLimited
 

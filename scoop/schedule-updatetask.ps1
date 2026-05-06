@@ -1,7 +1,7 @@
 $taskName = 'scoop-update'
-$scriptPath = Join-Path $PSScriptRoot 'scoop-update-all.ps1'
+$launcherPath = Join-Path (Split-Path -Path $PSScriptRoot -Parent) 'windows\run-hidden.vbs'
 $startTime = '00:00'
-$taskCommand = "pwsh.exe -WindowStyle Hidden -NoProfile -NonInteractive -ExecutionPolicy Bypass -File `"$scriptPath`""
+$taskCommand = "wscript.exe //B //Nologo `"$launcherPath`" --cwd `"$PSScriptRoot`" `"pwsh.exe`" `"-WindowStyle`" `"Hidden`" `"-NoProfile`" `"-NonInteractive`" `"-ExecutionPolicy`" `"Bypass`" `"-File`" `"scoop-update-all.ps1`""
 
 $arguments = @(
   '/Create'
