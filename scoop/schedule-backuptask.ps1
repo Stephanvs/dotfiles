@@ -1,6 +1,6 @@
 $taskName = 'scoop-backup'
 $scriptPath = Join-Path $PSScriptRoot 'backup-scoop.ps1'
-$taskCommand = "pwsh.exe -NoProfile -ExecutionPolicy Bypass -WorkingDirectory `"$PSScriptRoot`" -File `"$scriptPath`""
+$taskCommand = "pwsh.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -WorkingDirectory `"$PSScriptRoot`" -File `"$scriptPath`""
 
 $arguments = @(
   '/Create'

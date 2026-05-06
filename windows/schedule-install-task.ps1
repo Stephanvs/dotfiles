@@ -7,7 +7,7 @@ $runLevelHighest = 'Highest'
 $interactiveLogon = 'Interactive'
 $serviceAccountLogon = 'ServiceAccount'
 $midnight = '12:00AM'
-$action = New-ScheduledTaskAction -Execute 'pwsh.exe' -WorkingDirectory $repoRoot -Argument "-NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`""
+$action = New-ScheduledTaskAction -Execute 'pwsh.exe' -WorkingDirectory $repoRoot -Argument "-WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -File `"$scriptPath`""
 $trigger = New-ScheduledTaskTrigger -Daily -At $midnight
 $principal = New-ScheduledTaskPrincipal -UserId $currentUser -LogonType $interactiveLogon -RunLevel $runLevelLimited
 
