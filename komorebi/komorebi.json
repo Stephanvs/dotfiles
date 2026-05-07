@@ -18,7 +18,7 @@
 		"unfocused": "#5f8787"
 	},
 	"animation": {
-		"enabled": true,
+		"enabled": false,
 		"duration": 250,
 		"style": "EaseInOutExpo",
 		"fps": 60
