@@ -41,7 +41,7 @@
 		{
 			"workspaces": [
 				{
-					"name": "www",
+					"name": "web",
 					"layout": "BSP",
 					"workspace_rules": [
 						{
