@@ -41,7 +41,7 @@
 		{
 			"workspaces": [
 				{
-					"name": "I",
+					"name": "www",
 					"layout": "BSP",
 					"workspace_rules": [
 						{
@@ -52,7 +52,7 @@
 					]
 				},
 				{
-					"name": "II",
+					"name": "dev",
 					"layout": "BSP",
 					"workspace_rules": [
 						{
@@ -63,11 +63,11 @@
 					]
 				},
 				{
-					"name": "III",
+					"name": "ide",
 					"layout": "BSP"
 				},
 				{
-					"name": "IV",
+					"name": "comms",
 					"layout": "Grid",
 					"workspace_rules": [
 						{
@@ -93,15 +93,19 @@
 					]
 				},
 				{
-					"name": "V",
+					"name": "notes",
 					"layout": "Grid"
 				},
 				{
-					"name": "VI",
+					"name": "games",
 					"layout": "Grid"
 				},
 				{
-					"name": "VII",
+					"name": "media",
+					"layout": "RightMainVerticalStack"
+				},
+				{
+					"name": "misc",
 					"layout": "RightMainVerticalStack"
 				}
 			]

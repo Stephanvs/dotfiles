@@ -3,9 +3,30 @@ Import-Module -Name "$PSScriptRoot\..\lib\Symlink.psm1"
 foreach ($link in @(
     @{ Name = 'applications.json'; Label = 'Komorebi applications link' },
     @{ Name = 'komorebi.ahk'; Label = 'Komorebi AHK link' },
+    @{ Name = 'komorebi.bar.json'; Label = 'Komorebi bar config link' },
     @{ Name = 'komorebi.json'; Label = 'Komorebi config link' }
 )) {
     New-Symlink -SourcePath "$PSScriptRoot/$($link.Name)" -TargetPath "$HOME/$($link.Name)" -Label $link.Label
+}
+
+$komorebicCommand = Get-Command komorebic.exe -ErrorAction SilentlyContinue
+
+if (-not $komorebicCommand) {
+    $komorebicCommand = Get-Command komorebic -ErrorAction SilentlyContinue
+}
+
+if ($komorebicCommand) {
+    $komorebiConfigPath = Join-Path -Path $HOME -ChildPath 'komorebi.json'
+    & $komorebicCommand.Source enable-autostart --config $komorebiConfigPath --bar
+
+    if ($LASTEXITCODE -ne 0) {
+        throw 'Failed to configure Komorebi autostart.'
+    }
+
+    Write-Host "Configured Komorebi autostart with bar for $komorebiConfigPath"
+}
+else {
+    Write-Warning 'komorebic was not found; skipping Komorebi autostart configuration.'
 }
 
 $autohotkeyCommand = Get-Command autohotkey.exe -ErrorAction SilentlyContinue
@@ -31,10 +52,10 @@ if (Test-Path -LiteralPath $runKeyPath) {
 
 if ($existingStartupCommand -eq $startupCommand) {
     Write-Host "Windows startup entry already configured for $komorebiAhkPath"
-    return
 }
+else {
+    New-Item -Path $runKeyPath -Force | Out-Null
+    New-ItemProperty -Path $runKeyPath -Name $runValueName -PropertyType String -Value $startupCommand -Force | Out-Null
 
-New-Item -Path $runKeyPath -Force | Out-Null
-New-ItemProperty -Path $runKeyPath -Name $runValueName -PropertyType String -Value $startupCommand -Force | Out-Null
-
-Write-Host "Configured Windows startup entry for $komorebiAhkPath"
+    Write-Host "Configured Windows startup entry for $komorebiAhkPath"
+}
