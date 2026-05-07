@@ -3,13 +3,37 @@
 	"monitor": 0,
 	"height": 40,
 	"font_family": "BerkeleyMono Nerd Font",
-	"font_size": 12,
+	"font_size": 11,
 	"widget_spacing": 8,
 	"padding": {
 		"horizontal": 6,
 		"vertical": 6
 	},
-  "icon_scale": 1,
+	"icon_scale": 1,
+	"theme": {
+		"palette": "Custom",
+		"colours": {
+			"base_00": "#121113",
+			"base_01": "#141414",
+			"base_02": "#e78a53",
+			"base_03": "#333333",
+			"base_04": "#b3b3b3",
+			"base_05": "#fbcb97",
+			"base_06": "#00a542",
+			"base_07": "#fbcb97",
+			"base_08": "#e78a53",
+			"base_09": "#e78a53",
+			"base_0a": "#fbcb97",
+			"base_0b": "#00a542",
+			"base_0c": "#5f8787",
+			"base_0d": "#e78a53",
+			"base_0e": "#fbcb97",
+			"base_0f": "#e78a53"
+		},
+		"accent": "Base00",
+		"auto_select_fill": "Base09",
+		"auto_select_text": "Base00"
+	},
 	"left_widgets": [
 		{
 			"Komorebi": {
