@@ -169,7 +169,8 @@
     },
     "chrome-devtools": {
       "type": "local",
-      "command": ["bunx", "-y", "chrome-devtools-mcp@latest"]
+      "command": ["bunx", "-y", "chrome-devtools-mcp@latest"],
+      "enabled": false
     }
   }
 }
