@@ -14,7 +14,7 @@
 		"floating": "#e78a53",
 		"monocle": "#e78a53",
 		"single": "#e78a53",
-		"stack": "#fbcb97",
+		"stack": "#e78a53",
 		"unfocused": "#5f8787"
 	},
 	"animation": {
@@ -30,8 +30,8 @@
 		"mode": "OnStack",
 		"tabs": {
 			"width": 300,
-			"focused_text": "#00a542",
-			"unfocused_text": "#b3b3b3",
+			"focused_text": "#e78a53",
+			"unfocused_text": "#fbcb97",
 			"background": "#141414",
 			"font_family": "BerkeleyMono Nerd Font",
 			"font_size": 34
