@@ -12,7 +12,7 @@
 	"border_implementation": "Komorebi",
 	"border_colours": {
 		"floating": "#e78a53",
-		"monocle": "#e78a53",
+		"monocle": "#00a542",
 		"single": "#e78a53",
 		"stack": "#e78a53",
 		"unfocused": "#5f8787"
