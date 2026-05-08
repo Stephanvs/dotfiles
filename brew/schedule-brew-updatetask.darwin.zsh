@@ -13,7 +13,7 @@ label="com.stephanvs.dotfiles.brew-update"
 launch_agents_dir="$HOME/Library/LaunchAgents"
 log_dir="$HOME/Library/Logs/dotfiles"
 plist_path="$launch_agents_dir/$label.plist"
-updater="$DOTFILES/macos/brew-update-all.zsh"
+updater="$DOTFILES/brew/brew-update-all.zsh"
 
 if [[ "$(uname -s)" != "Darwin" ]]; then
   fail "brew update LaunchAgent can only be installed on macOS"
