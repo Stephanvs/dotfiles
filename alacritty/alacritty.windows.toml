@@ -1,4 +1,3 @@
-general.import = ['C:\Users\steph\dotfiles/alacritty/catppuccin-mocha.yml']
 general.live_config_reload = true
 general.working_directory = "E:/Code/"
 
@@ -12,18 +11,18 @@ TERM = "xterm-256color"
 size = 10
 
 [font.bold]
-family = "JetBrainsMono Nerd Font"
+family = "BerkeleyMono Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font"
+family = "BerkeleyMono Nerd Font"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font"
+family = "BerkeleyMono Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "JetBrainsMono Nerd Font"
+family = "BerkeleyMono Nerd Font"
 style = "Regular"
 
 [terminal.shell]
