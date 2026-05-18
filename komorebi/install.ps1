@@ -18,33 +18,46 @@ if (-not $komorebicCommand) {
 
 if ($komorebicCommand) {
     $komorebiConfigPath = Join-Path -Path $HOME -ChildPath 'komorebi.json'
-    & $komorebicCommand.Source enable-autostart --config $komorebiConfigPath
+    & $komorebicCommand.Source enable-autostart --config $komorebiConfigPath --bar
 
     if ($LASTEXITCODE -ne 0) {
         throw 'Failed to configure Komorebi autostart.'
     }
 
-    Write-Host "Configured Komorebi autostart for $komorebiConfigPath"
+    $startupApprovedFolderKeyPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\StartupFolder'
+
+    if (Test-Path -LiteralPath $startupApprovedFolderKeyPath) {
+        $approvedStartupFolderEntry = Get-ItemProperty -Path $startupApprovedFolderKeyPath -Name 'komorebi.lnk' -ErrorAction SilentlyContinue
+        if ($approvedStartupFolderEntry) {
+            Remove-ItemProperty -Path $startupApprovedFolderKeyPath -Name 'komorebi.lnk' -ErrorAction Stop
+            Write-Host 'Reset Windows Startup Apps approval for komorebi.lnk'
+        }
+    }
+
+    Write-Host "Configured Komorebi autostart with bar for $komorebiConfigPath"
 }
 else {
     Write-Warning 'komorebic was not found; skipping Komorebi autostart configuration.'
 }
 
-$komorebiBarCommand = Get-Command komorebi-bar.exe -ErrorAction SilentlyContinue
+$legacyKomorebiBarRunKeyPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run'
+$legacyKomorebiBarStartupApprovedKeyPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run'
 
-if (-not $komorebiBarCommand) {
-    $komorebiBarCommand = Get-Command komorebi-bar -ErrorAction SilentlyContinue
+if (Test-Path -LiteralPath $legacyKomorebiBarRunKeyPath) {
+    $legacyKomorebiBarRunEntry = Get-ItemProperty -Path $legacyKomorebiBarRunKeyPath -Name 'KomorebiBar' -ErrorAction SilentlyContinue
+    if ($legacyKomorebiBarRunEntry) {
+        Remove-ItemProperty -Path $legacyKomorebiBarRunKeyPath -Name 'KomorebiBar' -ErrorAction Stop
+        Write-Host 'Removed legacy KomorebiBar registry startup entry'
+    }
 }
 
-$komorebiBarPath = if ($komorebiBarCommand) { $komorebiBarCommand.Source } else { 'komorebi-bar.exe' }
-$komorebiBarConfigPath = Join-Path -Path $HOME -ChildPath 'komorebi.bar.json'
-$hiddenLauncherPath = Join-Path -Path (Split-Path -Path $PSScriptRoot -Parent) -ChildPath 'windows\run-hidden.vbs'
-$komorebiBarStartupCommand = 'wscript.exe //B //Nologo "{0}" --cwd "{1}" "{2}" --config "{3}"' -f $hiddenLauncherPath, $HOME, $komorebiBarPath, $komorebiBarConfigPath
-
-Set-WindowsStartupEntry `
-    -Name 'KomorebiBar' `
-    -Command $komorebiBarStartupCommand `
-    -Label "Windows startup entry for $komorebiBarConfigPath"
+if (Test-Path -LiteralPath $legacyKomorebiBarStartupApprovedKeyPath) {
+    $legacyKomorebiBarApprovalEntry = Get-ItemProperty -Path $legacyKomorebiBarStartupApprovedKeyPath -Name 'KomorebiBar' -ErrorAction SilentlyContinue
+    if ($legacyKomorebiBarApprovalEntry) {
+        Remove-ItemProperty -Path $legacyKomorebiBarStartupApprovedKeyPath -Name 'KomorebiBar' -ErrorAction Stop
+        Write-Host 'Removed legacy KomorebiBar Startup Apps approval entry'
+    }
+}
 
 $autohotkeyCommand = Get-Command autohotkey.exe -ErrorAction SilentlyContinue
 

@@ -11,6 +11,7 @@ function Set-WindowsStartupEntry {
     )
 
     $runKeyPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Run'
+    $startupApprovedRunKeyPath = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\StartupApproved\Run'
     $existingStartupCommand = $null
 
     if (Test-Path -LiteralPath $runKeyPath) {
@@ -31,6 +32,14 @@ function Set-WindowsStartupEntry {
         New-ItemProperty -Path $runKeyPath -Name $Name -PropertyType String -Value $Command -Force | Out-Null
 
         Write-Host "Configured $Label"
+    }
+
+    if (Test-Path -LiteralPath $startupApprovedRunKeyPath) {
+        $startupApprovedEntry = Get-ItemProperty -Path $startupApprovedRunKeyPath -Name $Name -ErrorAction SilentlyContinue
+        if ($startupApprovedEntry) {
+            Remove-ItemProperty -Path $startupApprovedRunKeyPath -Name $Name -ErrorAction Stop
+            Write-Host "Reset Windows Startup Apps approval for $Label"
+        }
     }
 }
 
