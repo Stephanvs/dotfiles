@@ -3,7 +3,7 @@
 	"monitor": 0,
 	"height": 40,
 	"font_family": "BerkeleyMono Nerd Font",
-	"font_size": 11,
+	"font_size": 10,
 	"widget_spacing": 8,
 	"padding": {
 		"horizontal": 6,
