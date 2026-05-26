@@ -1,4 +1,4 @@
-$Wallpaper = Resolve-Path "$PSScriptRoot/wallhaven-oglrv9.jpg".ToLower()
+$Wallpaper = Resolve-Path "$PSScriptRoot/starship.jpeg".ToLower()
 
 $current = Get-ItemPropertyValue -Path "HKCU:\Control Panel\Desktop" -Name WallPaper
 Write-Host "Current Wallpaper: $current"
