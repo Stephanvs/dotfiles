@@ -4,7 +4,7 @@ font-family-italic = BerkeleyMono Nerd Font
 font-family-bold-italic = BerkeleyMono Nerd Font
 font-size = 13
 
-theme = light:ayu_light,dark:TokyoNight
+theme = light:Catppuccin Latte,dark:TokyoNight
 
 cursor-style = block
 background-opacity = 0.8
