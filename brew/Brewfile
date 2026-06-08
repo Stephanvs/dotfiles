@@ -1,117 +1,213 @@
-tap "azure/functions"
-tap "fastrepl/hyprnote"
-tap "felixkratz/formulae"
-tap "jandedobbeleer/oh-my-posh"
-tap "jetbrains/utils"
-tap "joshmedeski/sesh"
-tap "koekeishiya/formulae"
-tap "libsql/sqld"
-tap "lucaspickering/tap"
-tap "nikitabobko/tap"
-tap "oven-sh/bun"
-tap "raine/workmux"
-tap "sst/tap"
-tap "steipete/tap"
-tap "stephanvs/tap", "git@github.com:Stephanvs/homebrew-tap.git"
-tap "tokentopapp/tap"
-tap "tursodatabase/tap"
-tap "wedow/tools"
+tap "azure/functions", trusted: true
+tap "fastrepl/hyprnote", trusted: true
+tap "felixkratz/formulae", trusted: true
+tap "jandedobbeleer/oh-my-posh", trusted: true
+tap "jetbrains/utils", trusted: true
+tap "joshmedeski/sesh", trusted: true
+tap "koekeishiya/formulae", trusted: true
+tap "libsql/sqld", trusted: true
+tap "lucaspickering/tap", trusted: true
+tap "nikitabobko/tap", trusted: true
+tap "oven-sh/bun", trusted: true
+tap "raine/workmux", trusted: true
+tap "sst/tap", trusted: true
+tap "steipete/tap", trusted: true
+tap "stephanvs/tap", "git@github.com:Stephanvs/homebrew-tap.git", trusted: true
+tap "tokentopapp/tap", trusted: true
+tap "tursodatabase/tap", trusted: true
+tap "wedow/tools", trusted: true
+# Run your GitHub Actions locally
 brew "act"
+# Automatic configure script builder
 brew "autoconf"
+# Collection of over 500 reusable autoconf macros
 brew "autoconf-archive"
+# Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Securely manage AWS API credentials using AWS SSO
 brew "aws-sso-cli"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Microsoft Azure CLI 2.0
 brew "azure-cli"
+# Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Toolchain of the web
 brew "biome"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# Validating, recursive, caching DNS resolver
 brew "unbound"
+# GNU Emacs text editor
 brew "emacs"
+# Emacs dependency management
 brew "cask"
+# Object-file caching compiler wrapper
 brew "ccache"
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
+# CLI tool for Cloudflare Workers
 brew "cloudflare-wrangler"
+# Cross-platform make
 brew "cmake"
+# High performance code minimap generator
 brew "code-minimap"
+# Tool for changing code across many languages
 brew "comby"
+# Modern diagram scripting language that turns text to diagrams
 brew "d2"
+# Modern, maintained replacement for ls
 brew "eza"
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
+# GitHub command-line tool
 brew "gh"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Git extension for versioning large files
 brew "git-lfs"
+# Statically typed language for the Erlang VM
 brew "gleam"
+# Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Tool for glamorous shell scripts
 brew "gum"
+# Improved top (interactive process viewer)
 brew "htop"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Lazier way to manage everything docker
 brew "lazydocker"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Simple tool to make locally trusted development certificates
 brew "mkcert"
+# Deep clean and optimize your Mac
 brew "mole"
+# Remote terminal application
 brew "mosh"
+# Netwide Assembler (NASM) is an 80x86 assembler
 brew "nasm"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Small build system for use with gyp or CMake
 brew "ninja"
+# Open-source, cross-platform JavaScript runtime environment
 brew "node@22"
+# Manage multiple Node.js versions
 brew "nvm"
+# Create, run, and share large language models (LLMs)
 brew "ollama"
+# Feature-rich terminal-based text viewer
 brew "ov"
+# Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Your Gateway to Embedded Software Development Excellence
 brew "platformio"
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
+# Python version management
 brew "pyenv"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
+# File browser
 brew "ranger"
+# Rsync for cloud storage
 brew "rclone"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Smart session manager for the terminal
 brew "sesh"
+# Automate your tmux workflow
 brew "smug"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Command-line client for WebSockets
 brew "websocat"
+# Internet file retriever
 brew "wget"
+# Library to create, extract, and modify Windows Imaging files
 brew "wimlib"
+# Personal information dashboard for your terminal
 brew "wtfutil"
+# JavaScript package manager
 brew "yarn"
+# Blazing fast terminal file manager written in Rust, based on async I/O
 brew "yazi"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
+# Pluggable terminal workspace, with terminal multiplexer as the base feature
 brew "zellij"
+# Programming language designed for robustness, optimality, and clarity
 brew "zig"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Azure Functions Core Tools 4.0
 brew "azure/functions/azure-functions-core-tools@4"
+# A window border system for macOS
 brew "felixkratz/formulae/borders"
+# Custom macOS statusbar with shell plugin, interaction and graph support
 brew "felixkratz/formulae/sketchybar"
+# 🔧 Run Qodana as fast as possible, with minimum effort required
 brew "jetbrains/utils/qodana"
+# Terminal-based HTTP client
 brew "lucaspickering/tap/slumber"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun"
+# Opinionated workflow tool that orchestrates git worktrees and tmux
 brew "raine/workmux/workmux"
+# The AI coding agent built for the terminal.
 brew "sst/tap/opencode"
+# htop for your AI costs - real-time terminal monitoring of LLM token usage
 brew "tokentopapp/tap/tokentop"
 brew "tursodatabase/tap/turso"
+# Minimal ticket tracking in bash
 brew "wedow/tools/ticket"
+# Command-line interface for 1Password
 cask "1password-cli"
+# AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
+# Multi-track audio editor and recorder
 cask "audacity"
+# Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
+# 3D creation suite
 cask "blender"
+# Web browser focusing on privacy
 cask "brave-browser"
+# Anthropic's official Claude AI desktop app
 cask "claude"
+# Ghostty-based terminal with vertical tabs and notifications for AI coding agents
 cask "cmux"
+# OpenAI's coding agent that runs in your terminal
 cask "codex"
+# OpenAI's Codex desktop app for managing coding agents
 cask "codex-app"
+# Menu bar usage monitor for Codex and Claude
 cask "steipete/tap/codexbar"
+# Browser for SQLite databases
 cask "db-browser-for-sqlite"
+# Virtual monitor for screen sharing
 cask "deskpad"
+# Voice and text chat software
 cask "discord"
+# Calendar software
 cask "fantastical"
+# Collaborative team software
 cask "figma"
 cask "font-caskaydia-cove-nerd-font"
 cask "font-commit-mono-nerd-font"
@@ -120,44 +216,83 @@ cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-monaspice-nerd-font"
 cask "font-victor-mono-nerd-font"
+# GIT client
 cask "fork"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Web browser
 cask "google-chrome"
+# AI-powered notepad for meetings
 cask "granola"
+# Speech to text application
 cask "handy"
+# Chromium-based web browser
 cask "helium-browser"
+# Menu bar application that displays the CPU speed limit due to thermal issues
 cask "hot"
+# Char application
 cask "fastrepl/hyprnote/hyprnote"
+# JetBrains tools manager
 cask "jetbrains-toolbox"
+# ZSA keyboard firmware flasher
 cask "keymapp"
+# Discover, download, and run local LLMs
 cask "lm-studio"
+# Provides updates to various Microsoft products
 cask "microsoft-auto-update"
+# OpenJDK distribution from Microsoft
 cask "microsoft-openjdk"
+# GameStream client
 cask "moonlight"
+# Unofficial desktop client for F1 TV
 cask "multiviewer"
+# Cloud gaming platform
 cask "nvidia-geforce-now"
+# Open-source software for live streaming and screen recording
 cask "obs"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# AI coding agent desktop client
 cask "opencode-desktop"
+# Replacement for Docker Desktop
 cask "orbstack"
+# Desktop virtualization software
 cask "parallels"
+# Client for Proton Mail and Proton Calendar
 cask "proton-mail"
+# HTTP debugging proxy
 cask "proxyman"
+# Control your tools with a few keystrokes
 cask "raycast"
+# .NET IDE
 cask "rider"
+# Open source virtual/remote desktop application
 cask "rustdesk"
+# Instant messaging application focusing on security
 cask "signal"
+# Music streaming service
 cask "spotify"
+# Media player based on MPlayer and mplayer2
 cask "stolendata-mpv"
+# Native GUI tool for relational databases
 cask "tableplus"
+# Remote access and connectivity software focused on security
 cask "teamviewer"
+# Menu bar manager
 cask "thaw"
+# Open-source BitTorrent client
 cask "transmission"
+# File transfer application
 cask "transmit"
+# Open-source code editor
 cask "visual-studio-code"
+# Multimedia player
 cask "vlc"
+# GPU-accelerated cross-platform terminal emulator and multiplexer
 cask "wezterm"
+# Multiplayer code editor
 cask "zed"
+# Gecko based web browser
 cask "zen"
 vscode "astro-build.astro-vscode"
 vscode "biomejs.biome"
