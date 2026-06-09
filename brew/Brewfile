@@ -12,7 +12,7 @@ tap "oven-sh/bun", trusted: true
 tap "raine/workmux", trusted: true
 tap "sst/tap", trusted: true
 tap "steipete/tap", trusted: true
-tap "stephanvs/tap", "git@github.com:Stephanvs/homebrew-tap.git", trusted: true
+tap "stephanvs/tap", trusted: true
 tap "tokentopapp/tap", trusted: true
 tap "tursodatabase/tap", trusted: true
 tap "wedow/tools", trusted: true
