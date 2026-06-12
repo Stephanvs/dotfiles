@@ -1,12 +1,13 @@
-$Wallpaper = Resolve-Path "$PSScriptRoot/starship.jpeg".ToLower()
+$Wallpaper = Resolve-Path "$PSScriptRoot/wallhaven-wej177.jpg".ToLower()
 
 $current = Get-ItemPropertyValue -Path "HKCU:\Control Panel\Desktop" -Name WallPaper
 Write-Host "Current Wallpaper: $current"
 
-if ($current -ne $Wallpaper) {
-  Write-Host "Setting wallpaper to $Wallpaper"
+if ($current -ne $Wallpaper)
+{
+    Write-Host "Setting wallpaper to $Wallpaper"
 
-  $setwallpapersrc = @"
+    $setwallpapersrc = @"
     using System.Runtime.InteropServices;
 
     public class Wallpaper
@@ -23,10 +24,10 @@ if ($current -ne $Wallpaper) {
     }
 "@
 
-  Add-Type -TypeDefinition $setwallpapersrc
+    Add-Type -TypeDefinition $setwallpapersrc
 
-  [Wallpaper]::SetWallpaper($Wallpaper)
+    [Wallpaper]::SetWallpaper($Wallpaper)
 
-  # No longer needed to reload the PerUser settings
-  # rundll32.exe user32.dll, UpdatePerUserSystemParameters
+    # No longer needed to reload the PerUser settings
+    # rundll32.exe user32.dll, UpdatePerUserSystemParameters
 }
