@@ -1,16 +1,16 @@
+tap "anomalyco/tap", trusted: true
+tap "asmvik/formulae", trusted: true
 tap "azure/functions", trusted: true
-tap "fastrepl/hyprnote", trusted: true
+tap "fastrepl/fastrepl", trusted: true
 tap "felixkratz/formulae", trusted: true
 tap "jandedobbeleer/oh-my-posh", trusted: true
 tap "jetbrains/utils", trusted: true
 tap "joshmedeski/sesh", trusted: true
-tap "koekeishiya/formulae", trusted: true
 tap "libsql/sqld", trusted: true
 tap "lucaspickering/tap", trusted: true
 tap "nikitabobko/tap", trusted: true
 tap "oven-sh/bun", trusted: true
 tap "raine/workmux", trusted: true
-tap "sst/tap", trusted: true
 tap "steipete/tap", trusted: true
 tap "stephanvs/tap", trusted: true
 tap "tokentopapp/tap", trusted: true
@@ -58,8 +58,6 @@ brew "cloudflare-wrangler"
 brew "cmake"
 # High performance code minimap generator
 brew "code-minimap"
-# Tool for changing code across many languages
-brew "comby"
 # Modern diagram scripting language that turns text to diagrams
 brew "d2"
 # Modern, maintained replacement for ls
@@ -108,6 +106,10 @@ brew "node@22"
 brew "nvm"
 # Create, run, and share large language models (LLMs)
 brew "ollama"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# AI coding agent, built for the terminal
+brew "opencode"
 # Feature-rich terminal-based text viewer
 brew "ov"
 # Package compiler and linker metadata toolkit
@@ -124,8 +126,6 @@ brew "python@3.11"
 brew "ranger"
 # Rsync for cloud storage
 brew "rclone"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
 # Smart session manager for the terminal
 brew "sesh"
 # Automate your tmux workflow
@@ -170,8 +170,6 @@ brew "lucaspickering/tap/slumber"
 brew "oven-sh/bun/bun"
 # Opinionated workflow tool that orchestrates git worktrees and tmux
 brew "raine/workmux/workmux"
-# The AI coding agent built for the terminal.
-brew "sst/tap/opencode"
 # htop for your AI costs - real-time terminal monitoring of LLM token usage
 brew "tokentopapp/tap/tokentop"
 brew "tursodatabase/tap/turso"
@@ -189,8 +187,6 @@ cask "balenaetcher"
 cask "blender"
 # Web browser focusing on privacy
 cask "brave-browser"
-# Anthropic's official Claude AI desktop app
-cask "claude"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
 cask "cmux"
 # OpenAI's coding agent that runs in your terminal
@@ -230,8 +226,6 @@ cask "handy"
 cask "helium-browser"
 # Menu bar application that displays the CPU speed limit due to thermal issues
 cask "hot"
-# Char application
-cask "fastrepl/hyprnote/hyprnote"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
 # ZSA keyboard firmware flasher
@@ -272,8 +266,6 @@ cask "rustdesk"
 cask "signal"
 # Music streaming service
 cask "spotify"
-# Media player based on MPlayer and mplayer2
-cask "stolendata-mpv"
 # Native GUI tool for relational databases
 cask "tableplus"
 # Remote access and connectivity software focused on security
