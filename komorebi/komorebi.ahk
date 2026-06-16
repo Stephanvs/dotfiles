@@ -1,8 +1,11 @@
 #Requires AutoHotkey v2.0.2
 #SingleInstance Force
 
-; Key bindings for Komorebic
-; Note that # = WIN Key and ! = ALT Key
+; Key bindings for Komorebic:
+; # = Win | Mod
+; ! = ALT | Meta
+; ^ = CTRL
+; + = SHIFT
 
 Komorebic(cmd) {
     RunWait(format("komorebic.exe {}", cmd), , "Hide")
@@ -15,7 +18,7 @@ ReloadKomorebiConfig() {
 }
 
 #q::Komorebic("close")
-; !m::Komorebic("minimize")
+!m::Komorebic("minimize")
 
 ; Focus windows
 #h::Komorebic("focus left")
