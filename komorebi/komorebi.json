@@ -1,6 +1,10 @@
 {
 	"$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.32/schema.json",
 	"app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+	"bar_configurations": [
+		"$Env:USERPROFILE/komorebi.bar.monitor1.json",
+		"$Env:USERPROFILE/komorebi.bar.monitor2.json"
+	],
 	"window_hiding_behaviour": "Cloak",
 	"cross_monitor_move_behaviour": "Insert",
 	"cross_boundary_behaviour": "Monitor",
@@ -37,6 +41,10 @@
 			"font_size": 34
 		}
 	},
+	"display_index_preferences": {
+		"0": "419150",
+		"1": "SAME035-5&9248f87&0&UID41217"
+	},
 	"monitors": [
 		{
 			"workspaces": [
@@ -50,21 +58,6 @@
 							"matching_strategy": "Equals"
 						}
 					]
-				},
-				{
-					"name": "dev",
-					"layout": "BSP",
-					"workspace_rules": [
-						{
-							"kind": "Exe",
-							"id": "WindowsTerminal.exe",
-							"matching_strategy": "Equals"
-						}
-					]
-				},
-				{
-					"name": "ide",
-					"layout": "BSP"
 				},
 				{
 					"name": "comms",
@@ -91,6 +84,25 @@
 							"matching_strategy": "Equals"
 						}
 					]
+				}
+			]
+		},
+		{
+			"workspaces": [
+				{
+					"name": "dev",
+					"layout": "BSP",
+					"workspace_rules": [
+						{
+							"kind": "Exe",
+							"id": "WindowsTerminal.exe",
+							"matching_strategy": "Equals"
+						}
+					]
+				},
+				{
+					"name": "ide",
+					"layout": "BSP"
 				},
 				{
 					"name": "notes",

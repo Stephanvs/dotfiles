@@ -4,7 +4,8 @@ Import-Module -Name "$PSScriptRoot\..\lib\Set-WindowsStartupEntry.psm1"
 foreach ($link in @(
     @{ Name = 'applications.json'; Label = 'Komorebi applications link' },
     @{ Name = 'komorebi.ahk'; Label = 'Komorebi AHK link' },
-    @{ Name = 'komorebi.bar.json'; Label = 'Komorebi bar config link' },
+    @{ Name = 'komorebi.bar.monitor1.json'; Label = 'Komorebi monitor 1 bar config link' },
+    @{ Name = 'komorebi.bar.monitor2.json'; Label = 'Komorebi monitor 2 bar config link' },
     @{ Name = 'komorebi.json'; Label = 'Komorebi config link' }
 )) {
     New-Symlink -SourcePath "$PSScriptRoot/$($link.Name)" -TargetPath "$HOME/$($link.Name)" -Label $link.Label

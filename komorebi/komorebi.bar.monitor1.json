@@ -55,11 +55,6 @@
 	],
 	"right_widgets": [
 		{
-			"Systray": {
-				"enable": true
-			}
-		},
-		{
 			"Date": {
 				"enable": true,
 				"format": "DayDateMonthYear"
