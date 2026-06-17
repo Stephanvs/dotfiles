@@ -1,18 +1,18 @@
-tap "anomalyco/tap", trusted: true
-tap "asmvik/formulae", trusted: true
+tap "anomalyco/tap", "https://github.com/anomalyco/homebrew-tap.git", trusted: true
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git", trusted: true
 tap "azure/functions", trusted: true
-tap "fastrepl/fastrepl", trusted: true
-tap "felixkratz/formulae", trusted: true
+tap "fastrepl/fastrepl", "https://github.com/fastrepl/homebrew-fastrepl.git", trusted: true
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 tap "jandedobbeleer/oh-my-posh", trusted: true
 tap "jetbrains/utils", trusted: true
 tap "joshmedeski/sesh", trusted: true
 tap "libsql/sqld", trusted: true
-tap "lucaspickering/tap", trusted: true
+tap "lucaspickering/tap", "https://github.com/LucasPickering/homebrew-tap", trusted: true
 tap "nikitabobko/tap", trusted: true
 tap "oven-sh/bun", trusted: true
 tap "raine/workmux", trusted: true
 tap "steipete/tap", trusted: true
-tap "stephanvs/tap", trusted: true
+tap "stephanvs/tap", "git@github.com:Stephanvs/homebrew-tap.git", trusted: true
 tap "tokentopapp/tap", trusted: true
 tap "tursodatabase/tap", trusted: true
 tap "wedow/tools", trusted: true
