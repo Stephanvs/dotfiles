@@ -50,14 +50,7 @@
 			"workspaces": [
 				{
 					"name": "web",
-					"layout": "BSP",
-					"workspace_rules": [
-						{
-							"kind": "Exe",
-							"id": "zen.exe",
-							"matching_strategy": "Equals"
-						}
-					]
+					"layout": "BSP"
 				},
 				{
 					"name": "comms",
