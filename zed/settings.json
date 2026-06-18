@@ -16,7 +16,7 @@
   "cli_default_open_behavior": "existing_window",
   "ui_font_size": 14.0,
   "auto_update": false,
-  "diff_view_style": "unified",
+  "diff_view_style": "split",
   "show_whitespaces": "boundary",
   "selection_highlight": true,
   "edit_predictions": {
@@ -36,9 +36,7 @@
     },
     "opencode": {
       "favorite_config_option_values": {
-        "effort": [
-          "xhigh"
-        ],
+        "effort": ["xhigh"],
         "model": ["openai/gpt-5.5/xhigh", "openai/gpt-5.5-fast/xhigh"],
       },
       "type": "registry",
@@ -142,7 +140,7 @@
   "base_keymap": "VSCode",
   "theme": {
     "mode": "system",
-    "light": "Ayu Light",
+    "light": "Catppuccin Latte",
     "dark": "Catppuccin Mocha",
   },
   "icon_theme": {
