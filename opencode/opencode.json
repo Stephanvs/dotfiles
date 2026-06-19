@@ -167,6 +167,11 @@
       "url": "https://mcp.grep.app",
       "enabled": true
     },
+    "codebase-memory-mcp": {
+      "type": "local",
+      "command": ["bunx", "-y", "codebase-memory-mcp"],
+      "enabled": true
+    },
     "chrome-devtools": {
       "type": "local",
       "command": ["bunx", "-y", "chrome-devtools-mcp@latest"],
