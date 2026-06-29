@@ -54,29 +54,7 @@
 				},
 				{
 					"name": "comms",
-					"layout": "Grid",
-					"workspace_rules": [
-						{
-							"kind": "Exe",
-							"id": "ms-teams.exe",
-							"matching_strategy": "Equals"
-						},
-						{
-							"kind": "Exe",
-							"id": "Teams.exe",
-							"matching_strategy": "Equals"
-						},
-						{
-							"kind": "Exe",
-							"id": "WhatsApp.Root.exe",
-							"matching_strategy": "Equals"
-						},
-						{
-							"kind": "Exe",
-							"id": "WhatsApp.exe",
-							"matching_strategy": "Equals"
-						}
-					]
+					"layout": "Grid"
 				}
 			]
 		},
