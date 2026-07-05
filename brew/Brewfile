@@ -187,6 +187,8 @@ cask "balenaetcher"
 cask "blender"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
 cask "cmux"
 # OpenAI's coding agent that runs in your terminal
