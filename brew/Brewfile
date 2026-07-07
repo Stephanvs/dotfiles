@@ -132,6 +132,8 @@ brew "sesh"
 brew "smug"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Open source continuous file synchronization application
+brew "syncthing", restart_service: :changed
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
