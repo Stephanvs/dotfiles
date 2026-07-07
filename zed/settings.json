@@ -29,7 +29,15 @@
   },
   "agent_servers": {
     "codex-acp": {
+      "favorite_config_option_values": {
+        "fast-mode": [
+          "on"
+        ]
+      },
       "default_config_options": {
+        "model": "gpt-5.5",
+        "fast-mode": "on",
+        "reasoning_effort": "low",
         "mode": "full-access",
       },
       "type": "registry",
