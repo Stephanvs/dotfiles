@@ -1,4 +1,49 @@
-$Wallpaper = Resolve-Path "$PSScriptRoot/wallhaven-wej177.jpg".ToLower()
+$CurrentWallpaper = Join-Path $PSScriptRoot "current"
+$DefaultWallpaper = "palm_booster.jpeg"
+
+function Initialize-CurrentWallpaper {
+    $defaultWallpaperPath = Join-Path $PSScriptRoot $DefaultWallpaper
+
+    if (-not (Test-Path -LiteralPath $defaultWallpaperPath -PathType Leaf))
+    {
+        Write-Warning "Wallpaper not found: $defaultWallpaperPath"
+        exit 1
+    }
+
+    if (-not (Get-Item -LiteralPath $CurrentWallpaper -Force -ErrorAction SilentlyContinue))
+    {
+        Push-Location $PSScriptRoot
+        try
+        {
+            New-Item -ItemType SymbolicLink -Path "current" -Target $DefaultWallpaper -ErrorAction Stop | Out-Null
+        }
+        catch
+        {
+            Write-Warning "Failed to create wallpaper symlink: $CurrentWallpaper -> $DefaultWallpaper. Enable Developer Mode or run PowerShell as Administrator."
+            exit 1
+        }
+        finally
+        {
+            Pop-Location
+        }
+    }
+
+    $item = Get-Item -LiteralPath $CurrentWallpaper -Force
+    if ($item.LinkType -eq "SymbolicLink" -and $item.Target)
+    {
+        $target = $item.Target
+        if (-not [System.IO.Path]::IsPathRooted($target))
+        {
+            $target = Join-Path $PSScriptRoot $target
+        }
+
+        return (Resolve-Path -LiteralPath $target).Path
+    }
+
+    return (Resolve-Path -LiteralPath $CurrentWallpaper).Path
+}
+
+$Wallpaper = (Initialize-CurrentWallpaper).ToLowerInvariant()
 
 $current = Get-ItemPropertyValue -Path "HKCU:\Control Panel\Desktop" -Name WallPaper
 Write-Host "Current Wallpaper: $current"
