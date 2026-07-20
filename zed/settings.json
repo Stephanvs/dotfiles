@@ -57,7 +57,7 @@
       "type": "registry",
       "default_config_options": {
         "model": "openai/gpt-5.6-sol-fast",
-        "effort": "medium",
+        "effort": "high",
         "mode": "build",
       },
     },
