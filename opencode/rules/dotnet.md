@@ -89,6 +89,15 @@ dotnet restore
 dotnet publish -c Release -o ./publish
 ```
 
+## Thread Synchronization
+
+Prefer `System.Threading.Lock` over `object` for dedicated lock objects when targeting .NET 9 or later with C# 13 or later:
+```csharp
+private readonly Lock _lock = new();
+```
+
+Use another synchronization mechanism when the target framework does not provide `System.Threading.Lock`, compatibility requires exposing an existing `object` lock, or the critical section must support `await` (for example, use `SemaphoreSlim`). Keep a `Lock` strongly typed; casting it to `object` bypasses its specialized `lock` behavior.
+
 ## Common Patterns
 
 ### Check if build succeeds without full output
