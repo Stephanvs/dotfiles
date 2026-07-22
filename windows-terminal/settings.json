@@ -11,9 +11,11 @@
             "id": "User.closeTab.0"
         }
     ],
+    "alwaysShowTabs": true,
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "disableAnimations": true,
     "keybindings": 
     [
         {
@@ -281,8 +283,10 @@
         ]
     },
     "schemes": [],
+    "showTabsInTitlebar": true,
+    "showTerminalTitleInTitlebar": false,
     "theme": "system",
     "themes": [],
-    "useAcrylicInTabRow": true,
+    "useAcrylicInTabRow": false,
     "windowingBehavior": "useNew"
 }
