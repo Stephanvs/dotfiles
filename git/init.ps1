@@ -7,6 +7,7 @@ function Set-GitCommit { & git commit -m $args }
 function Set-GitAddAll { & git add --all }
 function Set-GitPush { & git push }
 function Set-GitPull { & git pull }
+function Invoke-GitFetchAll { & git fetch --all --no-write-fetch-head }
 function Invoke-GitAiCommitMessage { & "$PSScriptRoot\ai-commit-msg.ps1" @args }
 
 Write-Verbose "Setting git aliases:"
@@ -16,6 +17,7 @@ Set-Alias -Name gcm -Value Set-GitCommit -Force -Scope Global
 Set-Alias -Name gaa -Value Set-GitAddAll -Force -Scope Global
 Set-Alias -Name gp -Value Set-GitPush -Force -Scope Global
 Set-Alias -Name gpl -Value Set-GitPull -Force -Scope Global
+Set-Alias -Name gf -Value Invoke-GitFetchAll -Force -Scope Global
 Set-Alias -Name gai -Value Invoke-GitAiCommitMessage -Force -Scope Global
 Set-Alias -Name gcmai -Value Invoke-GitAiCommitMessage -Force -Scope Global
 
