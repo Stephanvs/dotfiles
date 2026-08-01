@@ -51,13 +51,14 @@
           "openai/gpt-5.5-fast/xhigh",
           "openai/gpt-5.6-sol-fast",
           "openai/gpt-5.6-fast",
-          "openai/gpt-5.6-luna-fast"
+          "openai/gpt-5.6-luna-fast",
+          "openai/gpt-5.6-terra-fast"
         ],
       },
       "type": "registry",
       "default_config_options": {
         "model": "openai/gpt-5.6-sol-fast",
-        "effort": "high",
+        "effort": "xhigh",
         "mode": "build",
       },
     },
