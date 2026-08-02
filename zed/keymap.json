@@ -148,5 +148,17 @@
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown"
     }
+  },
+  {
+    "context": "AcpThread > Editor && use_modifier_to_send",
+    "bindings": {
+      "ctrl-enter": "agent::Chat"
+    }
+  },
+  {
+    "context": "AcpThread > Editor && use_modifier_to_send",
+    "unbind": {
+      "cmd-enter": "agent::Chat"
+    }
   }
 ]
