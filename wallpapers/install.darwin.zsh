@@ -42,4 +42,5 @@ change_background() {
   fi
 }
 
-ensure_current_wallpaper && change_background "$DOTFILES/wallpapers/current"
+current_wallpaper="$DOTFILES/wallpapers/current"
+ensure_current_wallpaper && change_background "${current_wallpaper:A}"
