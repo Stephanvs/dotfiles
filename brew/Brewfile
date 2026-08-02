@@ -189,6 +189,8 @@ cask "balenaetcher"
 cask "blender"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Utility that prevents the system from going to sleep
+cask "caffeine"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
 # Anthropic's official Claude AI desktop app
