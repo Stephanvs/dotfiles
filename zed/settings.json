@@ -16,7 +16,7 @@
   "cli_default_open_behavior": "existing_window",
   "ui_font_size": 14.0,
   "auto_update": false,
-  "diff_view_style": "split",
+  "diff_view_style": "unified",
   "show_whitespaces": "boundary",
   "selection_highlight": true,
   "edit_predictions": {
@@ -58,7 +58,7 @@
       "type": "registry",
       "default_config_options": {
         "model": "openai/gpt-5.6-sol-fast",
-        "effort": "xhigh",
+        "effort": "max",
         "mode": "build",
       },
     },
@@ -126,9 +126,11 @@
       "model": "claude-sonnet-4-5",
     },
     "commit_message_model": {
-      "provider": "lmstudio",
-      "model": "qwen/qwen3.5-9b",
+      "provider": "openai-subscribed",
+      "model": "gpt-5.6-luna",
+      "speed": "fast",
     },
+    "commit_message_instructions": "Use Conventional Commits: <type>(<optional scope>): <description>. Write a concise, imperative subject without a trailing period. Accurately summarize the staged changes and their intent. Add a short body only when it provides important context. Use only lowercase letters. Only if absolutely needed use the `-` character to split long words, but prefer to just use spaces.",
   },
   "language_models": {
     "lmstudio": {
