@@ -176,6 +176,14 @@
       "type": "local",
       "command": ["bunx", "-y", "chrome-devtools-mcp@latest"],
       "enabled": false
+    },
+    "rider": {
+      "type": "remote",
+      "url": "http://127.0.0.1:64482/sse",
+      "headers": {
+        "IJ_MCP_SERVER_PROJECT_PATH": "/Users/stephanvs/Code/prosim-fms"
+      },
+      "enabled": true
     }
   }
 }
