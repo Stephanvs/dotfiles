@@ -28,6 +28,12 @@ dotnet test > /tmp/dotnet-test.txt 2>&1
 grep -E "Failed|Passed|Error" /tmp/dotnet-test.txt
 ```
 
+## Defining Unit Tests
+
+- Follow established project conventions. If no test framework is in use, prefer xUnit v3.
+- Prefer AwesomeAssertions for assertions and FakeItEasy for fakes, dummies, and interaction verification in justified white-box tests.
+- Apply `[Trait("Category", "...")]` to tests, using broad categories for cohesive groups of related tests. Categories should support focused runs without requiring the full suite.
+
 ## Project References
 
 ALWAYS use the CLI to add project references:
