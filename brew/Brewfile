@@ -264,8 +264,6 @@ cask "raycast"
 cask "rider"
 # Open source virtual/remote desktop application
 cask "rustdesk"
-# Instant messaging application focusing on security
-cask "signal"
 # Music streaming service
 cask "spotify"
 # Native GUI tool for relational databases
