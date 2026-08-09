@@ -193,8 +193,8 @@ cask "brave-browser"
 cask "caffeine"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
-# Anthropic's official Claude AI desktop app
-cask "claude"
+# Terminal-based AI coding assistant
+cask "claude-code@latest"
 # Ghostty-based terminal with vertical tabs and notifications for AI coding agents
 cask "cmux"
 # OpenAI's coding agent that runs in your terminal
@@ -205,6 +205,8 @@ cask "steipete/tap/codexbar"
 cask "db-browser-for-sqlite"
 # Virtual monitor for screen sharing
 cask "deskpad"
+# Voice and text chat software
+cask "discord"
 # Calendar software
 cask "fantastical"
 # Collaborative team software
@@ -230,6 +232,8 @@ cask "handy"
 cask "helium-browser"
 # Menu bar application that displays the CPU speed limit due to thermal issues
 cask "hot"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
 # ZSA keyboard firmware flasher
 cask "keymapp"
 # Discover, download, and run local LLMs
@@ -264,6 +268,8 @@ cask "raycast"
 cask "rider"
 # Open source virtual/remote desktop application
 cask "rustdesk"
+# Instant messaging application focusing on security
+cask "signal"
 # Music streaming service
 cask "spotify"
 # Native GUI tool for relational databases
