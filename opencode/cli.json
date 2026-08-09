@@ -1,0 +1,14 @@
+{
+  "theme": {
+    "name": "lucent-orng"
+  },
+  "diffs": {
+    "wrap": "word"
+  },
+  "session": {
+    "sidebar": "hide",
+    "scrollbar": true,
+    "thinking": "hide"
+  },
+  "animations": true
+}

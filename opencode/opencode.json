@@ -1,28 +1,24 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "layout": "stretch",
   "model": "openai/sol-fast-high",
-  "small_model": "openai/gpt-5.6-luna-fast/low",
-  "autoshare": true,
+  "share": "auto",
   "autoupdate": false,
-  "plugin": [
+  "plugins": [
     "opencode-sfx",
     "opencode-claude-bridge"
   ],
-  "permission": {
-    "external_directory": {
-      "~/.config/*": "allow",
-      "~/dotfiles/*": "allow",
-      "~/code/*": "allow",
-      "~/notes/*": "allow",
-      "E:/Code/*": "allow"
-    }
-  },
-  "provider": {
+  "permissions": [
+    { "action": "external_directory", "resource": "~/.config/*", "effect": "allow" },
+    { "action": "external_directory", "resource": "~/dotfiles/*", "effect": "allow" },
+    { "action": "external_directory", "resource": "~/code/*", "effect": "allow" },
+    { "action": "external_directory", "resource": "~/notes/*", "effect": "allow" },
+    { "action": "external_directory", "resource": "E:/Code/*", "effect": "allow" }
+  ],
+  "providers": {
     "lmstudio-homepc": {
-      "npm": "@ai-sdk/openai-compatible",
+      "package": "aisdk:@ai-sdk/openai-compatible",
       "name": "LM Studio (homepc)",
-      "options": {
+      "settings": {
         "baseURL": "http://100.84.112.43:1234/v1"
       },
       "models": {
@@ -32,9 +28,9 @@
       }
     },
     "lmstudio-mini": {
-      "npm": "@ai-sdk/openai-compatible",
+      "package": "aisdk:@ai-sdk/openai-compatible",
       "name": "LM Studio (mini)",
-      "options": {
+      "settings": {
         "baseURL": "http://100.71.230.81:1234/v1"
       },
       "models": {
@@ -47,9 +43,9 @@
       }
     },
     "lmstudio": {
-      "npm": "@ai-sdk/openai-compatible",
+      "package": "aisdk:@ai-sdk/openai-compatible",
       "name": "LM Studio (local)",
-      "options": {
+      "settings": {
         "baseURL": "http://127.0.0.1:1234/v1"
       },
       "models": {
@@ -59,131 +55,132 @@
       }
     }
   },
-  "disabled_providers": [],
-  "experimental": {
-    "disable_paste_summary": true
-  },
-  "mode": {
+  "agents": {
+    "title": {
+      "model": "openai/gpt-5.6-luna-fast/low"
+    },
     "plan": {
-      "tools": {
-        "write": false,
-        "edit": false,
-        "bash": false,
-        "read": true,
-        "grep": true,
-        "glob": true,
-        "list": true,
-        "webfetch": true
-      }
+      "mode": "primary",
+      "permissions": [
+        { "action": "edit", "resource": "*", "effect": "deny" },
+        { "action": "shell", "resource": "*", "effect": "deny" },
+        { "action": "read", "resource": "*", "effect": "allow" },
+        { "action": "grep", "resource": "*", "effect": "allow" },
+        { "action": "glob", "resource": "*", "effect": "allow" },
+        { "action": "list", "resource": "*", "effect": "allow" },
+        { "action": "webfetch", "resource": "*", "effect": "allow" }
+      ]
     },
     "docs": {
-      "prompt": "{file:./prompts/documentation.txt}",
-      "tools": {
-        "write": true,
-        "edit": true,
-        "bash": false,
-        "read": true,
-        "grep": true,
-        "glob": true
-      }
+      "mode": "primary",
+      "system": "{file:./prompts/documentation.txt}",
+      "permissions": [
+        { "action": "edit", "resource": "*", "effect": "allow" },
+        { "action": "shell", "resource": "*", "effect": "deny" },
+        { "action": "read", "resource": "*", "effect": "allow" },
+        { "action": "grep", "resource": "*", "effect": "allow" },
+        { "action": "glob", "resource": "*", "effect": "allow" }
+      ]
     },
     "review": {
-      "prompt": "{file:./prompts/code_review.txt}",
-      "tools": {
-        "write": false,
-        "edit": false,
-        "bash": false,
-        "read": true,
-        "glob": true,
-        "grep": true,
-        "list": true,
-        "webfetch": true
-      }
+      "mode": "primary",
+      "system": "{file:./prompts/code_review.txt}",
+      "permissions": [
+        { "action": "edit", "resource": "*", "effect": "deny" },
+        { "action": "shell", "resource": "*", "effect": "deny" },
+        { "action": "read", "resource": "*", "effect": "allow" },
+        { "action": "glob", "resource": "*", "effect": "allow" },
+        { "action": "grep", "resource": "*", "effect": "allow" },
+        { "action": "list", "resource": "*", "effect": "allow" },
+        { "action": "webfetch", "resource": "*", "effect": "allow" }
+      ]
     }
   },
   "mcp": {
-    "context7": {
-      "type": "remote",
-      "url": "https://mcp.context7.com/mcp",
-      "enabled": true
-    },
-    "az-devops": {
-      "type": "local",
-      "command": ["bunx", "-y", "@azure-devops/mcp", "itncare", "-d", "core", "work", "work-items", "repositories", "pipelines", "wiki"],
-      "enabled": false
-    },
-    "atlassian": {
-      "type": "local",
-      "enabled": false,
-      "command": [
-        "op", "run", "--",
-        "docker", "run", "-i", "--rm", "--network=host",
-        "-e", "CONFLUENCE_URL",
-        "-e", "CONFLUENCE_USERNAME",
-        "-e", "CONFLUENCE_API_TOKEN",
-        "-e", "JIRA_URL",
-        "-e", "JIRA_USERNAME",
-        "-e", "JIRA_API_TOKEN",
-        "ghcr.io/sooperset/mcp-atlassian:latest"
-      ],
-      "environment": {
-        "CONFLUENCE_URL": "https://prosim.atlassian.net/wiki",
-        "CONFLUENCE_USERNAME": "stephan.van.stekelenburg@prosim-ar.com",
-        "CONFLUENCE_API_TOKEN": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/opencode api token",
-        "JIRA_URL": "https://prosim.atlassian.net",
-        "JIRA_USERNAME": "stephan.van.stekelenburg@prosim-ar.com",
-        "JIRA_API_TOKEN": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/opencode api token"
-      }
-    },
-    "bitbucket": {
-      "type": "local",
-      "enabled": false,
-      "command": [
-        "op", "run", "--",
-        "bunx", "-y", "bitbucket-mcp@latest"
-      ],
-      "environment": {
-        "BITBUCKET_URL": "https://api.bitbucket.org/2.0",
-        "BITBUCKET_WORKSPACE": "prosim",
-        "BITBUCKET_USERNAME": "stephan.van.stekelenburg@prosim-ar.com",
-        "BITBUCKET_PASSWORD": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/Bitbucket MCP API Token/API Token"
-      }
-    },
-    "teamcity": {
-      "type": "local",
-      "command": [
-        "op", "run", "--env-file", "/home/stephanvs/dotfiles/opencode/teamcity.env", "--",
-        "bunx", "-y", "@daghis/teamcity-mcp", "--config", "/home/stephanvs/dotfiles/opencode/teamcity.env"
-      ],
-      "enabled": false
-    },
-    "xcodebuild": {
-      "type": "local",
-      "command": ["bunx", "-y", "xcodebuildmcp@latest", "mcp"],
-      "enabled": false
-    },
-    "gh_grep": {
-      "type": "remote",
-      "url": "https://mcp.grep.app",
-      "enabled": true
-    },
-    "codebase-memory-mcp": {
-      "type": "local",
-      "command": ["bunx", "-y", "codebase-memory-mcp"],
-      "enabled": true
-    },
-    "chrome-devtools": {
-      "type": "local",
-      "command": ["bunx", "-y", "chrome-devtools-mcp@latest"],
-      "enabled": false
-    },
-    "rider": {
-      "type": "remote",
-      "url": "http://127.0.0.1:64482/sse",
-      "headers": {
-        "IJ_MCP_SERVER_PROJECT_PATH": "/Users/stephanvs/Code/prosim-fms"
+    "servers": {
+      "context7": {
+        "type": "remote",
+        "url": "https://mcp.context7.com/mcp",
+        "disabled": false
       },
-      "enabled": true
+      "az-devops": {
+        "type": "local",
+        "command": ["bunx", "-y", "@azure-devops/mcp", "itncare", "-d", "core", "work", "work-items", "repositories", "pipelines", "wiki"],
+        "disabled": true
+      },
+      "atlassian": {
+        "type": "local",
+        "disabled": true,
+        "command": [
+          "op", "run", "--",
+          "docker", "run", "-i", "--rm", "--network=host",
+          "-e", "CONFLUENCE_URL",
+          "-e", "CONFLUENCE_USERNAME",
+          "-e", "CONFLUENCE_API_TOKEN",
+          "-e", "JIRA_URL",
+          "-e", "JIRA_USERNAME",
+          "-e", "JIRA_API_TOKEN",
+          "ghcr.io/sooperset/mcp-atlassian:latest"
+        ],
+        "environment": {
+          "CONFLUENCE_URL": "https://prosim.atlassian.net/wiki",
+          "CONFLUENCE_USERNAME": "stephan.van.stekelenburg@prosim-ar.com",
+          "CONFLUENCE_API_TOKEN": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/opencode api token",
+          "JIRA_URL": "https://prosim.atlassian.net",
+          "JIRA_USERNAME": "stephan.van.stekelenburg@prosim-ar.com",
+          "JIRA_API_TOKEN": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/opencode api token"
+        }
+      },
+      "bitbucket": {
+        "type": "local",
+        "disabled": true,
+        "command": [
+          "op", "run", "--",
+          "bunx", "-y", "bitbucket-mcp@latest"
+        ],
+        "environment": {
+          "BITBUCKET_URL": "https://api.bitbucket.org/2.0",
+          "BITBUCKET_WORKSPACE": "prosim",
+          "BITBUCKET_USERNAME": "stephan.van.stekelenburg@prosim-ar.com",
+          "BITBUCKET_PASSWORD": "op://ProSIM/2niy3vs6lrbipxhqqtme33ca3m/Bitbucket MCP API Token/API Token"
+        }
+      },
+      "teamcity": {
+        "type": "local",
+        "command": [
+          "op", "run", "--env-file", "/home/stephanvs/dotfiles/opencode/teamcity.env", "--",
+          "bunx", "-y", "@daghis/teamcity-mcp", "--config", "/home/stephanvs/dotfiles/opencode/teamcity.env"
+        ],
+        "disabled": true
+      },
+      "xcodebuild": {
+        "type": "local",
+        "command": ["bunx", "-y", "xcodebuildmcp@latest", "mcp"],
+        "disabled": true
+      },
+      "gh_grep": {
+        "type": "remote",
+        "url": "https://mcp.grep.app",
+        "disabled": false
+      },
+      "codebase-memory-mcp": {
+        "type": "local",
+        "command": ["bunx", "-y", "codebase-memory-mcp"],
+        "disabled": false
+      },
+      "chrome-devtools": {
+        "type": "local",
+        "command": ["bunx", "-y", "chrome-devtools-mcp@latest"],
+        "disabled": true
+      },
+      "rider": {
+        "type": "remote",
+        "url": "http://127.0.0.1:64482/sse",
+        "headers": {
+          "IJ_MCP_SERVER_PROJECT_PATH": "/Users/stephanvs/Code/prosim-fms"
+        },
+        "disabled": false
+      }
     }
   }
 }

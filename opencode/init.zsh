@@ -1,1 +1,1 @@
-alias oc='opencode --auto'
+alias oc='opencode2 --auto'
