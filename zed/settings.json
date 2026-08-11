@@ -29,6 +29,9 @@
     "sort_by_path": true,
   },
   "agent_servers": {
+    "grok-build": {
+      "type": "registry"
+    },
     "codex-acp": {
       "favorite_config_option_values": {
         "fast-mode": [
