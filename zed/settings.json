@@ -66,6 +66,11 @@
       },
     },
     "claude-acp": {
+      "default_config_options": {
+        "effort": "max",
+        "model": "sonnet",
+        "mode": "auto"
+      },
       "type": "registry",
       "default_mode": "acceptEdits",
     },
