@@ -200,7 +200,7 @@ cask "cmux"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # Menu bar usage monitor for Codex and Claude
-cask "steipete/tap/codexbar"
+cask "codexbar"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Virtual monitor for screen sharing
@@ -226,6 +226,8 @@ cask "ghostty"
 cask "google-chrome"
 # AI-powered notepad for meetings
 cask "granola"
+# Extensible coding agent for the terminal
+cask "grok-build"
 # Speech to text application
 cask "handy"
 # Chromium-based web browser
