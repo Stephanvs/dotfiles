@@ -42,10 +42,10 @@ brew "btop"
 brew "coreutils"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 # GNU Emacs text editor
 brew "emacs"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # Emacs dependency management
 brew "cask"
 # Object-file caching compiler wrapper
