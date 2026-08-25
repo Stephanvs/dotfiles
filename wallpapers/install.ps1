@@ -31,7 +31,8 @@ function Initialize-CurrentWallpaper {
     $item = Get-Item -LiteralPath $CurrentWallpaper -Force
     if ($item.LinkType -eq "SymbolicLink" -and $item.Target)
     {
-        $target = $item.Target
+        # $item.Target is a string[]; take the first entry
+        $target = @($item.Target)[0]
         if (-not [System.IO.Path]::IsPathRooted($target))
         {
             $target = Join-Path $PSScriptRoot $target
