@@ -8,7 +8,11 @@
   "session": {
     "sidebar": "hide",
     "scrollbar": true,
-    "thinking": "hide"
+    "thinking": "hide",
+    "grouping": "auto"
   },
-  "animations": true
+  "animations": true,
+  "prompt": {
+    "paste": "full"
+  }
 }
