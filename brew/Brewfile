@@ -82,6 +82,8 @@ brew "go"
 brew "gum"
 # Improved top (interactive process viewer)
 brew "htop"
+# Review-first terminal diff viewer
+brew "hunk"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Lazier way to manage everything docker

@@ -1,5 +1,9 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/jesseduffield/lazygit/master/schema/config.json
 
+git:
+  diffRenderers:
+    - command: hunk pager
+
 # Custom commands
 customCommands:
   - key: "<c-a>"

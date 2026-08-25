@@ -10,7 +10,7 @@
   excludesfile = $HOME/.gitignore
   editor = vim
   autocrlf = input
-  pager = delta
+  pager = hunk pager
 
 [interactive]
   diffFilter = delta --color-only
