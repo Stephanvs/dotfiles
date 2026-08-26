@@ -23,7 +23,7 @@
     "provider": "zed",
   },
   "git_panel": {
-    "group_by": "none",
+    "group_by": "staging",
     "dock": "left",
     "tree_view": true,
     "sort_by_path": true,
