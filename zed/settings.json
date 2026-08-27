@@ -39,9 +39,10 @@
         ]
       },
       "default_config_options": {
-        "model": "gpt-5.5",
-        "fast-mode": "on",
-        "reasoning_effort": "low",
+        "collaboration_mode": "default",
+        "model": "gpt-5.6-sol",
+        "fast-mode": true,
+        "reasoning_effort": "xhigh",
         "mode": "full-access",
       },
       "type": "registry",
