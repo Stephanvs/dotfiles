@@ -209,8 +209,7 @@ end
 ----- PLATFORM SPECIFIC CONFIG
 if wezterm.target_triple == 'aarch64-apple-darwin' then
     config.font = wezterm.font_with_fallback({
-        "BerkeleyMono Nerd Font",
-        { family = "BerkeleyMono", weight = "Bold" },
+        "IoskeleyMono Nerd Font Mono",
     })
     config.font_size = 14
     config.window_background_opacity = dark_opacity
@@ -221,7 +220,7 @@ elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.default_prog = { 'pwsh', '-nologo' }
     config.font = wezterm.font_with_fallback({
         -- "JetBrainsMono Nerd Font",
-        "BerkeleyMono Nerd Font",
+        "IoskeleyMono Nerd Font Mono",
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
     })
     config.font_size = 10
@@ -229,7 +228,7 @@ elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.window_frame = {
       font = wezterm.font_with_fallback({
           -- "JetBrainsMono Nerd Font",
-          "BerkeleyMono Nerd Font",
+          "IoskeleyMono Nerd Font Mono",
           { family = "Symbols Nerd Font Mono", weight = "Bold" },
       }),
       font_size = 10.0,
@@ -250,7 +249,7 @@ elseif wezterm.target_triple == 'x86_64-pc-windows-msvc' then
     config.tab_max_width = 50
 else
     config.font = wezterm.font_with_fallback({
-        "BerkeleyMono Nerd Font",
+        "IoskeleyMono Nerd Font Mono",
         { family = "Symbols Nerd Font Mono", weight = "Bold" },
     })
     config.font_size = 10
