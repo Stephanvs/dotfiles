@@ -4,7 +4,6 @@ foreach ($link in @(
     @{ Name = 'opencode.json'; Label = 'OpenCode config link' },
     @{ Name = 'cli.json'; Label = 'OpenCode CLI config link' },
     @{ Name = 'prompts'; Label = 'OpenCode prompts link' },
-    @{ Name = 'skills'; Label = 'OpenCode skills link' },
     @{ Name = 'themes'; Label = 'OpenCode themes link' },
     @{ Name = 'rules'; Label = 'OpenCode rules link' },
     @{ Name = 'AGENTS.md'; Label = 'OpenCode agents link' },
