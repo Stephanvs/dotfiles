@@ -59,7 +59,9 @@
           "openai/gpt-5.6-terra-fast"
         ],
       },
-      "type": "registry",
+      "type": "custom",
+      "command": "opencode2",
+      "args": ["acp"],
       "default_config_options": {
         "model": "openai/gpt-5.6-sol-fast",
         "effort": "max",
