@@ -7,6 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "session": {
+    "trust_all_worktrees": true
+  },
   "outline_panel": {
     "dock": "left",
   },
@@ -42,7 +45,7 @@
         "collaboration_mode": "default",
         "model": "gpt-6-astra",
         "fast-mode": false,
-        "reasoning_effort": "low",
+        "reasoning_effort": "high",
         "mode": "full-access",
       },
       "type": "registry",
