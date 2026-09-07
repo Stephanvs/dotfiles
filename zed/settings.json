@@ -40,9 +40,9 @@
       },
       "default_config_options": {
         "collaboration_mode": "default",
-        "model": "gpt-5.6-sol",
-        "fast-mode": true,
-        "reasoning_effort": "xhigh",
+        "model": "gpt-6-astra",
+        "fast-mode": false,
+        "reasoning_effort": "low",
         "mode": "full-access",
       },
       "type": "registry",
