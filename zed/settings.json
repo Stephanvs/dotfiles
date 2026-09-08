@@ -45,7 +45,7 @@
         "collaboration_mode": "default",
         "model": "gpt-6-astra",
         "fast-mode": false,
-        "reasoning_effort": "high",
+        "reasoning_effort": "low",
         "mode": "full-access",
       },
       "type": "registry",
