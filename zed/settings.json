@@ -73,7 +73,8 @@
     },
     "claude-acp": {
       "default_config_options": {
-        "effort": "max",
+        "fast": true,
+        "effort": "high",
         "model": "sonnet",
         "mode": "auto"
       },
