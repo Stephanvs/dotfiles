@@ -21,3 +21,4 @@
 & "$PSScriptRoot/remove-desktop-shortcuts.ps1"
 & "$PSScriptRoot/disable-lock-workstation.ps1"
 & "$PSScriptRoot/keyboard-rate.ps1"
+& "$PSScriptRoot/window-disable-rounded-corners.ps1"

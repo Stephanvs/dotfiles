@@ -41,9 +41,10 @@ function Set-RegistryValueIfDifferent {
   )
 
   Ensure-RegistryKey -Path $Path
-  $currentValue = Get-ItemPropertyValue -Path $Path -Name $Name -ErrorAction SilentlyContinue
+  $item = Get-Item -LiteralPath $Path
+  $currentValue = $item.GetValue($Name, $null, 'DoNotExpandEnvironmentNames')
 
-  if ($currentValue -ceq $Value) {
+  if ($null -ne $currentValue -and $currentValue -ceq $Value) {
     return $false
   }
 
