@@ -173,7 +173,7 @@
   "base_keymap": "VSCode",
   "theme": {
     "mode": "system",
-    "light": "Catppuccin Latte",
+    "light": "Ayu Light",
     "dark": "Matte Black",
   },
   "icon_theme": {
