@@ -1,5 +1,5 @@
 {
-	"$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.32/schema.json",
+	"$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.41/schema.json",
 	"app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
 	"bar_configurations": [
 		"$Env:USERPROFILE/komorebi.bar.monitor1.json",
