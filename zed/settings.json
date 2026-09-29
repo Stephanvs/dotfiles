@@ -126,11 +126,13 @@
   "cursor_blink": false,
   "cursor_shape": "bar",
   "agent": {
+    "enable_feedback": false,
+    "show_turn_stats": true,
+    "thinking_display": "always_collapsed",
     "dock": "right",
     "new_thread_location": "new_worktree",
     "show_merge_conflict_indicator": true,
     "use_modifier_to_send": true,
-    "thinking_display": "preview",
     "play_sound_when_agent_done": "when_hidden",
     "default_profile": "write",
     "tool_permissions": {
