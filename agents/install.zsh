@@ -12,10 +12,17 @@ skill_roots=(
   "$HOME/.gemini/skills"
 )
 
-for skill_dir in "$DOTFILES"/agents/skills/*(/N); do
+for skill_dir in "$DOTFILES"/agents/skills/*(/N) "$DOTFILES"/agents/pstack/skills/*(/N); do
   name="${skill_dir:t}"
   for root in "${skill_roots[@]}"; do
-    symlink "agents/skills/$name" "$root/$name"
+    symlink "${skill_dir#$DOTFILES/}" "$root/$name"
+  done
+done
+
+for agent_file in "$DOTFILES"/agents/pstack/agents/*.md(N); do
+  name="${agent_file:t}"
+  for root in "$HOME/.cursor/agents" "$HOME/.claude/agents"; do
+    symlink "${agent_file#$DOTFILES/}" "$root/$name"
   done
 done
 
