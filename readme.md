@@ -7,6 +7,8 @@ Personal cross-platform dotfiles, organized as composable modules.
 Low coupling, high cohesion: each tool owns its own folder, platform differences are explicit,
 shared side effects live in `lib/`, and setup scripts are idempotent.
 
+The agents module includes the full [pstack toolkit](agents/pstack-integration.md), shared across the configured coding tools.
+
 ## Principles
 
 - **Organize by concern, not by file type.** Each tool/environment gets its own folder with its config and scripts.

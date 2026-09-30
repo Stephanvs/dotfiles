@@ -11,12 +11,22 @@ $skillRoots = @(
     "$HOME/.gemini/skills"
 )
 
-Get-ChildItem -LiteralPath "$PSScriptRoot/skills" -Directory | ForEach-Object {
+$skillSources = @("$PSScriptRoot/skills", "$PSScriptRoot/pstack/skills")
+Get-ChildItem -LiteralPath $skillSources -Directory | ForEach-Object {
     foreach ($root in $skillRoots) {
         New-Symlink `
             -SourcePath $_.FullName `
             -TargetPath (Join-Path $root $_.Name) `
             -Label "Skill $($_.Name)"
+    }
+}
+
+Get-ChildItem -LiteralPath "$PSScriptRoot/pstack/agents" -File -Filter *.md | ForEach-Object {
+    foreach ($root in @("$HOME/.cursor/agents", "$HOME/.claude/agents")) {
+        New-Symlink `
+            -SourcePath $_.FullName `
+            -TargetPath (Join-Path $root $_.Name) `
+            -Label "pstack agent $($_.BaseName)"
     }
 }
 
