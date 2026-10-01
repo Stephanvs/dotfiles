@@ -159,7 +159,7 @@ brew "zig"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Azure Functions Core Tools 4.0
-brew "azure/functions/azure-functions-core-tools@4", link: false
+brew "azure/functions/azure-functions-core-tools@4"
 # A window border system for macOS
 brew "felixkratz/formulae/borders"
 # Custom macOS statusbar with shell plugin, interaction and graph support
