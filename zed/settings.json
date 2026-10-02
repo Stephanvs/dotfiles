@@ -33,6 +33,9 @@
   },
   "agent_servers": {
     "grok-build": {
+      "default_config_options": {
+        "model": "grok-4.7-build-fast"
+      },
       "type": "registry"
     },
     "codex-acp": {
