@@ -6,7 +6,7 @@
     "wrap": "word"
   },
   "session": {
-    "sidebar": "hide",
+    "sidebar": "auto",
     "scrollbar": true,
     "thinking": "hide",
     "grouping": "auto"
