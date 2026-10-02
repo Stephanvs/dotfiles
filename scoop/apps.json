@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-01T18:33:00+02:00",
+            "Updated": "2026-10-02T18:34:18+02:00",
             "Manifests": 1662
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-01T18:33:07+02:00",
-            "Manifests": 2402
+            "Updated": "2026-10-02T18:33:53+02:00",
+            "Manifests": 2404
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-01T17:32:34+02:00",
-            "Manifests": 618
+            "Updated": "2026-10-02T18:08:29+02:00",
+            "Manifests": 620
         },
         {
             "Name": "nerd-fonts",
@@ -27,13 +27,13 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-01T17:30:35+02:00",
+            "Updated": "2026-10-02T16:47:33+02:00",
             "Manifests": 419
         },
         {
             "Name": "stephanvs",
             "Source": "https://github.com/Stephanvs/scoop-bucket",
-            "Updated": "2026-10-01T09:22:34+02:00",
+            "Updated": "2026-10-02T13:07:01+02:00",
             "Manifests": 0
         },
         {
@@ -123,9 +123,9 @@
         },
         {
             "Name": "clacky",
-            "Version": "1.0.3",
+            "Version": "1.0.4",
             "Source": "stephanvs",
-            "Updated": "2026-10-01T12:00:19.9487508+02:00",
+            "Updated": "2026-10-02T16:00:14.3536417+02:00",
             "Info": ""
         },
         {
@@ -137,16 +137,16 @@
         },
         {
             "Name": "codex",
-            "Version": "0.159.3",
+            "Version": "0.160.0",
             "Source": "main",
-            "Updated": "2026-10-01T04:00:18.8401801+02:00",
+            "Updated": "2026-10-02T01:00:11.3957195+02:00",
             "Info": ""
         },
         {
             "Name": "cursor",
-            "Version": "3.22.12",
+            "Version": "3.23.12",
             "Source": "extras",
-            "Updated": "2026-09-28T20:02:30.7457688+02:00",
+            "Updated": "2026-10-02T04:01:39.5842959+02:00",
             "Info": ""
         },
         {
@@ -193,9 +193,9 @@
         },
         {
             "Name": "figma",
-            "Version": "126.8.18",
+            "Version": "126.9.11",
             "Source": "extras",
-            "Updated": "2026-09-04T01:00:09.0814149+02:00",
+            "Updated": "2026-10-02T01:00:16.4987316+02:00",
             "Info": ""
         },
         {
@@ -382,9 +382,9 @@
         },
         {
             "Name": "opencode2",
-            "Version": "2.0.21",
+            "Version": "2.0.22",
             "Source": "versions",
-            "Updated": "2026-10-01T12:00:23.9598107+02:00",
+            "Updated": "2026-10-02T08:00:13.759582+02:00",
             "Info": ""
         },
         {
@@ -431,9 +431,9 @@
         },
         {
             "Name": "rustdesk",
-            "Version": "1.4.9",
+            "Version": "1.5.0",
             "Source": "extras",
-            "Updated": "2026-07-06T17:00:11.6493495+02:00",
+            "Updated": "2026-10-02T08:00:14.9953241+02:00",
             "Info": ""
         },
         {
@@ -546,6 +546,13 @@
             "Version": "26.9.1",
             "Source": "main",
             "Updated": "2026-09-01T16:00:11.0264128+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "yt-dlp",
+            "Version": "2026.08.19",
+            "Source": "main",
+            "Updated": "2026-10-02T12:49:12.0769302+02:00",
             "Info": ""
         },
         {
