@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-02T18:34:18+02:00",
-            "Manifests": 1662
+            "Updated": "2026-10-03T20:27:17+02:00",
+            "Manifests": 1663
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-02T18:33:53+02:00",
+            "Updated": "2026-10-03T19:38:55+02:00",
             "Manifests": 2404
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-02T18:08:29+02:00",
+            "Updated": "2026-10-03T15:31:17+02:00",
             "Manifests": 620
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-02T16:47:33+02:00",
+            "Updated": "2026-10-03T15:27:37+02:00",
             "Manifests": 419
         },
         {
@@ -46,9 +46,9 @@
     "apps": [
         {
             "Name": "1password-cli",
-            "Version": "2.39.0",
+            "Version": "2.40.0",
             "Source": "main",
-            "Updated": "2026-08-21T11:02:08.2072061+02:00",
+            "Updated": "2026-10-03T01:00:10.8151448+02:00",
             "Info": ""
         },
         {
@@ -74,9 +74,9 @@
         },
         {
             "Name": "autohotkey",
-            "Version": "2.0.28",
+            "Version": "2.0.29",
             "Source": "extras",
-            "Updated": "2026-09-12T12:00:15.1144304+02:00",
+            "Updated": "2026-10-03T17:00:15.0678043+02:00",
             "Info": ""
         },
         {
@@ -130,9 +130,9 @@
         },
         {
             "Name": "cmake",
-            "Version": "4.4.3",
+            "Version": "4.4.4",
             "Source": "main",
-            "Updated": "2026-08-26T01:00:45.4194973+02:00",
+            "Updated": "2026-10-03T01:00:43.034359+02:00",
             "Info": ""
         },
         {
@@ -228,9 +228,9 @@
         },
         {
             "Name": "handy",
-            "Version": "0.9.7",
+            "Version": "0.9.8",
             "Source": "extras",
-            "Updated": "2026-09-18T20:00:17.7769572+02:00",
+            "Updated": "2026-10-03T09:00:12.2647664+02:00",
             "Info": ""
         },
         {
@@ -375,9 +375,9 @@
         },
         {
             "Name": "ollama-full",
-            "Version": "0.35.0",
+            "Version": "0.35.1",
             "Source": "extras",
-            "Updated": "2026-09-30T09:01:44.0225333+02:00",
+            "Updated": "2026-10-03T01:02:24.6407618+02:00",
             "Info": ""
         },
         {
@@ -564,16 +564,16 @@
         },
         {
             "Name": "zen-browser",
-            "Version": "1.22.3b",
+            "Version": "1.23b",
             "Source": "extras",
-            "Updated": "2026-09-23T17:01:30.6393317+02:00",
+            "Updated": "2026-10-03T17:00:23.5918414+02:00",
             "Info": ""
         },
         {
             "Name": "zig",
-            "Version": "0.16.0",
+            "Version": "0.17.0",
             "Source": "main",
-            "Updated": "2026-05-28T17:24:09.2206873+02:00",
+            "Updated": "2026-10-03T05:01:27.4448294+02:00",
             "Info": ""
         },
         {
