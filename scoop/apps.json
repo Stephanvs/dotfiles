@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-03T20:27:17+02:00",
-            "Manifests": 1663
+            "Updated": "2026-10-04T20:27:18+02:00",
+            "Manifests": 1664
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-03T19:38:55+02:00",
-            "Manifests": 2404
+            "Updated": "2026-10-04T20:10:14+02:00",
+            "Manifests": 2405
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-03T15:31:17+02:00",
-            "Manifests": 620
+            "Updated": "2026-10-04T20:16:25+02:00",
+            "Manifests": 622
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-03T15:27:37+02:00",
+            "Updated": "2026-10-04T18:25:13+02:00",
             "Manifests": 419
         },
         {
@@ -39,7 +39,7 @@
         {
             "Name": "tokentop",
             "Source": "https://github.com/tokentopapp/scoop-tokentop",
-            "Updated": "2026-04-17T09:22:47+02:00",
+            "Updated": "2026-10-04T07:16:56+02:00",
             "Manifests": 0
         }
     ],
@@ -158,9 +158,9 @@
         },
         {
             "Name": "delta",
-            "Version": "0.19.2",
+            "Version": "0.20.0",
             "Source": "main",
-            "Updated": "2026-04-18T18:56:21.2440944+02:00",
+            "Updated": "2026-10-04T21:00:11.7544174+02:00",
             "Info": ""
         },
         {
@@ -235,9 +235,9 @@
         },
         {
             "Name": "helium",
-            "Version": "0.18.2.1",
+            "Version": "0.18.3.1",
             "Source": "extras",
-            "Updated": "2026-10-01T00:01:09.751273+02:00",
+            "Updated": "2026-10-04T13:00:19.1155748+02:00",
             "Info": ""
         },
         {
@@ -312,9 +312,9 @@
         },
         {
             "Name": "libreoffice",
-            "Version": "26.8.0",
+            "Version": "26.8.1",
             "Source": "extras",
-            "Updated": "2026-08-26T16:02:43.0121074+02:00",
+            "Updated": "2026-10-04T09:02:21.8934275+02:00",
             "Info": ""
         },
         {
@@ -487,9 +487,9 @@
         },
         {
             "Name": "tokentop",
-            "Version": "0.7.0",
+            "Version": "0.8.0",
             "Source": "tokentop",
-            "Updated": "2026-04-18T17:01:36.1548491+02:00",
+            "Updated": "2026-10-04T09:02:27.5409276+02:00",
             "Info": ""
         },
         {
