@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-04T20:27:18+02:00",
-            "Manifests": 1664
+            "Updated": "2026-10-05T18:36:48+02:00",
+            "Manifests": 1668
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-04T20:10:14+02:00",
+            "Updated": "2026-10-05T18:36:37+02:00",
             "Manifests": 2405
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-04T20:16:25+02:00",
-            "Manifests": 622
+            "Updated": "2026-10-05T19:14:55+02:00",
+            "Manifests": 623
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-04T18:25:13+02:00",
+            "Updated": "2026-10-05T19:11:00+02:00",
             "Manifests": 419
         },
         {
@@ -158,9 +158,9 @@
         },
         {
             "Name": "delta",
-            "Version": "0.20.0",
+            "Version": "0.20.1",
             "Source": "main",
-            "Updated": "2026-10-04T21:00:11.7544174+02:00",
+            "Updated": "2026-10-05T01:00:10.3675766+02:00",
             "Info": ""
         },
         {
@@ -210,6 +210,13 @@
             "Version": "2.102.0",
             "Source": "main",
             "Updated": "2026-09-30T09:00:17.8372619+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "ghidra",
+            "Version": "12.1.4-20260921",
+            "Source": "extras",
+            "Updated": "2026-10-05T17:43:39.536108+02:00",
             "Info": ""
         },
         {
@@ -382,9 +389,9 @@
         },
         {
             "Name": "opencode2",
-            "Version": "2.0.22",
+            "Version": "2.0.23",
             "Source": "versions",
-            "Updated": "2026-10-02T08:00:13.759582+02:00",
+            "Updated": "2026-10-05T09:00:11.7473644+02:00",
             "Info": ""
         },
         {
@@ -406,6 +413,13 @@
             "Version": "7.6.6",
             "Source": "main",
             "Updated": "2026-09-09T04:00:16.7492307+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "python313",
+            "Version": "3.13.16",
+            "Source": "versions",
+            "Updated": "2026-10-05T11:43:18.4100672+02:00",
             "Info": ""
         },
         {
