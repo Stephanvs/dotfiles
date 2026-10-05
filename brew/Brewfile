@@ -193,8 +193,10 @@ cask "claude-code@latest"
 cask "cmux"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
-# Menu bar usage monitor for Codex and Claude
+# Menu bar app for tracking agentic coding limits and usage
 cask "codexbar"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Browser for SQLite databases
 cask "db-browser-for-sqlite"
 # Virtual monitor for screen sharing
@@ -220,6 +222,8 @@ cask "ghostty"
 cask "google-chrome"
 # AI-powered notepad for meetings
 cask "granola"
+# AI teammates that work across your apps and tools
+cask "grok-bot"
 # Extensible coding agent for the terminal
 cask "grok-build"
 # Speech to text application
