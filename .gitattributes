@@ -1,0 +1,2 @@
+/nix/*.sh text eol=lf
+*.nix text eol=lf

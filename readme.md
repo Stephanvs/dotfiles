@@ -9,6 +9,8 @@ shared side effects live in `lib/`, and setup scripts are idempotent.
 
 The agents module includes the full [pstack toolkit](agents/pstack-integration.md), shared across the configured coding tools.
 
+The [NixOS workstation and VM rehearsal](nix/README.md) prepare a Hyprland setup for the Framework Laptop 13 Pro.
+
 ## Principles
 
 - **Organize by concern, not by file type.** Each tool/environment gets its own folder with its config and scripts.
