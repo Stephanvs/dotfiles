@@ -1,18 +1,15 @@
+Set-Location $PSScriptRoot
 Write-Host "Backing up scoop apps list"
-
-# create restore point
-$date = Get-Date -Format "yyyyMMddHHmmss"
-git add --all
-git stash save --message "$date"
 
 # export apps list
 scoop export > apps.json
 
-# commit to git
+# commit only apps.json, leaving any other changes in the repo untouched
 git add apps.json
-git commit -m "chore: backup of scoop apps"
-
-# restore
-git stash apply stash@{0}
-
-Write-Host "Backup completed"
+git diff --cached --quiet -- apps.json
+if ($LASTEXITCODE -eq 0) {
+  Write-Host "No changes to apps list"
+} else {
+  git commit -m "chore: backup of scoop apps" -- apps.json
+  Write-Host "Backup completed"
+}
