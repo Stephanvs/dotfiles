@@ -6,8 +6,11 @@ import path from "node:path";
 import { test } from "node:test";
 import { fileURLToPath } from "node:url";
 import {
+	LEGACY_SHARED,
+	RUNTIMES,
 	applyBudget,
 	defaultConfig,
+	loadConfig,
 	normalizeCapabilities,
 	parseConfig,
 	render,
@@ -59,8 +62,8 @@ const codexSelection = () => ({
 	},
 });
 
-const tempFile = (name = "pstack-models.md") =>
-	path.join(fs.mkdtempSync(path.join(os.tmpdir(), "pstack-config-")), name);
+const tempHome = () => fs.mkdtempSync(path.join(os.tmpdir(), "pstack-config-"));
+const tempFile = (name) => path.join(tempHome(), name);
 
 test("default Cursor render reproduces the SKILL.md rule shape", () => {
 	const skill = fs.readFileSync(path.join(HERE, "..", "SKILL.md"), "utf8");
@@ -181,58 +184,135 @@ test("separate-field budgets set the effort field and skip inheriting history", 
 });
 
 test("panel counts, role choices, and budget survive render and rerun", () => {
-	const out = tempFile();
-	assert.equal(writeConfig(codexSelection(), separate, { out, format: "markdown" }).written, true);
+	const home = tempHome();
+	assert.equal(writeConfig(codexSelection(), separate, { runtime: "codex", home }).written, true);
+	const out = path.join(home, ".agents", "pstack-models", "codex.md");
 	const first = fs.readFileSync(out, "utf8");
-	const { dropped, ...parsed } = parseConfig(first);
+	const { dropped, runtime, ...parsed } = parseConfig(first);
+	assert.equal(runtime, "codex");
 	assert.deepEqual(parsed, codexSelection());
 	assert.equal(parsed.roles["arena runners"].length, 3);
-	assert.deepEqual(writeConfig(parsed, separate, { out, format: "markdown" }), {
+	assert.deepEqual(writeConfig(parsed, separate, { runtime: "codex", home }), {
 		written: false,
 		unchanged: true,
+		out,
 		errors: [],
 	});
 	assert.equal(fs.readFileSync(out, "utf8"), first);
 });
 
 test("invalid combinations fail before replacing an existing configuration", () => {
-	const out = tempFile();
-	fs.writeFileSync(out, "existing\n");
+	const home = tempHome();
+	const out = path.join(home, ".agents", "pstack-models", "codex.md");
+	fs.mkdirSync(path.dirname(out), { recursive: true });
+	fs.writeFileSync(out, "# budget: small (medium)\nbug-fix: model-b\n");
+	const before = fs.readFileSync(out, "utf8");
 	const bad = codexSelection();
 	bad.roles["bug-fix"] = [{ model: "model-a", history: "fork" }];
-	const result = spawnSync(
-		process.execPath,
-		[SCRIPT, "write", "--capabilities", capsFile(), "--selection", jsonFile(bad), "--out", out, "--format", "markdown"],
-		{
-			encoding: "utf8",
-		},
-	);
+	const run = (selection) =>
+		spawnSync(
+			process.execPath,
+			[SCRIPT, "write", "--runtime", "codex", "--capabilities", capsFile(), "--selection", jsonFile(selection)],
+			{ encoding: "utf8", env: { ...process.env, HOME: home } },
+		);
+	const result = run(bad);
 	assert.equal(result.status, 1);
 	assert.match(result.stderr, /inherits the parent model/);
-	assert.equal(fs.readFileSync(out, "utf8"), "existing\n");
-	const ok = spawnSync(
-		process.execPath,
-		[
-			SCRIPT,
-			"write",
-			"--capabilities",
-			capsFile(),
-			"--selection",
-			jsonFile(codexSelection()),
-			"--out",
-			out,
-			"--format",
-			"markdown",
-		],
-		{
-			encoding: "utf8",
-		},
-	);
+	assert.equal(fs.readFileSync(out, "utf8"), before);
+	const ok = run(codexSelection());
 	assert.equal(ok.status, 0, ok.stderr);
 	assert.match(
 		fs.readFileSync(out, "utf8"),
 		/^arena runners: model-a effort=high history=fresh, model-b effort=medium, auto$/m,
 	);
+});
+
+test("configuring runtime A, then B, then A keeps both runtimes' choices", () => {
+	const home = tempHome();
+	const grokCaps = normalizeCapabilities({
+		runtime: "grok",
+		modelField: "slug",
+		models: ["grok-x-high", "grok-x-low"],
+	});
+	const grokSelection = { budget: "large", roles: { "bug-fix": [{ model: "grok-x-high" }] } };
+	const codexChanged = codexSelection();
+	codexChanged.roles["swarm workers"] = [{ model: "model-b", effort: "low" }];
+
+	writeConfig(codexSelection(), separate, { runtime: "codex", home });
+	writeConfig(grokSelection, grokCaps, { runtime: "grok", home });
+	const grokFile = fs.readFileSync(path.join(home, ".agents", "pstack-models", "grok.md"), "utf8");
+	writeConfig(codexChanged, separate, { runtime: "codex", home });
+
+	assert.equal(fs.readFileSync(path.join(home, ".agents", "pstack-models", "grok.md"), "utf8"), grokFile);
+	const {
+		runtime: codexOwner,
+		dropped: d1,
+		...codexParsed
+	} = parseConfig(fs.readFileSync(path.join(home, ".agents", "pstack-models", "codex.md"), "utf8"));
+	const { runtime: grokOwner, dropped: d2, ...grokParsed } = parseConfig(grokFile);
+	assert.deepEqual([codexOwner, grokOwner], ["codex", "grok"]);
+	assert.deepEqual(codexParsed, codexChanged);
+	assert.deepEqual(grokParsed, grokSelection);
+	assert.equal(loadConfig("grok", home).source, "runtime");
+	assert.deepEqual(loadConfig("codex", home).roles, codexChanged.roles);
+	assert.equal(fs.existsSync(path.join(home, ".agents", "pstack-models.md")), false);
+});
+
+test("a legacy shared file is offered, never attributed or rewritten", () => {
+	const home = tempHome();
+	const legacy = path.join(home, ".agents", "pstack-models.md");
+	fs.mkdirSync(path.dirname(legacy), { recursive: true });
+	const legacyText = "# budget: medium (high)\nbug-fix: model-a effort=high\n";
+	fs.writeFileSync(legacy, legacyText);
+
+	const offered = loadConfig("codex", home);
+	assert.equal(offered.source, "legacy-shared");
+	assert.equal(offered.legacyFile, legacy);
+	assert.deepEqual(offered.roles, { "bug-fix": [{ model: "model-a", effort: "high" }] });
+	assert.equal(loadConfig("cursor", home).source, "defaults");
+
+	writeConfig(codexSelection(), separate, { runtime: "codex", home });
+	assert.equal(fs.readFileSync(legacy, "utf8"), legacyText);
+	assert.equal(loadConfig("codex", home).source, "runtime");
+	assert.equal(loadConfig("grok", home).source, "legacy-shared");
+});
+
+test("a writer refuses another runtime's capabilities or file", () => {
+	const home = tempHome();
+	assert.deepEqual(writeConfig(codexSelection(), separate, { runtime: "grok", home }).errors, [
+		'capabilities describe runtime "codex", not "grok"',
+	]);
+	const out = path.join(home, ".gemini", "pstack-models.md");
+	fs.mkdirSync(path.dirname(out), { recursive: true });
+	fs.writeFileSync(out, "# runtime: claude\n# budget: small (medium)\n");
+	const gemini = normalizeCapabilities({ runtime: "gemini", modelField: "slug", models: ["gem-pro"] });
+	const selection = { budget: "small", roles: { "bug-fix": [{ model: "gem-pro" }] } };
+	assert.deepEqual(writeConfig(selection, gemini, { runtime: "gemini", home }).errors, [
+		`${out} records runtime "claude", not "gemini"`,
+	]);
+	fs.writeFileSync(out, "unrelated notes\n");
+	assert.throws(() => writeConfig(selection, gemini, { runtime: "gemini", home }), /not a pstack model configuration/);
+	assert.equal(fs.readFileSync(out, "utf8"), "unrelated notes\n");
+});
+
+test("Cursor keeps its rule path and frontmatter", () => {
+	const home = tempHome();
+	const cursor = normalizeCapabilities({ runtime: "cursor", modelField: "slug", models: ["grok-4.7-xhigh-fast"] });
+	writeConfig({ budget: "unlimited", roles: { "bug-fix": [{ model: "grok-4.7-xhigh-fast" }] } }, cursor, {
+		runtime: "cursor",
+		home,
+	});
+	const text = fs.readFileSync(path.join(home, ".cursor", "rules", "pstack-models.mdc"), "utf8");
+	assert.match(text, /^---\ndescription: .*\nalwaysApply: true\n---\n/);
+	assert.match(text, /^# runtime: cursor\n# budget: unlimited \(max\)\nbug-fix: grok-4.7-xhigh-fast\n$/m);
+});
+
+test("HARNESS.md documents the same runtime paths the writer uses", () => {
+	const harness = fs.readFileSync(path.join(HERE, "..", "..", "..", "HARNESS.md"), "utf8");
+	for (const [runtime, { file }] of Object.entries(RUNTIMES)) {
+		assert.ok(harness.includes(`\`~/${file.join("/")}\``), `${runtime} path missing from HARNESS.md`);
+	}
+	assert.ok(harness.includes(`\`~/${LEGACY_SHARED.join("/")}\``));
 });
 
 test("parse drops retired roles and reports them", () => {
