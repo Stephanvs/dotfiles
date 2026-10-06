@@ -26,5 +26,6 @@ The separately distributed `cursor-team-kit` supplies `deslop`, `control-cli`, a
 - Normalize the two display-style skill names to `poteto-mode` and `make-bot-ui` so their names match their folders.
 - Add `HARNESS.md`; preserve upstream playbooks, references, guide text, and automation files. Five guide illustrations use pinned upstream URLs; the logo and design illustration are bundled locally.
 - Extend the two dotfiles installers to link the package's skills and agent definitions.
+- Add `skills/setup-pstack/scripts/pstack-config.mjs`, a dependency-free Node helper that validates model, reasoning-effort, and history-mode choices against capabilities the active tool reports, then renders the configuration. Run its tests with `node --test agents/pstack/skills/setup-pstack/scripts/`.
 
 To refresh, replace the vendored package from a reviewed upstream snapshot, reapply the compatibility pointers and name normalization, and update the recorded snapshot and version. Validate all skill metadata, relative resources, plugin paths, and installer behavior before shipping the update.
