@@ -2,7 +2,9 @@
 // Validate and render the pstack model configuration against capabilities the
 // active tool reports. Role labels and defaults come from ../SKILL.md step 5;
 // model IDs, efforts, and history modes come only from the capabilities file.
+// Each runtime reads and writes only its own file (RUNTIMES, mirrored in HARNESS.md).
 import fs from "node:fs";
+import os from "node:os";
 import path from "node:path";
 import process from "node:process";
 import { fileURLToPath, pathToFileURL } from "node:url";
@@ -12,6 +14,15 @@ export const ALIASES = ["inherit-parent", "auto"];
 export const PANELS = ["arena runners", "arena cross-judge pool", "architect runners", "interrogate reviewers"];
 export const LADDER = ["low", "medium", "high", "xhigh", "max"];
 export const BUDGETS = { unlimited: "max", large: "xhigh", medium: "high", small: "medium" };
+export const RUNTIMES = {
+	cursor: { file: [".cursor", "rules", "pstack-models.mdc"], format: "cursor" },
+	claude: { file: [".claude", "rules", "pstack-models.md"], format: "markdown" },
+	gemini: { file: [".gemini", "pstack-models.md"], format: "markdown" },
+	codex: { file: [".agents", "pstack-models", "codex.md"], format: "markdown", legacy: true },
+	opencode: { file: [".agents", "pstack-models", "opencode.md"], format: "markdown", legacy: true },
+	grok: { file: [".agents", "pstack-models", "grok.md"], format: "markdown", legacy: true },
+};
+export const LEGACY_SHARED = [".agents", "pstack-models.md"];
 const ENTRY_KEYS = ["effort", "history"];
 const HEADER = [
 	"# pstack model configuration. One line per role. Delete a line to fall back to the skill default.",
@@ -54,6 +65,11 @@ export function parseConfig(text, roles = defaultRoles()) {
 		const budget = line.match(/^# budget: (\S+)/);
 		if (budget) {
 			selection.budget = budget[1];
+			return;
+		}
+		const runtime = line.match(/^# runtime: (\S+)$/);
+		if (runtime) {
+			selection.runtime = runtime[1];
 			return;
 		}
 		if (line === "" || line.startsWith("#")) return;
@@ -110,7 +126,7 @@ export function normalizeCapabilities(raw) {
 		if (typeof mode?.id !== "string") throw new ConfigError("every capabilities.historyModes entry needs an id");
 		historyModes.set(mode.id, { model: mode.acceptsModel === true, effort: mode.acceptsEffort === true });
 	}
-	return { runtime: raw.runtime ?? "this runtime", modelField: raw.modelField, models, historyModes };
+	return { id: raw.runtime, runtime: raw.runtime ?? "this runtime", modelField: raw.modelField, models, historyModes };
 }
 
 export function validate(selection, caps, roles = defaultRoles()) {
@@ -222,7 +238,7 @@ export function applyBudget(selection, caps, budget) {
 const renderEntry = (entry) =>
 	[entry.model, ...ENTRY_KEYS.filter((key) => entry[key] !== undefined).map((key) => `${key}=${entry[key]}`)].join(" ");
 
-export function render(selection, format, roles = defaultRoles()) {
+export function render(selection, format, roles = defaultRoles(), runtime = undefined) {
 	if (!["cursor", "markdown"].includes(format)) throw new ConfigError('format must be "cursor" or "markdown"');
 	const ordered = roles.filter((role) => role in selection.roles);
 	const fields = ordered.some((role) =>
@@ -232,6 +248,7 @@ export function render(selection, format, roles = defaultRoles()) {
 		...(format === "cursor" ? FRONTMATTER : []),
 		...HEADER,
 		...(fields ? [FIELDS_NOTE] : []),
+		...(runtime ? [`# runtime: ${runtime}`] : []),
 		`# budget: ${selection.budget} (${BUDGETS[selection.budget]})`,
 		...ordered.map((role) => `${role}: ${selection.roles[role].map(renderEntry).join(", ")}`),
 		"",
@@ -240,36 +257,81 @@ export function render(selection, format, roles = defaultRoles()) {
 
 const comparable = (selection, roles) =>
 	JSON.stringify({
+		runtime: selection.runtime,
 		budget: selection.budget,
 		roles: roles
 			.filter((role) => role in selection.roles)
 			.map((role) => [role, selection.roles[role].map(renderEntry)]),
 	});
 
-export function writeConfig(selection, caps, { out, format }, roles = defaultRoles()) {
+export function runtimeFile(runtime, home = os.homedir()) {
+	if (!(runtime in RUNTIMES))
+		throw new ConfigError(`runtime "${runtime}" is not one of ${Object.keys(RUNTIMES).join(", ")}`);
+	return path.join(home, ...RUNTIMES[runtime].file);
+}
+
+function readExisting(file, roles) {
+	try {
+		return parseConfig(fs.readFileSync(file, "utf8"), roles);
+	} catch (error) {
+		if (error instanceof ConfigError)
+			throw new ConfigError(`${file} is not a pstack model configuration: ${error.message}`);
+		throw error;
+	}
+}
+
+export function loadConfig(runtime, home = os.homedir(), roles = defaultRoles()) {
+	const file = runtimeFile(runtime, home);
+	if (fs.existsSync(file)) {
+		const { runtime: owner, ...config } = readExisting(file, roles);
+		if (owner !== undefined && owner !== runtime)
+			throw new ConfigError(`${file} records runtime "${owner}", not "${runtime}"`);
+		return { runtime, source: "runtime", file, ...config };
+	}
+	const legacy = path.join(home, ...LEGACY_SHARED);
+	if (RUNTIMES[runtime].legacy && fs.existsSync(legacy)) {
+		const { runtime: owner, ...config } = readExisting(legacy, roles);
+		return { runtime, source: "legacy-shared", file, legacyFile: legacy, ...config };
+	}
+	return { runtime, source: "defaults", file, ...defaultConfig(), dropped: [] };
+}
+
+export function writeConfig(selection, caps, { runtime, home = os.homedir() }, roles = defaultRoles()) {
+	const out = runtimeFile(runtime, home);
+	if (caps.id !== undefined && caps.id !== runtime)
+		return { written: false, errors: [`capabilities describe runtime "${caps.id}", not "${runtime}"`] };
 	const errors = validate(selection, caps, roles);
-	if (errors.length) return { written: false, errors };
-	const text = render(selection, format, roles);
+	if (errors.length) return { written: false, out, errors };
+	if (fs.existsSync(out)) {
+		const owner = readExisting(out, roles).runtime;
+		if (owner !== undefined && owner !== runtime)
+			return { written: false, out, errors: [`${out} records runtime "${owner}", not "${runtime}"`] };
+	}
+	const expected = { ...selection, runtime };
+	const text = render(expected, RUNTIMES[runtime].format, roles, runtime);
 	const { dropped, ...readback } = parseConfig(text, roles);
-	if (comparable(readback, roles) !== comparable(selection, roles))
+	if (comparable(readback, roles) !== comparable(expected, roles))
 		throw new ConfigError("rendered configuration does not parse back to the selection");
 	if (fs.existsSync(out) && fs.readFileSync(out, "utf8") === text)
-		return { written: false, unchanged: true, errors: [] };
+		return { written: false, unchanged: true, out, errors: [] };
 	fs.mkdirSync(path.dirname(out), { recursive: true });
 	const temp = `${out}.${process.pid}.tmp`;
 	fs.writeFileSync(temp, text);
 	fs.renameSync(temp, out);
 	if (fs.readFileSync(out, "utf8") !== text)
 		throw new ConfigError(`readback of ${out} does not match what was written`);
-	return { written: true, errors: [] };
+	return { written: true, out, errors: [] };
 }
 
+const RUNTIME_NAMES = Object.keys(RUNTIMES).join("|");
 const USAGE = `usage:
+  pstack-config.mjs path --runtime <${RUNTIME_NAMES}>
+  pstack-config.mjs load --runtime <${RUNTIME_NAMES}>
   pstack-config.mjs defaults
   pstack-config.mjs parse <config-file>
   pstack-config.mjs budget --capabilities <caps.json> --selection <selection.json> --budget <unlimited|large|medium|small>
   pstack-config.mjs validate --capabilities <caps.json> --selection <selection.json>
-  pstack-config.mjs write --capabilities <caps.json> --selection <selection.json> --out <file> --format <cursor|markdown>`;
+  pstack-config.mjs write --runtime <${RUNTIME_NAMES}> --capabilities <caps.json> --selection <selection.json>`;
 
 function options(args) {
 	const result = {};
@@ -297,22 +359,24 @@ export function main(argv) {
 		if (!rest[0]) throw new ConfigError(USAGE);
 		return (print(parseConfig(fs.readFileSync(rest[0], "utf8"))), 0);
 	}
-	if (!["budget", "validate", "write"].includes(command)) throw new ConfigError(USAGE);
+	if (!["path", "load", "budget", "validate", "write"].includes(command)) throw new ConfigError(USAGE);
 	const opts = options(rest);
+	if (command === "path") return (process.stdout.write(`${runtimeFile(opts.runtime ?? fail("--runtime"))}\n`), 0);
+	if (command === "load") return (print(loadConfig(opts.runtime ?? fail("--runtime"))), 0);
 	const caps = normalizeCapabilities(readJson(opts.capabilities, "capabilities"));
 	const selection = readJson(opts.selection, "selection");
 	if (command === "budget") return (print(applyBudget(selection, caps, opts.budget)), 0);
 	const result =
 		command === "validate"
 			? { errors: validate(selection, caps) }
-			: writeConfig(selection, caps, { out: opts.out ?? fail("--out"), format: opts.format ?? fail("--format") });
+			: writeConfig(selection, caps, { runtime: opts.runtime ?? fail("--runtime") });
 	for (const error of result.errors) process.stderr.write(`invalid: ${error}\n`);
 	if (result.errors.length) {
 		if (command === "write") process.stderr.write("nothing written; the existing configuration is unchanged\n");
 		return 1;
 	}
 	if (command === "validate") process.stdout.write("valid\n");
-	else process.stdout.write(result.unchanged ? `unchanged ${opts.out}\n` : `wrote ${opts.out}\n`);
+	else process.stdout.write(result.unchanged ? `unchanged ${result.out}\n` : `wrote ${result.out}\n`);
 	return 0;
 }
 
