@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-05T18:36:48+02:00",
-            "Manifests": 1668
+            "Updated": "2026-10-06T18:36:31+02:00",
+            "Manifests": 1669
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-05T18:36:37+02:00",
+            "Updated": "2026-10-06T18:36:56+02:00",
             "Manifests": 2405
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-05T19:14:55+02:00",
+            "Updated": "2026-10-06T13:23:19+02:00",
             "Manifests": 623
         },
         {
@@ -27,8 +27,8 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-05T19:11:00+02:00",
-            "Manifests": 419
+            "Updated": "2026-10-06T13:19:26+02:00",
+            "Manifests": 421
         },
         {
             "Name": "stephanvs",
@@ -53,9 +53,9 @@
         },
         {
             "Name": "7zip",
-            "Version": "26.03",
+            "Version": "26.04",
             "Source": "main",
-            "Updated": "2026-09-04T12:00:12.567676+02:00",
+            "Updated": "2026-10-06T12:00:17.3320004+02:00",
             "Info": ""
         },
         {
@@ -81,9 +81,9 @@
         },
         {
             "Name": "azure-cli",
-            "Version": "2.90.0",
+            "Version": "2.91.0",
             "Source": "main",
-            "Updated": "2026-09-01T08:58:13.5765543+02:00",
+            "Updated": "2026-10-06T04:00:40.8844137+02:00",
             "Info": ""
         },
         {
@@ -137,16 +137,16 @@
         },
         {
             "Name": "codex",
-            "Version": "0.160.0",
+            "Version": "0.160.1",
             "Source": "main",
-            "Updated": "2026-10-02T01:00:11.3957195+02:00",
+            "Updated": "2026-10-06T04:00:48.4669802+02:00",
             "Info": ""
         },
         {
             "Name": "cursor",
-            "Version": "3.23.12",
+            "Version": "3.23.23",
             "Source": "extras",
-            "Updated": "2026-10-02T04:01:39.5842959+02:00",
+            "Updated": "2026-10-06T04:02:15.2059193+02:00",
             "Info": ""
         },
         {
@@ -221,9 +221,9 @@
         },
         {
             "Name": "git",
-            "Version": "2.56.0",
+            "Version": "2.56.0.2",
             "Source": "main",
-            "Updated": "2026-09-29T04:01:06.4443193+02:00",
+            "Updated": "2026-10-06T04:02:46.1399593+02:00",
             "Info": ""
         },
         {
@@ -312,9 +312,9 @@
         },
         {
             "Name": "lazygit",
-            "Version": "0.65.1",
+            "Version": "0.66.0",
             "Source": "extras",
-            "Updated": "2026-09-13T12:00:10.5940066+02:00",
+            "Updated": "2026-10-06T04:02:47.9198617+02:00",
             "Info": ""
         },
         {
@@ -375,9 +375,9 @@
         },
         {
             "Name": "obsidian",
-            "Version": "1.13.7",
+            "Version": "1.14.4",
             "Source": "extras",
-            "Updated": "2026-08-21T12:10:48.5313132+02:00",
+            "Updated": "2026-10-06T04:02:57.4231439+02:00",
             "Info": ""
         },
         {
@@ -389,9 +389,9 @@
         },
         {
             "Name": "opencode2",
-            "Version": "2.0.23",
+            "Version": "2.0.24",
             "Source": "versions",
-            "Updated": "2026-10-05T09:00:11.7473644+02:00",
+            "Updated": "2026-10-06T16:00:14.2340551+02:00",
             "Info": ""
         },
         {
