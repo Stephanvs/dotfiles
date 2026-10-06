@@ -258,6 +258,8 @@ cask "opencode-desktop"
 cask "orbstack"
 # Desktop virtualization software
 cask "parallels"
+# Self-hosted daemon for AI coding agents
+cask "paseo"
 # Client for Proton Mail and Proton Calendar
 cask "proton-mail"
 # HTTP debugging proxy
