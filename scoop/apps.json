@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-06T18:36:31+02:00",
+            "Updated": "2026-10-07T22:33:43+02:00",
             "Manifests": 1669
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-06T18:36:56+02:00",
-            "Manifests": 2405
+            "Updated": "2026-10-07T22:34:01+02:00",
+            "Manifests": 2406
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-06T13:23:19+02:00",
-            "Manifests": 623
+            "Updated": "2026-10-07T15:55:28+02:00",
+            "Manifests": 625
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-06T13:19:26+02:00",
+            "Updated": "2026-10-07T17:35:48+02:00",
             "Manifests": 421
         },
         {
@@ -137,9 +137,9 @@
         },
         {
             "Name": "codex",
-            "Version": "0.160.1",
+            "Version": "0.161.0",
             "Source": "main",
-            "Updated": "2026-10-06T04:00:48.4669802+02:00",
+            "Updated": "2026-10-07T19:00:18.4366147+02:00",
             "Info": ""
         },
         {
@@ -382,9 +382,9 @@
         },
         {
             "Name": "ollama-full",
-            "Version": "0.35.1",
+            "Version": "0.40.0",
             "Source": "extras",
-            "Updated": "2026-10-03T01:02:24.6407618+02:00",
+            "Updated": "2026-10-07T00:01:40.64244+02:00",
             "Info": ""
         },
         {
@@ -392,6 +392,20 @@
             "Version": "2.0.24",
             "Source": "versions",
             "Updated": "2026-10-06T16:00:14.2340551+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "opencode2-beta",
+            "Version": "0.0.0-beta-19507",
+            "Source": "versions",
+            "Updated": "2026-10-07T12:30:30.6957435+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "paseo",
+            "Version": "0.11.0",
+            "Source": "extras",
+            "Updated": "2026-10-07T19:00:25.1036331+02:00",
             "Info": ""
         },
         {
@@ -487,9 +501,9 @@
         },
         {
             "Name": "syncthingtray",
-            "Version": "2.1.7",
+            "Version": "2.1.8",
             "Source": "extras",
-            "Updated": "2026-09-28T00:00:12.5817144+02:00",
+            "Updated": "2026-10-07T23:00:13.5042715+02:00",
             "Info": ""
         },
         {
@@ -529,9 +543,9 @@
         },
         {
             "Name": "vscode",
-            "Version": "1.140.0",
+            "Version": "1.141.0",
             "Source": "extras",
-            "Updated": "2026-09-30T21:00:51.9573756+02:00",
+            "Updated": "2026-10-07T15:00:54.8487288+02:00",
             "Info": ""
         },
         {
@@ -571,16 +585,16 @@
         },
         {
             "Name": "zed",
-            "Version": "1.22.0",
+            "Version": "1.23.2",
             "Source": "extras",
-            "Updated": "2026-09-30T21:01:04.4593878+02:00",
+            "Updated": "2026-10-07T23:00:28.2728738+02:00",
             "Info": ""
         },
         {
             "Name": "zen-browser",
-            "Version": "1.23b",
+            "Version": "1.23.1b",
             "Source": "extras",
-            "Updated": "2026-10-03T17:00:23.5918414+02:00",
+            "Updated": "2026-10-07T12:00:12.5720522+02:00",
             "Info": ""
         },
         {
