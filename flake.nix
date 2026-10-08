@@ -78,6 +78,15 @@
         ];
       };
 
+      nixosConfigurations.rehearsal-macos = nixpkgs.lib.nixosSystem {
+        system = "aarch64-linux";
+        modules = shared ++ [
+          "${nixpkgs}/nixos/modules/virtualisation/qemu-vm.nix"
+          ./nix/hosts/rehearsal.nix
+          ./nix/hosts/macos-preview.nix
+        ];
+      };
+
       nixosModules.framework = {
         imports = shared ++ [
           nixos-hardware.nixosModules.framework-intel-core-ultra-series3
@@ -89,6 +98,11 @@
         rehearsal = self.nixosConfigurations.rehearsal.config.system.build.vm;
         default = self.packages.${system}.rehearsal;
       };
+      packages.aarch64-linux = {
+        macos-preview = self.nixosConfigurations.rehearsal-macos.config.system.build.macosPreview;
+        default = self.packages.aarch64-linux.macos-preview;
+      };
+      formatter.aarch64-linux = nixpkgs.legacyPackages.aarch64-linux.nixfmt;
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt;
     };
 }

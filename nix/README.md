@@ -4,6 +4,33 @@ This configuration prepares a Hyprland workstation for the Intel Framework Lapto
 
 The VM and laptop share `workstation.nix` and the per-tool Home Manager modules. The VM has its own UEFI bootloader and disk image. Its software-rendered desktop cannot establish laptop GPU compatibility or performance.
 
+## Run the rehearsal on Apple Silicon macOS
+
+The native ARM guest uses the same Hyprland and Home Manager configuration as the x86 laptop rehearsal. OrbStack builds its self-contained bootable disk; Homebrew QEMU runs it with macOS hardware acceleration. The preview has four CPUs, 8 GB RAM, and a persistent sparse 48 GB disk. Its software-rendered display establishes desktop behavior, not the Framework GPU's performance. The Mac preview uses Swaybg for the same wallpaper because Hyprpaper 0.8 requires graphics buffers unavailable in this VM; the laptop and Windows profiles retain Hyprpaper.
+
+With OrbStack installed and running:
+
+```bash
+brew install qemu
+bash nix/rehearse-macos.sh check
+bash nix/rehearse-macos.sh build
+bash nix/rehearse-macos.sh web
+bash nix/rehearse-macos.sh verify
+```
+
+The launcher creates a dedicated OrbStack machine named `nixos-preview-builder` if it is absent. The builder's NixOS release is independent of the guest, which follows this repository's `flake.lock`. The first build downloads several gigabytes of desktop and SDK packages. `build` exports the image and browser-console files into the ignored `.nixos-vm/macos` directory in this checkout. Guest state is separate for each built image and persists between launches of that image. No shared host directory is mounted inside the graphical guest. QEMU uses the matching ARM UEFI firmware supplied by its Homebrew installation; the guest image includes the standard ARM EFI fallback boot path.
+
+Open [the Mac browser console](http://127.0.0.1:6080/vnc.html?host=127.0.0.1&port=5701&encrypt=0&autoconnect=1&resize=scale&path=). The left toolbar provides full-screen and extra-key controls, including the Windows/Super modifier used by the desktop shortcuts. Super+Return opens Ghostty, Super+Shift+Return opens Firefox, Super+Space opens the launcher, and Super+Escape locks the session. If macOS captures a shortcut, toggle the Windows key in the extra-key toolbar and then press its other key. Log in as `stephanvs` with password `rehearsal`; the initial desktop login is automatic. The VM and browser server continue running after the launch command exits. The first terminal launch can take longer while shell completion caches initialize; later launches are faster. Closing the browser tab leaves the VM running. SSH is available at `ssh -p 2222 stephanvs@127.0.0.1`. The SSH, VNC, WebSocket, and HTTP listeners bind to loopback. Clipboard operations work between guest applications; automatic Mac-to-guest clipboard integration is not enabled. The audio output device is available, but microphone passthrough is not configured.
+
+`verify` checks the running guest with the same desktop, editor, and development checks used on Windows and saves `verification.log`, `boot.log`, and `desktop.png` under `.nixos-vm/macos/current`. It leaves the desktop running for the test drive.
+
+```bash
+bash nix/rehearse-macos.sh status
+bash nix/rehearse-macos.sh stop
+```
+
+`stop` waits for a clean guest shutdown and stops the browser server. Use `web` to boot it again. Override `NIXOS_REHEARSAL_BUILDER` or `NIXOS_REHEARSAL_MACOS_DIR` to choose a different builder name or state directory.
+
 ## Run the rehearsal on Windows
 
 From the repository root in PowerShell:
@@ -35,7 +62,15 @@ Neovim uses the existing NvChad configuration with Nix-supplied plugins, parsers
 
 Sign into 1Password and enable its SSH agent inside the guest when testing that workflow. GitHub HTTPS authentication uses `gh auth login`. AI assistants and usage widgets also need their own authentication. Credentials are not copied from Windows.
 
-## Verified on 5 October 2026
+## Verified on Apple Silicon on 7 October 2026
+
+The native ARM image built in the dedicated OrbStack builder and booted under Homebrew QEMU with HVF acceleration. The guest has four CPUs, 8 GB RAM and a 47 GB ext4 root filesystem, with about 31 GB free after installation. The complete automated desktop and developer suite passed: UEFI, Home Manager, Hyprland configuration and display, Waybar, the Swaybg wallpaper service, hypridle, Mako notifications, Ghostty, tmux, sesh, Neovim TypeScript diagnostics, Lua/Rust/TypeScript/C# parsing, Lua formatting and JavaScript/Rust/.NET program execution.
+
+Browser-console mouse focus and terminal typing worked. Hyprlock authenticated the preview password and unlocked the session. Firefox loaded the NixOS website. Guest Wayland clipboard operations and PipeWire audio stream playback passed. A saved file survived a clean shutdown and subsequent boot of the same disk. `stop` also stopped the local browser server; `web` restarted both successfully. The VM was left running for a test drive. These checks establish the ARM software-rendered preview; account authentication, Mac clipboard integration, microphone input and physical Framework hardware remain separate acceptance work.
+
+Nix formatting, ShellCheck, Bash syntax, Git whitespace checks and flake evaluation for both architectures passed. The Mac acceptance logs and screenshot are in `.nixos-vm/macos/current`.
+
+## Verified on Windows on 5 October 2026
 
 The VM was built and booted with KVM inside the separate WSL builder on the existing Windows PC. Automated checks passed for UEFI boot, the ext4 root filesystem, Home Manager activation, Hyprland configuration and an active display, Waybar, hyprpaper, hypridle, Mako notification delivery, Ghostty configuration and window creation, tmux shell execution and pane creation, sesh session discovery, and execution of small JavaScript, Rust and .NET console programs. The graphical session and SSH sessions share the Home Manager environment, including the tmux socket location.
 

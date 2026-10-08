@@ -4,16 +4,27 @@ set -euo pipefail
 result=$(readlink -f "$1")
 run_dir=$2
 cd "$run_dir"
-export QEMU_OPTS="-display none -qmp unix:$run_dir/qmp.sock,server=on,wait=off"
-"$result/bin/run-nixos-rehearsal-vm" >boot.log 2>&1 &
-vm_pid=$!
+if [[ ${NIXOS_VM_EXTERNAL:-0} == 1 ]]; then
+    vm_pid=$(cat "$run_dir/vm.pid")
+else
+    export QEMU_OPTS="-display none -qmp unix:$run_dir/qmp.sock,server=on,wait=off"
+    "$result/bin/run-nixos-rehearsal-vm" >boot.log 2>&1 &
+    vm_pid=$!
+fi
 export SSHPASS=rehearsal
 ssh_options=(-p 2222 -o ConnectTimeout=3 -o StrictHostKeyChecking=accept-new -o "UserKnownHostsFile=$run_dir/known_hosts")
-guest() { sshpass -e ssh "${ssh_options[@]}" stephanvs@127.0.0.1 "$@"; }
+guest() {
+    if [[ ${NIXOS_VM_EXTERNAL:-0} == 1 ]]; then
+        ssh -o PubkeyAuthentication=no "${ssh_options[@]}" stephanvs@127.0.0.1 "$@"
+    else
+        sshpass -e ssh "${ssh_options[@]}" stephanvs@127.0.0.1 "$@"
+    fi
+}
 
 # Invoked by the EXIT trap, including after a failed guest check.
 # shellcheck disable=SC2329
 cleanup() {
+    if [[ ${NIXOS_VM_EXTERNAL:-0} == 1 ]]; then return; fi
     if kill -0 "$vm_pid" 2>/dev/null; then
         guest "printf '%s\\n' rehearsal | sudo -S poweroff" >/dev/null 2>&1 || true
         for _ in {1..15}; do
@@ -56,7 +67,15 @@ hyprctl configerrors -j | tee /tmp/hyprland-config-errors.json
 # Hyprland 0.55 returns [""] when there are no configuration errors.
 jq -e 'map(select(test("\\S"))) | length == 0' /tmp/hyprland-config-errors.json
 hyprctl monitors -j | jq -e 'length > 0'
-for unit in waybar.service hyprpaper.service hypridle.service; do
+wallpaper_unit=hyprpaper.service
+if [[ -f "$HOME/.config/systemd/user/nixos-preview-wallpaper.service" ]]; then
+    wallpaper_unit=nixos-preview-wallpaper.service
+fi
+for unit in waybar.service "$wallpaper_unit" hypridle.service; do
+    for _ in {1..30}; do
+        systemctl --user is-active --quiet "$unit" && break
+        sleep 1
+    done
     systemctl --user is-active "$unit"
 done
 notification_id=$(notify-send --print-id --expire-time=0 'NixOS rehearsal' 'Desktop notification check')
@@ -79,7 +98,7 @@ done
 tmux has-session -t rehearsal-verify
 tmux send-keys -t rehearsal-verify:1.1 -l "printf '%s\\n' 'tmux shell check' > '$work/tmux-result'"
 tmux send-keys -t rehearsal-verify:1.1 Enter
-for _ in {1..20}; do
+for _ in {1..90}; do
     [[ -f "$work/tmux-result" ]] && break
     sleep 1
 done
