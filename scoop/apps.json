@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-09T19:58:08+02:00",
+            "Updated": "2026-10-10T18:35:29+02:00",
             "Manifests": 1671
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-09T18:34:35+02:00",
+            "Updated": "2026-10-10T18:32:38+02:00",
             "Manifests": 2419
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-09T17:23:51+02:00",
+            "Updated": "2026-10-10T16:33:14+02:00",
             "Manifests": 626
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-09T17:20:35+02:00",
+            "Updated": "2026-10-10T16:30:27+02:00",
             "Manifests": 421
         },
         {
@@ -109,9 +109,9 @@
         },
         {
             "Name": "bun",
-            "Version": "1.4.2",
+            "Version": "1.4.3",
             "Source": "main",
-            "Updated": "2026-09-05T13:00:19.2604866+02:00",
+            "Updated": "2026-10-10T12:00:18.0923425+02:00",
             "Info": ""
         },
         {
@@ -137,9 +137,9 @@
         },
         {
             "Name": "codex",
-            "Version": "0.162.0",
+            "Version": "0.162.1",
             "Source": "main",
-            "Updated": "2026-10-09T01:00:11.9955236+02:00",
+            "Updated": "2026-10-10T00:00:17.3793083+02:00",
             "Info": ""
         },
         {
@@ -256,9 +256,9 @@
         },
         {
             "Name": "imagemagick",
-            "Version": "7.1.2-32",
+            "Version": "7.1.2-33",
             "Source": "main",
-            "Updated": "2026-09-27T20:00:23.5551285+02:00",
+            "Updated": "2026-10-10T20:00:18.7448133+02:00",
             "Info": ""
         },
         {
@@ -592,9 +592,9 @@
         },
         {
             "Name": "zen-browser",
-            "Version": "1.23.1b",
+            "Version": "1.23.2b",
             "Source": "extras",
-            "Updated": "2026-10-07T12:00:12.5720522+02:00",
+            "Updated": "2026-10-10T00:00:26.1017797+02:00",
             "Info": ""
         },
         {
