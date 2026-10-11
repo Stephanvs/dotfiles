@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-10T18:35:29+02:00",
-            "Manifests": 1671
+            "Updated": "2026-10-11T20:58:12+02:00",
+            "Manifests": 1678
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-10T18:32:38+02:00",
-            "Manifests": 2419
+            "Updated": "2026-10-11T18:49:22+02:00",
+            "Manifests": 2420
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-10T16:33:14+02:00",
-            "Manifests": 626
+            "Updated": "2026-10-11T16:59:45+02:00",
+            "Manifests": 627
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-10T16:30:27+02:00",
+            "Updated": "2026-10-11T16:57:01+02:00",
             "Manifests": 421
         },
         {
@@ -144,9 +144,9 @@
         },
         {
             "Name": "cursor",
-            "Version": "3.24.9",
+            "Version": "3.24.12",
             "Source": "extras",
-            "Updated": "2026-10-09T04:01:39.4007659+02:00",
+            "Updated": "2026-10-11T01:01:38.0752154+02:00",
             "Info": ""
         },
         {
@@ -312,9 +312,9 @@
         },
         {
             "Name": "lazygit",
-            "Version": "0.66.0",
+            "Version": "0.66.1",
             "Source": "extras",
-            "Updated": "2026-10-06T04:02:47.9198617+02:00",
+            "Updated": "2026-10-11T17:00:12.6723109+02:00",
             "Info": ""
         },
         {
@@ -382,9 +382,9 @@
         },
         {
             "Name": "ollama-full",
-            "Version": "0.40.2",
+            "Version": "0.40.3",
             "Source": "extras",
-            "Updated": "2026-10-09T08:01:57.1347783+02:00",
+            "Updated": "2026-10-11T13:02:03.900845+02:00",
             "Info": ""
         },
         {
