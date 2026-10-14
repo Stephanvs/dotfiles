@@ -162,6 +162,8 @@ brew "felixkratz/formulae/borders"
 brew "felixkratz/formulae/sketchybar"
 # 🔧 Run Qodana as fast as possible, with minimum effort required
 brew "jetbrains/utils/qodana"
+# A command-line interface for TeamCity CI/CD server
+brew "jetbrains/utils/teamcity", trusted: true
 # Terminal-based HTTP client
 brew "lucaspickering/tap/slumber"
 # Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
