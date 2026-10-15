@@ -147,7 +147,7 @@
     },
     "commit_message_model": {
       "provider": "openai-subscribed",
-      "model": "gpt-5.6-luna",
+      "model": "gpt-6-luna",
       "speed": "fast",
     },
     "commit_message_instructions": "Use Conventional Commits: <type>(<optional scope>): <description>. Write a concise, imperative subject without a trailing period. Accurately summarize the staged changes and their intent. Add a short body only when it provides important context. Use only lowercase letters. Only if absolutely needed use the `-` character to split long words, but prefer to just use spaces.",
@@ -180,7 +180,7 @@
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Matte Black",
+    "dark": "Catppuccin Mocha",
   },
   "icon_theme": {
     "mode": "light",
