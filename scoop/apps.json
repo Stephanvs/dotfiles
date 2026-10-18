@@ -3,31 +3,31 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-17T22:29:07+02:00",
+            "Updated": "2026-10-18T22:28:11+02:00",
             "Manifests": 1692
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-17T22:28:32+02:00",
-            "Manifests": 2425
+            "Updated": "2026-10-18T22:28:33+02:00",
+            "Manifests": 2426
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-17T20:35:16+02:00",
+            "Updated": "2026-10-18T19:00:36+02:00",
             "Manifests": 627
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
-            "Updated": "2026-10-17T21:09:00+02:00",
+            "Updated": "2026-10-18T16:24:10+02:00",
             "Manifests": 367
         },
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-17T20:32:41+02:00",
+            "Updated": "2026-10-18T20:40:36+02:00",
             "Manifests": 421
         },
         {
@@ -144,9 +144,9 @@
         },
         {
             "Name": "cursor",
-            "Version": "3.25.6",
+            "Version": "3.25.9",
             "Source": "extras",
-            "Updated": "2026-10-16T07:02:09.1967469+02:00",
+            "Updated": "2026-10-18T23:02:03.7704248+02:00",
             "Info": ""
         },
         {
