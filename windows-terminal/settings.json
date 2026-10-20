@@ -218,7 +218,7 @@
                 "hidden": false,
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore",
-                "startingDirectory": null
+                "startingDirectory": "%USERPROFILE%"
             },
             {
                 "guid": "{ccdc2b78-b724-55cc-bf0c-0045ed604702}",
