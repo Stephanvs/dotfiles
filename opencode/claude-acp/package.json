@@ -1,0 +1,22 @@
+{
+  "name": "opencode-claude-acp-local",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./server.js",
+  "exports": { ".": "./server.js", "./provider": "./dist/provider.js" },
+  "scripts": {
+    "build": "tsc --outDir .build && node build-runtime.mjs",
+    "check": "tsc --noEmit",
+    "test": "npm run build && node --test --test-timeout=120000 test/*.test.mjs"
+  },
+  "dependencies": {
+    "@opencode/plugin": "2.0.32",
+    "@opencode/ai": "2.0.32",
+    "@agentclientprotocol/sdk": "1.9.0",
+    "@agentclientprotocol/claude-agent-acp": "0.93.0",
+    "effect": "4.0.1"
+  },
+  "devDependencies": { "@types/node": "24.10.1", "typescript": "5.8.2" },
+  "engines": { "node": ">=22" }
+}
