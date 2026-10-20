@@ -1,6 +1,13 @@
 {
 	"$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.41/schema.json",
 	"app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+	"ignore_rules": [
+		{
+			"kind": "Exe",
+			"id": "opentokenusage.exe",
+			"matching_strategy": "Equals"
+		}
+	],
 	"bar_configurations": [
 		"$Env:USERPROFILE/komorebi.bar.monitor1.json",
 		"$Env:USERPROFILE/komorebi.bar.monitor2.json"
