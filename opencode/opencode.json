@@ -5,7 +5,7 @@
   "autoupdate": false,
   "plugins": [
     "opencode-sfx",
-    "opencode-claude-bridge"
+    "./claude-acp"
   ],
   "permissions": [
     { "action": "external_directory", "resource": "~/.config/*", "effect": "allow" },
