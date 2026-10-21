@@ -34,6 +34,7 @@
   "agent_servers": {
     "grok-build": {
       "default_config_options": {
+        "reasoning_effort": "medium",
         "model": "grok-4.7-build-fast"
       },
       "type": "registry"
@@ -142,8 +143,10 @@
       "default": "allow",
     },
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4-5",
+      "effort": "xhigh",
+      "enable_thinking": true,
+      "provider": "openai-subscribed",
+      "model": "gpt-6.1-sol",
     },
     "commit_message_model": {
       "provider": "openai-subscribed",
