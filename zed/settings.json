@@ -78,7 +78,7 @@
     "claude-acp": {
       "default_config_options": {
         "fast": false,
-        "effort": "medium",
+        "effort": "high",
         "model": "opus",
         "mode": "auto"
       },
