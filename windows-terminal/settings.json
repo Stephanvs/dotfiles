@@ -1,10 +1,10 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
+    "actions":
     [
         {
-            "command": 
+            "command":
             {
                 "action": "closeTab"
             },
@@ -16,7 +16,7 @@
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
     "disableAnimations": true,
-    "keybindings": 
+    "keybindings":
     [
         {
             "id": "Terminal.CopyToClipboard",
@@ -39,8 +39,8 @@
             "keys": "alt+shift+d"
         },
         {
-            "id": "Terminal.MoveFocusDown",
-            "keys": "ctrl+j"
+            "id": null,
+            "keys": "alt+down"
         },
         {
             "id": "Terminal.SwapPaneRight",
@@ -51,8 +51,8 @@
             "keys": "ctrl+alt+k"
         },
         {
-            "id": null,
-            "keys": "alt+down"
+            "id": "Terminal.MoveFocusDown",
+            "keys": "ctrl+j"
         },
         {
             "id": null,
@@ -159,19 +159,19 @@
             "keys": "ctrl+alt+j"
         }
     ],
-    "newTabMenu": 
+    "newTabMenu":
     [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
+    "profiles":
     {
-        "defaults": 
+        "defaults":
         {
             "backgroundImageOpacity": 0.16,
-            "colorScheme": "Dark+",
-            "font": 
+            "colorScheme": "One Half Dark",
+            "font":
             {
                 "face": "JetBrainsMono Nerd Font",
                 "size": 9
@@ -181,7 +181,7 @@
             "scrollbarState": "visible",
             "useAcrylic": false
         },
-        "list": 
+        "list":
         [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -287,6 +287,6 @@
     "showTerminalTitleInTitlebar": false,
     "theme": "system",
     "themes": [],
-    "useAcrylicInTabRow": false,
+    "useAcrylicInTabRow": true,
     "windowingBehavior": "useNew"
 }
