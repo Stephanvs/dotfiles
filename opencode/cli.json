@@ -14,5 +14,6 @@
   "animations": true,
   "prompt": {
     "paste": "full"
-  }
+  },
+  "highlights": true
 }
