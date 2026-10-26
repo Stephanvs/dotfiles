@@ -3,32 +3,32 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-21T22:30:51+02:00",
-            "Manifests": 1695
+            "Updated": "2026-10-26T17:35:51+01:00",
+            "Manifests": 1701
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-21T22:54:27+02:00",
-            "Manifests": 2438
+            "Updated": "2026-10-26T19:36:47+01:00",
+            "Manifests": 2448
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-21T22:16:10+02:00",
+            "Updated": "2026-10-26T16:18:40+01:00",
             "Manifests": 629
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
-            "Updated": "2026-10-18T16:24:10+02:00",
+            "Updated": "2026-10-25T05:05:48+01:00",
             "Manifests": 367
         },
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-21T22:13:05+02:00",
-            "Manifests": 421
+            "Updated": "2026-10-26T19:24:59+01:00",
+            "Manifests": 422
         },
         {
             "Name": "stephanvs",
@@ -46,9 +46,9 @@
     "apps": [
         {
             "Name": "1password-cli",
-            "Version": "2.41.0",
+            "Version": "2.41.1",
             "Source": "main",
-            "Updated": "2026-10-13T21:00:10.3793871+02:00",
+            "Updated": "2026-10-22T07:00:15.4403871+02:00",
             "Info": ""
         },
         {
@@ -74,9 +74,9 @@
         },
         {
             "Name": "autohotkey",
-            "Version": "2.0.30",
+            "Version": "2.0.31",
             "Source": "extras",
-            "Updated": "2026-10-09T12:00:18.8742851+02:00",
+            "Updated": "2026-10-26T08:00:20.8012984+01:00",
             "Info": ""
         },
         {
@@ -102,16 +102,16 @@
         },
         {
             "Name": "blender",
-            "Version": "5.2.2",
+            "Version": "5.2.3",
             "Source": "extras",
-            "Updated": "2026-09-15T17:00:52.036374+02:00",
+            "Updated": "2026-10-22T14:01:00.4443762+02:00",
             "Info": ""
         },
         {
             "Name": "bun",
-            "Version": "1.4.3",
+            "Version": "1.4.4",
             "Source": "main",
-            "Updated": "2026-10-10T12:00:18.0923425+02:00",
+            "Updated": "2026-10-22T18:00:22.9229497+02:00",
             "Info": ""
         },
         {
@@ -137,16 +137,16 @@
         },
         {
             "Name": "codex",
-            "Version": "0.163.0",
+            "Version": "0.164.0",
             "Source": "main",
-            "Updated": "2026-10-16T03:00:19.8368937+02:00",
+            "Updated": "2026-10-26T08:00:25.6589056+01:00",
             "Info": ""
         },
         {
             "Name": "cursor",
-            "Version": "3.26.16",
+            "Version": "3.27.14",
             "Source": "extras",
-            "Updated": "2026-10-21T23:02:22.5267642+02:00",
+            "Updated": "2026-10-26T20:02:21.880338+01:00",
             "Info": ""
         },
         {
@@ -193,9 +193,9 @@
         },
         {
             "Name": "figma",
-            "Version": "126.9.16",
+            "Version": "126.10.13",
             "Source": "extras",
-            "Updated": "2026-10-20T23:00:22.7313576+02:00",
+            "Updated": "2026-10-26T16:00:21.3128193+01:00",
             "Info": ""
         },
         {
@@ -207,23 +207,23 @@
         },
         {
             "Name": "gh",
-            "Version": "2.103.0",
+            "Version": "2.103.2",
             "Source": "main",
-            "Updated": "2026-10-21T23:02:24.0807636+02:00",
+            "Updated": "2026-10-26T08:01:25.4961902+01:00",
             "Info": ""
         },
         {
             "Name": "ghidra",
-            "Version": "12.1.4-20260921",
+            "Version": "12.2-20261016",
             "Source": "extras",
-            "Updated": "2026-10-05T17:43:39.536108+02:00",
+            "Updated": "2026-10-22T14:01:55.7777346+02:00",
             "Info": ""
         },
         {
             "Name": "git",
-            "Version": "2.56.0.2",
+            "Version": "2.56.0.4",
             "Source": "main",
-            "Updated": "2026-10-06T04:02:46.1399593+02:00",
+            "Updated": "2026-10-26T12:00:58.83124+01:00",
             "Info": ""
         },
         {
@@ -231,6 +231,13 @@
             "Version": "3.0.0",
             "Source": "main",
             "Updated": "2026-08-21T11:10:35.7148032+02:00",
+            "Info": ""
+        },
+        {
+            "Name": "go-containerregistry",
+            "Version": "0.22.1",
+            "Source": "main",
+            "Updated": "2026-10-26T14:23:15.4499576+01:00",
             "Info": ""
         },
         {
@@ -242,9 +249,9 @@
         },
         {
             "Name": "helium",
-            "Version": "0.19.4.1",
+            "Version": "0.20.1.1",
             "Source": "extras",
-            "Updated": "2026-10-17T07:00:21.8533984+02:00",
+            "Updated": "2026-10-22T18:00:33.3373541+02:00",
             "Info": ""
         },
         {
@@ -340,9 +347,9 @@
         },
         {
             "Name": "mole",
-            "Version": "1.37.0",
+            "Version": "1.39.0",
             "Source": "main",
-            "Updated": "2026-10-21T10:45:39.0146567+02:00",
+            "Updated": "2026-10-26T08:01:47.134626+01:00",
             "Info": ""
         },
         {
@@ -375,30 +382,30 @@
         },
         {
             "Name": "obs-studio",
-            "Version": "32.2.2",
+            "Version": "33.0.0",
             "Source": "extras",
-            "Updated": "2026-08-21T12:10:33.1541748+02:00",
+            "Updated": "2026-10-26T08:02:01.2040221+01:00",
             "Info": ""
         },
         {
             "Name": "obsidian",
-            "Version": "1.14.4",
+            "Version": "1.14.5",
             "Source": "extras",
-            "Updated": "2026-10-06T04:02:57.4231439+02:00",
+            "Updated": "2026-10-26T11:00:17.573307+01:00",
             "Info": ""
         },
         {
             "Name": "ollama-full",
-            "Version": "0.40.7",
+            "Version": "0.40.11",
             "Source": "extras",
-            "Updated": "2026-10-21T07:04:39.9074209+02:00",
+            "Updated": "2026-10-26T08:03:43.4736529+01:00",
             "Info": ""
         },
         {
             "Name": "opencode2",
-            "Version": "2.1.2",
+            "Version": "2.1.3",
             "Source": "versions",
-            "Updated": "2026-10-21T10:45:42.4923297+02:00",
+            "Updated": "2026-10-22T18:00:37.5214855+02:00",
             "Info": ""
         },
         {
@@ -410,9 +417,9 @@
         },
         {
             "Name": "paseo",
-            "Version": "0.12.0",
+            "Version": "0.13.2",
             "Source": "extras",
-            "Updated": "2026-10-19T11:00:19.2233626+02:00",
+            "Updated": "2026-10-26T16:00:28.2978488+01:00",
             "Info": ""
         },
         {
@@ -508,23 +515,16 @@
         },
         {
             "Name": "syncthingtray",
-            "Version": "2.1.8",
+            "Version": "2.1.9",
             "Source": "extras",
-            "Updated": "2026-10-07T23:00:13.5042715+02:00",
-            "Info": ""
-        },
-        {
-            "Name": "tailscale",
-            "Version": "1.104.1",
-            "Source": "extras",
-            "Updated": "2026-10-08T21:38:53.273225+02:00",
+            "Updated": "2026-10-26T08:03:51.455732+01:00",
             "Info": ""
         },
         {
             "Name": "telegram",
-            "Version": "7.3.2",
+            "Version": "7.3.3",
             "Source": "extras",
-            "Updated": "2026-10-21T10:59:15.1651953+02:00",
+            "Updated": "2026-10-22T10:34:09.7418876+02:00",
             "Info": ""
         },
         {
@@ -536,9 +536,9 @@
         },
         {
             "Name": "transmission",
-            "Version": "4.1.3",
+            "Version": "4.1.4",
             "Source": "extras",
-            "Updated": "2026-07-06T22:08:50.066085+02:00",
+            "Updated": "2026-10-26T08:03:54.4668991+01:00",
             "Info": ""
         },
         {
@@ -557,9 +557,9 @@
         },
         {
             "Name": "vscode",
-            "Version": "1.142.0",
+            "Version": "1.143.1",
             "Source": "extras",
-            "Updated": "2026-10-15T11:21:45.7174643+02:00",
+            "Updated": "2026-10-26T08:04:12.9765857+01:00",
             "Info": ""
         },
         {
@@ -592,23 +592,23 @@
         },
         {
             "Name": "yt-dlp",
-            "Version": "2026.08.19",
+            "Version": "2026.10.21",
             "Source": "main",
-            "Updated": "2026-10-02T12:49:12.0769302+02:00",
+            "Updated": "2026-10-22T10:34:33.9798305+02:00",
             "Info": ""
         },
         {
             "Name": "zed",
-            "Version": "1.24.4",
+            "Version": "1.25.3",
             "Source": "extras",
-            "Updated": "2026-10-20T15:00:25.8781519+02:00",
+            "Updated": "2026-10-26T08:04:22.3635097+01:00",
             "Info": ""
         },
         {
             "Name": "zen-browser",
-            "Version": "1.23.3b",
+            "Version": "1.23.4b",
             "Source": "extras",
-            "Updated": "2026-10-17T03:00:24.5989388+02:00",
+            "Updated": "2026-10-22T10:03:46.5906449+02:00",
             "Info": ""
         },
         {
