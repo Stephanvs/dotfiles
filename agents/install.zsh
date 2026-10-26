@@ -12,7 +12,7 @@ skill_roots=(
   "$HOME/.gemini/skills"
 )
 
-for skill_dir in "$DOTFILES"/agents/skills/*(/N) "$DOTFILES"/agents/pstack/skills/*(/N) "$DOTFILES"/agents/ai-design-skills/skills/*(/N); do
+for skill_dir in "$DOTFILES"/agents/skills/*(/N) "$DOTFILES"/agents/pstack/skills/*(/N) "$DOTFILES"/agents/ai-design-skills/skills/*(/N) "$DOTFILES"/agents/blazing-fast-dotnet/skills/*(/N); do
   name="${skill_dir:t}"
   for root in "${skill_roots[@]}"; do
     symlink "${skill_dir#$DOTFILES/}" "$root/$name"

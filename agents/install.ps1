@@ -11,7 +11,7 @@ $skillRoots = @(
     "$HOME/.gemini/skills"
 )
 
-$skillSources = @("$PSScriptRoot/skills", "$PSScriptRoot/pstack/skills", "$PSScriptRoot/ai-design-skills/skills")
+$skillSources = @("$PSScriptRoot/skills", "$PSScriptRoot/pstack/skills", "$PSScriptRoot/ai-design-skills/skills", "$PSScriptRoot/blazing-fast-dotnet/skills")
 Get-ChildItem -LiteralPath $skillSources -Directory | ForEach-Object {
     foreach ($root in $skillRoots) {
         New-Symlink `
