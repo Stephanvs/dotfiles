@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-26T17:35:51+01:00",
-            "Manifests": 1701
+            "Updated": "2026-10-27T20:21:13+01:00",
+            "Manifests": 1702
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-26T19:36:47+01:00",
+            "Updated": "2026-10-27T17:30:30+01:00",
             "Manifests": 2448
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-26T16:18:40+01:00",
+            "Updated": "2026-10-27T15:40:29+01:00",
             "Manifests": 629
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-26T19:24:59+01:00",
+            "Updated": "2026-10-27T15:35:34+01:00",
             "Manifests": 422
         },
         {
@@ -144,9 +144,9 @@
         },
         {
             "Name": "cursor",
-            "Version": "3.27.14",
+            "Version": "3.27.22",
             "Source": "extras",
-            "Updated": "2026-10-26T20:02:21.880338+01:00",
+            "Updated": "2026-10-27T21:02:26.4603746+01:00",
             "Info": ""
         },
         {
@@ -207,9 +207,9 @@
         },
         {
             "Name": "gh",
-            "Version": "2.103.2",
+            "Version": "2.103.3",
             "Source": "main",
-            "Updated": "2026-10-26T08:01:25.4961902+01:00",
+            "Updated": "2026-10-27T01:00:33.5546054+01:00",
             "Info": ""
         },
         {
@@ -256,9 +256,9 @@
         },
         {
             "Name": "ilspy",
-            "Version": "11.1.0.9782",
+            "Version": "11.2.0.10050",
             "Source": "extras",
-            "Updated": "2026-10-15T01:00:11.9931434+02:00",
+            "Updated": "2026-10-27T13:00:36.5683104+01:00",
             "Info": ""
         },
         {
@@ -592,9 +592,9 @@
         },
         {
             "Name": "yt-dlp",
-            "Version": "2026.10.21",
+            "Version": "2026.10.26",
             "Source": "main",
-            "Updated": "2026-10-22T10:34:33.9798305+02:00",
+            "Updated": "2026-10-27T05:00:16.3638356+01:00",
             "Info": ""
         },
         {
