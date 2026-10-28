@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-27T20:21:13+01:00",
+            "Updated": "2026-10-28T17:26:58+01:00",
             "Manifests": 1702
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-27T17:30:30+01:00",
+            "Updated": "2026-10-28T17:30:00+01:00",
             "Manifests": 2448
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-27T15:40:29+01:00",
+            "Updated": "2026-10-28T16:13:39+01:00",
             "Manifests": 629
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-27T15:35:34+01:00",
+            "Updated": "2026-10-28T16:09:41+01:00",
             "Manifests": 422
         },
         {
@@ -130,16 +130,16 @@
         },
         {
             "Name": "cmake",
-            "Version": "4.4.4",
+            "Version": "4.4.5",
             "Source": "main",
-            "Updated": "2026-10-03T01:00:43.034359+02:00",
+            "Updated": "2026-10-28T01:01:03.4492929+01:00",
             "Info": ""
         },
         {
             "Name": "codex",
-            "Version": "0.164.0",
+            "Version": "0.165.0",
             "Source": "main",
-            "Updated": "2026-10-26T08:00:25.6589056+01:00",
+            "Updated": "2026-10-28T01:01:11.0492463+01:00",
             "Info": ""
         },
         {
@@ -396,9 +396,9 @@
         },
         {
             "Name": "ollama-full",
-            "Version": "0.40.11",
+            "Version": "0.40.12",
             "Source": "extras",
-            "Updated": "2026-10-26T08:03:43.4736529+01:00",
+            "Updated": "2026-10-28T05:02:59.7798698+01:00",
             "Info": ""
         },
         {
