@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-28T17:26:58+01:00",
+            "Updated": "2026-10-29T17:27:17+01:00",
             "Manifests": 1702
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-28T17:30:00+01:00",
-            "Manifests": 2448
+            "Updated": "2026-10-29T17:28:29+01:00",
+            "Manifests": 2449
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-28T16:13:39+01:00",
-            "Manifests": 629
+            "Updated": "2026-10-29T16:19:23+01:00",
+            "Manifests": 630
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-28T16:09:41+01:00",
+            "Updated": "2026-10-29T17:12:37+01:00",
             "Manifests": 422
         },
         {
@@ -48,28 +48,28 @@
             "Name": "1password-cli",
             "Version": "2.41.1",
             "Source": "main",
-            "Updated": "2026-10-22T07:00:15.4403871+02:00",
+            "Updated": "2026-10-29T09:16:40.6101987+01:00",
             "Info": ""
         },
         {
             "Name": "7zip",
             "Version": "26.05",
             "Source": "main",
-            "Updated": "2026-10-21T23:00:19.6059677+02:00",
+            "Updated": "2026-10-29T09:16:42.9232129+01:00",
             "Info": ""
         },
         {
             "Name": "alacritty",
             "Version": "0.17.0",
             "Source": "extras",
-            "Updated": "2026-04-07T08:56:52.5231687+02:00",
+            "Updated": "2026-10-29T09:16:44.1729879+01:00",
             "Info": ""
         },
         {
             "Name": "archwsl",
             "Version": "26.10.14.0",
             "Source": "extras",
-            "Updated": "2026-10-14T21:00:19.5254915+02:00",
+            "Updated": "2026-10-29T09:16:45.7777651+01:00",
             "Info": ""
         },
         {
@@ -83,28 +83,28 @@
             "Name": "azure-cli",
             "Version": "2.91.0",
             "Source": "main",
-            "Updated": "2026-10-06T04:00:40.8844137+02:00",
+            "Updated": "2026-10-29T09:17:10.3149508+01:00",
             "Info": ""
         },
         {
             "Name": "azure-functions-core-tools",
             "Version": "4.16.0",
             "Source": "main",
-            "Updated": "2026-10-13T00:01:00.4114874+02:00",
+            "Updated": "2026-10-29T09:17:41.7952394+01:00",
             "Info": ""
         },
         {
             "Name": "bat",
             "Version": "0.26.1",
             "Source": "main",
-            "Updated": "2026-02-24T08:38:49.1127532+01:00",
+            "Updated": "2026-10-29T09:17:43.9784106+01:00",
             "Info": ""
         },
         {
             "Name": "blender",
             "Version": "5.2.3",
             "Source": "extras",
-            "Updated": "2026-10-22T14:01:00.4443762+02:00",
+            "Updated": "2026-10-29T09:18:12.0879618+01:00",
             "Info": ""
         },
         {
@@ -118,7 +118,7 @@
             "Name": "CascadiaCode-NF",
             "Version": "3.5.1",
             "Source": "nerd-fonts",
-            "Updated": "2026-08-22T12:00:15.0040407+02:00",
+            "Updated": "2026-10-29T09:18:17.1580981+01:00",
             "Info": ""
         },
         {
@@ -132,42 +132,42 @@
             "Name": "cmake",
             "Version": "4.4.5",
             "Source": "main",
-            "Updated": "2026-10-28T01:01:03.4492929+01:00",
+            "Updated": "2026-10-29T09:18:45.8736783+01:00",
             "Info": ""
         },
         {
             "Name": "codex",
             "Version": "0.165.0",
             "Source": "main",
-            "Updated": "2026-10-28T01:01:11.0492463+01:00",
+            "Updated": "2026-10-29T09:18:49.770584+01:00",
             "Info": ""
         },
         {
             "Name": "cursor",
             "Version": "3.27.22",
             "Source": "extras",
-            "Updated": "2026-10-27T21:02:26.4603746+01:00",
+            "Updated": "2026-10-29T09:19:44.6215086+01:00",
             "Info": ""
         },
         {
             "Name": "dark",
             "Version": "3.14.1",
             "Source": "main",
-            "Updated": "2025-05-20T15:13:54.4190828+02:00",
+            "Updated": "2026-10-29T09:19:45.5367833+01:00",
             "Info": ""
         },
         {
             "Name": "delta",
             "Version": "0.20.1",
             "Source": "main",
-            "Updated": "2026-10-05T01:00:10.3675766+02:00",
+            "Updated": "2026-10-29T09:19:46.5199766+01:00",
             "Info": ""
         },
         {
             "Name": "discord",
             "Version": "1.0.9259-28",
             "Source": "extras",
-            "Updated": "2026-09-28T04:00:17.4318254+02:00",
+            "Updated": "2026-10-29T09:19:53.5156545+01:00",
             "Info": ""
         },
         {
@@ -249,9 +249,9 @@
         },
         {
             "Name": "helium",
-            "Version": "0.20.1.1",
+            "Version": "0.20.2.1",
             "Source": "extras",
-            "Updated": "2026-10-22T18:00:33.3373541+02:00",
+            "Updated": "2026-10-29T11:30:23.0297234+01:00",
             "Info": ""
         },
         {
@@ -326,9 +326,9 @@
         },
         {
             "Name": "libreoffice",
-            "Version": "26.8.1",
+            "Version": "26.8.2",
             "Source": "extras",
-            "Updated": "2026-10-04T09:02:21.8934275+02:00",
+            "Updated": "2026-10-29T17:02:57.0693661+01:00",
             "Info": ""
         },
         {
@@ -396,16 +396,16 @@
         },
         {
             "Name": "ollama-full",
-            "Version": "0.40.12",
+            "Version": "0.40.13",
             "Source": "extras",
-            "Updated": "2026-10-28T05:02:59.7798698+01:00",
+            "Updated": "2026-10-29T09:02:32.7409027+01:00",
             "Info": ""
         },
         {
             "Name": "opencode2",
-            "Version": "2.1.3",
+            "Version": "2.2.1",
             "Source": "versions",
-            "Updated": "2026-10-22T18:00:37.5214855+02:00",
+            "Updated": "2026-10-29T22:00:09.765557+01:00",
             "Info": ""
         },
         {
@@ -417,9 +417,9 @@
         },
         {
             "Name": "paseo",
-            "Version": "0.13.2",
+            "Version": "0.14.0",
             "Source": "extras",
-            "Updated": "2026-10-26T16:00:28.2978488+01:00",
+            "Updated": "2026-10-29T17:03:05.7898665+01:00",
             "Info": ""
         },
         {
@@ -557,9 +557,9 @@
         },
         {
             "Name": "vscode",
-            "Version": "1.143.1",
+            "Version": "1.144.0",
             "Source": "extras",
-            "Updated": "2026-10-26T08:04:12.9765857+01:00",
+            "Updated": "2026-10-29T16:00:49.108863+01:00",
             "Info": ""
         },
         {
