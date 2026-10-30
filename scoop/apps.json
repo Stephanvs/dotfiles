@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-29T17:27:17+01:00",
-            "Manifests": 1702
+            "Updated": "2026-10-30T21:22:46+01:00",
+            "Manifests": 1703
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-29T17:28:29+01:00",
+            "Updated": "2026-10-30T21:23:28+01:00",
             "Manifests": 2449
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-29T16:19:23+01:00",
+            "Updated": "2026-10-30T16:08:55+01:00",
             "Manifests": 630
         },
         {
@@ -27,13 +27,13 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-29T17:12:37+01:00",
+            "Updated": "2026-10-30T16:05:13+01:00",
             "Manifests": 422
         },
         {
             "Name": "stephanvs",
             "Source": "https://github.com/Stephanvs/scoop-bucket",
-            "Updated": "2026-10-02T13:07:01+02:00",
+            "Updated": "2026-10-30T21:23:53+01:00",
             "Manifests": 0
         },
         {
@@ -123,9 +123,9 @@
         },
         {
             "Name": "clacky",
-            "Version": "1.0.4",
+            "Version": "1.0.6",
             "Source": "stephanvs",
-            "Updated": "2026-10-02T16:00:14.3536417+02:00",
+            "Updated": "2026-10-30T21:44:55.0805353+01:00",
             "Info": ""
         },
         {
@@ -137,9 +137,9 @@
         },
         {
             "Name": "codex",
-            "Version": "0.165.0",
+            "Version": "0.166.0",
             "Source": "main",
-            "Updated": "2026-10-29T09:18:49.770584+01:00",
+            "Updated": "2026-10-30T01:00:35.771536+01:00",
             "Info": ""
         },
         {
@@ -249,9 +249,9 @@
         },
         {
             "Name": "helium",
-            "Version": "0.20.2.1",
+            "Version": "0.20.3.1",
             "Source": "extras",
-            "Updated": "2026-10-29T11:30:23.0297234+01:00",
+            "Updated": "2026-10-30T21:44:28.9981964+01:00",
             "Info": ""
         },
         {
@@ -382,9 +382,9 @@
         },
         {
             "Name": "obs-studio",
-            "Version": "33.0.0",
+            "Version": "33.0.1",
             "Source": "extras",
-            "Updated": "2026-10-26T08:02:01.2040221+01:00",
+            "Updated": "2026-10-30T05:00:30.7200675+01:00",
             "Info": ""
         },
         {
@@ -403,9 +403,9 @@
         },
         {
             "Name": "opencode2",
-            "Version": "2.2.1",
+            "Version": "2.2.3",
             "Source": "versions",
-            "Updated": "2026-10-29T22:00:09.765557+01:00",
+            "Updated": "2026-10-30T17:00:21.8805223+01:00",
             "Info": ""
         },
         {
@@ -599,16 +599,16 @@
         },
         {
             "Name": "zed",
-            "Version": "1.25.3",
+            "Version": "1.26.2",
             "Source": "extras",
-            "Updated": "2026-10-26T08:04:22.3635097+01:00",
+            "Updated": "2026-10-30T10:01:09.3663355+01:00",
             "Info": ""
         },
         {
             "Name": "zen-browser",
-            "Version": "1.23.4b",
+            "Version": "1.24b",
             "Source": "extras",
-            "Updated": "2026-10-22T10:03:46.5906449+02:00",
+            "Updated": "2026-10-30T10:00:53.225704+01:00",
             "Info": ""
         },
         {
