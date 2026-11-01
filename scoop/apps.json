@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-10-31T17:22:27+01:00",
+            "Updated": "2026-11-01T21:22:43+01:00",
             "Manifests": 1703
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-10-31T17:24:10+01:00",
+            "Updated": "2026-11-01T21:24:50+01:00",
             "Manifests": 2451
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-10-31T15:39:06+01:00",
+            "Updated": "2026-11-01T21:36:16+01:00",
             "Manifests": 630
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-10-31T15:34:30+01:00",
+            "Updated": "2026-11-01T21:32:16+01:00",
             "Manifests": 422
         },
         {
@@ -263,9 +263,9 @@
         },
         {
             "Name": "imagemagick",
-            "Version": "7.1.2-34",
+            "Version": "7.1.2-35",
             "Source": "main",
-            "Updated": "2026-10-15T04:00:18.7251246+02:00",
+            "Updated": "2026-11-01T02:00:23.8731193+01:00",
             "Info": ""
         },
         {
