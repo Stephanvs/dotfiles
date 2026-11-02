@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-01T21:22:43+01:00",
+            "Updated": "2026-11-02T17:23:52+01:00",
             "Manifests": 1703
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-01T21:24:50+01:00",
+            "Updated": "2026-11-02T17:25:04+01:00",
             "Manifests": 2451
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-01T21:36:16+01:00",
-            "Manifests": 630
+            "Updated": "2026-11-02T19:33:04+01:00",
+            "Manifests": 631
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-01T21:32:16+01:00",
+            "Updated": "2026-11-02T19:26:39+01:00",
             "Manifests": 422
         },
         {
@@ -347,9 +347,9 @@
         },
         {
             "Name": "mole",
-            "Version": "1.40.0",
+            "Version": "1.41.0",
             "Source": "main",
-            "Updated": "2026-10-31T13:00:21.2935349+01:00",
+            "Updated": "2026-11-02T21:00:19.0780312+01:00",
             "Info": ""
         },
         {
@@ -375,9 +375,9 @@
         },
         {
             "Name": "nodejs-lts",
-            "Version": "24.22.1",
+            "Version": "26.13.0",
             "Source": "main",
-            "Updated": "2026-10-21T14:00:30.6740837+02:00",
+            "Updated": "2026-11-02T09:00:22.3218648+01:00",
             "Info": ""
         },
         {
@@ -438,9 +438,9 @@
         },
         {
             "Name": "pwsh",
-            "Version": "7.6.7",
+            "Version": "7.6.9",
             "Source": "main",
-            "Updated": "2026-10-14T05:00:22.1568409+02:00",
+            "Updated": "2026-11-02T09:00:27.9440807+01:00",
             "Info": ""
         },
         {
@@ -473,9 +473,9 @@
         },
         {
             "Name": "rustdesk",
-            "Version": "1.5.0",
+            "Version": "1.5.1",
             "Source": "extras",
-            "Updated": "2026-10-02T08:00:14.9953241+02:00",
+            "Updated": "2026-11-02T09:40:55.4633046+01:00",
             "Info": ""
         },
         {
