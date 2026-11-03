@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-02T17:23:52+01:00",
-            "Manifests": 1703
+            "Updated": "2026-11-03T20:43:58+01:00",
+            "Manifests": 1704
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-02T17:25:04+01:00",
-            "Manifests": 2451
+            "Updated": "2026-11-03T17:24:29+01:00",
+            "Manifests": 2453
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-02T19:33:04+01:00",
-            "Manifests": 631
+            "Updated": "2026-11-03T13:04:41+01:00",
+            "Manifests": 632
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-02T19:26:39+01:00",
+            "Updated": "2026-11-03T20:32:24+01:00",
             "Manifests": 422
         },
         {
@@ -81,9 +81,9 @@
         },
         {
             "Name": "azure-cli",
-            "Version": "2.91.0",
+            "Version": "2.92.0",
             "Source": "main",
-            "Updated": "2026-10-29T09:17:10.3149508+01:00",
+            "Updated": "2026-11-03T05:00:49.6080387+01:00",
             "Info": ""
         },
         {
@@ -242,9 +242,9 @@
         },
         {
             "Name": "handy",
-            "Version": "0.9.8",
+            "Version": "0.10.0",
             "Source": "extras",
-            "Updated": "2026-10-03T09:00:12.2647664+02:00",
+            "Updated": "2026-11-03T18:46:18.3167975+01:00",
             "Info": ""
         },
         {
@@ -389,16 +389,16 @@
         },
         {
             "Name": "obsidian",
-            "Version": "1.14.5",
+            "Version": "1.15.0",
             "Source": "extras",
-            "Updated": "2026-10-26T11:00:17.573307+01:00",
+            "Updated": "2026-11-03T18:46:34.9774954+01:00",
             "Info": ""
         },
         {
             "Name": "ollama-full",
-            "Version": "0.40.13",
+            "Version": "0.40.14",
             "Source": "extras",
-            "Updated": "2026-10-29T09:02:32.7409027+01:00",
+            "Updated": "2026-11-03T13:03:35.9724979+01:00",
             "Info": ""
         },
         {
@@ -417,9 +417,9 @@
         },
         {
             "Name": "paseo",
-            "Version": "0.14.0",
+            "Version": "0.15.0",
             "Source": "extras",
-            "Updated": "2026-10-29T17:03:05.7898665+01:00",
+            "Updated": "2026-11-03T13:03:59.8339534+01:00",
             "Info": ""
         },
         {
@@ -521,6 +521,13 @@
             "Info": ""
         },
         {
+            "Name": "t3code",
+            "Version": "0.1.6",
+            "Source": "extras",
+            "Updated": "2026-11-03T18:38:58.471575+01:00",
+            "Info": ""
+        },
+        {
             "Name": "telegram",
             "Version": "7.3.3",
             "Source": "extras",
@@ -557,9 +564,9 @@
         },
         {
             "Name": "vscode",
-            "Version": "1.144.0",
+            "Version": "1.144.1",
             "Source": "extras",
-            "Updated": "2026-10-29T16:00:49.108863+01:00",
+            "Updated": "2026-11-03T05:01:29.9491725+01:00",
             "Info": ""
         },
         {
