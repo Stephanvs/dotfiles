@@ -248,8 +248,6 @@ cask "microsoft-openjdk"
 cask "moonlight"
 # Unofficial desktop client for F1 TV
 cask "multiviewer"
-# Cloud gaming platform
-cask "nvidia-geforce-now"
 # Open-source software for live streaming and screen recording
 cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
@@ -276,6 +274,8 @@ cask "rustdesk"
 cask "signal"
 # Music streaming service
 cask "spotify"
+# Minimal GUI for AI code agents
+cask "t3-code@nightly"
 # Native GUI tool for relational databases
 cask "tableplus"
 # Remote access and connectivity software focused on security
