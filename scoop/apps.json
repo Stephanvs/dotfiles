@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-03T20:43:58+01:00",
-            "Manifests": 1704
+            "Updated": "2026-11-04T17:22:59+01:00",
+            "Manifests": 1705
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-03T17:24:29+01:00",
-            "Manifests": 2453
+            "Updated": "2026-11-04T17:26:24+01:00",
+            "Manifests": 2454
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-03T13:04:41+01:00",
-            "Manifests": 632
+            "Updated": "2026-11-04T20:54:55+01:00",
+            "Manifests": 642
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-03T20:32:24+01:00",
+            "Updated": "2026-11-04T20:52:25+01:00",
             "Manifests": 422
         },
         {
@@ -144,9 +144,9 @@
         },
         {
             "Name": "cursor",
-            "Version": "3.27.22",
+            "Version": "3.28.7",
             "Source": "extras",
-            "Updated": "2026-10-29T09:19:44.6215086+01:00",
+            "Updated": "2026-11-04T02:02:26.8248253+01:00",
             "Info": ""
         },
         {
@@ -347,9 +347,9 @@
         },
         {
             "Name": "mole",
-            "Version": "1.41.0",
+            "Version": "1.42.0",
             "Source": "main",
-            "Updated": "2026-11-02T21:00:19.0780312+01:00",
+            "Updated": "2026-11-04T17:00:19.5722716+01:00",
             "Info": ""
         },
         {
@@ -522,16 +522,16 @@
         },
         {
             "Name": "t3code",
-            "Version": "0.1.6",
+            "Version": "0.1.7",
             "Source": "extras",
-            "Updated": "2026-11-03T18:38:58.471575+01:00",
+            "Updated": "2026-11-04T13:00:39.1952971+01:00",
             "Info": ""
         },
         {
             "Name": "telegram",
-            "Version": "7.3.3",
+            "Version": "7.3.5",
             "Source": "extras",
-            "Updated": "2026-10-22T10:34:09.7418876+02:00",
+            "Updated": "2026-11-04T17:00:24.5843479+01:00",
             "Info": ""
         },
         {
@@ -564,9 +564,9 @@
         },
         {
             "Name": "vscode",
-            "Version": "1.144.1",
+            "Version": "1.145.0",
             "Source": "extras",
-            "Updated": "2026-11-03T05:01:29.9491725+01:00",
+            "Updated": "2026-11-04T13:01:22.7065966+01:00",
             "Info": ""
         },
         {
@@ -620,9 +620,9 @@
         },
         {
             "Name": "zig",
-            "Version": "0.17.0",
+            "Version": "0.17.1",
             "Source": "main",
-            "Updated": "2026-10-03T05:01:27.4448294+02:00",
+            "Updated": "2026-11-04T02:04:14.5708201+01:00",
             "Info": ""
         },
         {
