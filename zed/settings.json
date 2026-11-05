@@ -34,7 +34,7 @@
   "agent_servers": {
     "grok-build": {
       "default_config_options": {
-        "reasoning_effort": "medium",
+        "reasoning_effort": "xhigh",
         "model": "grok-4.7-build-fast"
       },
       "type": "registry"
@@ -47,7 +47,7 @@
       },
       "default_config_options": {
         "collaboration_mode": "default",
-        "model": "gpt-6.1-sol",
+        "model": "gpt-6-astra",
         "fast-mode": true,
         "reasoning_effort": "high",
         "mode": "full-access",
@@ -79,7 +79,7 @@
       "default_config_options": {
         "fast": false,
         "effort": "high",
-        "model": "opus",
+        "model": "sonnet",
         "mode": "auto"
       },
       "type": "registry",
