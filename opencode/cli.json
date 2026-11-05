@@ -1,19 +1,41 @@
 {
   "theme": {
-    "name": "lucent-orng"
+    "name": "orng",
+    "mode": "system"
   },
   "diffs": {
-    "wrap": "word"
+    "wrap": "word",
+    "view": "auto"
   },
   "session": {
     "sidebar": "auto",
     "scrollbar": true,
     "thinking": "hide",
-    "grouping": "auto"
+    "grouping": "auto",
+    "tps": true,
+    "markdown": "rendered",
+    "verbosity": "low",
+    "permissions": "autoaccept"
   },
   "animations": true,
   "prompt": {
-    "paste": "full"
+    "paste": "full",
+    "image_preview": false
   },
-  "highlights": true
+  "highlights": true,
+  "tabs": {
+    "layout": "horizontal",
+    "indicators": "numbers",
+    "scope": "global",
+    "mode": "auto"
+  },
+  "attention": {
+    "notifications": true,
+    "sound": true,
+    "volume": 0.7
+  },
+  "terminal": {
+    "title": true,
+    "copy": "manual"
+  }
 }
