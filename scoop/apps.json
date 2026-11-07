@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-06T17:23:32+01:00",
+            "Updated": "2026-11-07T17:22:34+01:00",
             "Manifests": 1709
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-06T17:26:04+01:00",
+            "Updated": "2026-11-07T17:22:48+01:00",
             "Manifests": 2458
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-06T17:02:09+01:00",
+            "Updated": "2026-11-07T15:58:39+01:00",
             "Manifests": 644
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-06T16:58:29+01:00",
+            "Updated": "2026-11-07T15:56:29+01:00",
             "Manifests": 422
         },
         {
@@ -53,9 +53,9 @@
         },
         {
             "Name": "7zip",
-            "Version": "26.05",
+            "Version": "26.06",
             "Source": "main",
-            "Updated": "2026-10-29T09:16:42.9232129+01:00",
+            "Updated": "2026-11-07T17:00:21.9984187+01:00",
             "Info": ""
         },
         {
@@ -200,9 +200,9 @@
         },
         {
             "Name": "fork",
-            "Version": "2.23.2",
+            "Version": "2.24.0",
             "Source": "extras",
-            "Updated": "2026-09-30T17:00:16.1826934+02:00",
+            "Updated": "2026-11-07T01:00:22.6743406+01:00",
             "Info": ""
         },
         {
@@ -529,9 +529,9 @@
         },
         {
             "Name": "telegram",
-            "Version": "7.4.0",
+            "Version": "7.4.1",
             "Source": "extras",
-            "Updated": "2026-11-06T01:00:27.4588419+01:00",
+            "Updated": "2026-11-07T01:00:26.7358323+01:00",
             "Info": ""
         },
         {
