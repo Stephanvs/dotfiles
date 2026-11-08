@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-07T17:22:34+01:00",
-            "Manifests": 1709
+            "Updated": "2026-11-08T17:22:18+01:00",
+            "Manifests": 1710
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-07T17:22:48+01:00",
-            "Manifests": 2458
+            "Updated": "2026-11-08T18:01:05+01:00",
+            "Manifests": 2459
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-07T15:58:39+01:00",
+            "Updated": "2026-11-08T16:23:30+01:00",
             "Manifests": 644
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-07T15:56:29+01:00",
+            "Updated": "2026-11-08T16:17:14+01:00",
             "Manifests": 422
         },
         {
@@ -347,9 +347,9 @@
         },
         {
             "Name": "mole",
-            "Version": "1.42.0",
+            "Version": "1.43.0",
             "Source": "main",
-            "Updated": "2026-11-04T17:00:19.5722716+01:00",
+            "Updated": "2026-11-08T17:00:25.4477485+01:00",
             "Info": ""
         },
         {
