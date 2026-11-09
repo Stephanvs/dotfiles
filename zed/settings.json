@@ -79,7 +79,7 @@
       "default_config_options": {
         "fast": false,
         "effort": "high",
-        "model": "sonnet",
+        "model": "opus",
         "mode": "auto"
       },
       "type": "registry",
