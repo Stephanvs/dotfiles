@@ -228,8 +228,6 @@ cask "granola"
 cask "grok-bot"
 # Extensible coding agent for the terminal
 cask "grok-build"
-# Speech to text application
-cask "handy"
 # Chromium-based web browser
 cask "helium-browser"
 # Local voice dictation
