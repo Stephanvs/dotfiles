@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-08T17:22:18+01:00",
-            "Manifests": 1710
+            "Updated": "2026-11-09T17:24:27+01:00",
+            "Manifests": 1711
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-08T18:01:05+01:00",
-            "Manifests": 2459
+            "Updated": "2026-11-09T17:24:44+01:00",
+            "Manifests": 2460
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-08T16:23:30+01:00",
+            "Updated": "2026-11-09T19:57:04+01:00",
             "Manifests": 644
         },
         {
@@ -27,8 +27,8 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-08T16:17:14+01:00",
-            "Manifests": 422
+            "Updated": "2026-11-09T19:52:17+01:00",
+            "Manifests": 424
         },
         {
             "Name": "stephanvs",
@@ -193,9 +193,9 @@
         },
         {
             "Name": "figma",
-            "Version": "126.10.13",
+            "Version": "126.11.8",
             "Source": "extras",
-            "Updated": "2026-10-26T16:00:21.3128193+01:00",
+            "Updated": "2026-11-09T09:12:49.4372213+01:00",
             "Info": ""
         },
         {
@@ -238,13 +238,6 @@
             "Version": "0.22.1",
             "Source": "main",
             "Updated": "2026-10-26T14:23:15.4499576+01:00",
-            "Info": ""
-        },
-        {
-            "Name": "handy",
-            "Version": "0.10.0",
-            "Source": "extras",
-            "Updated": "2026-11-03T18:46:18.3167975+01:00",
             "Info": ""
         },
         {
@@ -319,9 +312,9 @@
         },
         {
             "Name": "lazygit",
-            "Version": "0.66.2",
+            "Version": "0.66.3",
             "Source": "extras",
-            "Updated": "2026-10-16T15:00:21.7378814+02:00",
+            "Updated": "2026-11-09T09:16:03.9266175+01:00",
             "Info": ""
         },
         {
@@ -403,9 +396,9 @@
         },
         {
             "Name": "opencode2",
-            "Version": "2.2.5",
+            "Version": "2.2.6",
             "Source": "versions",
-            "Updated": "2026-10-31T09:00:23.3199575+01:00",
+            "Updated": "2026-11-09T09:12:37.7403679+01:00",
             "Info": ""
         },
         {
@@ -613,9 +606,9 @@
         },
         {
             "Name": "zen-browser",
-            "Version": "1.24b",
+            "Version": "1.24.1b",
             "Source": "extras",
-            "Updated": "2026-10-30T10:00:53.225704+01:00",
+            "Updated": "2026-11-09T09:16:17.8739677+01:00",
             "Info": ""
         },
         {
