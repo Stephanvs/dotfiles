@@ -180,6 +180,16 @@
           "IJ_MCP_SERVER_PROJECT_PATH": "/Users/stephanvs/Code/prosim-fms"
         },
         "disabled": false
+      },
+      "browse": {
+        "type": "local",
+        "command": [
+          "C:\\Users\\stephanvs\\.local\\bin\\browse.exe",
+          "mcp"
+        ],
+        "environment": {
+          "OPENCODE_BROWSER_RUNTIME": "auto-update"
+        }
       }
     }
   }
