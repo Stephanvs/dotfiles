@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-09T17:24:27+01:00",
+            "Updated": "2026-11-10T17:23:25+01:00",
             "Manifests": 1711
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-09T17:24:44+01:00",
-            "Manifests": 2460
+            "Updated": "2026-11-10T19:38:20+01:00",
+            "Manifests": 2467
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-09T19:57:04+01:00",
-            "Manifests": 644
+            "Updated": "2026-11-10T18:06:39+01:00",
+            "Manifests": 646
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-09T19:52:17+01:00",
+            "Updated": "2026-11-10T13:43:03+01:00",
             "Manifests": 424
         },
         {
@@ -102,9 +102,9 @@
         },
         {
             "Name": "blender",
-            "Version": "5.2.3",
+            "Version": "5.3.0",
             "Source": "extras",
-            "Updated": "2026-10-29T09:18:12.0879618+01:00",
+            "Updated": "2026-11-10T16:01:03.6825816+01:00",
             "Info": ""
         },
         {
@@ -144,9 +144,9 @@
         },
         {
             "Name": "cursor",
-            "Version": "3.29.9",
+            "Version": "3.29.15",
             "Source": "extras",
-            "Updated": "2026-11-06T05:01:58.3297661+01:00",
+            "Updated": "2026-11-10T01:02:46.987371+01:00",
             "Info": ""
         },
         {
@@ -340,9 +340,9 @@
         },
         {
             "Name": "mole",
-            "Version": "1.43.0",
+            "Version": "1.44.0",
             "Source": "main",
-            "Updated": "2026-11-08T17:00:25.4477485+01:00",
+            "Updated": "2026-11-10T20:00:20.7005731+01:00",
             "Info": ""
         },
         {
@@ -389,16 +389,16 @@
         },
         {
             "Name": "ollama-full",
-            "Version": "0.40.15",
+            "Version": "0.40.16",
             "Source": "extras",
-            "Updated": "2026-11-06T09:03:31.3802225+01:00",
+            "Updated": "2026-11-10T05:03:23.6348138+01:00",
             "Info": ""
         },
         {
             "Name": "opencode2",
-            "Version": "2.2.6",
+            "Version": "2.2.7",
             "Source": "versions",
-            "Updated": "2026-11-09T09:12:37.7403679+01:00",
+            "Updated": "2026-11-10T16:01:10.6984171+01:00",
             "Info": ""
         },
         {
@@ -410,9 +410,9 @@
         },
         {
             "Name": "paseo",
-            "Version": "0.15.3",
+            "Version": "0.15.4",
             "Source": "extras",
-            "Updated": "2026-11-06T21:00:26.3383536+01:00",
+            "Updated": "2026-11-10T08:59:47.3070208+01:00",
             "Info": ""
         },
         {
@@ -515,9 +515,9 @@
         },
         {
             "Name": "t3code",
-            "Version": "0.1.7",
+            "Version": "0.1.8",
             "Source": "extras",
-            "Updated": "2026-11-04T13:00:39.1952971+01:00",
+            "Updated": "2026-11-10T09:00:30.8610452+01:00",
             "Info": ""
         },
         {
