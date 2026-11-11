@@ -3,31 +3,31 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-10T17:23:25+01:00",
-            "Manifests": 1711
+            "Updated": "2026-11-11T17:24:01+01:00",
+            "Manifests": 1713
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-10T19:38:20+01:00",
+            "Updated": "2026-11-11T17:24:32+01:00",
             "Manifests": 2467
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-10T18:06:39+01:00",
+            "Updated": "2026-11-11T17:20:13+01:00",
             "Manifests": 646
         },
         {
             "Name": "nerd-fonts",
             "Source": "https://github.com/matthewjberger/scoop-nerd-fonts",
-            "Updated": "2026-10-25T05:05:48+01:00",
+            "Updated": "2026-11-10T21:21:53+01:00",
             "Manifests": 367
         },
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-10T13:43:03+01:00",
+            "Updated": "2026-11-11T17:13:48+01:00",
             "Manifests": 424
         },
         {
@@ -137,9 +137,9 @@
         },
         {
             "Name": "codex",
-            "Version": "0.167.0",
+            "Version": "0.167.1",
             "Source": "main",
-            "Updated": "2026-11-06T09:00:34.1974336+01:00",
+            "Updated": "2026-11-11T04:00:27.5058155+01:00",
             "Info": ""
         },
         {
@@ -221,9 +221,9 @@
         },
         {
             "Name": "git",
-            "Version": "2.56.0.4",
+            "Version": "2.56.1",
             "Source": "main",
-            "Updated": "2026-10-26T12:00:58.83124+01:00",
+            "Updated": "2026-11-11T04:01:10.1632081+01:00",
             "Info": ""
         },
         {
@@ -242,9 +242,9 @@
         },
         {
             "Name": "helium",
-            "Version": "0.21.1.1",
+            "Version": "0.21.2.1",
             "Source": "extras",
-            "Updated": "2026-11-05T13:00:45.0427938+01:00",
+            "Updated": "2026-11-11T10:40:53.4208765+01:00",
             "Info": ""
         },
         {
@@ -417,9 +417,9 @@
         },
         {
             "Name": "podman",
-            "Version": "6.1.4",
+            "Version": "6.2.0",
             "Source": "main",
-            "Updated": "2026-10-13T04:00:20.8623336+02:00",
+            "Updated": "2026-11-11T00:00:34.0258985+01:00",
             "Info": ""
         },
         {
@@ -466,9 +466,9 @@
         },
         {
             "Name": "rustdesk",
-            "Version": "1.5.1",
+            "Version": "1.5.3",
             "Source": "extras",
-            "Updated": "2026-11-02T09:40:55.4633046+01:00",
+            "Updated": "2026-11-11T15:00:18.1455221+01:00",
             "Info": ""
         },
         {
@@ -522,9 +522,9 @@
         },
         {
             "Name": "telegram",
-            "Version": "7.4.1",
+            "Version": "7.4.2",
             "Source": "extras",
-            "Updated": "2026-11-07T01:00:26.7358323+01:00",
+            "Updated": "2026-11-11T11:16:53.8046511+01:00",
             "Info": ""
         },
         {
@@ -543,9 +543,9 @@
         },
         {
             "Name": "vcredist2022",
-            "Version": "14.51.36247.0",
+            "Version": "14.52.37029.0",
             "Source": "extras",
-            "Updated": "2026-06-11T09:06:12.4225336+02:00",
+            "Updated": "2026-11-11T00:04:39.9588951+01:00",
             "Info": ""
         },
         {
@@ -557,9 +557,9 @@
         },
         {
             "Name": "vscode",
-            "Version": "1.145.2",
+            "Version": "1.146.0",
             "Source": "extras",
-            "Updated": "2026-11-06T17:01:01.7314217+01:00",
+            "Updated": "2026-11-11T15:01:02.6682264+01:00",
             "Info": ""
         },
         {
@@ -571,9 +571,9 @@
         },
         {
             "Name": "winscp",
-            "Version": "6.7",
+            "Version": "6.7.1",
             "Source": "extras",
-            "Updated": "2026-10-14T17:00:17.0950833+02:00",
+            "Updated": "2026-11-11T19:00:14.9997013+01:00",
             "Info": ""
         },
         {
