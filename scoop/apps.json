@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-12T17:24:12+01:00",
+            "Updated": "2026-11-13T21:23:32+01:00",
             "Manifests": 1713
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-12T21:24:05+01:00",
+            "Updated": "2026-11-13T21:23:39+01:00",
             "Manifests": 2468
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-12T17:55:42+01:00",
-            "Manifests": 646
+            "Updated": "2026-11-13T20:56:00+01:00",
+            "Manifests": 647
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-12T17:51:35+01:00",
+            "Updated": "2026-11-13T20:47:27+01:00",
             "Manifests": 424
         },
         {
@@ -130,23 +130,23 @@
         },
         {
             "Name": "cmake",
-            "Version": "4.4.5",
+            "Version": "4.5.0",
             "Source": "main",
-            "Updated": "2026-10-29T09:18:45.8736783+01:00",
+            "Updated": "2026-11-13T03:00:50.4764315+01:00",
             "Info": ""
         },
         {
             "Name": "codex",
-            "Version": "0.167.2",
+            "Version": "0.169.0",
             "Source": "main",
-            "Updated": "2026-11-12T03:00:29.3266064+01:00",
+            "Updated": "2026-11-13T14:00:33.1536201+01:00",
             "Info": ""
         },
         {
             "Name": "cursor",
-            "Version": "3.29.15",
+            "Version": "3.30.8",
             "Source": "extras",
-            "Updated": "2026-11-10T01:02:46.987371+01:00",
+            "Updated": "2026-11-13T03:02:26.8587756+01:00",
             "Info": ""
         },
         {
@@ -193,9 +193,9 @@
         },
         {
             "Name": "figma",
-            "Version": "126.11.8",
+            "Version": "126.11.9",
             "Source": "extras",
-            "Updated": "2026-11-09T09:12:49.4372213+01:00",
+            "Updated": "2026-11-13T10:53:02.3643843+01:00",
             "Info": ""
         },
         {
@@ -207,9 +207,9 @@
         },
         {
             "Name": "gh",
-            "Version": "2.103.3",
+            "Version": "2.104.0",
             "Source": "main",
-            "Updated": "2026-10-27T01:00:33.5546054+01:00",
+            "Updated": "2026-11-13T03:02:30.536075+01:00",
             "Info": ""
         },
         {
@@ -347,9 +347,9 @@
         },
         {
             "Name": "mole",
-            "Version": "1.44.0",
+            "Version": "1.45.0",
             "Source": "main",
-            "Updated": "2026-11-10T20:00:20.7005731+01:00",
+            "Updated": "2026-11-13T08:00:53.7770093+01:00",
             "Info": ""
         },
         {
@@ -403,9 +403,9 @@
         },
         {
             "Name": "opencode2",
-            "Version": "2.2.7",
+            "Version": "2.3.0",
             "Source": "versions",
-            "Updated": "2026-11-10T16:01:10.6984171+01:00",
+            "Updated": "2026-11-13T14:00:37.8033782+01:00",
             "Info": ""
         },
         {
@@ -438,9 +438,9 @@
         },
         {
             "Name": "pwsh",
-            "Version": "7.6.9",
+            "Version": "7.7.0",
             "Source": "main",
-            "Updated": "2026-11-02T09:00:27.9440807+01:00",
+            "Updated": "2026-11-13T10:52:01.2648351+01:00",
             "Info": ""
         },
         {
@@ -529,9 +529,9 @@
         },
         {
             "Name": "telegram",
-            "Version": "7.4.2",
+            "Version": "7.4.4",
             "Source": "extras",
-            "Updated": "2026-11-11T11:16:53.8046511+01:00",
+            "Updated": "2026-11-13T22:00:23.0003379+01:00",
             "Info": ""
         },
         {
@@ -613,9 +613,9 @@
         },
         {
             "Name": "zen-browser",
-            "Version": "1.24.1b",
+            "Version": "1.24.2b",
             "Source": "extras",
-            "Updated": "2026-11-09T09:16:17.8739677+01:00",
+            "Updated": "2026-11-13T10:54:13.916138+01:00",
             "Info": ""
         },
         {
