@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-13T21:23:32+01:00",
-            "Manifests": 1713
+            "Updated": "2026-11-14T21:22:54+01:00",
+            "Manifests": 1714
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-13T21:23:39+01:00",
+            "Updated": "2026-11-14T17:49:56+01:00",
             "Manifests": 2468
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-13T20:56:00+01:00",
+            "Updated": "2026-11-14T19:17:25+01:00",
             "Manifests": 647
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-13T20:47:27+01:00",
+            "Updated": "2026-11-14T19:10:49+01:00",
             "Manifests": 424
         },
         {
@@ -88,9 +88,9 @@
         },
         {
             "Name": "azure-functions-core-tools",
-            "Version": "4.16.0",
+            "Version": "4.16.1",
             "Source": "main",
-            "Updated": "2026-10-29T09:17:41.7952394+01:00",
+            "Updated": "2026-11-14T03:01:13.7228919+01:00",
             "Info": ""
         },
         {
@@ -144,9 +144,9 @@
         },
         {
             "Name": "cursor",
-            "Version": "3.30.8",
+            "Version": "3.30.14",
             "Source": "extras",
-            "Updated": "2026-11-13T03:02:26.8587756+01:00",
+            "Updated": "2026-11-14T03:02:51.0835496+01:00",
             "Info": ""
         },
         {
@@ -242,16 +242,16 @@
         },
         {
             "Name": "handy",
-            "Version": "0.10.0",
+            "Version": "0.10.1",
             "Source": "extras",
-            "Updated": "2026-11-12T13:55:42.5212982+01:00",
+            "Updated": "2026-11-14T15:00:17.044593+01:00",
             "Info": ""
         },
         {
             "Name": "helium",
-            "Version": "0.21.2.1",
+            "Version": "0.21.3.1",
             "Source": "extras",
-            "Updated": "2026-11-11T10:40:53.4208765+01:00",
+            "Updated": "2026-11-14T00:00:19.7815176+01:00",
             "Info": ""
         },
         {
