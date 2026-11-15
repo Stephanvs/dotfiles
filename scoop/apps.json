@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-14T21:22:54+01:00",
+            "Updated": "2026-11-15T21:22:33+01:00",
             "Manifests": 1714
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-14T17:49:56+01:00",
+            "Updated": "2026-11-15T21:23:17+01:00",
             "Manifests": 2468
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-14T19:17:25+01:00",
+            "Updated": "2026-11-15T16:44:53+01:00",
             "Manifests": 647
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-14T19:10:49+01:00",
+            "Updated": "2026-11-15T22:03:59+01:00",
             "Manifests": 424
         },
         {
