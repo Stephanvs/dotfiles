@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-15T21:22:33+01:00",
-            "Manifests": 1714
+            "Updated": "2026-11-16T21:23:54+01:00",
+            "Manifests": 1715
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-15T21:23:17+01:00",
-            "Manifests": 2468
+            "Updated": "2026-11-16T21:23:56+01:00",
+            "Manifests": 2470
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-15T16:44:53+01:00",
+            "Updated": "2026-11-16T07:48:14+01:00",
             "Manifests": 647
         },
         {
@@ -27,8 +27,8 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-15T22:03:59+01:00",
-            "Manifests": 424
+            "Updated": "2026-11-16T19:37:17+01:00",
+            "Manifests": 426
         },
         {
             "Name": "stephanvs",
@@ -39,7 +39,7 @@
         {
             "Name": "tokentop",
             "Source": "https://github.com/tokentopapp/scoop-tokentop",
-            "Updated": "2026-10-14T06:46:07+02:00",
+            "Updated": "2026-11-16T05:46:20+01:00",
             "Manifests": 0
         }
     ],
@@ -56,6 +56,13 @@
             "Version": "26.06",
             "Source": "main",
             "Updated": "2026-11-07T17:00:21.9984187+01:00",
+            "Info": ""
+        },
+        {
+            "Name": "actionlint",
+            "Version": "1.17.1",
+            "Source": "main",
+            "Updated": "2026-11-16T23:49:55.5985414+01:00",
             "Info": ""
         },
         {
@@ -81,9 +88,9 @@
         },
         {
             "Name": "azure-cli",
-            "Version": "2.92.0",
+            "Version": "2.93.0",
             "Source": "main",
-            "Updated": "2026-11-03T05:00:49.6080387+01:00",
+            "Updated": "2026-11-16T03:00:56.1875478+01:00",
             "Info": ""
         },
         {
@@ -227,6 +234,13 @@
             "Info": ""
         },
         {
+            "Name": "git-cliff",
+            "Version": "2.14.2",
+            "Source": "main",
+            "Updated": "2026-11-16T23:45:38.2683268+01:00",
+            "Info": ""
+        },
+        {
             "Name": "glow",
             "Version": "3.0.0",
             "Source": "main",
@@ -263,9 +277,9 @@
         },
         {
             "Name": "imagemagick",
-            "Version": "7.1.2-35",
+            "Version": "7.1.2-36",
             "Source": "main",
-            "Updated": "2026-11-01T02:00:23.8731193+01:00",
+            "Updated": "2026-11-16T23:00:26.7643702+01:00",
             "Info": ""
         },
         {
@@ -417,9 +431,9 @@
         },
         {
             "Name": "paseo",
-            "Version": "0.15.4",
+            "Version": "0.16.0",
             "Source": "extras",
-            "Updated": "2026-11-10T08:59:47.3070208+01:00",
+            "Updated": "2026-11-16T11:00:21.7173909+01:00",
             "Info": ""
         },
         {
@@ -431,9 +445,9 @@
         },
         {
             "Name": "podman-desktop",
-            "Version": "1.30.5",
+            "Version": "1.30.7",
             "Source": "extras",
-            "Updated": "2026-10-15T01:00:29.4940279+02:00",
+            "Updated": "2026-11-16T19:00:39.7239366+01:00",
             "Info": ""
         },
         {
@@ -536,9 +550,9 @@
         },
         {
             "Name": "tokentop",
-            "Version": "0.8.1",
+            "Version": "0.9.0",
             "Source": "tokentop",
-            "Updated": "2026-10-14T09:04:00.4845135+02:00",
+            "Updated": "2026-11-16T07:00:20.1294821+01:00",
             "Info": ""
         },
         {
