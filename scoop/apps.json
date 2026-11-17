@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-16T21:23:54+01:00",
-            "Manifests": 1715
+            "Updated": "2026-11-17T21:23:50+01:00",
+            "Manifests": 1716
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-16T21:23:56+01:00",
-            "Manifests": 2470
+            "Updated": "2026-11-17T21:24:08+01:00",
+            "Manifests": 2471
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-16T07:48:14+01:00",
+            "Updated": "2026-11-17T14:38:46+01:00",
             "Manifests": 647
         },
         {
@@ -27,13 +27,13 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-16T19:37:17+01:00",
+            "Updated": "2026-11-17T22:38:02+01:00",
             "Manifests": 426
         },
         {
             "Name": "stephanvs",
             "Source": "https://github.com/Stephanvs/scoop-bucket",
-            "Updated": "2026-10-30T21:23:53+01:00",
+            "Updated": "2026-11-17T11:24:39+01:00",
             "Manifests": 0
         },
         {
@@ -241,6 +241,13 @@
             "Info": ""
         },
         {
+            "Name": "gitleaks",
+            "Version": "8.30.1",
+            "Source": "main",
+            "Updated": "2026-11-17T10:32:42.8679125+01:00",
+            "Info": ""
+        },
+        {
             "Name": "glow",
             "Version": "3.0.0",
             "Source": "main",
@@ -409,6 +416,13 @@
             "Info": ""
         },
         {
+            "Name": "odin",
+            "Version": "2026-11a",
+            "Source": "versions",
+            "Updated": "2026-11-17T22:43:44.187454+01:00",
+            "Info": ""
+        },
+        {
             "Name": "ollama-full",
             "Version": "0.40.16",
             "Source": "extras",
@@ -430,10 +444,17 @@
             "Info": ""
         },
         {
+            "Name": "openspeak",
+            "Version": "0.1.1",
+            "Source": "stephanvs",
+            "Updated": "2026-11-17T11:26:22.1066736+01:00",
+            "Info": ""
+        },
+        {
             "Name": "paseo",
-            "Version": "0.16.0",
+            "Version": "0.16.1",
             "Source": "extras",
-            "Updated": "2026-11-16T11:00:21.7173909+01:00",
+            "Updated": "2026-11-17T11:00:16.3361183+01:00",
             "Info": ""
         },
         {
@@ -480,9 +501,9 @@
         },
         {
             "Name": "rufus",
-            "Version": "4.15",
+            "Version": "4.16",
             "Source": "extras",
-            "Updated": "2026-06-30T17:00:09.729599+02:00",
+            "Updated": "2026-11-17T19:00:15.1887819+01:00",
             "Info": ""
         },
         {
@@ -536,9 +557,9 @@
         },
         {
             "Name": "t3code",
-            "Version": "0.1.9",
+            "Version": "0.1.10",
             "Source": "extras",
-            "Updated": "2026-11-12T09:16:12.2821079+01:00",
+            "Updated": "2026-11-17T07:00:28.5960674+01:00",
             "Info": ""
         },
         {
