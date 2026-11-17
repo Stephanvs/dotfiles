@@ -212,7 +212,7 @@ cask "font-iosevka-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 cask "font-monaspice-nerd-font"
 cask "font-victor-mono-nerd-font"
-# GIT client
+# Git client
 cask "fork"
 # Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
