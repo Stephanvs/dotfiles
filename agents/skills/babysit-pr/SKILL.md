@@ -66,7 +66,7 @@ Applies to bot and human comments alike. A true finding is not automatically a f
 
 | | Blocker | Improvement |
 |---|---|---|
-| **In scope** | Fix now. | Fix now if trivial, otherwise file an issue. |
+| **In scope** | Fix now. | Fix now, nitpicks included. File an issue only if the fix is large. |
 | **Out of scope** | File an issue, and say so on the PR. | File an issue. |
 
 In scope means it concerns the behaviour this PR set out to change. Ask: would this defect exist on the base
@@ -74,15 +74,25 @@ without my change? If yes, it's pre-existing and belongs in an issue. A blocker 
 a security hole. Hardening, stricter validation, and "this could also be wrong if" are improvements, however
 confidently a bot says otherwise. A fix that would break something that works today is the owner's call.
 
+Defer every out-of-scope comment, from a bot or a human, however small or easy the fix looks. Don't change code
+for it in this PR. File an issue for it, reply on the thread with the issue link and a note that it is deferred
+because it is outside this PR's scope, then resolve the thread. Keeping going (below) means chasing in-scope
+findings only; out-of-scope ones never pull new work into the PR.
+
 Reply on each thread with what you did (fixed, issue link, or why not) and resolve it. No bot thread stays open at
 merge time.
 
-Stop the review loop and ask the owner when:
+### Keep going
 
-- three rounds in a row produce no in-scope blocker;
+Never stop the bot loop after a round. Keep fixing in-scope findings round after round, nitpicks included:
+naming, wording, comments, small cleanups. A round with only small findings is a reason to fix them and push,
+not to stop. Don't stop just because the remaining findings look minor or the PR seems good enough. The loop
+ends only on an exit condition at the top of this skill.
+
+While you keep going, tell the owner (without pausing the loop) when:
+
 - findings start targeting code that only exists because of earlier findings;
-- the diff has grown well past the task (check `git diff --stat` against the base, not memory);
-- every push produces new findings, so the PR can never go clean.
+- the diff has grown well past the task (check `git diff --stat` against the base, not memory).
 
 Bring numbers (commits, files, diff size) and propose a split. Before reverting out-of-scope work, park it on a
 `followup/<topic>` branch and say so.
