@@ -3,20 +3,20 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-18T19:11:55+01:00",
+            "Updated": "2026-11-19T19:40:20+01:00",
             "Manifests": 1719
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-18T17:25:08+01:00",
+            "Updated": "2026-11-19T19:58:32+01:00",
             "Manifests": 2474
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-18T18:22:50+01:00",
-            "Manifests": 647
+            "Updated": "2026-11-19T19:16:38+01:00",
+            "Manifests": 649
         },
         {
             "Name": "nerd-fonts",
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-18T18:18:20+01:00",
+            "Updated": "2026-11-19T14:18:01+01:00",
             "Manifests": 426
         },
         {
@@ -116,9 +116,9 @@
         },
         {
             "Name": "bun",
-            "Version": "1.4.4",
+            "Version": "1.4.5",
             "Source": "main",
-            "Updated": "2026-10-22T18:00:22.9229497+02:00",
+            "Updated": "2026-11-19T16:00:29.1626205+01:00",
             "Info": ""
         },
         {
@@ -165,9 +165,9 @@
         },
         {
             "Name": "delta",
-            "Version": "0.20.1",
+            "Version": "0.21.1",
             "Source": "main",
-            "Updated": "2026-10-29T09:19:46.5199766+01:00",
+            "Updated": "2026-11-19T09:00:07.1389824+01:00",
             "Info": ""
         },
         {
@@ -200,9 +200,9 @@
         },
         {
             "Name": "figma",
-            "Version": "126.11.9",
+            "Version": "126.11.11",
             "Source": "extras",
-            "Updated": "2026-11-13T10:53:02.3643843+01:00",
+            "Updated": "2026-11-19T05:00:20.1838336+01:00",
             "Info": ""
         },
         {
@@ -270,9 +270,9 @@
         },
         {
             "Name": "helium",
-            "Version": "0.21.3.1",
+            "Version": "0.22.1.1",
             "Source": "extras",
-            "Updated": "2026-11-14T00:00:19.7815176+01:00",
+            "Updated": "2026-11-19T01:00:35.6691774+01:00",
             "Info": ""
         },
         {
@@ -291,9 +291,9 @@
         },
         {
             "Name": "innounp",
-            "Version": "2.71.3",
+            "Version": "2.71.4",
             "Source": "main",
-            "Updated": "2026-10-31T21:00:16.4766597+01:00",
+            "Updated": "2026-11-19T16:00:29.8503805+01:00",
             "Info": ""
         },
         {
@@ -620,9 +620,9 @@
         },
         {
             "Name": "wireshark",
-            "Version": "4.6.9",
+            "Version": "4.6.10",
             "Source": "extras",
-            "Updated": "2026-09-24T05:00:36.3713439+02:00",
+            "Updated": "2026-11-19T05:00:30.1197718+01:00",
             "Info": ""
         },
         {
@@ -641,16 +641,16 @@
         },
         {
             "Name": "zed",
-            "Version": "1.28.1",
+            "Version": "1.29.2",
             "Source": "extras",
-            "Updated": "2026-11-12T03:00:40.4277836+01:00",
+            "Updated": "2026-11-19T05:00:40.8410957+01:00",
             "Info": ""
         },
         {
             "Name": "zen-browser",
-            "Version": "1.24.2b",
+            "Version": "1.24.3b",
             "Source": "extras",
-            "Updated": "2026-11-13T10:54:13.916138+01:00",
+            "Updated": "2026-11-19T01:00:55.1614386+01:00",
             "Info": ""
         },
         {
