@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-20T17:23:44+01:00",
+            "Updated": "2026-11-21T21:22:59+01:00",
             "Manifests": 1719
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-20T17:33:53+01:00",
-            "Manifests": 2475
+            "Updated": "2026-11-21T21:24:26+01:00",
+            "Manifests": 2477
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-20T18:03:28+01:00",
+            "Updated": "2026-11-21T22:44:28+01:00",
             "Manifests": 651
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-20T18:00:27+01:00",
+            "Updated": "2026-11-21T22:41:24+01:00",
             "Manifests": 427
         },
         {
@@ -81,9 +81,9 @@
         },
         {
             "Name": "autohotkey",
-            "Version": "2.0.31",
+            "Version": "2.0.32",
             "Source": "extras",
-            "Updated": "2026-10-26T08:00:20.8012984+01:00",
+            "Updated": "2026-11-21T04:00:19.2416982+01:00",
             "Info": ""
         },
         {
@@ -95,9 +95,9 @@
         },
         {
             "Name": "azure-functions-core-tools",
-            "Version": "4.16.1",
+            "Version": "4.17.0",
             "Source": "main",
-            "Updated": "2026-11-14T03:01:13.7228919+01:00",
+            "Updated": "2026-11-21T04:00:58.2553059+01:00",
             "Info": ""
         },
         {
@@ -151,9 +151,9 @@
         },
         {
             "Name": "cursor",
-            "Version": "3.31.11",
+            "Version": "3.31.15",
             "Source": "extras",
-            "Updated": "2026-11-20T04:01:52.4353341+01:00",
+            "Updated": "2026-11-21T04:02:36.290576+01:00",
             "Info": ""
         },
         {
@@ -403,9 +403,9 @@
         },
         {
             "Name": "obs-studio",
-            "Version": "33.0.1",
+            "Version": "33.0.2",
             "Source": "extras",
-            "Updated": "2026-10-30T05:00:30.7200675+01:00",
+            "Updated": "2026-11-21T00:00:25.4640331+01:00",
             "Info": ""
         },
         {
@@ -424,9 +424,9 @@
         },
         {
             "Name": "ollama-full",
-            "Version": "0.40.16",
+            "Version": "0.40.17",
             "Source": "extras",
-            "Updated": "2026-11-10T05:03:23.6348138+01:00",
+            "Updated": "2026-11-21T08:02:10.4752324+01:00",
             "Info": ""
         },
         {
