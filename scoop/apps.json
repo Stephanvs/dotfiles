@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-22T21:22:56+01:00",
+            "Updated": "2026-11-23T21:23:38+01:00",
             "Manifests": 1719
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-22T21:42:29+01:00",
+            "Updated": "2026-11-23T21:23:48+01:00",
             "Manifests": 2477
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-22T17:26:16+01:00",
+            "Updated": "2026-11-23T15:57:13+01:00",
             "Manifests": 651
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-22T22:55:02+01:00",
+            "Updated": "2026-11-23T21:18:49+01:00",
             "Manifests": 427
         },
         {
@@ -165,9 +165,9 @@
         },
         {
             "Name": "delta",
-            "Version": "0.21.2",
+            "Version": "0.22.0",
             "Source": "main",
-            "Updated": "2026-11-20T00:00:48.5016267+01:00",
+            "Updated": "2026-11-23T07:00:19.6106576+01:00",
             "Info": ""
         },
         {
@@ -431,9 +431,9 @@
         },
         {
             "Name": "opencode2",
-            "Version": "2.3.2",
+            "Version": "2.4.0",
             "Source": "versions",
-            "Updated": "2026-11-18T09:51:02.6441149+01:00",
+            "Updated": "2026-11-23T19:00:17.9331293+01:00",
             "Info": ""
         },
         {
@@ -494,9 +494,9 @@
         },
         {
             "Name": "ripgrep",
-            "Version": "15.2.0",
+            "Version": "16.0.0",
             "Source": "main",
-            "Updated": "2026-09-30T15:21:27.5747718+02:00",
+            "Updated": "2026-11-23T03:00:12.7163433+01:00",
             "Info": ""
         },
         {
@@ -564,9 +564,9 @@
         },
         {
             "Name": "telegram",
-            "Version": "7.4.4",
+            "Version": "7.4.6",
             "Source": "extras",
-            "Updated": "2026-11-13T22:00:23.0003379+01:00",
+            "Updated": "2026-11-23T19:00:22.3059219+01:00",
             "Info": ""
         },
         {
