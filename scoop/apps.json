@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-24T21:22:54+01:00",
-            "Manifests": 1721
+            "Updated": "2026-11-25T21:24:35+01:00",
+            "Manifests": 1723
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-24T17:28:12+01:00",
+            "Updated": "2026-11-25T17:28:45+01:00",
             "Manifests": 2479
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-24T14:51:04+01:00",
+            "Updated": "2026-11-25T18:19:12+01:00",
             "Manifests": 651
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-24T20:32:37+01:00",
+            "Updated": "2026-11-25T15:28:54+01:00",
             "Manifests": 427
         },
         {
@@ -151,9 +151,9 @@
         },
         {
             "Name": "cursor",
-            "Version": "3.31.15",
+            "Version": "3.32.4",
             "Source": "extras",
-            "Updated": "2026-11-21T04:02:36.290576+01:00",
+            "Updated": "2026-11-25T07:01:53.4705954+01:00",
             "Info": ""
         },
         {
@@ -270,9 +270,9 @@
         },
         {
             "Name": "helium",
-            "Version": "0.22.2.1",
+            "Version": "0.22.4.1",
             "Source": "extras",
-            "Updated": "2026-11-22T00:00:15.5904166+01:00",
+            "Updated": "2026-11-25T03:00:25.6249997+01:00",
             "Info": ""
         },
         {
@@ -431,9 +431,9 @@
         },
         {
             "Name": "opencode2",
-            "Version": "2.4.0",
+            "Version": "2.4.1",
             "Source": "versions",
-            "Updated": "2026-11-23T19:00:17.9331293+01:00",
+            "Updated": "2026-11-25T15:00:21.4029877+01:00",
             "Info": ""
         },
         {
@@ -557,9 +557,9 @@
         },
         {
             "Name": "t3code",
-            "Version": "0.1.11",
+            "Version": "0.1.12",
             "Source": "extras",
-            "Updated": "2026-11-20T12:00:41.5881244+01:00",
+            "Updated": "2026-11-25T11:01:15.7786749+01:00",
             "Info": ""
         },
         {
@@ -599,9 +599,9 @@
         },
         {
             "Name": "vscode",
-            "Version": "1.147.0",
+            "Version": "1.148.0",
             "Source": "extras",
-            "Updated": "2026-11-18T17:01:30.5951854+01:00",
+            "Updated": "2026-11-25T15:01:09.0978904+01:00",
             "Info": ""
         },
         {
