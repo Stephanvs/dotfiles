@@ -23,32 +23,32 @@
             "keys": "ctrl+c"
         },
         {
-            "id": "Terminal.FindText",
-            "keys": "ctrl+shift+f"
+            "id": "Terminal.MoveFocusLeft",
+            "keys": "ctrl+h"
         },
         {
             "id": "Terminal.PasteFromClipboard",
             "keys": "ctrl+v"
         },
         {
-            "id": "Terminal.MoveFocusLeft",
-            "keys": "ctrl+h"
+            "id": "Terminal.FindText",
+            "keys": "ctrl+shift+f"
         },
         {
             "id": "Terminal.DuplicatePaneAuto",
             "keys": "alt+shift+d"
         },
         {
-            "id": null,
-            "keys": "alt+down"
+            "id": "Terminal.SwapPaneUp",
+            "keys": "ctrl+alt+k"
         },
         {
             "id": "Terminal.SwapPaneRight",
             "keys": "ctrl+alt+l"
         },
         {
-            "id": "Terminal.SwapPaneUp",
-            "keys": "ctrl+alt+k"
+            "id": null,
+            "keys": "alt+down"
         },
         {
             "id": "Terminal.MoveFocusDown",
@@ -288,5 +288,5 @@
     "theme": "system",
     "themes": [],
     "useAcrylicInTabRow": true,
-    "windowingBehavior": "useNew"
+    "windowingBehavior": "useExisting"
 }
