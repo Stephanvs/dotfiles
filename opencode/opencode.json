@@ -8,11 +8,31 @@
     "./claude-acp"
   ],
   "permissions": [
-    { "action": "external_directory", "resource": "~/.config/*", "effect": "allow" },
-    { "action": "external_directory", "resource": "~/dotfiles/*", "effect": "allow" },
-    { "action": "external_directory", "resource": "~/code/*", "effect": "allow" },
-    { "action": "external_directory", "resource": "~/notes/*", "effect": "allow" },
-    { "action": "external_directory", "resource": "E:/Code/*", "effect": "allow" }
+    {
+      "action": "external_directory",
+      "resource": "~/.config/*",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "~/dotfiles/*",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "~/code/*",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "~/notes/*",
+      "effect": "allow"
+    },
+    {
+      "action": "external_directory",
+      "resource": "E:/Code/*",
+      "effect": "allow"
+    }
   ],
   "providers": {
     "lmstudio-homepc": {
@@ -53,6 +73,71 @@
           "name": "Devstral Small 2507"
         }
       }
+    },
+    "mini-codex": {
+      "name": "Codex Personal (Mini)",
+      "canonical": "openai",
+      "package": "@opencode/ai/providers/openai/responses",
+      "settings": {
+        "baseURL": "https://ai-hub.taile6f5e.ts.net:8317/v1",
+        "apiKey": "{file:C:/Users/stephanvs/.config/infra-ai-hub/codex-api-key}"
+      },
+      "models": {
+        "gpt-6.1-sol": {
+          "modelID": "gpt-6.1-sol"
+        },
+        "gpt-image-2": {
+          "modelID": "gpt-image-2"
+        },
+        "gpt-image-2.5": {
+          "modelID": "gpt-image-2.5"
+        },
+        "gpt-image-2.6-flare": {
+          "modelID": "gpt-image-2.6-flare"
+        },
+        "gpt-6-astra": {
+          "modelID": "gpt-6-astra"
+        },
+        "gpt-6-sol": {
+          "modelID": "gpt-6-sol"
+        },
+        "gpt-6.1-terra": {
+          "modelID": "gpt-6.1-terra"
+        },
+        "gpt-6-luna": {
+          "modelID": "gpt-6-luna"
+        },
+        "gpt-5.6-sol": {
+          "modelID": "gpt-5.6-sol"
+        },
+        "gpt-image-1.5": {
+          "modelID": "gpt-image-1.5"
+        },
+        "gpt-image-2.6-sunburst": {
+          "modelID": "gpt-image-2.6-sunburst"
+        },
+        "gpt-image-2.6": {
+          "modelID": "gpt-image-2.6"
+        },
+        "gpt-6-chat-thinking": {
+          "modelID": "gpt-6-chat-thinking"
+        },
+        "gpt-5.6-terra": {
+          "modelID": "gpt-5.6-terra"
+        },
+        "gpt-5.6-luna": {
+          "modelID": "gpt-5.6-luna"
+        },
+        "gpt-image-2.5-flare": {
+          "modelID": "gpt-image-2.5-flare"
+        },
+        "gpt-image-2.5-sunburst": {
+          "modelID": "gpt-image-2.5-sunburst"
+        },
+        "codex-auto-review": {
+          "modelID": "codex-auto-review"
+        }
+      }
     }
   },
   "agents": {
@@ -62,37 +147,113 @@
     "plan": {
       "mode": "primary",
       "permissions": [
-        { "action": "edit", "resource": "*", "effect": "deny" },
-        { "action": "shell", "resource": "*", "effect": "deny" },
-        { "action": "read", "resource": "*", "effect": "allow" },
-        { "action": "grep", "resource": "*", "effect": "allow" },
-        { "action": "glob", "resource": "*", "effect": "allow" },
-        { "action": "list", "resource": "*", "effect": "allow" },
-        { "action": "webfetch", "resource": "*", "effect": "allow" }
+        {
+          "action": "edit",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "shell",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "read",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "grep",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "glob",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "list",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "webfetch",
+          "resource": "*",
+          "effect": "allow"
+        }
       ]
     },
     "docs": {
       "mode": "primary",
       "system": "{file:./prompts/documentation.txt}",
       "permissions": [
-        { "action": "edit", "resource": "*", "effect": "allow" },
-        { "action": "shell", "resource": "*", "effect": "deny" },
-        { "action": "read", "resource": "*", "effect": "allow" },
-        { "action": "grep", "resource": "*", "effect": "allow" },
-        { "action": "glob", "resource": "*", "effect": "allow" }
+        {
+          "action": "edit",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "shell",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "read",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "grep",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "glob",
+          "resource": "*",
+          "effect": "allow"
+        }
       ]
     },
     "review": {
       "mode": "primary",
       "system": "{file:./prompts/code_review.txt}",
       "permissions": [
-        { "action": "edit", "resource": "*", "effect": "deny" },
-        { "action": "shell", "resource": "*", "effect": "deny" },
-        { "action": "read", "resource": "*", "effect": "allow" },
-        { "action": "glob", "resource": "*", "effect": "allow" },
-        { "action": "grep", "resource": "*", "effect": "allow" },
-        { "action": "list", "resource": "*", "effect": "allow" },
-        { "action": "webfetch", "resource": "*", "effect": "allow" }
+        {
+          "action": "edit",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "shell",
+          "resource": "*",
+          "effect": "deny"
+        },
+        {
+          "action": "read",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "glob",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "grep",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "list",
+          "resource": "*",
+          "effect": "allow"
+        },
+        {
+          "action": "webfetch",
+          "resource": "*",
+          "effect": "allow"
+        }
       ]
     }
   },
@@ -105,21 +266,45 @@
       },
       "az-devops": {
         "type": "local",
-        "command": ["bunx", "-y", "@azure-devops/mcp", "itncare", "-d", "core", "work", "work-items", "repositories", "pipelines", "wiki"],
+        "command": [
+          "bunx",
+          "-y",
+          "@azure-devops/mcp",
+          "itncare",
+          "-d",
+          "core",
+          "work",
+          "work-items",
+          "repositories",
+          "pipelines",
+          "wiki"
+        ],
         "disabled": true
       },
       "atlassian": {
         "type": "local",
         "disabled": true,
         "command": [
-          "op", "run", "--",
-          "docker", "run", "-i", "--rm", "--network=host",
-          "-e", "CONFLUENCE_URL",
-          "-e", "CONFLUENCE_USERNAME",
-          "-e", "CONFLUENCE_API_TOKEN",
-          "-e", "JIRA_URL",
-          "-e", "JIRA_USERNAME",
-          "-e", "JIRA_API_TOKEN",
+          "op",
+          "run",
+          "--",
+          "docker",
+          "run",
+          "-i",
+          "--rm",
+          "--network=host",
+          "-e",
+          "CONFLUENCE_URL",
+          "-e",
+          "CONFLUENCE_USERNAME",
+          "-e",
+          "CONFLUENCE_API_TOKEN",
+          "-e",
+          "JIRA_URL",
+          "-e",
+          "JIRA_USERNAME",
+          "-e",
+          "JIRA_API_TOKEN",
           "ghcr.io/sooperset/mcp-atlassian:latest"
         ],
         "environment": {
@@ -135,8 +320,12 @@
         "type": "local",
         "disabled": true,
         "command": [
-          "op", "run", "--",
-          "bunx", "-y", "bitbucket-mcp@latest"
+          "op",
+          "run",
+          "--",
+          "bunx",
+          "-y",
+          "bitbucket-mcp@latest"
         ],
         "environment": {
           "BITBUCKET_URL": "https://api.bitbucket.org/2.0",
@@ -148,14 +337,27 @@
       "teamcity": {
         "type": "local",
         "command": [
-          "op", "run", "--env-file", "/home/stephanvs/dotfiles/opencode/teamcity.env", "--",
-          "bunx", "-y", "@daghis/teamcity-mcp", "--config", "/home/stephanvs/dotfiles/opencode/teamcity.env"
+          "op",
+          "run",
+          "--env-file",
+          "/home/stephanvs/dotfiles/opencode/teamcity.env",
+          "--",
+          "bunx",
+          "-y",
+          "@daghis/teamcity-mcp",
+          "--config",
+          "/home/stephanvs/dotfiles/opencode/teamcity.env"
         ],
         "disabled": true
       },
       "xcodebuild": {
         "type": "local",
-        "command": ["bunx", "-y", "xcodebuildmcp@latest", "mcp"],
+        "command": [
+          "bunx",
+          "-y",
+          "xcodebuildmcp@latest",
+          "mcp"
+        ],
         "disabled": true
       },
       "gh_grep": {
@@ -165,12 +367,20 @@
       },
       "codebase-memory-mcp": {
         "type": "local",
-        "command": ["bunx", "-y", "codebase-memory-mcp"],
+        "command": [
+          "bunx",
+          "-y",
+          "codebase-memory-mcp"
+        ],
         "disabled": false
       },
       "chrome-devtools": {
         "type": "local",
-        "command": ["bunx", "-y", "chrome-devtools-mcp@latest"],
+        "command": [
+          "bunx",
+          "-y",
+          "chrome-devtools-mcp@latest"
+        ],
         "disabled": true
       },
       "rider": {
