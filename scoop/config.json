@@ -1,6 +1,6 @@
 {
-    "last_update":  "2026-11-09T09:00:17.3876565+01:00",
+    "last_update":  "2026-11-26T07:00:12.1299966+01:00",
     "scoop_repo":  "https://github.com/ScoopInstaller/Scoop",
     "scoop_branch":  "master",
-    "ignore_running_processes":  false
+    "ignore_running_processes":  true
 }
