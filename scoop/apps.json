@@ -3,19 +3,19 @@
         {
             "Name": "main",
             "Source": "https://github.com/ScoopInstaller/Main.git",
-            "Updated": "2026-11-25T21:24:35+01:00",
+            "Updated": "2026-11-26T21:23:22+01:00",
             "Manifests": 1723
         },
         {
             "Name": "extras",
             "Source": "https://github.com/ScoopInstaller/Extras",
-            "Updated": "2026-11-25T17:28:45+01:00",
+            "Updated": "2026-11-26T17:25:30+01:00",
             "Manifests": 2479
         },
         {
             "Name": "versions",
             "Source": "https://github.com/ScoopInstaller/Versions",
-            "Updated": "2026-11-25T18:19:12+01:00",
+            "Updated": "2026-11-26T15:01:12+01:00",
             "Manifests": 651
         },
         {
@@ -27,7 +27,7 @@
         {
             "Name": "games",
             "Source": "https://github.com/Calinou/scoop-games",
-            "Updated": "2026-11-25T15:28:54+01:00",
+            "Updated": "2026-11-26T14:57:58+01:00",
             "Manifests": 427
         },
         {
@@ -214,9 +214,9 @@
         },
         {
             "Name": "gh",
-            "Version": "2.105.0",
+            "Version": "2.106.0",
             "Source": "main",
-            "Updated": "2026-11-18T02:00:23.5162894+01:00",
+            "Updated": "2026-11-26T03:11:09.5966926+01:00",
             "Info": ""
         },
         {
@@ -270,9 +270,9 @@
         },
         {
             "Name": "helium",
-            "Version": "0.22.4.1",
+            "Version": "0.22.5.1",
             "Source": "extras",
-            "Updated": "2026-11-25T03:00:25.6249997+01:00",
+            "Updated": "2026-11-26T15:00:24.2425713+01:00",
             "Info": ""
         },
         {
@@ -431,9 +431,9 @@
         },
         {
             "Name": "opencode2",
-            "Version": "2.4.1",
+            "Version": "2.4.2",
             "Source": "versions",
-            "Updated": "2026-11-25T15:00:21.4029877+01:00",
+            "Updated": "2026-11-26T15:00:28.5321382+01:00",
             "Info": ""
         },
         {
@@ -452,9 +452,9 @@
         },
         {
             "Name": "paseo",
-            "Version": "0.17.4",
+            "Version": "0.17.5",
             "Source": "extras",
-            "Updated": "2026-11-24T03:00:27.2894941+01:00",
+            "Updated": "2026-11-26T19:00:23.7600866+01:00",
             "Info": ""
         },
         {
@@ -641,9 +641,9 @@
         },
         {
             "Name": "zed",
-            "Version": "1.29.3",
+            "Version": "1.30.2",
             "Source": "extras",
-            "Updated": "2026-11-20T20:00:26.2516955+01:00",
+            "Updated": "2026-11-26T03:11:21.9400447+01:00",
             "Info": ""
         },
         {
